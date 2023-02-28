@@ -42,7 +42,6 @@ const Blog = () => {
         </Box>
 
         <SimpleGrid columns={[1, 3]} py={10} px={[0, 20]} align="center">
-          <Text>hello</Text>
           {posts.length > 0 &&
             posts.map((data) => (
               <Box py={[5]}>
