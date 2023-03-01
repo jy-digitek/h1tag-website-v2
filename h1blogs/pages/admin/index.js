@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { useState } from "react";
 import LoginForm from "../../components/loginForm";
+
 const index = () => {
   return (
     <div>
@@ -11,7 +13,6 @@ const index = () => {
         }}
       >
         <LoginForm />
-        <div>dasdas</div>
       </div>
     </div>
   );
