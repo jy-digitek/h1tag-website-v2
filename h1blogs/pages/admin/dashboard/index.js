@@ -10,11 +10,12 @@ import {
   Button,
   Box,
   Link,
+  Flex,
 } from "@chakra-ui/react";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { redirect } from "next/navigation";
+
 import axios from "axios";
 import AdminLayout from "../Components/AdminLayout";
 import PostForm from "../Components/postForm";
@@ -22,11 +23,27 @@ import PostForm from "../Components/postForm";
 const DashBoard = () => {
   const router = useRouter();
   const [posts, setPosts] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
   const getData = async () => {
-    const response = await axios.get("http://localhost:5000/api/vi/post/posts");
+    const response = await axios.get(
+      `http://localhost:5000/api/vi/post/posts?page=${page}`
+    );
     //  const data=await response;
-    setPosts(response.data);
+    setTotalPages(response.data.totalPages);
+    setPosts(response.data.posts);
+    console.log(response.data);
+  };
+  const prevPage = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
+  const nextPage = () => {
+    if (page < totalPages) {
+      setPage(page + 1);
+    }
   };
 
   useEffect(() => {
@@ -35,7 +52,7 @@ const DashBoard = () => {
     } else {
       getData();
     }
-  }, []);
+  }, [page]);
 
   return (
     <AdminLayout>
@@ -55,7 +72,6 @@ const DashBoard = () => {
       </Box>
       <TableContainer>
         <Table variant="simple" size={["sm", "lg"]}>
-          <TableCaption>Imperial to metric conversion factors</TableCaption>
           <Thead>
             <Tr fontWeight={"bold"}>
               <Th>Post</Th>
@@ -85,6 +101,16 @@ const DashBoard = () => {
               })}
           </Tbody>
         </Table>
+        <Box m={10}>
+          <Flex justify={"space-between"}>
+            <Button onClick={prevPage} bg={"yellow.300"}>
+              prev
+            </Button>
+            <Button onClick={nextPage} bg={"green.300"}>
+              next
+            </Button>
+          </Flex>
+        </Box>
       </TableContainer>
     </AdminLayout>
   );

@@ -9,30 +9,52 @@ import {
   CardBody,
   Text,
   Image,
+  Button,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 import axios from "axios";
+import Link from "next/link";
+
+// export async function getStaticProps(context) {
+//   // fetch the blog posts from the mock API
+//   const res = await fetch(`http://localhost:5000/api/vi/post/posts`);
+//   const posts = await res.json();
+
+//   return {
+//     props: { posts }, // props will be passed to the page
+//   };
+// }
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
-  // const getData = async () => {
-  //     const response = await fetch("http://localhost:5000/api/vi/post/posts");
-  //     const data = await response.json();
-  //     setPosts(data);
-  //   };
-
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const getData = async () => {
-    const response = await axios.get("http://localhost:5000/api/vi/post/posts");
-    //  const data=await response;
-    setPosts(response.data);
+    const response = await axios.get(
+      `http://localhost:5000/api/vi/post/posts?page=${page}`
+    );
+
+    console.log(response.data.totalPages);
+    setTotalPages(response.data.totalPages);
+    setPosts(response.data.posts);
   };
 
+  const prevPage = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
+  const nextPage = () => {
+    if (page < totalPages) {
+      setPage(page + 1);
+    }
+  };
   useEffect(() => {
     getData();
-  }, []);
+  }, [page]);
 
-  console.log("post", posts);
+  // console.log("post", posts);
 
   return (
     <Layout>
@@ -43,7 +65,7 @@ const Blog = () => {
 
         <SimpleGrid columns={[1, 3]} py={10} px={[0, 20]} align="center">
           {posts.length > 0 &&
-            posts.map((data) => (
+            posts.map((data, index) => (
               <Box py={[5]}>
                 <Card maxW="xs">
                   <CardHeader>
@@ -56,7 +78,7 @@ const Blog = () => {
                       >
                         <Box>
                           <Heading size="sm">Segun Adebayo</Heading>
-                          <Text>{data.title}</Text>
+                          <Text key={data._id}>{data.title}</Text>
                         </Box>
                       </Flex>
                     </Flex>
@@ -67,6 +89,7 @@ const Blog = () => {
                       with the speed of design. I wanted the developer to be
                       just as excited as the designer to create a screen.
                     </Text>
+                    <Link href={`/blogs/${data._id}`}>next</Link>
                   </CardBody>
                   <Image
                     objectFit="cover"
@@ -77,6 +100,16 @@ const Blog = () => {
               </Box>
             ))}
         </SimpleGrid>
+        <Box m={10}>
+          <Flex justify={"space-between"}>
+            <Button onClick={prevPage} bg={"yellow.300"}>
+              prev
+            </Button>
+            <Button onClick={nextPage} bg={"green.300"}>
+              next
+            </Button>
+          </Flex>
+        </Box>
       </Container>
     </Layout>
   );
