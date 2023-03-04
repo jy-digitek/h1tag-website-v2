@@ -10,24 +10,41 @@ import {
   Button,
 } from "@chakra-ui/react";
 import AdminLayout from "./AdminLayout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const PostForm = (props) => {
+  const [category, setCategory] = useState([]);
   const gettAllCategory = async () => {
     try {
+      const category = await axios.get(
+        `http://localhost:5000/api/vi/category/getallcategory`
+      );
+      console.log(category.data);
+      setCategory(category.data);
     } catch (error) {}
   };
-  const [selectData, setSelectData] = useState([]);
-  let arr = [];
-  const submitHandle = async (e) => {
+  const [data, setData] = useState([]);
+  const AddsubmitHandle = async (e) => {
     e.preventDefault();
-    console.log(selectData);
+    const response = await axios.post(
+      `http://localhost:5000/api/vi/post/postcreate`,
+      { data }
+    );
+    console.log(response);
   };
-  // const onChangeHandle = (e) => {
-  //   arr.push(e.target.value);
-  //   setSelectData(arr);
-  //   console.log(selectData);
-  // };
+
+  const onChangeHandle = (e) => {
+    // console.log(e.target.value);
+    //arr.push(e.target.value);
+    setData({ ...data, [e.target.name]: e.target.value });
+    //console.log(data);
+  };
+  const updateSubmitHandle = () => {};
+
+  useEffect(() => {
+    gettAllCategory();
+  }, []);
 
   return (
     <AdminLayout>
@@ -39,31 +56,70 @@ const PostForm = (props) => {
           <FormControl>
             <Select
               placeholder="Select Category"
-              multiple
-              onChange={(e) => arr.push(e.target.value)}
-              value={selectData}
+              onChange={onChangeHandle}
               size="xl"
-              // options={data}
+              name="categories"
+              //value={data}
             >
-              <option value={1}>option1</option>
-              <option value={2}>option2</option>
-              <option value={3}>option3</option>
+              {category &&
+                category.map((item, i) => {
+                  return (
+                    <option value={item._id} key={i}>
+                      {item.name}
+                    </option>
+                  );
+                })}
             </Select>
-            <Button onClick={submitHandle}>submit</Button>
-            <Input type="text" placeholder="Give title here" my={4} />
-            <Input type="text" placeholder="slug here" my={4} />
+
+            <Input
+              type="text"
+              placeholder="Give title here"
+              my={4}
+              name="title"
+              onChange={(e) =>
+                setData({ ...data, [e.target.name]: e.target.value })
+              }
+            />
+            <Input
+              type="text"
+              placeholder="slug here"
+              name="slug"
+              value={data.title}
+              onChange={(e) =>
+                setData({ ...data, [e.target.name]: data.title })
+              }
+              my={4}
+            />
             <Input
               type="text"
               placeholder="give image
             "
+              name="img"
               my={4}
+              onChange={(e) =>
+                setData({ ...data, [e.target.name]: e.target.value })
+              }
             />
-            <Textarea placeholder="Text Your Body here" my={4} />
-            <Textarea placeholder="Text your summary here" my={4} />
+            <Textarea
+              placeholder="Text Your Body here"
+              my={4}
+              name="body"
+              onChange={(e) =>
+                setData({ ...data, [e.target.name]: e.target.value })
+              }
+            />
+            <Textarea
+              placeholder="Text your summary here"
+              my={4}
+              name="summary"
+              onChange={(e) =>
+                setData({ ...data, [e.target.name]: e.target.value })
+              }
+            />
             {props._id ? (
-              <Button> Update Submit</Button>
+              <Button onClick={updateSubmitHandle}> Update Submit</Button>
             ) : (
-              <Button>Add Submit</Button>
+              <Button onClick={AddsubmitHandle}>Add Submit</Button>
             )}
           </FormControl>
         </Box>

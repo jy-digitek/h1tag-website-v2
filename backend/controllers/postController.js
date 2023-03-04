@@ -6,11 +6,14 @@ module.exports = {
   postCreate: async (req, res) => {
     try {
       const post = req.body;
+      console.log(req.body);
       const newPost = await Post.create(post);
-      await Categories.updateMany(
+      console.log(newPost);
+      const cat = await Categories.updateMany(
         { _id: newPost.categories },
         { $push: { posts: newPost._id } }
       );
+      console.log(cat, "category");
       return res.status(201).json(newPost);
     } catch (error) {
       return res.status(500).json({ error: "can not be stored" });
@@ -52,6 +55,15 @@ module.exports = {
       }
       const updatePost = await Post.findByIdAndUpdate(id, req.body);
       return res.status(201).json({ message: "post updated", updatePost });
+    } catch (error) {
+      return res.status(500).json(error);
+    }
+  },
+  deletePost: async (req, res) => {
+    try {
+      const id = req.params.id;
+      const deletedData = await Post.findByIdAndDelete(id);
+      return res.status(201).json({ message: "data is deleted", deletedData });
     } catch (error) {
       return res.status(500).json(error);
     }

@@ -9,16 +9,17 @@ import {
   Td,
   Button,
   Box,
-  Link,
   Flex,
+  Link,
 } from "@chakra-ui/react";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 import axios from "axios";
 import AdminLayout from "../Components/AdminLayout";
 import PostForm from "../Components/postForm";
+import AddPost from "./addPost";
 
 const DashBoard = () => {
   const router = useRouter();
@@ -45,7 +46,7 @@ const DashBoard = () => {
       setPage(page + 1);
     }
   };
-
+  const deleteItem = () => {};
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       router.replace("/admin");
@@ -57,18 +58,16 @@ const DashBoard = () => {
   return (
     <AdminLayout>
       <Box>
-        <Link href={<PostForm />}>
-          <Button
-            bg={"blue.500"}
-            px={10}
-            my={5}
-            color={"white"}
-            ml={10}
-            // onClick={router.push("/admin")}
-          >
-            Add Post
-          </Button>
-        </Link>
+        <Button
+          bg={"blue.500"}
+          px={10}
+          my={5}
+          color={"white"}
+          ml={10}
+          // onClick={router.push("/admin")}
+        >
+          <Link href="/admin/dashboard/addPost">add post</Link>
+        </Button>
       </Box>
       <TableContainer>
         <Table variant="simple" size={["sm", "lg"]}>
@@ -81,15 +80,15 @@ const DashBoard = () => {
           </Thead>
           <Tbody>
             {posts.length > 0 &&
-              posts.map((data) => {
+              posts.map((data, i) => {
                 return (
                   <>
-                    <Tr>
+                    <Tr key={i}>
                       <Td>i{data._id}</Td>
                       <Td>{data.title}</Td>
                       <Td gap={10}>
                         <Button bg={"yellow.200"} mr={5}>
-                          Edit
+                          <Link href="/admin/dashboard/updatePost">Edit</Link>
                         </Button>
                         <Button bg="red.500" color="white">
                           Delete

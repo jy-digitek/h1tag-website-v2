@@ -16,29 +16,21 @@ import Layout from "../../components/layout";
 import axios from "axios";
 import Link from "next/link";
 
-// export async function getStaticProps(context) {
-//   // fetch the blog posts from the mock API
-//   const res = await fetch(`http://localhost:5000/api/vi/post/posts`);
-//   const posts = await res.json();
-
-//   return {
-//     props: { posts }, // props will be passed to the page
-//   };
-// }
+import { getPost } from "../api/post";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const getData = async () => {
-    const response = await axios.get(
-      `http://localhost:5000/api/vi/post/posts?page=${page}`
-    );
+  // const getData = async () => {
+  //   const response = await axios.get(
+  //     `http://localhost:5000/api/vi/post/posts?page=${page}`
+  //   );
 
-    console.log(response.data.totalPages);
-    setTotalPages(response.data.totalPages);
-    setPosts(response.data.posts);
-  };
+  //   console.log(response.data.totalPages);
+  //   setTotalPages(response.data.totalPages);
+  //   setPosts(response.data.posts);
+  // };
 
   const prevPage = () => {
     if (page > 1) {
@@ -51,7 +43,16 @@ const Blog = () => {
     }
   };
   useEffect(() => {
-    getData();
+    getPost(page)
+      .then((response) => {
+        //setUsers(response.data);
+        console.log(response);
+        setPosts(response.data.posts);
+        setTotalPages(response.data.totalPages);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [page]);
 
   // console.log("post", posts);

@@ -17,7 +17,7 @@ import Link from "next/link";
 export default function LoginForm({ props }) {
   const [data, setData] = useState({});
   const [token, setToken] = useState("");
-  const [role, setRole] = useState("");
+  // const [role, setRole] = useState("");
   const router = useRouter();
   const submitHandle = async () => {
     // console.log(data)
@@ -27,9 +27,10 @@ export default function LoginForm({ props }) {
         password: data.password,
       })
       .then(function (response) {
-        setRole(response.data.data.role);
+        //setRole(response.data.data.role);
         setToken(response.data.token);
         localStorage.setItem("token", token);
+        console.log(localStorage.getItem("token"));
         if (localStorage.getItem("token")) {
           router.push("/admin/dashboard");
         } else {

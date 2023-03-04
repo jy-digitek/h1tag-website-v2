@@ -1,31 +1,28 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import { Box, Text } from "@chakra-ui/react";
+import { getPostById } from "../api/post";
 
 const Post = ({}) => {
   const [post, setPost] = useState({});
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  //console.log("vhjhjhvjh", _id);
-
+  const { _id } = router.query;
   const getData = async () => {
-    const { _id } = router.query;
-
-    if (_id) {
-      const res = await axios.get(`http://localhost:5000/api/vi/post/${_id}`);
-      setPost(res.data.post);
-    }
-
-    //console.log(res.data.post);
-    //console.log(post);
+    getPostById(_id)
+      .then((response) => setPost(response.data.post))
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   useEffect(() => {
     setLoading(true);
     getData();
     setLoading(false);
-  });
+  }, [_id]);
+
   return (
     <div>
       {!loading && (
