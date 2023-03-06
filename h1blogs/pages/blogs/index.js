@@ -67,7 +67,7 @@ const Blog = () => {
         <SimpleGrid columns={[1, 3]} py={10} px={[0, 20]} align="center">
           {posts.length > 0 &&
             posts.map((data, index) => (
-              <Box py={[5]}>
+              <Box py={[5]} key={index}>
                 <Card maxW="xs">
                   <CardHeader>
                     <Flex spacing="4">

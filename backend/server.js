@@ -13,7 +13,9 @@ mongoose.set("strictQuery", false);
 mongoose.connect(process.env.DB_URL, (err) => {
   if (!err) console.log("database connected");
 });
-
+//console.log(__dirname);
+app.use(express.static(__dirname + "/public/"));
+//console.log(__dirname);
 app.use(express.json());
 app.use("/api/vi/post", postrouter);
 app.use("/api/vi/category", categoryrouter);

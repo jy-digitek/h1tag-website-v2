@@ -3,9 +3,13 @@ const express = require("express");
 const router = express.Router();
 const adminAuth = require("../middleware/auth");
 
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
+
+console.log(upload);
 router
   .route("/postcreate")
-  .post(adminAuth.adminAuth, postController.postCreate);
+  .post(adminAuth.adminAuth, upload.single("image"), postController.postCreate);
 router.route("/posts").get(postController.allPosts);
 router.route("/:id").get(postController.getPost);
 router.route("/:id").put(adminAuth.adminAuth, postController.updatePost);

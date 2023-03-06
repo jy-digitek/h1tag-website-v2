@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { getPostById } from "../api/post";
+import { Image } from "@chakra-ui/react";
 
 const Post = ({}) => {
   const [post, setPost] = useState({});
@@ -31,6 +32,7 @@ const Post = ({}) => {
           <p>{post.body}</p>
           <p>{post.slug}</p>
           <p>{post._id}</p>
+          <Image src={post.image} alt="Dan Abramov" />
         </>
       )}
     </div>

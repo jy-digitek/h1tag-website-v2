@@ -12,6 +12,8 @@ import {
 import AdminLayout from "./AdminLayout";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { createPost } from "../../api/post";
+import { useRef } from "react";
 
 const PostForm = (props) => {
   const [category, setCategory] = useState([]);
@@ -20,20 +22,28 @@ const PostForm = (props) => {
       const category = await axios.get(
         `http://localhost:5000/api/vi/category/getallcategory`
       );
-      console.log(category.data);
+      // console.log(category.data);
       setCategory(category.data);
     } catch (error) {}
   };
   const [data, setData] = useState([]);
+  const [image, setImage] = useState(undefined);
   const AddsubmitHandle = async (e) => {
     e.preventDefault();
-    const response = await axios.post(
-      `http://localhost:5000/api/vi/post/postcreate`,
-      { data }
-    );
-    console.log(response);
+    // console.log(data);
+    // console.log(response);
+    // console.log(image);
+    const formData = new FormData();
+    formData.append("title", data.title);
+    formData.append("slug", data.slug);
+    formData.append("image", image);
+    formData.append("summary", data.summary);
+    formData.append("categories", data.categories);
+    formData.append("body", data.body);
+    console.log(formData.getAll("image"));
+    const response = await createPost(formData);
+    // console.log(response);
   };
-
   const onChangeHandle = (e) => {
     // console.log(e.target.value);
     //arr.push(e.target.value);
@@ -53,11 +63,11 @@ const PostForm = (props) => {
           {props.title}
         </Text>
         <Box>
-          <FormControl>
+          <FormControl enctype="multipart/form-data">
             <Select
               placeholder="Select Category"
               onChange={onChangeHandle}
-              size="xl"
+              size="lg"
               name="categories"
               //value={data}
             >
@@ -84,21 +94,17 @@ const PostForm = (props) => {
               type="text"
               placeholder="slug here"
               name="slug"
-              value={data.title}
               onChange={(e) =>
-                setData({ ...data, [e.target.name]: data.title })
+                setData({ ...data, [e.target.name]: e.target.value })
               }
               my={4}
             />
             <Input
-              type="text"
-              placeholder="give image
-            "
-              name="img"
+              type="file"
+              placeholder="give imag "
+              name="image"
               my={4}
-              onChange={(e) =>
-                setData({ ...data, [e.target.name]: e.target.value })
-              }
+              onChange={(e) => setImage(e.target.files[0])}
             />
             <Textarea
               placeholder="Text Your Body here"

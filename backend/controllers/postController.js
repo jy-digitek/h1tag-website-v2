@@ -1,19 +1,41 @@
 const Post = require("../modals/post");
 const Categories = require("../modals/categories");
 
+// const upload = multer({
+//   storage: multer.diskStorage({
+//     destination: (req, res, cb) => {
+//       cb(null, "../uploads");
+//     },
+//     filename: (req, file, cb) => {
+//       cb(null, file.fieldname + "-" + Date.now() + [".jpg", ".jpeg"]);
+//     },
+//   }),
+// }).single("post_file");
+
 module.exports = {
   //admin---set
   postCreate: async (req, res) => {
     try {
-      const post = req.body;
-      console.log(req.body);
-      const newPost = await Post.create(post);
+      console.log("--->", req.file);
+      // console.log(fs);
+      var obj = {
+        title: req.body.title,
+        slug: req.body.slug,
+        image: req.body.image,
+        categories: req.body.categories,
+        summary: req.body.summary,
+        body: req.body.body,
+      };
+
+      console.log(obj);
+      const newPost = await Post.create(obj);
+      console.log(newPost);
       console.log(newPost);
       const cat = await Categories.updateMany(
         { _id: newPost.categories },
         { $push: { posts: newPost._id } }
       );
-      console.log(cat, "category");
+      //  console.log(cat, "category");
       return res.status(201).json(newPost);
     } catch (error) {
       return res.status(500).json({ error: "can not be stored" });

@@ -1,7 +1,7 @@
 import axios from "./index";
 
-export const createPost = () => {
-  return axios.post(`postcreate`);
+export const createPost = (data) => {
+  return axios.post(`/post/postcreate`, data);
 };
 
 export const getPost = (page) => {
@@ -16,6 +16,6 @@ export const updatePost = (id, data) => {
   return axios.put(`/post/${id}`, data);
 };
 
-export const deleteUser = (id) => {
-  return axios.delete(`/post/${id}`);
-};
+// export const deleteUser = (id) => {
+//   return instance.delete(`/post/${id}`);
+// };
