@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { getPostById } from "../api/post";
 import { Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const Post = ({}) => {
   const [post, setPost] = useState({});
@@ -31,7 +32,10 @@ const Post = ({}) => {
           <h1>{post.title}</h1>
           <p>{post.summary}</p>
           <Image src={`/${post.image}`} alt="Dan Abramov" />
-          <p>{post.body}</p>
+          <div
+            style={{ padding: "10px", fontSize: "17px", textAlign: "center" }}
+            dangerouslySetInnerHTML={{ __html: post.body }}
+          ></div>
         </>
       )}
     </div>

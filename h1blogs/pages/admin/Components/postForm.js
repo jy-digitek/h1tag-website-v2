@@ -10,12 +10,14 @@ import {
   Button,
 } from "@chakra-ui/react";
 import AdminLayout from "./AdminLayout";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { createPost } from "../../api/post";
-import { useRef } from "react";
+import JoditEditor from "jodit-react";
 
 const PostForm = (props) => {
+  const editor = useRef(null);
+  const [content, setContent] = useState("");
   const [category, setCategory] = useState([]);
   const gettAllCategory = async () => {
     try {
@@ -28,12 +30,12 @@ const PostForm = (props) => {
   };
   const [data, setData] = useState([]);
   const [image, setImage] = useState(undefined);
+  const [editorLoaded, setEditorLoaded] = useState(false);
   const AddsubmitHandle = async (e) => {
     e.preventDefault();
-    // console.log(data);
-    // console.log(response);
-    // console.log(image);
+
     const formData = new FormData();
+
     formData.append("title", data.title);
     formData.append("slug", data.slug);
     formData.append("image", image);
@@ -45,15 +47,18 @@ const PostForm = (props) => {
     // console.log(response);
   };
   const onChangeHandle = (e) => {
-    // console.log(e.target.value);
-    //arr.push(e.target.value);
     setData({ ...data, [e.target.name]: e.target.value });
-    //console.log(data);
   };
   const updateSubmitHandle = () => {};
 
+  const bodyHandleChanged = (data) => {
+    console.log(data);
+    setData({ ...data, body: data });
+  };
+
   useEffect(() => {
     gettAllCategory();
+    setEditorLoaded(true);
   }, []);
 
   return (
@@ -90,6 +95,7 @@ const PostForm = (props) => {
                 setData({ ...data, [e.target.name]: e.target.value })
               }
             />
+
             <Input
               type="text"
               placeholder="slug here"
@@ -106,14 +112,14 @@ const PostForm = (props) => {
               my={4}
               onChange={(e) => setImage(e.target.files[0])}
             />
-            <Textarea
+            {/* <Textarea
               placeholder="Text Your Body here"
               my={4}
               name="body"
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
-            />
+            /> */}
             <Textarea
               placeholder="Text your summary here"
               my={4}
@@ -121,6 +127,26 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
+            />
+            {/* <Box>
+              <_Wyswyg
+                name="name"
+                // onChange={console.log(1)}
+                editorLoaded={true}
+                value={1}
+                onChange={(e) => {
+                  setData({ ...data, body:  });
+                }}
+                // editorLoaded={editorLoaded}
+              />
+              {JSON.stringify(data)}
+            </Box> */}
+            <JoditEditor
+              ref={editor}
+              value={content}
+              //tabIndex={1} // tabIndex of textarea
+              // onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+              onChange={bodyHandleChanged}
             />
             {props._id ? (
               <Button onClick={updateSubmitHandle}> Update Submit</Button>
