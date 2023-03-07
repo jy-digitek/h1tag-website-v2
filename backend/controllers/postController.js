@@ -1,16 +1,7 @@
 const Post = require("../modals/post");
 const Categories = require("../modals/categories");
-
-// const upload = multer({
-//   storage: multer.diskStorage({
-//     destination: (req, res, cb) => {
-//       cb(null, "../uploads");
-//     },
-//     filename: (req, file, cb) => {
-//       cb(null, file.fieldname + "-" + Date.now() + [".jpg", ".jpeg"]);
-//     },
-//   }),
-// }).single("post_file");
+var fs = require("fs");
+var path = require("path");
 
 module.exports = {
   //admin---set
@@ -18,18 +9,20 @@ module.exports = {
     try {
       console.log("--->", req.file);
       // console.log(fs);
+      //console.log(fs.readFileSync("uploads/" + req.file.filename));
       var obj = {
         title: req.body.title,
         slug: req.body.slug,
-        image: req.body.image,
+        image: req.file.filename,
         categories: req.body.categories,
         summary: req.body.summary,
         body: req.body.body,
+        image: req.file.path,
       };
 
-      console.log(obj);
+      //console.log(obj);
       const newPost = await Post.create(obj);
-      console.log(newPost);
+      //console.log(newPost);
       console.log(newPost);
       const cat = await Categories.updateMany(
         { _id: newPost.categories },
@@ -84,8 +77,9 @@ module.exports = {
   deletePost: async (req, res) => {
     try {
       const id = req.params.id;
-      const deletedData = await Post.findByIdAndDelete(id);
-      return res.status(201).json({ message: "data is deleted", deletedData });
+      const deletedData = await Post.findById(id);
+      deletedData.isActive = false;
+      return res.status(200).json({ message: "data is deleted", deletedData });
     } catch (error) {
       return res.status(500).json(error);
     }

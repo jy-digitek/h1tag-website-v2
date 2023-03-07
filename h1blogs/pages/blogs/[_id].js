@@ -29,10 +29,9 @@ const Post = ({}) => {
       {!loading && (
         <>
           <h1>{post.title}</h1>
+          <p>{post.summary}</p>
+          <Image src={`/${post.image}`} alt="Dan Abramov" />
           <p>{post.body}</p>
-          <p>{post.slug}</p>
-          <p>{post._id}</p>
-          <Image src={post.image} alt="Dan Abramov" />
         </>
       )}
     </div>

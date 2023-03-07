@@ -6,19 +6,19 @@ module.exports = {
     try {
       const token = req.headers["authorization"];
 
-      console.log(token, "1");
+      // console.log(token, "1");
 
       if (token == "undefined" || !token) {
         return res.status(401).json("token not got");
-        console.log(1);
+        // console.log(1);
       }
       //console.log("pre");
       const decoded = await jwt.verify(token, process.env.JWT_SECRET);
       req.user = decoded;
-      console.log("two", decoded);
+      // console.log("two", decoded);
       if (decoded.role === "admin") {
         //console.log(3);
-        console.log(decoded.role);
+        // console.log(decoded.role);
         return next();
       } else {
         res

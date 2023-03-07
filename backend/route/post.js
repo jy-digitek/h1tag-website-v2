@@ -4,9 +4,10 @@ const router = express.Router();
 const adminAuth = require("../middleware/auth");
 
 const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
-
-console.log(upload);
+// const upload = multer({ dest: "uploads/" });
+// import upload from "../middleware/upload";
+// console.log(upload);
+const upload = require("../middleware/upload");
 router
   .route("/postcreate")
   .post(adminAuth.adminAuth, upload.single("image"), postController.postCreate);
