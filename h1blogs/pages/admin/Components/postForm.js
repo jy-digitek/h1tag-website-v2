@@ -13,11 +13,11 @@ import AdminLayout from "./AdminLayout";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { createPost } from "../../api/post";
-import JoditEditor from "jodit-react";
-
+//
 const PostForm = (props) => {
-  const editor = useRef(null);
-  const [content, setContent] = useState("");
+  //const editor = useRef(null);
+  //const [content, setContent] = useState("");
+  console.log(props.data);
   const [category, setCategory] = useState([]);
   const gettAllCategory = async () => {
     try {
@@ -31,6 +31,7 @@ const PostForm = (props) => {
   const [data, setData] = useState([]);
   const [image, setImage] = useState(undefined);
   const [editorLoaded, setEditorLoaded] = useState(false);
+
   const AddsubmitHandle = async (e) => {
     e.preventDefault();
 
@@ -52,7 +53,7 @@ const PostForm = (props) => {
   const updateSubmitHandle = () => {};
 
   const bodyHandleChanged = (data) => {
-    console.log(data);
+    // console.log(data);
     setData({ ...data, body: data });
   };
 
@@ -68,13 +69,14 @@ const PostForm = (props) => {
           {props.title}
         </Text>
         <Box>
+          {/* Selected category -{} */}
+          {/* {console.log("props", props.data.categories[0].name)} */}
           <FormControl enctype="multipart/form-data">
             <Select
               placeholder="Select Category"
               onChange={onChangeHandle}
               size="lg"
               name="categories"
-              //value={data}
             >
               {category &&
                 category.map((item, i) => {
@@ -85,7 +87,6 @@ const PostForm = (props) => {
                   );
                 })}
             </Select>
-
             <Input
               type="text"
               placeholder="Give title here"
@@ -94,8 +95,8 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
+              value={props.data.title}
             />
-
             <Input
               type="text"
               placeholder="slug here"
@@ -103,6 +104,7 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
+              value={props.data.slug}
               my={4}
             />
             <Input
@@ -112,14 +114,7 @@ const PostForm = (props) => {
               my={4}
               onChange={(e) => setImage(e.target.files[0])}
             />
-            {/* <Textarea
-              placeholder="Text Your Body here"
-              my={4}
-              name="body"
-              onChange={(e) =>
-                setData({ ...data, [e.target.name]: e.target.value })
-              }
-            /> */}
+            {/* <img src={`uploads/${props.data.image}`} /> */}
             <Textarea
               placeholder="Text your summary here"
               my={4}
@@ -127,27 +122,19 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
+              value={props.data.summary}
             />
-            {/* <Box>
-              <_Wyswyg
-                name="name"
-                // onChange={console.log(1)}
-                editorLoaded={true}
-                value={1}
-                onChange={(e) => {
-                  setData({ ...data, body:  });
-                }}
-                // editorLoaded={editorLoaded}
-              />
-              {JSON.stringify(data)}
-            </Box> */}
-            <JoditEditor
-              ref={editor}
-              value={content}
-              //tabIndex={1} // tabIndex of textarea
-              // onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
-              onChange={bodyHandleChanged}
+
+            <Textarea
+              placeholder="Text your body here"
+              my={4}
+              name="body"
+              onChange={(e) =>
+                setData({ ...data, [e.target.name]: e.target.value })
+              }
+              value={props.data.body}
             />
+
             {props._id ? (
               <Button onClick={updateSubmitHandle}> Update Submit</Button>
             ) : (

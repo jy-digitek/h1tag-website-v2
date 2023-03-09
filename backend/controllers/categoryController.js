@@ -38,6 +38,7 @@ module.exports = {
   updateCategory: async (req, res) => {
     try {
       const id = req.params.id;
+      console.log(id);
       if (!id) {
         return res.status(404).json({ message: "category not found" });
       }

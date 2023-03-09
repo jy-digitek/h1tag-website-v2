@@ -10,9 +10,9 @@ if (typeof window !== "undefined") {
   // Perform localStorage action
   const token = localStorage.getItem("token");
   axios.defaults.baseURL = "http://localhost:5000/api/vi";
-  axios.defaults.headers.common = { Authorization: `${token}` };
+  axios.defaults.headers.common = { Authorization: `Bearer ${token}` };
 
-  console.log(axios.headers);
+  // console.log(axios.headers);
 }
 
 // //const token = localStorage.getItem("token");
