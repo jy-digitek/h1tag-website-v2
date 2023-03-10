@@ -13,27 +13,19 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
-import axios from "axios";
 import Link from "next/link";
-import { Spinner } from "@chakra-ui/react";
 
-import { getPost } from "../api/post";
+import { useDispatch, useSelector } from "react-redux";
+import { getPostList } from "../redux/featured/actions";
 
 const Blog = () => {
-  const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(1);
-  const [loadingPosts, loadingPostsSet] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
-  const [postIsVisible, postIsVisibleSet] = useState(false);
-  // const getData = async () => {
-  //   const response = await axios.get(
-  //     `http://localhost:5000/api/vi/post/posts?page=${page}`
-  //   );
 
-  //   console.log(response.data.totalPages);
-  //   setTotalPages(response.data.totalPages);
-  //   setPosts(response.data.posts);
-  // };
+  const post = useSelector((state) => state.post.data);
+
+  console.log("post", post);
+  const dispatch = useDispatch();
 
   const prevPage = () => {
     if (page > 1) {
@@ -46,16 +38,7 @@ const Blog = () => {
     }
   };
   useEffect(() => {
-    loadingPostsSet(true);
-    getPost(page)
-      .then((response) => {
-        setPosts(response.data.posts);
-        setTotalPages(response.data.totalPages);
-        loadingPostsSet(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    dispatch(getPostList(page));
   }, [page]);
 
   return (
@@ -63,14 +46,11 @@ const Blog = () => {
       <Container maxW={"full"}>
         <Box align={"center"} pt={3}>
           <Heading as="h1">Blog</Heading>
-
-          {loadingPosts && <Spinner size="sm" />}
         </Box>
         <SimpleGrid columns={[1, 3]} py={10} px={[0, 20]} align="center">
-          {!loadingPosts &&
-            posts &&
-            posts.length > 0 &&
-            posts.map((data, index) => (
+          {post &&
+            post.length > 0 &&
+            post.map((data, index) => (
               <Box py={[5]} key={index}>
                 {/* {data.isVisible != false && ( */}
                 <Card maxW="xs">

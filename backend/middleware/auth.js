@@ -37,7 +37,7 @@ module.exports = {
       // return res.status(500).json("server error");
       res
         .status(403)
-        .json({ message: "you are not authentiocated", success: false });
+        .json({ message: "you are not authentiocated  ", success: false });
     }
   },
   userAuth: (req, res) => {},
