@@ -1,43 +1,34 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
-import { getPostById } from "../api/post";
 import { Image } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
-
+import { getSinglePost } from "../redux/featured/actions";
+import { useDispatch, useSelector } from "react-redux";
 const Post = ({}) => {
-  const [post, setPost] = useState({});
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
-
   const { _id } = router.query;
-  const getData = async () => {
-    getPostById(_id)
-      .then((response) => setPost(response.data.post))
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  const post = useSelector((state) => state.post.data);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setLoading(true);
-    getData();
-    setLoading(false);
+    if (_id) {
+      dispatch(getSinglePost(_id));
+    }
   }, [_id]);
 
   return (
     <div>
-      {!loading && (
+      {
         <>
-          <h1>{post.title}</h1>
-          <p>{post.summary}</p>
+          <h1>{post.title} title</h1>
+          <p>{post.summary}summary</p>
           <Image src={`/${post.image}`} alt="Dan Abramov" />
           <div
             style={{ padding: "10px", fontSize: "17px", textAlign: "center" }}
             dangerouslySetInnerHTML={{ __html: post.body }}
           ></div>
         </>
-      )}
+      }
     </div>
   );
 };

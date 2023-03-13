@@ -10,32 +10,26 @@ import {
   Button,
   Box,
   Flex,
-  Link,
 } from "@chakra-ui/react";
-
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-
 import axios from "axios";
 import AdminLayout from "../Components/AdminLayout";
 import PostForm from "../Components/postForm";
 import AddPost from "./addPost";
+import { useSelector, useDispatch } from "react-redux";
+import { getPostList } from "../../redux/featured/actions";
 
 const DashBoard = () => {
   const router = useRouter();
-  const [posts, setPosts] = useState([]);
+
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  const getData = async () => {
-    const response = await axios.get(
-      `http://localhost:5000/api/vi/post/posts?page=${page}`
-    );
-    //  const data=await response;
-    setTotalPages(response.data.totalPages);
-    setPosts(response.data.posts);
-    console.log(response.data);
-  };
+  const posts = useSelector((state) => state.post.data);
+
+  const dispatch = useDispatch();
   const prevPage = () => {
     if (page > 1) {
       setPage(page - 1);
@@ -51,7 +45,7 @@ const DashBoard = () => {
     if (!localStorage.getItem("token")) {
       router.replace("/admin");
     } else {
-      getData();
+      dispatch(getPostList(page));
     }
   }, [page]);
 

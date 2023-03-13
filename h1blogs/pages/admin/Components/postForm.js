@@ -10,13 +10,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import AdminLayout from "./AdminLayout";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { createPost } from "../../api/post";
-//
+
+import { postCreate } from "../../redux/featured/actions";
+import { useDispatch } from "react-redux";
 const PostForm = (props) => {
-  //const editor = useRef(null);
-  //const [content, setContent] = useState("");
   console.log(props.data);
   const [category, setCategory] = useState([]);
   const gettAllCategory = async () => {
@@ -30,7 +29,7 @@ const PostForm = (props) => {
   };
   const [data, setData] = useState([]);
   const [image, setImage] = useState(undefined);
-  const [editorLoaded, setEditorLoaded] = useState(false);
+  const dispatch = useDispatch();
 
   const AddsubmitHandle = async (e) => {
     e.preventDefault();
@@ -44,8 +43,8 @@ const PostForm = (props) => {
     formData.append("categories", data.categories);
     formData.append("body", data.body);
     console.log(formData.getAll("image"));
-    const response = await createPost(formData);
-    // console.log(response);
+
+    dispatch(postCreate(formData));
   };
   const onChangeHandle = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -53,13 +52,11 @@ const PostForm = (props) => {
   const updateSubmitHandle = () => {};
 
   const bodyHandleChanged = (data) => {
-    // console.log(data);
     setData({ ...data, body: data });
   };
 
   useEffect(() => {
     gettAllCategory();
-    setEditorLoaded(true);
   }, []);
 
   return (
@@ -95,7 +92,6 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
-              value={props.data.title}
             />
             <Input
               type="text"
@@ -104,7 +100,6 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
-              value={props.data.slug}
               my={4}
             />
             <Input
@@ -122,7 +117,6 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
-              value={props.data.summary}
             />
 
             <Textarea
@@ -132,7 +126,6 @@ const PostForm = (props) => {
               onChange={(e) =>
                 setData({ ...data, [e.target.name]: e.target.value })
               }
-              value={props.data.body}
             />
 
             {props._id ? (

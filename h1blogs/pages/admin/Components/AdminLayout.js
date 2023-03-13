@@ -24,7 +24,7 @@ import {
   Flex,
   Icon,
   useColorModeValue,
-  // Link,
+  Button,
   Drawer,
   DrawerContent,
   Text,
@@ -103,6 +103,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
           {link.name}
         </NavItem>
       ))}
+      <Button alignItems="center" mx="8">
+        LogOut
+      </Button>
     </Box>
   );
 };

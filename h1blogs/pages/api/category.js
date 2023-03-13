@@ -5,6 +5,7 @@ export const createCategory = (data) => {
 };
 
 export const gettAllCategory = () => {
+  // console.log("axios category");
   return axios.get(`category/getallcategory`);
 };
 

@@ -45,11 +45,11 @@ const Category = (props) => {
 
           <Box textAlign="center" py={10}>
             {props._id ? (
-              <Button px={10} onClick={onUpdateHandle}>
+              <Button px={10} bg={"blue.500"} onClick={onUpdateHandle}>
                 Update Category
               </Button>
             ) : (
-              <Button px={10} onClick={onAddHandle}>
+              <Button px={10} bg={"blue.500"} onClick={onAddHandle}>
                 add Category
               </Button>
             )}
