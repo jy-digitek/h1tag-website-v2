@@ -6,57 +6,59 @@ import {
   Input,
   Button,
   Heading,
+  FormLabel,
 } from "@chakra-ui/react";
-import AdminLayout from "./AdminLayout";
-const Category = (props) => {
-  const [data, setData] = useState({});
-  const onChangeHandle = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
-    console.log(data);
-  };
-  const onAddHandle = (e) => {
-    e.preventDefault();
-    console.log(1);
-    console.log(data);
-  };
-  const onUpdateHandle = (e) => {
-    e.preventDefault();
-    console.log("update");
-  };
-  return (
-    <AdminLayout>
-      <Container maxW={"full"} py={10}>
-        <Heading textAlign={"center"}>{props.title}</Heading>
-        <FormControl>
-          <Input
-            mt={10}
-            type="text"
-            placeholder={"Enter category name"}
-            onChange={onChangeHandle}
-            name={"name"}
-          />
-          <Input
-            mt={10}
-            type="text"
-            placeholder={"Enter category name"}
-            onChange={onChangeHandle}
-            name={"description"}
-          />
 
-          <Box textAlign="center" py={10}>
-            {props._id ? (
-              <Button px={10} bg={"blue.500"} onClick={onUpdateHandle}>
-                Update Category
-              </Button>
-            ) : (
-              <Button px={10} bg={"blue.500"} onClick={onAddHandle}>
-                add Category
-              </Button>
-            )}
-          </Box>
-        </FormControl>
-      </Container>
-    </AdminLayout>
+const Category = (props) => {
+  const [name, setName] = useState(props.name ? props.name : "");
+  const [description, setDescription] = useState(
+    props.description ? props.description : ""
+  );
+
+  return (
+    <Container maxW={"full"} py={10}>
+      <Heading textAlign={"center"}>{props.title}</Heading>
+
+      <FormControl>
+        <Input
+          mt={10}
+          type="text"
+          placeholder={"Enter category name"}
+          onChange={(e) => {
+            setName(e.target.value);
+            props.setName(e.target.value);
+          }}
+          name={"name"}
+          value={name}
+        />
+
+        <Input
+          mt={10}
+          type="text"
+          placeholder={"Enter category name"}
+          name={"description"}
+          onChange={(e) => {
+            setDescription(e.target.value);
+            props.setDescription(e.target.value);
+          }}
+          value={description}
+        />
+
+        <Box textAlign="center" py={10}>
+          <Button
+            px={10}
+            bg={"blue.500"}
+            onClick={(e) => {
+              props.onClickEvent(e);
+              setName("");
+              setDescription("");
+            }}
+          >
+            {props.isEditing ? "Update" : "Save"} Category
+          </Button>
+        </Box>
+      </FormControl>
+    </Container>
   );
 };
 

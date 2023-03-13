@@ -9,8 +9,8 @@ export const gettAllCategory = () => {
   return axios.get(`category/getallcategory`);
 };
 
-export const updateCategory = (id) => {
-  return axios.update(`category/category/${id}`);
+export const updateCategory = (id, data) => {
+  return axios.update(`category/category/${id}`, data);
 };
 
 export const getSingleCategory = (id) => {

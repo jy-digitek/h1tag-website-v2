@@ -51,4 +51,8 @@ module.exports = {
       return res.status(500).json(error);
     }
   },
+  deleteCategory: async (req, res) => {
+    try {
+    } catch (error) {}
+  },
 };
