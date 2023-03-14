@@ -29,7 +29,7 @@ export const authSlice = createSlice({
       state.error = payload;
     },
     [userLogout.pending]: (state) => {
-      console.log(state);
+      // console.log(state);
       state.isLoading = true;
     },
     [userLogout.fulfilled]: (state, { payload }) => {

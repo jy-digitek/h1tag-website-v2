@@ -3,7 +3,7 @@ const { normalize } = require("path");
 
 let destination = "./../uploads/";
 // "../h1blogs/public/uploads"
-
+console.log("destination", destination);
 //const require('./')
 
 const imgconfig = multer.diskStorage({

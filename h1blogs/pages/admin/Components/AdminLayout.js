@@ -1,5 +1,7 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+
 import Link from "next/link";
 import {
   IconButton,
@@ -24,9 +26,9 @@ import {
   FiSettings,
   FiMenu,
 } from "react-icons/fi";
-import { IconType } from "react-icons";
-import { ReactText } from "react";
+
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { userLogout } from "../../redux/featured/actions";
 const LinkItems = [
   { name: "Categories", icon: FiHome, link: "/admin/dashboard/categories" },
@@ -70,6 +72,15 @@ export default function AdminLayout({ children }) {
 
 const SidebarContent = ({ onClose, ...rest }) => {
   const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.auth);
+  const router = useRouter();
+
+  const goto = (e) => {
+    router.push({
+      pathname: "/admin",
+    });
+  };
+
   return (
     <Box
       bg={useColorModeValue("white", "gray.900")}
@@ -90,7 +101,14 @@ const SidebarContent = ({ onClose, ...rest }) => {
           {link.name}
         </NavItem>
       ))}
-      <Button alignItems="center" mx="8" onClick={() => dispatch(userLogout())}>
+      <Button
+        alignItems="center"
+        mx="8"
+        onClick={(e) => {
+          dispatch(userLogout(e));
+          goto(e);
+        }}
+      >
         LogOut
       </Button>
     </Box>

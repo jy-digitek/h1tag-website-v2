@@ -85,6 +85,8 @@ export const userLogin = createAsyncThunk(
   async (data) => {
     try {
       const res = await login(data);
+      if (!res.data.token) {
+      }
       window.localStorage.setItem("token", res.data.token);
       return res.data;
     } catch (error) {
