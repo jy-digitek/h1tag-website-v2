@@ -78,7 +78,8 @@ module.exports = {
     try {
       const id = req.params.id;
       const deletedData = await Post.findById(id);
-      deletedData.isActive = false;
+      deletedData.isVisible = false;
+      await deletedData.save();
       return res.status(200).json({ message: "data is deleted", deletedData });
     } catch (error) {
       return res.status(500).json(error);

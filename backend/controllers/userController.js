@@ -7,7 +7,12 @@ const jwtSecret =
 module.exports = {
   registerUser: async (req, res) => {
     try {
-      const user = await User.create(req.body);
+      const hashedPassword = await bcrypt.hash(req.body.password, 10);
+      const user = await User.create({
+        name: req.body.name,
+        email: req.body.email,
+        password: hashedPassword,
+      });
       return res.status(201).json(user);
     } catch (error) {
       return res.status(500).json(error);
@@ -30,27 +35,35 @@ module.exports = {
   },
   login: async (req, res) => {
     try {
+      console.log("start use");
+      console.log(req.body.email, req.body.password);
       const user = await User.findOne({ email: req.body.email });
       if (user) {
-        const authpassword = user.comparePassword(
-          user.password,
-          req.body.password
+        const authpassword = await bcrypt.compare(
+          req.body.password,
+          user.password
         );
+        // console.log(user.password);
+        // console.log(req.body.email, req.body.password);
+        // console.log(authpassword);
         if (authpassword) {
           const token = user.getToken();
-          var data = { role: user.role, id: user.id, username: user.email };
-          // res.cookie("token", token, {
-          //     httpOnly: true
-          // })
-          return res.status(201).json({ meggage: "login successfull", token });
+          console.log(1);
+          return res
+            .status(201)
+            .json({ meggage: "login successfull", token, success: true });
         } else {
-          return res.status(400).json({ message: "wrong credentials" });
+          return res
+            .status(400)
+            .json({ message: "wrong credentials1", success: false });
         }
       } else {
-        return res.status(400).json({ message: "wrong Credentials" });
+        return res
+          .status(400)
+          .json({ message: "wrong Credentials2", success: false });
       }
     } catch (error) {
-      res.send("failed");
+      res.status(500).json("failed");
     }
   },
   logout: async (req, res) => {

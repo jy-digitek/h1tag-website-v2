@@ -53,6 +53,15 @@ module.exports = {
   },
   deleteCategory: async (req, res) => {
     try {
-    } catch (error) {}
+      const id = req.params.id;
+      console.log(id);
+      if (!id) {
+        return res.status(404).json({ message: "category not found" });
+      }
+      const deletedData = await Categories.findByIdAndDelete(id);
+      return res.status(204).json({ success: true, deletedData });
+    } catch (error) {
+      return res.status(500).json(error);
+    }
   },
 };

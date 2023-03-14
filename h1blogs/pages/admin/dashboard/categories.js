@@ -15,7 +15,11 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { getCategories, createCategories } from "../../redux/featured/actions";
+import {
+  getCategories,
+  createCategories,
+  deleteCategories,
+} from "../../redux/featured/actions";
 
 import CategoryForm from "../../admin/Components/CategoryForm";
 
@@ -37,10 +41,10 @@ const categories = () => {
     e.preventDefault();
   };
   const categoriesData = useSelector((state) => state.category);
-  console.log("category", categoriesData.category);
+  //console.log("category", categoriesData.category);
   useEffect(() => {
     dispatch(getCategories());
-  }, []);
+  }, [dispatch]);
 
   return (
     <AdminLayout>
@@ -76,6 +80,7 @@ const categories = () => {
                   categoriesData.isSuccess &&
                   categoriesData.category.map((item, key) => (
                     <Tr key={key}>
+                      {console.log(item.name)}
                       <Td>{item.name}</Td>
                       <Td gap={10}>
                         <ReturnFocus
@@ -102,7 +107,11 @@ const categories = () => {
                           }
                         />
 
-                        <Button bg="red.500" color="white">
+                        <Button
+                          bg="red.500"
+                          color="white"
+                          onClick={() => dispatch(deleteCategories(item._id))}
+                        >
                           Delete
                         </Button>
                       </Td>

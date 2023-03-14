@@ -5,13 +5,13 @@ module.exports = {
     // console.log(token);
     try {
       const hrds = req.headers["authorization"];
-      console.log(hrds);
+      //console.log(hrds);
       const tkt = hrds.split(" ")[1];
-      console.log("tkt", tkt);
+      //console.log("tkt", tkt);
       //const token = req.headers["authorization"].split(" ")[2];
-      console.log("headers", req.headers);
+      // console.log("headers", req.headers);
       // console.log(token, "1");
-      console.log(tkt);
+      // console.log(tkt);
 
       if (tkt == "undefined" || !tkt) {
         return res.status(401).json("token not got");
@@ -22,7 +22,7 @@ module.exports = {
       //console.log("pre");
       const decoded = await jwt.verify(tkt, process.env.JWT_SECRET);
       req.user = decoded;
-      console.log("two", decoded);
+      //console.log("two", decoded);
       if (decoded.role === "admin") {
         //console.log(3);
         // console.log(decoded.role);

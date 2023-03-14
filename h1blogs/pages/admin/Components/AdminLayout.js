@@ -1,19 +1,3 @@
-// import Footer from "../../../components/footer";
-// import Topbar from "../../../components/Topbar";
-// import { ChakraProvider } from "@chakra-ui/react";
-// import AdminNavbar from "./AdminNavbar.js";
-
-// export default function AdminLayout({ children }) {
-//   return (
-//     <ChakraProvider>
-//       <Topbar />
-//       <AdminNavbar />
-//       <main>{children}</main>
-//       <Footer />
-//     </ChakraProvider>
-//   );
-// }
-
 import React, { ReactNode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import Link from "next/link";
@@ -42,7 +26,8 @@ import {
 } from "react-icons/fi";
 import { IconType } from "react-icons";
 import { ReactText } from "react";
-
+import { useDispatch } from "react-redux";
+import { userLogout } from "../../redux/featured/actions";
 const LinkItems = [
   { name: "Categories", icon: FiHome, link: "/admin/dashboard/categories" },
   { name: "posts", icon: FiTrendingUp, link: "/admin/dashboard/posts" },
@@ -52,6 +37,7 @@ const LinkItems = [
 
 export default function AdminLayout({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <ChakraProvider>
       <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
@@ -83,6 +69,7 @@ export default function AdminLayout({ children }) {
 }
 
 const SidebarContent = ({ onClose, ...rest }) => {
+  const dispatch = useDispatch();
   return (
     <Box
       bg={useColorModeValue("white", "gray.900")}
@@ -103,7 +90,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
           {link.name}
         </NavItem>
       ))}
-      <Button alignItems="center" mx="8">
+      <Button alignItems="center" mx="8" onClick={() => dispatch(userLogout())}>
         LogOut
       </Button>
     </Box>

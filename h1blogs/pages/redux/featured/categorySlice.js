@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getCategories, createCategories } from "./actions";
+import { getCategories, createCategories, deleteCategories } from "./actions";
 //import { gettAllCategory } from "../../api/category";
 
 const initialState = {
@@ -36,6 +36,24 @@ export const categorySlice = createSlice({
       state.category = [action.payload];
     },
     [createCategories.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isSuccess = false;
+      state.errorMessage = payload;
+    },
+    [deleteCategories.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [deleteCategories.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.isSuccess = true;
+      // state.category = [action.payload];
+      state.category = state.category.filter(
+        (item) => item._id !== action.payload
+      );
+
+      // console.log("slice", action.payload);
+    },
+    [deleteCategories.rejected]: (state, { payload }) => {
       state.isLoading = false;
       state.isSuccess = false;
       state.errorMessage = payload;

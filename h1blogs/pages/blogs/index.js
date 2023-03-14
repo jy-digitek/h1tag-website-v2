@@ -14,6 +14,9 @@ import {
 import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 import Link from "next/link";
+import { login } from "../api/category";
+
+import { userLogin } from "../redux/featured/actions";
 
 import { useDispatch, useSelector } from "react-redux";
 import { getPostList } from "../redux/featured/actions";
@@ -24,7 +27,7 @@ const Blog = () => {
 
   const post = useSelector((state) => state.post.data);
 
-  console.log("post", post);
+  //console.log("post", post);
   const dispatch = useDispatch();
 
   const prevPage = () => {
@@ -39,6 +42,7 @@ const Blog = () => {
   };
   useEffect(() => {
     dispatch(getPostList(page));
+    //login("rajputkdsingh999@gmail.com", "7408822798");
   }, [page]);
 
   return (
