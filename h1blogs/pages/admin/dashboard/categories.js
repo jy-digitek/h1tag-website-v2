@@ -13,17 +13,22 @@ import {
   Button,
   Box,
   Flex,
+  Heading,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import {
   getCategories,
   createCategories,
   deleteCategories,
+  updateCategories,
 } from "../../redux/featured/actions";
+
+import { updateCategory } from "../../api/category";
 
 import CategoryForm from "../../admin/Components/CategoryForm";
 
 import ReturnFocus from "../Components/modal";
+
 const categories = () => {
   const dispatch = useDispatch();
 
@@ -31,7 +36,9 @@ const categories = () => {
 
   const [name, setName] = React.useState("");
   const [description, setDescription] = React.useState("");
-
+  const [updateName, setUpdateName] = React.useState("");
+  const [updateDescription, setUpdateDescription] = React.useState("");
+  const [id, setId] = React.useState("");
   const onAddHandle = (e) => {
     e.preventDefault();
     dispatch(createCategories({ name, description }));
@@ -39,25 +46,40 @@ const categories = () => {
   };
   const onUpdateHandle = (e) => {
     e.preventDefault();
+    //console.log(id);
+    //dispatch(updateCategories(id, name, description));
+    // console.log("avdibjh", updateName, updateDescription);
+    // const data = updateCategory(id, {
+    //   name: updateName,
+    //   description: updateDescription,
+    // });
+    console.log("asads", updateName, updateDescription);
+    const data = { name: updateName, description: updateDescription };
+    console.log("data1", data);
+    dispatch(updateCategories([id, data]));
+    dispatch(getCategories());
   };
   const categoriesData = useSelector((state) => state.category);
-  //console.log("category", categoriesData.category);
   useEffect(() => {
     dispatch(getCategories());
   }, [dispatch]);
 
   return (
     <AdminLayout>
-      <Box>
+      {/* <Box>
         <Link href="/admin/dashboard/createcategory">
           <Button bg={"blue.500"} px={10} my={5} color={"white"} ml={10}>
             Add Category
           </Button>
         </Link>
-      </Box>
+      </Box> */}
 
       <SimpleGrid columns={2} spacing={10}>
         <Box>
+          <Heading p={0} textAlign={"center"}>
+            Add New Category
+          </Heading>
+
           <CategoryForm
             isEditing={false}
             onClickEvent={onAddHandle}
@@ -66,6 +88,10 @@ const categories = () => {
           />
         </Box>
         <Box>
+          <Heading p={0} textAlign={"center"}>
+            All Category
+          </Heading>
+
           <TableContainer>
             <Table variant="simple" size={["sm", "lg"]}>
               <Thead>
@@ -80,7 +106,6 @@ const categories = () => {
                   categoriesData.isSuccess &&
                   categoriesData.category.map((item, key) => (
                     <Tr key={key}>
-                      {console.log(item.name)}
                       <Td>{item.name}</Td>
                       <Td gap={10}>
                         <ReturnFocus
@@ -96,13 +121,13 @@ const categories = () => {
                             <CategoryForm
                               item={item}
                               isEditing={true}
-                              onClickEvent={
-                                isEditing ? onUpdateHandle : onAddHandle
-                              }
-                              setName={setName}
-                              setDescription={setDescription}
+                              onClickEvent={onUpdateHandle}
+                              setName={setUpdateName}
+                              setDescription={setUpdateDescription}
                               name={item.name}
                               description={item.description}
+                              setId={setId}
+                              id={item._id}
                             />
                           }
                         />

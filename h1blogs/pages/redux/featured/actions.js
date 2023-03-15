@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import {
   gettAllCategory,
-  updateCategory,
   createCategory,
   deleteCategory,
   login,
 } from "../../api/category";
 import { getPost, getPostById, createPost } from "../../api/post";
+
+import { updateCategory } from "../../api/category";
 
 export const getPostList = createAsyncThunk(
   "post/getPostList",
@@ -55,9 +56,11 @@ export const getCategories = createAsyncThunk(
 
 export const updateCategories = createAsyncThunk(
   "category/updateCategory",
-  async (id, data) => {
-    const res = await updateCategory(id, data);
-    // console.log(res);
+
+  async (data) => {
+    const res = await updateCategory(data[0], data[1]);
+    console.log("action res", res.data);
+    return res.data;
   }
 );
 

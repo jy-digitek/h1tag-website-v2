@@ -10,7 +10,7 @@ export const gettAllCategory = () => {
 };
 
 export const updateCategory = (id, data) => {
-  return axios.update(`category/category/${id}`, data);
+  return axios.put(`category/category/${id}`, data);
 };
 
 export const getSingleCategory = (id) => {

@@ -14,7 +14,11 @@ const Category = (props) => {
   const [description, setDescription] = useState(
     props.description ? props.description : ""
   );
-
+  if (props.item) {
+    props.setId(props.item._id);
+  }
+  props.setName(name);
+  props.setDescription(description);
   return (
     <Container maxW={"full"} py={10}>
       <Heading textAlign={"center"}>{props.title}</Heading>
@@ -23,19 +27,19 @@ const Category = (props) => {
         <Input
           mt={10}
           type="text"
-          placeholder={"Enter category name"}
+          name={"name"}
+          placeholder={"Enter Category Name"}
           onChange={(e) => {
             setName(e.target.value);
             props.setName(e.target.value);
           }}
-          name={"name"}
           value={name}
         />
 
         <Input
           mt={10}
           type="text"
-          placeholder={"Enter category name"}
+          placeholder={"Enter Category Description"}
           name={"description"}
           onChange={(e) => {
             setDescription(e.target.value);
@@ -45,17 +49,31 @@ const Category = (props) => {
         />
 
         <Box textAlign="center" py={10}>
-          <Button
-            px={10}
-            bg={"blue.500"}
-            onClick={(e) => {
-              props.onClickEvent(e);
-              setName("");
-              setDescription("");
-            }}
-          >
-            {props.isEditing ? "Update" : "Save"} Category
-          </Button>
+          {props.isEditing ? (
+            <Button
+              px={10}
+              bg={"blue.500"}
+              onClick={(e) => {
+                props.onClickEvent(e);
+                setName("");
+                setDescription("");
+              }}
+            >
+              Update Category
+            </Button>
+          ) : (
+            <Button
+              px={10}
+              bg={"blue.500"}
+              onClick={(e) => {
+                props.onClickEvent(e);
+                setName("");
+                setDescription("");
+              }}
+            >
+              Save Category
+            </Button>
+          )}
         </Box>
       </FormControl>
     </Container>

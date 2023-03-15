@@ -52,16 +52,19 @@ const DashBoard = () => {
   return (
     <AdminLayout>
       <Box>
-        <Button
-          bg={"blue.500"}
-          px={10}
-          my={5}
-          color={"white"}
-          ml={10}
-          // onClick={router.push("/admin")}
-        >
-          <Link href="/admin/dashboard/addPost">add post</Link>
-        </Button>
+        <Link href="/admin/dashboard/addPost">
+          {" "}
+          <Button
+            bg={"blue.500"}
+            px={10}
+            my={5}
+            color={"white"}
+            ml={10}
+            // onClick={router.push("/admin")}
+          >
+            add post
+          </Button>
+        </Link>
       </Box>
       <TableContainer>
         <Table variant="simple" size={["sm", "lg"]}>
@@ -80,9 +83,11 @@ const DashBoard = () => {
                     <Td>i{data._id}</Td>
                     <Td>{data.title}</Td>
                     <Td gap={10}>
-                      <Button bg={"yellow.200"} mr={5}>
-                        <Link href="/admin/dashboard/updatePost">Edit</Link>
-                      </Button>
+                      <Link href={`/admin/dashboard/updatepost/${data._id}`}>
+                        <Button bg={"yellow.200"} mr={5}>
+                          Edit
+                        </Button>
+                      </Link>
                       <Button bg="red.500" color="white">
                         Delete
                       </Button>

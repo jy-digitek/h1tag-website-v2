@@ -10,53 +10,20 @@ import {
   Button,
 } from "@chakra-ui/react";
 import AdminLayout from "./AdminLayout";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect } from "react";
+import { getCategories } from "../../redux/featured/actions";
 
-import { postCreate } from "../../redux/featured/actions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 const PostForm = (props) => {
-  console.log(props.data);
-  const [category, setCategory] = useState([]);
-  const gettAllCategory = async () => {
-    try {
-      const category = await axios.get(
-        `http://localhost:5000/api/vi/category/getallcategory`
-      );
-      // console.log(category.data);
-      setCategory(category.data);
-    } catch (error) {}
-  };
-  const [data, setData] = useState([]);
-  const [image, setImage] = useState(undefined);
   const dispatch = useDispatch();
 
-  const AddsubmitHandle = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-
-    formData.append("title", data.title);
-    formData.append("slug", data.slug);
-    formData.append("image", image);
-    formData.append("summary", data.summary);
-    formData.append("categories", data.categories);
-    formData.append("body", data.body);
-    console.log(formData.getAll("image"));
-
-    dispatch(postCreate(formData));
-  };
-  const onChangeHandle = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
-  };
-  const updateSubmitHandle = () => {};
-
-  const bodyHandleChanged = (data) => {
-    setData({ ...data, body: data });
-  };
+  const { category, isLoading, isSuccess } = useSelector(
+    (state) => state.category
+  );
 
   useEffect(() => {
-    gettAllCategory();
+    dispatch(getCategories());
   }, []);
 
   return (
@@ -66,16 +33,16 @@ const PostForm = (props) => {
           {props.title}
         </Text>
         <Box>
-          {/* Selected category -{} */}
-          {/* {console.log("props", props.data.categories[0].name)} */}
           <FormControl enctype="multipart/form-data">
             <Select
               placeholder="Select Category"
-              onChange={onChangeHandle}
+              onChange={(e) => props.setCategories(e.target.value)}
               size="lg"
               name="categories"
             >
-              {category &&
+              {!isLoading &&
+                isSuccess &&
+                category &&
                 category.map((item, i) => {
                   return (
                     <option value={item._id} key={i}>
@@ -89,17 +56,13 @@ const PostForm = (props) => {
               placeholder="Give title here"
               my={4}
               name="title"
-              onChange={(e) =>
-                setData({ ...data, [e.target.name]: e.target.value })
-              }
+              onChange={(e) => props.setTitle(e.target.value)}
             />
             <Input
               type="text"
               placeholder="slug here"
               name="slug"
-              onChange={(e) =>
-                setData({ ...data, [e.target.name]: e.target.value })
-              }
+              onChange={(e) => props.setSlug(e.target.value)}
               my={4}
             />
             <Input
@@ -107,31 +70,27 @@ const PostForm = (props) => {
               placeholder="give imag "
               name="image"
               my={4}
-              onChange={(e) => setImage(e.target.files[0])}
+              onChange={(e) => props.setImage(e.target.files[0])}
             />
             {/* <img src={`uploads/${props.data.image}`} /> */}
             <Textarea
               placeholder="Text your summary here"
               my={4}
               name="summary"
-              onChange={(e) =>
-                setData({ ...data, [e.target.name]: e.target.value })
-              }
+              onChange={(e) => props.setSummary(e.target.value)}
             />
 
             <Textarea
               placeholder="Text your body here"
               my={4}
               name="body"
-              onChange={(e) =>
-                setData({ ...data, [e.target.name]: e.target.value })
-              }
+              onChange={(e) => props.setBody(e.target.value)}
             />
 
-            {props._id ? (
-              <Button onClick={updateSubmitHandle}> Update Submit</Button>
+            {props.data ? (
+              <Button> Update Submit</Button>
             ) : (
-              <Button onClick={AddsubmitHandle}>Add Submit</Button>
+              <Button onClick={props.addsubmitHandle}>Add Submit</Button>
             )}
           </FormControl>
         </Box>

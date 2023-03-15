@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-
-import { useRouter } from "next/navigation";
 import { ChakraProvider } from "@chakra-ui/react";
 import {
   Box,
@@ -17,31 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { userLogin } from "../pages/redux/featured/actions";
-import Link from "next/link";
-
-import { useDispatch, useSelector } from "react-redux";
-
-export default function LoginForm({ props }) {
-  const [data, setData] = useState({});
-  const [token, setToken] = useState("");
-  const dispatch = useDispatch();
-  const router = useRouter();
-  const state = useSelector((state) => state.auth);
-
-  if (state.isLogin) {
-    router.push("/admin/dashboard");
-  } else {
-  }
-
-  const submitHandle = async () => {
-    dispatch(userLogin(data));
-  };
-
-  const changeHandle = (e) => {
-    setData((data) => ({ ...data, [e.target.name]: e.target.value }));
-  };
-
+export default function LoginForm(props) {
   return (
     <ChakraProvider>
       <Container
@@ -80,14 +53,14 @@ export default function LoginForm({ props }) {
                     id="email"
                     name="email"
                     type="email"
-                    onChange={changeHandle}
+                    onChange={(e) => props.setEmail(e.target.value)}
                   />
                 </FormControl>
                 <Input
                   id="email"
                   name="password"
                   type="password"
-                  onChange={changeHandle}
+                  onChange={(e) => props.setPassword(e.target.value)}
                 />
               </Stack>
               <HStack justify="space-between">
@@ -97,7 +70,11 @@ export default function LoginForm({ props }) {
                 </Button>
               </HStack>
               <Stack spacing="6">
-                <Button variant="primary" bg={"#2b6cb0"} onClick={submitHandle}>
+                <Button
+                  variant="primary"
+                  bg={"#2b6cb0"}
+                  onClick={props.onSubmitHandle}
+                >
                   Sign in
                 </Button>
                 <HStack>
