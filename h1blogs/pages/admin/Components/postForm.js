@@ -15,6 +15,10 @@ import { getCategories } from "../../redux/featured/actions";
 
 import { useDispatch, useSelector } from "react-redux";
 
+import ReactQuill from "react-quill";
+import React, { useState } from "react";
+import "react-quill/dist/quill.snow.css";
+
 const PostForm = (props) => {
   const dispatch = useDispatch();
 
@@ -80,17 +84,29 @@ const PostForm = (props) => {
               onChange={(e) => props.setSummary(e.target.value)}
             />
 
-            <Textarea
+            {/* <Textarea
               placeholder="Text your body here"
               my={4}
               name="body"
               onChange={(e) => props.setBody(e.target.value)}
             />
+            {props.body} */}
+            <ReactQuill
+              theme="snow"
+              value={props.body}
+              onChange={props.setBody}
+            />
 
             {props.data ? (
               <Button> Update Submit</Button>
             ) : (
-              <Button onClick={props.addsubmitHandle}>Add Submit</Button>
+              <Button
+                onClick={(e) => {
+                  props.addsubmitHandle(e);
+                }}
+              >
+                Add Submit
+              </Button>
             )}
           </FormControl>
         </Box>

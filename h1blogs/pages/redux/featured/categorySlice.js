@@ -50,12 +50,9 @@ export const categorySlice = createSlice({
     [deleteCategories.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.isSuccess = true;
-      // state.category = [action.payload];
       state.category = state.category.filter(
         (item) => item._id !== action.payload
       );
-
-      // console.log("slice", action.payload);
     },
     [deleteCategories.rejected]: (state, { payload }) => {
       state.isLoading = false;
@@ -69,9 +66,6 @@ export const categorySlice = createSlice({
     [updateCategories.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.isSuccess = true;
-      // state.category = [action.payload];
-      console.log("payload", action.payload);
-
       state.category.find((element, index) => {
         if (element._id === action.payload._id) {
           state.category[index] = action.payload;

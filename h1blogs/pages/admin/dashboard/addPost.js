@@ -38,6 +38,7 @@ const AddPost = () => {
       setCategories={setCategories}
       setBody={setBody}
       addsubmitHandle={addsubmitHandle}
+      body={body}
     />
   );
 };
