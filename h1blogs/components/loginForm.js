@@ -29,8 +29,6 @@ export default function LoginForm({ props }) {
   const router = useRouter();
   const state = useSelector((state) => state.auth);
 
-  console.log("state....", state.isLogin);
-
   if (state.isLogin) {
     router.push("/admin/dashboard");
   } else {
@@ -42,7 +40,6 @@ export default function LoginForm({ props }) {
 
   const changeHandle = (e) => {
     setData((data) => ({ ...data, [e.target.name]: e.target.value }));
-    console.log(data);
   };
 
   return (
