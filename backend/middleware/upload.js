@@ -1,7 +1,8 @@
 var multer = require("multer");
 const { normalize } = require("path");
+//const patg=require('')
 
-let destination = "./../uploads/";
+let destination = "../uploads/";
 // "../h1blogs/public/uploads"
 console.log("destination", destination);
 //const require('./')
@@ -29,18 +30,4 @@ const upload = multer({
   fileFilter: isImage,
 });
 
-// const upload = multer({
-//   storage: multer.diskStorage({
-//     destination: (req, res, cb) => {
-//       cb(null, "uploads/");
-//     },
-//     filename: (req, file, cb) => {
-//       cb(
-//         null,
-//         file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-//       );
-//       // console.log(file.fieldname);
-//     },
-//   }),
-// });
 module.exports = upload;

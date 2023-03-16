@@ -12,10 +12,10 @@ import {
 import AdminLayout from "./AdminLayout";
 import { useEffect } from "react";
 import { getCategories } from "../../redux/featured/actions";
-
+import dynamic from "next/dynamic";
 import { useDispatch, useSelector } from "react-redux";
 
-import ReactQuill from "react-quill";
+const ReactQuill = dynamic(import("react-quill"), { ssr: false });
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 
@@ -37,12 +37,17 @@ const PostForm = (props) => {
           {props.title}
         </Text>
         <Box>
-          <FormControl enctype="multipart/form-data">
+          <FormControl encType="multipart/form-data">
             <Select
               placeholder="Select Category"
-              onChange={(e) => props.setCategories(e.target.value)}
-              size="lg"
               name="categories"
+              onChange={(e) =>
+                props.setData({
+                  ...props.data,
+                  [e.target.name]: e.target.value,
+                })
+              }
+              size="lg"
             >
               {!isLoading &&
                 isSuccess &&
@@ -55,33 +60,83 @@ const PostForm = (props) => {
                   );
                 })}
             </Select>
+
             <Input
               type="text"
               placeholder="Give title here"
+              value={props.spost ? props.spost.title : props.data.title}
               my={4}
               name="title"
-              onChange={(e) => props.setTitle(e.target.value)}
+              onChange={(e) =>
+                props.spost
+                  ? props.spostSet({
+                      ...props.spost,
+                      [e.target.name]: e.target.value,
+                    })
+                  : props.setData({
+                      ...props.data,
+                      [e.target.name]: e.target.value,
+                    })
+              }
+              // onChange={(e) =>
+              // props.spostSet({
+              //   ...props.spost,
+              // [e.target.name]: e.target.value,
+              // })
+              // }
             />
             <Input
               type="text"
               placeholder="slug here"
               name="slug"
-              onChange={(e) => props.setSlug(e.target.value)}
+              value={props.spost ? props.spost.slug : props.data.slug}
+              onChange={(e) =>
+                props.spostSet
+                  ? props.spostSet({
+                      ...props.spost,
+                      [e.target.name]: e.target.value,
+                    })
+                  : props.setData({
+                      ...props.data,
+                      [e.target.name]: e.target.value,
+                    })
+              }
               my={4}
             />
             <Input
               type="file"
-              placeholder="give imag "
+              placeholder="Upload image"
               name="image"
               my={4}
-              onChange={(e) => props.setImage(e.target.files[0])}
+              onChange={(e) =>
+                props.spostSet
+                  ? props.spostSet({
+                      ...props.spost,
+                      [e.target.name]: e.target.value,
+                    })
+                  : props.setData({
+                      ...props.data,
+                      [e.target.name]: e.target.files[0],
+                    })
+              }
             />
             {/* <img src={`uploads/${props.data.image}`} /> */}
             <Textarea
               placeholder="Text your summary here"
               my={4}
               name="summary"
-              onChange={(e) => props.setSummary(e.target.value)}
+              value={props.spost ? props.spost.summary : props.data.summary}
+              onChange={(e) =>
+                props.spost
+                  ? props.spostSet({
+                      ...props.spost,
+                      [e.target.name]: e.target.value,
+                    })
+                  : props.setData({
+                      ...props.data,
+                      [e.target.name]: e.target.value,
+                    })
+              }
             />
 
             {/* <Textarea
@@ -93,12 +148,15 @@ const PostForm = (props) => {
             {props.body} */}
             <ReactQuill
               theme="snow"
-              value={props.body}
-              onChange={props.setBody}
+              value={props.spost ? props.body : props.body}
+              onChange={props.spost ? props.setBody : props.setBody}
             />
 
-            {props.data ? (
-              <Button> Update Submit</Button>
+            {props.spost ? (
+              <Button onClick={(e) => props.updateSubmitHandle(e)}>
+                {" "}
+                Update Submit
+              </Button>
             ) : (
               <Button
                 onClick={(e) => {

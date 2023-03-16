@@ -22,6 +22,7 @@ const Post = ({}) => {
         <>
           <h1>{post.title} title</h1>
           <p>{post.summary}summary</p>
+          {console.log("images", post.image)}
           <Image src={`/${post.image}`} alt="Dan Abramov" />
           <div
             style={{ padding: "10px", fontSize: "17px", textAlign: "center" }}

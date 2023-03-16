@@ -68,10 +68,23 @@ module.exports = {
       if (!id) {
         return res.status(404).json({ message: "user not found" });
       }
+      // var obj = {
+      //   title: req.body.title,
+      //   slug: req.body.slug,
+      //   image: req.file.filename,
+      //   categories: req.body.categories,
+      //   summary: req.body.summary,
+      //   body: req.body.body,
+      //   image: req.file.path,
+      // };
+
+      console.log("obj", req.body);
+
       const updatePost = await Post.findByIdAndUpdate(id, req.body);
-      return res.status(201).json({ message: "post updated", updatePost });
+      console.log("PostUpdated", updatePost);
+      return res.status(200).json({ message: "post updated", updatePost });
     } catch (error) {
-      return res.status(500).json(error);
+      return res.status(204).json(error);
     }
   },
   deletePost: async (req, res) => {

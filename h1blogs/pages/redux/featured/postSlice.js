@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getPostList, getSinglePost, postCreate } from "./actions";
+import { getPostList, getSinglePost, postCreate, updatePosts } from "./actions";
 
 const initialState = {
   data: [],
@@ -50,6 +50,24 @@ export const postSlice = createSlice({
       state.data = [payload];
     },
     [postCreate.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isSuccess = false;
+      state.errorMessage = payload;
+    },
+
+    [updatePosts.pending]: (state, { payload }) => {
+      state.isLoading = true;
+    },
+    [updatePosts.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.isSuccess = true;
+      state.data.find((item, index) => {
+        if (item._id === action.payload._id) {
+          state.data[index] = action.payload;
+        }
+      });
+    },
+    [updatePosts.rejected]: (state, { payload }) => {
       state.isLoading = false;
       state.isSuccess = false;
       state.errorMessage = payload;

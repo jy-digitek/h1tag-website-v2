@@ -12,8 +12,9 @@ export const getPostById = (id) => {
   return axios.get(`/post/${id}`);
 };
 
-export const updatePost = (id, data) => {
-  return axios.put(`/post/${id}`, data);
+export const updatePost = async (id, data) => {
+  console.log("axios", data);
+  return await axios.put(`/post/${id}`, data);
 };
 
 // export const deleteUser = (id) => {

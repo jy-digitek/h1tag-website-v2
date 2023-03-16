@@ -5,7 +5,7 @@ import {
   deleteCategory,
   login,
 } from "../../api/category";
-import { getPost, getPostById, createPost } from "../../api/post";
+import { getPost, getPostById, createPost, updatePost } from "../../api/post";
 
 import { updateCategory } from "../../api/category";
 
@@ -79,6 +79,17 @@ export const deleteCategories = createAsyncThunk(
     const res = await deleteCategory(id);
     //console.log("DELETErES", res);
     return id;
+  }
+);
+
+export const updatePosts = createAsyncThunk(
+  "category/updateCategory",
+  async (data) => {
+    console.log(data[0], data[1]);
+    const res = await updatePost(data[0], data[1]);
+    console.log("res actioon", res.data.updatePost);
+
+    return res.data.updatePost;
   }
 );
 

@@ -54,37 +54,41 @@ const Blog = () => {
         <SimpleGrid columns={[1, 3]} py={10} px={[0, 20]} align="center">
           {post &&
             post.length > 0 &&
-            post.map((data, index) => (
-              <Box py={[5]} key={index}>
-                {/* {data.isVisible != false && ( */}
-                <Card maxW="xs">
-                  <CardHeader>
-                    <Flex spacing="4">
-                      <Flex
-                        flex="1"
-                        gap="4"
-                        alignItems="center"
-                        flexWrap="wrap"
-                      >
-                        <Box>
-                          <Text>{data.title}</Text>
-                        </Box>
-                      </Flex>
-                    </Flex>
-                  </CardHeader>
-                  <CardBody>
-                    <Link href={`/blogs/${data._id}`}>view</Link>
-                  </CardBody>
-                  <Image
-                    objectFit="cover"
-                    src={`/${data.image}`}
-                    alt="Chakra UI"
-                  />
-                  {/* {console.log("img", data)} */}
-                </Card>
-                {/* )} */}
-              </Box>
-            ))}
+            post.map((data, index) => {
+              return (
+                <>
+                  {data.isVisible && (
+                    <Box py={[5]} key={index}>
+                      <Card maxW="xs">
+                        <CardHeader>
+                          <Flex spacing="4">
+                            <Flex
+                              flex="1"
+                              gap="4"
+                              alignItems="center"
+                              flexWrap="wrap"
+                            >
+                              <Box>
+                                <Text>{data.title}</Text>
+                              </Box>
+                            </Flex>
+                          </Flex>
+                        </CardHeader>
+                        <CardBody>
+                          <Link href={`/blogs/${data._id}`}>view</Link>
+                        </CardBody>
+                        <Image
+                          objectFit="cover"
+                          src={`/${data.image}`}
+                          alt="Chakra UI"
+                        />
+                        {/* {console.log("img", data)} */}
+                      </Card>
+                    </Box>
+                  )}
+                </>
+              );
+            })}
         </SimpleGrid>
         {totalPages > 1 && (
           <Box m={10}>
