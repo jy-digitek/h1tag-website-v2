@@ -36,9 +36,15 @@ module.exports = {
   },
   allPosts: async (req, res) => {
     try {
-      const { page = 1, limit = 9 } = req.query;
-
-      const posts = await Post.find()
+      const { page = 1, limit = 9, serchQuery = "" } = req.query;
+      //const searchQuery = req.query;
+      console.log("searchQuery", serchQuery, page);
+      const posts = await Post.find({
+        $or: [
+          { title: { $regex: serchQuery } },
+          { body: { $regex: serchQuery } },
+        ],
+      })
         .limit(limit * 1)
         .skip((page - 1) * limit);
       // .exex();

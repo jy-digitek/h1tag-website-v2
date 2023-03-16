@@ -9,7 +9,9 @@ import {
   Td,
   Button,
   Box,
+  Input,
   Flex,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -50,22 +52,34 @@ const DashBoard = () => {
   }, [page]);
 
   return (
-    <AdminLayout>
-      <Box>
-        <Link href="/admin/dashboard/addPost">
-          {" "}
-          <Button
-            bg={"blue.500"}
-            px={10}
-            my={5}
-            color={"white"}
-            ml={10}
-            // onClick={router.push("/admin")}
-          >
-            add post
-          </Button>
-        </Link>
-      </Box>
+    <AdminLayout pt={0}>
+      <SimpleGrid
+        columns={[1, 2]}
+        position={"sticky"}
+        top={0}
+        bg={"white"}
+        p={0}
+      >
+        <Box>
+          <Link href="/admin/dashboard/addPost">
+            {" "}
+            <Button
+              bg={"blue.500"}
+              px={10}
+              my={5}
+              color={"white"}
+              ml={10}
+              // onClick={router.push("/admin")}
+            >
+              add post
+            </Button>
+          </Link>
+        </Box>
+        <Box>
+          <Input px={10} my={5} placeholder="Search......" />
+        </Box>
+      </SimpleGrid>
+
       <TableContainer>
         <Table variant="simple" size={["sm", "lg"]}>
           <Thead>
