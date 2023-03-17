@@ -8,17 +8,18 @@ module.exports = {
   //admin---set
   postCreate: async (req, res) => {
     try {
-      console.log("--->", req.file);
+      console.log("--->", req.file.originalname);
       // console.log(fs);
       //console.log(fs.readFileSync("uploads/" + req.file.filename));
+      const imgpath = req.file.originalname;
+      console.log("imgpath", imgpath);
       var obj = {
         title: req.body.title,
         slug: req.body.slug,
-        image: req.file.filename,
+        image: imgpath,
         categories: req.body.categories,
         summary: req.body.summary,
         body: req.body.body,
-        image: req.file.path,
       };
 
       //console.log(obj);
@@ -103,17 +104,19 @@ module.exports = {
       await deletedData.save();
       return res.status(200).json({ message: "data is deleted", deletedData });
     } catch (error) {
-      return res.status(500).json(error);
+      return res.status(500).json({ message: error });
     }
   },
   visiblePost: async (req, res) => {
     try {
-      const deletedData = await Post.findById(id);
-      deletedData.isVisible = true;
-      await deletedData.save();
-      return res.status(200).json({ message: "data is deleted", deletedData });
+      const id = req.params.id;
+
+      const visiblePost = await Post.findById(id);
+      visiblePost.isVisible = true;
+      await visiblePost.save();
+      return res.status(200).json({ message: "data is visible", visiblePost });
     } catch (error) {
-      return res.status(500).json(error);
+      return res.status(500).json({ message: error, hdsnnfldf: "v sdvjhdsv" });
     }
   },
 };

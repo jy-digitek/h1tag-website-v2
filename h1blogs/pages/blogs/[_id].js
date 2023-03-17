@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 const Post = ({}) => {
   const router = useRouter();
   const { _id } = router.query;
-  const post = useSelector((state) => state.post.data);
+  const post = useSelector((state) => state.post);
+  console.log("post", post);
 
   const dispatch = useDispatch();
 
@@ -18,18 +19,22 @@ const Post = ({}) => {
 
   return (
     <div>
-      {
-        <>
-          <h1>{post.title} title</h1>
+      {!post.isLoading && (
+        <div>
+          <h1>{post.data.title} title</h1>
           <p>{post.summary}summary</p>
-          {console.log("images", post.image)}
-          <Image src={`/${post.image}`} alt="Dan Abramov" />
+          {console.log("images", post.data.image)}
+          <Image src={`../uploads/${post.data.image}`} alt="Dan Abramov" />
           <div
-            style={{ padding: "10px", fontSize: "17px", textAlign: "center" }}
-            dangerouslySetInnerHTML={{ __html: post.body }}
+            style={{ padding: "10px", fontSize: "17px" }}
+            dangerouslySetInnerHTML={{ __html: post.data.body }}
           ></div>
-        </>
-      }
+          <div>
+            <h2>Summary</h2>
+            <p>{post.data.summary}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

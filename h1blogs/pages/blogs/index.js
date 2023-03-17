@@ -83,7 +83,7 @@ const Blog = () => {
                         </CardBody>
                         <Image
                           objectFit="cover"
-                          src={`/${data.image}`}
+                          src={`./uploads/${data.image}`}
                           alt="Chakra UI"
                         />
                         {/* {console.log("img", data)} */}

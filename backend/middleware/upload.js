@@ -2,17 +2,18 @@ var multer = require("multer");
 const { normalize } = require("path");
 //const patg=require('')
 
-let destination = "../uploads/";
+let destination = "";
 // "../h1blogs/public/uploads"
 console.log("destination", destination);
 //const require('./')
 
 const imgconfig = multer.diskStorage({
   destination: (req, file, callback) => {
-    callback(null, normalize(destination));
+    callback(null, "../h1blogs/public/uploads");
   },
   filename: (req, file, callback) => {
     // callback(null, `image-${Date.now()}.${file.originalname}`);
+    console.log("file.....", file.originalname);
     callback(null, file.originalname);
   },
 });

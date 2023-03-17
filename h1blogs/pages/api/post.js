@@ -14,11 +14,19 @@ export const getPostById = (id) => {
   return axios.get(`/post/${id}`);
 };
 
-export const updatePost = async (id, data) => {
+export const updatePost = (id, data) => {
   console.log("axios", data);
-  return await axios.put(`/post/${id}`, data);
+  return axios.put(`/post/${id}`, data);
 };
 
-// export const deleteUser = (id) => {
-//   return instance.delete(`/post/${id}`);
-// };
+export const postVisible = async (id) => {
+  console.log("apiid", id);
+  const data = await axios.put(`/post/visible/${id}`);
+  console.log("apiresponse", data);
+  return data;
+};
+
+export const postDelete = (id) => {
+  console.log("deleteApi", id);
+  return axios.delete(`/post/${id}`);
+};

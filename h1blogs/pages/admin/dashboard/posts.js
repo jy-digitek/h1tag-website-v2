@@ -21,7 +21,11 @@ import AdminLayout from "../Components/AdminLayout";
 import PostForm from "../Components/postForm";
 import AddPost from "./addPost";
 import { useSelector, useDispatch } from "react-redux";
-import { getPostList } from "../../redux/featured/actions";
+import {
+  deletePost,
+  getPostList,
+  visiblePost,
+} from "../../redux/featured/actions";
 
 const DashBoard = () => {
   const router = useRouter();
@@ -30,7 +34,7 @@ const DashBoard = () => {
   const [querySearch, setQuerySearch] = useState("");
   const [totalPages, setTotalPages] = useState(0);
 
-  const posts = useSelector((state) => state.post.data);
+  const posts = useSelector((state) => state.post);
 
   //
 
@@ -54,7 +58,7 @@ const DashBoard = () => {
     } else {
       dispatch(getPostList(data));
     }
-  }, [page]);
+  }, [page, dispatch]);
 
   const onChangeSerachHandel = (e) => {
     data[1] = e.target.value;
@@ -112,8 +116,9 @@ const DashBoard = () => {
             </Tr>
           </Thead>
           <Tbody>
-            {posts.length > 0 &&
-              posts.map((data, i) => {
+            {posts.data.length > 0 &&
+              !posts.isLoading &&
+              posts.data.map((data, i) => {
                 return (
                   <Tr key={i}>
                     <Td>{data.title}</Td>
@@ -125,11 +130,21 @@ const DashBoard = () => {
                         </Button>
                       </Link>
                       {data.isVisible ? (
-                        <Button bg="red.500" color="white" mr={5}>
+                        <Button
+                          bg="red.500"
+                          color="white"
+                          mr={5}
+                          onClick={(e) => dispatch(deletePost(data._id))}
+                        >
                           Not Visible
                         </Button>
                       ) : (
-                        <Button bg="red.500" color="white" px={8}>
+                        <Button
+                          bg="red.500"
+                          color="white"
+                          px={8}
+                          onClick={() => dispatch(visiblePost(data._id))}
+                        >
                           Visible
                         </Button>
                       )}

@@ -5,7 +5,14 @@ import {
   deleteCategory,
   login,
 } from "../../api/category";
-import { getPost, getPostById, createPost, updatePost } from "../../api/post";
+import {
+  getPost,
+  getPostById,
+  createPost,
+  updatePost,
+  postDelete,
+  postVisible,
+} from "../../api/post";
 
 import { updateCategory } from "../../api/category";
 
@@ -13,10 +20,8 @@ export const getPostList = createAsyncThunk(
   "post/getPostList",
   async (data, { rejectWithValue }) => {
     try {
-      console.log("actions", data[0], data[1]);
       const res = await getPost(data[0], data[1]);
-      // console.log("actions", res.data.posts);
-      console.log("actionresponse", res);
+
       return res.data.posts;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -70,7 +75,7 @@ export const createCategories = createAsyncThunk(
   "category/createcategory",
   async (data) => {
     const res = await createCategory(data);
-    //console.log("action", res.data);
+
     return res.data;
   }
 );
@@ -79,7 +84,7 @@ export const deleteCategories = createAsyncThunk(
   "category/deleteCategory",
   async (id) => {
     const res = await deleteCategory(id);
-    //console.log("DELETErES", res);
+
     return id;
   }
 );
@@ -87,13 +92,28 @@ export const deleteCategories = createAsyncThunk(
 export const updatePosts = createAsyncThunk(
   "category/updateCategory",
   async (data) => {
-    console.log(data[0], data[1]);
+    // console.log(data[0], data[1]);
     const res = await updatePost(data[0], data[1]);
-    console.log("res actioon", res.data.updatePost);
+    //console.log("res actioon", res.data.updatePost);
 
     return res.data.updatePost;
   }
 );
+
+export const deletePost = createAsyncThunk("post/deletePost", async (id) => {
+  console.log("actionId", id);
+  const res = await postDelete(id);
+  console.log("deleteAction", res.data);
+  return res.data;
+});
+
+export const visiblePost = createAsyncThunk("post/Visible", async (id) => {
+  console.log("visiblePostId", id);
+
+  const res = await postVisible(id);
+  console.log(res);
+  return res.data;
+});
 
 export const userLogin = createAsyncThunk(
   "auth/useLogin",

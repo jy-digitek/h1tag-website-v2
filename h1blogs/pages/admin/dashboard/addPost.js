@@ -30,6 +30,14 @@ const AddPost = () => {
     formData.append("categories", data.categories);
     formData.append("body", body);
     dispatch(postCreate(formData));
+    setData({
+      title: "",
+      slug: "",
+      image: undefined,
+      summary: "",
+      categories: "",
+    });
+    setBody("");
   };
 
   return (

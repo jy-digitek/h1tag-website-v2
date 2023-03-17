@@ -7,7 +7,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -22,6 +21,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
+import Link from "next/link";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 

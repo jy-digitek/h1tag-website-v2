@@ -1,5 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getPostList, getSinglePost, postCreate, updatePosts } from "./actions";
+import {
+  getPostList,
+  getSinglePost,
+  postCreate,
+  updatePosts,
+  deletePost,
+  visiblePost,
+} from "./actions";
 
 const initialState = {
   data: [],
@@ -19,7 +26,6 @@ export const postSlice = createSlice({
       state.isLoading = false;
       state.isSuccess = true;
       state.data = payload;
-      console.log("payload", payload);
     },
     [getPostList.rejected]: (state, { payload }) => {
       state.isLoading = false;
@@ -69,6 +75,50 @@ export const postSlice = createSlice({
       });
     },
     [updatePosts.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isSuccess = false;
+      state.errorMessage = payload;
+    },
+
+    [deletePost.pending]: (state, { payload }) => {
+      state.isLoading = true;
+    },
+    [deletePost.fulfilled]: (state, { payload }) => {
+      console.log("update payload", payload);
+      state.isLoading = false;
+      state.isSuccess = true;
+      state.data.find((item, index) => {
+        // console.log("item._id", item._id);
+        //console.log("payload", payload.deletedData._id);
+        if (item._id == payload.deletedData._id) {
+          state.data[index] = payload.deletedData;
+        }
+        console.log("check item", item._id, item.isVisible);
+      });
+    },
+    [deletePost.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      state.isSuccess = false;
+      state.errorMessage = payload.message;
+    },
+
+    [visiblePost.pending]: (state, { payload }) => {
+      state.isLoading = true;
+    },
+    [visiblePost.fulfilled]: (state, { payload }) => {
+      console.log("update payload", payload);
+      state.isLoading = false;
+      state.isSuccess = true;
+      state.data.find((item, index) => {
+        // console.log("item._id", item._id);
+        //console.log("payload", payload.deletedData._id);
+        if (item._id == payload.visiblePost._id) {
+          state.data[index] = payload.visiblePost;
+        }
+        console.log("check item", item._id, item.isVisible);
+      });
+    },
+    [visiblePost.rejected]: (state, { payload }) => {
       state.isLoading = false;
       state.isSuccess = false;
       state.errorMessage = payload;
