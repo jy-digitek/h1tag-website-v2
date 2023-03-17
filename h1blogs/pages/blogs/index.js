@@ -63,31 +63,30 @@ const Blog = () => {
                 <>
                   {data.isVisible && (
                     <Box py={[5]} key={index}>
-                      <Card maxW="xs">
-                        <CardHeader>
-                          <Flex spacing="4">
-                            <Flex
-                              flex="1"
-                              gap="4"
-                              alignItems="center"
-                              flexWrap="wrap"
-                            >
-                              <Box>
-                                <Text>{data.title}</Text>
-                              </Box>
+                      <Link href={`/blogs/${data._id}`}>
+                        <Card maxW="xs">
+                          <Image
+                            objectFit="cover"
+                            src={`./uploads/${data.image}`}
+                            alt="Chakra UI"
+                          />
+                          <CardHeader>
+                            <Flex spacing="4">
+                              <Flex
+                                flex="1"
+                                gap="4"
+                                alignItems="center"
+                                flexWrap="wrap"
+                              >
+                                <Box>
+                                  <Text>{data.title}</Text>
+                                </Box>
+                              </Flex>
                             </Flex>
-                          </Flex>
-                        </CardHeader>
-                        <CardBody>
-                          <Link href={`/blogs/${data._id}`}>view</Link>
-                        </CardBody>
-                        <Image
-                          objectFit="cover"
-                          src={`./uploads/${data.image}`}
-                          alt="Chakra UI"
-                        />
-                        {/* {console.log("img", data)} */}
-                      </Card>
+                          </CardHeader>
+                          <CardBody></CardBody>
+                        </Card>
+                      </Link>
                     </Box>
                   )}
                 </>
