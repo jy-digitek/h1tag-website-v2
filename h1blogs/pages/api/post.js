@@ -4,8 +4,10 @@ export const createPost = (data) => {
   return axios.post(`/post/postcreate`, data);
 };
 
-export const getPost = (page) => {
-  return axios.get(`/post/posts?page=${page}`);
+//post/posts?serchQuery=abcred&page=1
+//serchQuery=a&page=1
+export const getPost = (page, querySearch) => {
+  return axios.get(`/post/posts?searchQuery=${querySearch}&page=${page}`);
 };
 
 export const getPostById = (id) => {

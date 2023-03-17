@@ -19,6 +19,7 @@ export const postSlice = createSlice({
       state.isLoading = false;
       state.isSuccess = true;
       state.data = payload;
+      console.log("payload", payload);
     },
     [getPostList.rejected]: (state, { payload }) => {
       state.isLoading = false;

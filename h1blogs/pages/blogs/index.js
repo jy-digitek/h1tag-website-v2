@@ -25,7 +25,10 @@ const Blog = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
+  // const post = useSelector((state) => state.post.data);
   const post = useSelector((state) => state.post.data);
+
+  console.log("getList", post);
 
   //console.log("post", post);
   const dispatch = useDispatch();
@@ -41,7 +44,8 @@ const Blog = () => {
     }
   };
   useEffect(() => {
-    dispatch(getPostList(page));
+    var data = [page, ""];
+    dispatch(getPostList(data));
     //login("rajputkdsingh999@gmail.com", "7408822798");
   }, [page]);
 

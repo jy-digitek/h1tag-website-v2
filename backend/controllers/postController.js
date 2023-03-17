@@ -2,6 +2,7 @@ const Post = require("../modals/post");
 const Categories = require("../modals/categories");
 var fs = require("fs");
 var path = require("path");
+const { populate } = require("../modals/post");
 
 module.exports = {
   //admin---set
@@ -36,15 +37,16 @@ module.exports = {
   },
   allPosts: async (req, res) => {
     try {
-      const { page = 1, limit = 9, serchQuery = "" } = req.query;
+      const { page = 1, limit = 9, searchQuery = "" } = req.query;
       //const searchQuery = req.query;
-      console.log("searchQuery", serchQuery, page);
+      console.log("searchQuery", searchQuery, page);
       const posts = await Post.find({
         $or: [
-          { title: { $regex: serchQuery } },
-          { body: { $regex: serchQuery } },
+          { title: { $regex: searchQuery } },
+          // { categories: { $regex: searchQuery } },
         ],
       })
+        .populate("categories")
         .limit(limit * 1)
         .skip((page - 1) * limit);
       // .exex();
@@ -98,6 +100,16 @@ module.exports = {
       const id = req.params.id;
       const deletedData = await Post.findById(id);
       deletedData.isVisible = false;
+      await deletedData.save();
+      return res.status(200).json({ message: "data is deleted", deletedData });
+    } catch (error) {
+      return res.status(500).json(error);
+    }
+  },
+  visiblePost: async (req, res) => {
+    try {
+      const deletedData = await Post.findById(id);
+      deletedData.isVisible = true;
       await deletedData.save();
       return res.status(200).json({ message: "data is deleted", deletedData });
     } catch (error) {

@@ -14,6 +14,9 @@ router
 router.route("/posts").get(postController.allPosts);
 router.route("/:id").get(postController.getPost);
 router.route("/:id").put(adminAuth.adminAuth, postController.updatePost);
-router.route("/:id").delete(postController.deletePost);
+router.route("/:id").delete(adminAuth.adminAuth, postController.deletePost);
+router
+  .route("/visible/:id")
+  .put(adminAuth.adminAuth, postController.visiblePost);
 
 module.exports = router;

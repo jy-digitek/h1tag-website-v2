@@ -11,10 +11,12 @@ import { updateCategory } from "../../api/category";
 
 export const getPostList = createAsyncThunk(
   "post/getPostList",
-  async (page, { rejectWithValue }) => {
+  async (data, { rejectWithValue }) => {
     try {
-      const res = await getPost(page);
+      console.log("actions", data[0], data[1]);
+      const res = await getPost(data[0], data[1]);
       // console.log("actions", res.data.posts);
+      console.log("actionresponse", res);
       return res.data.posts;
     } catch (error) {
       return rejectWithValue(error.message);
