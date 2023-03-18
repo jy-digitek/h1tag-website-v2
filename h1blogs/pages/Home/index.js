@@ -21,11 +21,10 @@ const Home = () => {
       <UpSkillCarrier />
 
       <Tranding />
+      <Benifits />
 
       <ComparisionChar />
       <EndToEnd />
-
-      <Benifits />
     </Layout>
   );
 };

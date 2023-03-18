@@ -19,7 +19,7 @@ export const Benifits = () => {
           Benefits to Students
         </Highlight>
       </Heading>
-      <Wrap spacing={["10px", "20px"]}>
+      <Wrap spacing={["10px", "20px"]} py={5}>
         <WrapItem>
           <Box boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)" p={[2, 5]}>
             <Center>Earn While You Learning</Center>
