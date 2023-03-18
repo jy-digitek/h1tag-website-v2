@@ -13,8 +13,8 @@ import {
 
 export const ComparisionChar = () => {
   return (
-    <Container maxW={"full"} mt={10} px={[0, 20]}>
-      <Heading textAlign={"center"} pt={10}>
+    <Container maxW={"full"} px={[0, 20]}>
+      <Heading textAlign={"center"}>
         <Highlight
           query="Chart"
           styles={{ px: "1", py: "1", color: "#dc3545", fontWeight: "bold" }}

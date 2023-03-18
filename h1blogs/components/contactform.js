@@ -15,7 +15,24 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+// import { useFormik } from "formik";
+
 export default function ContactForm() {
+  // const formik = useFormik({
+  //   initialValues: {
+  //     name: "",
+  //     email: "",
+  //     email: "",
+  //     rememberMe: false,
+  //   },
+  //   onSubmit: (valuse) => {
+  //     alert(JSON.stringify(values, 0, null));
+  //   },
+  // });
+  const handleSubmit = (data) => {
+    alert("hello");
+  };
+
   return (
     <Flex
       align={"center"}
@@ -38,8 +55,9 @@ export default function ContactForm() {
         </Text>
         <Formik
           initialValues={{
+            name: "",
             email: "",
-            password: "",
+            phone: "",
             rememberMe: false,
           }}
           onSubmit={(values) => {
@@ -58,6 +76,16 @@ export default function ContactForm() {
                     variant="filled"
                     bg={"white"}
                     Placeholder="Full Name"
+                    validate={(value) => {
+                      let error;
+
+                      value.length < 6
+                        ? (error =
+                            "Password must contain at least 6 characters")
+                        : "";
+
+                      return error;
+                    }}
                   />
                 </FormControl>
                 <FormControl>
@@ -84,9 +112,10 @@ export default function ContactForm() {
                     validate={(value) => {
                       let error;
 
-                      if (value.length < 6) {
-                        error = "Password must contain at least 6 characters";
-                      }
+                      value.length < 6
+                        ? (error =
+                            "Password must contain at least 6 characters")
+                        : "";
 
                       return error;
                     }}
@@ -124,8 +153,13 @@ export default function ContactForm() {
                     Privacy Policy
                   </Link>
                 </Field>
-                <Button type="submit" bg={"#b52828"} width="full">
-                  Login
+                <Button
+                  type="submit"
+                  bg={"#b52828"}
+                  width="full"
+                  onClick={() => handleSubmit}
+                >
+                  Submit
                 </Button>
               </VStack>
             </form>
