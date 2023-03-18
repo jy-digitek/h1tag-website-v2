@@ -29,9 +29,9 @@ export default function ContactForm() {
   //     alert(JSON.stringify(values, 0, null));
   //   },
   // });
-  const handleSubmit = (data) => {
-    alert("hello");
-  };
+  // const handleSubmit = (data) => {
+  //   alert("hello");
+  // };
 
   return (
     <Flex
@@ -59,8 +59,9 @@ export default function ContactForm() {
             email: "",
             phone: "",
             rememberMe: false,
+            place: "",
           }}
-          onSubmit={(values) => {
+          onSubmit={(values, error) => {
             alert(JSON.stringify(values, null, 2));
           }}
         >
@@ -115,7 +116,7 @@ export default function ContactForm() {
                       value.length < 6
                         ? (error =
                             "Password must contain at least 6 characters")
-                        : "";
+                        : (error = "");
 
                       return error;
                     }}
@@ -127,9 +128,14 @@ export default function ContactForm() {
                     placeholder="Choose your Center"
                     color={"gray"}
                     bg={"white"}
+                    name="place"
                   >
-                    <option variant="filled">Neta ji subhas palace</option>
-                    <option variant="filled">Nigeria</option>
+                    <option variant="filled" value={"Neta ji subhas palace"}>
+                      Neta ji subhas palace
+                    </option>
+                    <option variant="filled" value={"Nigeria"}>
+                      Nigeria
+                    </option>
                   </Select>
                 </FormControl>
                 <Field
