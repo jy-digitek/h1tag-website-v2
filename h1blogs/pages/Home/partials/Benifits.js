@@ -6,11 +6,12 @@ import {
   Heading,
   Highlight,
   Box,
+  Button,
 } from "@chakra-ui/react";
 
 export const Benifits = () => {
   return (
-    <Container maxW={"full"} py={10}>
+    <Container maxW={"full"} py={10} px={[5, 10]}>
       <Heading textAlign={"center"} py={10}>
         <Highlight
           query="Benefits"
@@ -19,7 +20,13 @@ export const Benifits = () => {
           Benefits to Students
         </Highlight>
       </Heading>
-      <Wrap spacing={["10px", "20px"]} py={5}>
+      <Wrap
+        spacing={["10px", "20px"]}
+        py={5}
+        px={[0, 10]}
+        fontFamily="bold"
+        fontSize={"20px"}
+      >
         <WrapItem>
           <Box boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)" p={[2, 5]}>
             <Center>Earn While You Learning</Center>
@@ -81,6 +88,11 @@ export const Benifits = () => {
           </Box>
         </WrapItem>
       </Wrap>
+      <Center>
+        <Button px={20} py={5} rounded={20} bg={"yellow"}>
+          Book Counseling Session
+        </Button>
+      </Center>
     </Container>
   );
 };

@@ -9,11 +9,19 @@ import {
   Image,
   Stack,
   Text,
+  Center,
 } from "@chakra-ui/react";
-
+import { MdCurrencyRupee, MdOutlineCastForEducation } from "react-icons/md";
+import { BsFillHandbagFill } from "react-icons/bs";
+import {
+  FaUserGraduate,
+  FaChalkboardTeacher,
+  FaHistory,
+  FaCogs,
+} from "react-icons/fa";
 export const ComparisionChar = () => {
   return (
-    <Container maxW={"full"} px={[0, 20]}>
+    <Container maxW={"full"} px={[5, 10]}>
       <Heading textAlign={"center"}>
         <Highlight
           query="Chart"
@@ -26,15 +34,20 @@ export const ComparisionChar = () => {
         What makes H1 Tags the Best Digital Marketing training institute in
         Delhi?
       </Text>
-      <SimpleGrid columns={[1, 2, 3]} spacing={10} pt={10}>
+      <SimpleGrid
+        columns={[1, 2, 3]}
+        spacing={10}
+        pt={10}
+        px={[0, 10]}
+        fontFamily={"bold"}
+        fontSize={"20px"}
+      >
         <Box>
           <Card maxW="sm">
             <CardBody>
-              <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Green double couch with wooden legs"
-                borderRadius="lg"
-              />
+              <Center>
+                <MdCurrencyRupee size={"100px"} />
+              </Center>
               <Stack mt="6" spacing="3">
                 <Heading size="md" color={"#dc3545"}>
                   Flexible Fee Structure
@@ -51,11 +64,16 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              <Image
+              {/* <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
                 borderRadius="lg"
-              />
+              /> */}
+              <Center>
+                {" "}
+                <FaChalkboardTeacher size={"100px"} />
+              </Center>
+
               <Stack mt="6" spacing="3">
                 <Heading size="md" color={"#dc3545"}>
                   Training Facilities
@@ -72,11 +90,15 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              <Image
+              {/* <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
                 borderRadius="lg"
-              />
+              /> */}
+              <Center>
+                <BsFillHandbagFill size={"100px"} />
+              </Center>
+
               <Stack mt="6" spacing="3">
                 <Heading size="md" color={"#dc3545"}>
                   Job Placement
@@ -93,11 +115,14 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              <Image
+              {/* <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
                 borderRadius="lg"
-              />
+              /> */}
+              <Center>
+                <FaUserGraduate size={"100px"} />
+              </Center>
               <Stack mt="6" spacing="3">
                 <Heading size="md" color={"#dc3545"}>
                   Paid Internship
@@ -115,11 +140,15 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              <Image
+              {/* <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
                 borderRadius="lg"
-              />
+              /> */}
+              <Center>
+                <FaCogs size={"100px"} />
+              </Center>
+
               <Stack mt="6" spacing="3">
                 <Heading size="md" color={"#dc3545"}>
                   Advanced Experience
@@ -136,11 +165,14 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              <Image
+              {/* <Image
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt="Green double couch with wooden legs"
                 borderRadius="lg"
-              />
+              /> */}
+              <Center>
+                <FaHistory size={"100px"} />
+              </Center>
               <Stack mt="6" spacing="3">
                 <Heading size="md" color={"#dc3545"}>
                   Proven Track Record

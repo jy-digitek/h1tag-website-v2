@@ -1,5 +1,8 @@
 // import axios from "axios";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { userLogout } from "../redux/featured/actions";
+
 // const instance = axios.create({
 //   baseURL: "http://localhost:5000/api/vi",
 //   headers: {
@@ -35,8 +38,11 @@ instance.interceptors.response.use(
     return response;
   },
   (error) => {
+    const dispatch = useDispatch();
     if (error.response.status === 401 || error.response.status === 403) {
-      return (window.location.href = "/admin");
+      dispatch(userLogout());
+
+      //return (window.location.href = "/admin");
     }
     return Promise.reject(error);
   }

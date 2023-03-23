@@ -12,26 +12,31 @@ import {
   CardFooter,
   Button,
   Center,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanel,
+  TabPanels,
+  List,
+  ListItem,
+  Show,
+  Hide,
 } from "@chakra-ui/react";
 import Link from "next/link";
 export const Instutute = () => {
   return (
-    <Container maxW={"full"} p={0} bg={"#f7f7f7"} pb={10}>
+    <Container maxW={"full"} p={0} bg={"#f7f7f7"} pb={10} px={10}>
       <Heading
         size="xl"
         px={{ base: "0", sm: "10", md: "20" }}
         py={50}
         textAlign={"center"}
       >
-        <Text>
-          {" "}
-          "Digital Marketing Course | Best Digital Marketing Institute in Delhi
-          & across India"
-        </Text>
+        <Text> Pick a Course to Enhance Your Career</Text>
       </Heading>
 
-      <SimpleGrid columns={[1, null, 3]} spacing="40px" px={10}>
-        <Box pl={5}>
+      <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
+        {/* <Box pl={5}>
           <Heading as="h3">Choose Your Interest</Heading>
           <Text mt={5}>
             <Highlight
@@ -79,8 +84,8 @@ export const Instutute = () => {
               Have a look
             </Highlight>
           </Text>
-        </Box>
-        <Box>
+        </Box> */}
+        {/* <Box>
           <Card maxW="sm" align={"center"}>
             <CardBody textAlign={"center"}>
               <Image
@@ -122,7 +127,117 @@ export const Instutute = () => {
               </Link>
             </CardFooter>
           </Card>
-        </Box>
+        </Box> */}
+        <Hide above="md">
+          <Box>
+            <Tabs orientation={"horizontal"}>
+              <TabList aria-orientation="verticasd">
+                <Tab>Digital Marketing </Tab>
+                <Tab>Graphic Designing </Tab>
+              </TabList>
+
+              <TabPanels>
+                <TabPanel>
+                  <Card W={["100%", "100%"]}>
+                    <CardBody>
+                      <Stack mt="6" spacing="3">
+                        <Heading size="md" my={3}>
+                          Digital Marketing
+                        </Heading>
+                      </Stack>
+                      <List>
+                        <ListItem>Job Oriented Course</ListItem>
+                        <ListItem>Foundation Course</ListItem>
+                        <ListItem>Customized Course</ListItem>
+                        <ListItem>Master Course</ListItem>
+                      </List>
+                    </CardBody>
+                    <CardFooter>
+                      <Link href="#!">
+                        <Button bg={"yellow.300"}>Learn More</Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                </TabPanel>
+                <TabPanel>
+                  <Card W={"100%"}>
+                    <CardBody>
+                      <Stack mt="6" spacing="3">
+                        <Heading size="md" my={3}>
+                          Graphic Designing
+                        </Heading>
+                      </Stack>
+                      <List>
+                        <ListItem>Foundation Course</ListItem>
+                        <ListItem>Master Course</ListItem>
+                      </List>
+                    </CardBody>
+                    <CardFooter>
+                      <Link href="#!">
+                        <Button bg={"yellow.300"}>Learn More</Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </Box>
+        </Hide>
+        <Show above="md">
+          <Box>
+            <Tabs orientation={"vertical"}>
+              <TabList aria-orientation="verticasd">
+                <Tab>Digital Marketing </Tab>
+                <Tab>Graphic Designing </Tab>
+              </TabList>
+
+              <TabPanels>
+                <TabPanel>
+                  <Card W={["100%", "100%"]}>
+                    <CardBody>
+                      <Stack mt="6" spacing="3">
+                        <Heading size="md" my={3}>
+                          Digital Marketing
+                        </Heading>
+                      </Stack>
+                      <List>
+                        <ListItem>Job Oriented Course</ListItem>
+                        <ListItem>Foundation Course</ListItem>
+                        <ListItem>Customized Course</ListItem>
+                        <ListItem>Master Course</ListItem>
+                      </List>
+                    </CardBody>
+                    <CardFooter>
+                      <Link href="#!">
+                        <Button bg={"yellow.300"}>Learn More</Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                </TabPanel>
+                <TabPanel>
+                  <Card W={"100%"}>
+                    <CardBody>
+                      <Stack mt="6" spacing="3">
+                        <Heading size="md" my={3}>
+                          Graphic Designing
+                        </Heading>
+                      </Stack>
+                      <List>
+                        <ListItem>Foundation Course</ListItem>
+                        <ListItem>Master Course</ListItem>
+                      </List>
+                    </CardBody>
+                    <CardFooter>
+                      <Link href="#!">
+                        <Button bg={"yellow.300"}>Learn More</Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </Box>
+        </Show>
       </SimpleGrid>
     </Container>
   );

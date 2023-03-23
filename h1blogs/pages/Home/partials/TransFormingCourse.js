@@ -11,8 +11,8 @@ import {
 import { CheckCircleIcon } from "@chakra-ui/icons";
 export const TransFormingCourse = () => {
   return (
-    <Container maxW={"full"} textAlign={"center"} mt={10}>
-      <Heading>
+    <Container maxW={"full"} textAlign={"center"} mt={2}>
+      {/* <Heading>
         <Highlight
           query="Digital Marketing Course"
           styles={{ px: "1", py: "1", color: "#dc3545", fontWeight: "bold" }}
@@ -20,8 +20,8 @@ export const TransFormingCourse = () => {
           Digital Marketing Course
         </Highlight>{" "}
         Your Career
-      </Heading>
-      <Text textAlign={"center"} px={[2, 20]} py={[5, 10]}>
+      </Heading> */}
+      {/* <Text textAlign={"center"} px={[2, 20]} py={[5, 10]}>
         Do you lack the skills you need to move ahead? Now, you can become a
         digital marketing specialist without leaving your job. Boost your career
         with the Delhi Institute of Digital Marketing. A place to learn digital
@@ -29,8 +29,8 @@ export const TransFormingCourse = () => {
         The high demand for a digital marketing course is best suited for
         working professionals, job seekers, freelancers, students, and
         entrepreneurs.
-      </Text>
-      <SimpleGrid columns={[2, null, 4]} spacing={6} pt={5} mx={2} px={10}>
+      </Text> */}
+      <SimpleGrid columns={[1, null, 4]} spacing={6} mx={2} px={10}>
         <Box
           bg="white"
           boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
@@ -38,7 +38,7 @@ export const TransFormingCourse = () => {
           px={2}
         >
           <Image src="icon.png" alt="Dan Abramov" />{" "}
-          <Center ml={5}>100% Placement Asssistance</Center>
+          <Center ml={5}>100% Placement </Center>
         </Box>
         <Box
           bg="white"
