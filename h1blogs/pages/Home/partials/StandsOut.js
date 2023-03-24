@@ -1,6 +1,12 @@
-import { Container, SimpleGrid, Box, Text, Heading } from "@chakra-ui/react";
+import {
+  Container,
+  SimpleGrid,
+  Box,
+  Text,
+  Heading,
+  Image,
+} from "@chakra-ui/react";
 import React from "react";
-import Layout from "../../../components/layout";
 
 export const StandsOut = () => {
   return (
@@ -14,8 +20,10 @@ export const StandsOut = () => {
         fontFamily="bold"
         fontSize={"20px"}
       >
-        <Box>image</Box>
         <Box>
+          <Image src={"/h1Standout.png"} boxSize={"100%"} />
+        </Box>
+        <Box px={10}>
           <Text>
             H1 Tags is an agency-based Digital Marketing Institute in Delhi that
             provides top Digital Marketing Courses and a solid platform for

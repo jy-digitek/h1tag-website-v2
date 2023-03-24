@@ -8,6 +8,7 @@ import {
   Center,
   Button,
 } from "@chakra-ui/react";
+import Carousel from "../../../components/Carousel";
 export const StudentFeedback = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
@@ -15,7 +16,9 @@ export const StudentFeedback = () => {
         Students’ Feedback
       </Heading>
       <SimpleGrid columns={[1, 2]} textAlign={"center"} fontFamily={"bold"}>
-        <Box>videos</Box>
+        <Box>
+          <Carousel />
+        </Box>
         <Box>
           <Text fontSize={"24px"} my={5}>
             Digital is The Future and We Care for Your Future
