@@ -36,7 +36,7 @@ export const authSlice = createSlice({
       state.isLoading = false;
       state.isLogin = false;
       state.userToken = payload;
-      window.location.href = "/admin";
+      // window.location.href = "/admin";
     },
     [userLogout.rejected]: (state, { payload }) => {
       state.isLoading = false;

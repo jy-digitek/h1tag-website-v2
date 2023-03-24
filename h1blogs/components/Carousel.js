@@ -39,7 +39,7 @@ export default function Carousel() {
   return (
     <Slider {...settings}>
       {data.map((item, key) => (
-        <Box px={20}>
+        <Box px={[0, 3]}>
           <Card>
             <iframe
               //margin="10px"
@@ -52,7 +52,7 @@ export default function Carousel() {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-            ></iframe>
+            />
           </Card>
         </Box>
       ))}

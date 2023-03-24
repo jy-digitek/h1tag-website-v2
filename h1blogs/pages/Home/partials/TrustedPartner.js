@@ -22,94 +22,67 @@ export const TrustedPartner = () => {
       <Heading as={"h3"} px={[0, 10]} mb={[5, 10]} size="md">
         Our Placement Partners
       </Heading>
-      <Wrap bg={"white"} p={3} spacing={["10px", "30px"]} px={[0, 10]}>
+      <Wrap bg={"white"} p={3} spacing={["10px", "20px"]} px={[0, 10]}>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/1.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/1.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/2.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/2.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/3.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/3.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/4.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/4.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/5.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/5.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/6.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/6.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/7.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/7.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/8.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/8.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/9.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/TrustedPartner/9.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>
@@ -118,7 +91,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/10.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -128,7 +101,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/11.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -138,7 +111,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/12.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -148,7 +121,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/13.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -158,7 +131,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/14.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -168,7 +141,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/15.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -178,7 +151,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/16.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -188,7 +161,7 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/17.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
@@ -198,24 +171,91 @@ export const TrustedPartner = () => {
             <CardBody>
               <Image
                 src={"/TrustedPartner/18.png"}
-                boxSize={["25px", "100px"]}
+                boxSize={["25px", "70px"]}
               />
             </CardBody>
           </Card>
         </WrapItem>
       </Wrap>
 
-      <Heading as={"h3"} px={[0, 10]} mb={[5, 10]} size="md">
+      <Heading as={"h3"} px={[0, 10]} my={[5, 10]} size="md">
         Our Advertising Partners
       </Heading>
-      <Wrap bg={"white"} p={3} spacing={["10px", "30px"]} px={[0, 10]}>
+      <Wrap bg={"white"} p={3} spacing={["10px", "20px"]} px={[0, 10]}>
         <WrapItem>
           <Card align="center">
             <CardBody>
-              <Image
-                src={"/TrustedPartner/1.png"}
-                boxSize={["25px", "100px"]}
-              />
+              <Image src={"/adver/1.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/2.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/3.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/4.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/5.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/6.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/7.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/8.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/9.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/10.png"} boxSize={["25px", "70px"]} />
+            </CardBody>
+          </Card>
+        </WrapItem>
+        <WrapItem>
+          <Card align="center">
+            <CardBody>
+              <Image src={"/adver/11.png"} boxSize={["25px", "70px"]} />
             </CardBody>
           </Card>
         </WrapItem>

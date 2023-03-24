@@ -23,7 +23,7 @@ export const StandsOut = () => {
         <Box>
           <Image src={"/h1Standout.png"} boxSize={"100%"} />
         </Box>
-        <Box px={10}>
+        <Box px={[0, 10]}>
           <Text>
             H1 Tags is an agency-based Digital Marketing Institute in Delhi that
             provides top Digital Marketing Courses and a solid platform for
