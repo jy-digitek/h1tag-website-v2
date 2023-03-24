@@ -13,6 +13,7 @@ import { Suitable } from "./partials/Suitable";
 import { ExperienceH1tags } from "./partials/ExperienceH1tags";
 import { CarrerOption } from "./partials/CarrerOption";
 import { StudentFeedback } from "./partials/StudentFeedback";
+import { TrustedPartner } from "./partials/TrustedPartner";
 const Home = () => {
   return (
     <Layout>
@@ -27,6 +28,7 @@ const Home = () => {
       <CarrerOption />
       {/* <EndToEnd /> */}
       <StudentFeedback />
+      <TrustedPartner />
     </Layout>
   );
 };
