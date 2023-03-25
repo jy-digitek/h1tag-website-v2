@@ -1,4 +1,4 @@
-// /** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 };
@@ -8,18 +8,11 @@ module.exports = {
     return [
       {
         // Source Path ( from )
-        source: "/admin*",
+        source: "/admin/:path*",
 
         // Destination Path ( to )
-        has: [
-          {
-            type: "host",
-            key: "localhost",
-            value: "",
-          },
-        ],
+
         destination: "/admin",
-        permanent: true,
       },
     ];
   },
