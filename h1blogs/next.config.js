@@ -1,19 +1,20 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
+// };
 
-module.exports = {
-  redirects: async () => {
-    return [
-      {
-        // Source Path ( from )
-        source: "/admin/:path*",
+// module.exports = {
+//   redirects: async () => {
+//     return [
+//       {
+//         // Source Path ( from )
+//         source: "/admin/:path*",
 
-        // Destination Path ( to )
+//         // Destination Path ( to )
 
-        destination: "/admin",
-      },
-    ];
-  },
-};
+//         destination: "/admin",
+//         permanent: false,
+//       },
+//     ];
+//   },
+// };
