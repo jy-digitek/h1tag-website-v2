@@ -1,12 +1,11 @@
 import Layout from "../../components/layout";
 
-
-const About=()=>{
-    return(
-        <Layout>
-            <div>Hello about</div>
-        </Layout>
-    )
-}
+const About = () => {
+  return (
+    <Layout>
+      <div>Hello aboutfedvdfvfv</div>
+    </Layout>
+  );
+};
 
 export default About;
