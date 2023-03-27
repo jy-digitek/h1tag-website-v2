@@ -298,4 +298,8 @@ const NAV_ITEMS = [
     label: "Contact",
     href: "/contact",
   },
+  {
+    label: "Galary",
+    href: "#",
+  },
 ];

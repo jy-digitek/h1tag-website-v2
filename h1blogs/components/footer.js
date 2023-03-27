@@ -11,7 +11,13 @@ import {
   UnorderedList,
   Flex,
 } from "@chakra-ui/react";
-import { SiGooglemaps } from "react-icons/si";
+import {
+  SiGooglemaps,
+  SiYoutube,
+  SiInstagram,
+  SiFacebook,
+  SiLinkedin,
+} from "react-icons/si";
 import { SlPhone } from "react-icons/sl";
 
 export default function Footer() {
@@ -131,6 +137,20 @@ export default function Footer() {
           <Heading as={"h2"} fontSize="20px" pt={4}>
             Subscribe & Follow us :
           </Heading>
+          <Flex pt={3}>
+            <Box mr={10}>
+              <SiYoutube fontSize={"30px"} />
+            </Box>
+            <Box mr={10}>
+              <SiInstagram fontSize={"30px"} />
+            </Box>
+            <Box mr={10}>
+              <SiFacebook fontSize={"30px"} />
+            </Box>
+            <Box mr={10}>
+              <SiLinkedin fontSize={"30px"} />
+            </Box>
+          </Flex>
         </Box>
       </SimpleGrid>
       <Text fontSize={"14px"} color="white" textAlign={"center"} py={10}>
