@@ -22,7 +22,7 @@ import { SlPhone } from "react-icons/sl";
 
 export default function Footer() {
   return (
-    <Container bg={"#dc3545"} maxW="full" mt={10}>
+    <Container bg={"#101C32"} maxW="full" mt={10}>
       <SimpleGrid
         columns={[1, 2, 4]}
         spacing={10}
@@ -108,7 +108,7 @@ export default function Footer() {
               <SiGooglemaps fontSize={"25px"} />
             </Box>
             <Box>
-              <Text>
+              <Text ml={2}>
                 :Plot No-12, 3rd Floor, Satya Niketan, Near Moti Bagh - South
                 Delhi, Opp. Venketeshwar College, New Delhi-110021
               </Text>
@@ -122,7 +122,7 @@ export default function Footer() {
               <SlPhone fontSize={"25px"} />
             </Box>
             <Box>
-              <Text>:+91 77700-07683</Text>
+              <Text ml={2}>:+91 77700-07683</Text>
             </Box>
           </Flex>
           {/* <Text pt={3}> info@didm.in</Text> */}
@@ -131,7 +131,7 @@ export default function Footer() {
               <EmailIcon fontSize={"25px"} />
             </Box>
             <Box>
-              <Text>: info@h1tags.com</Text>
+              <Text ml={2}>: info@h1tags.com</Text>
             </Box>
           </Flex>
           <Heading as={"h2"} fontSize="20px" pt={4}>

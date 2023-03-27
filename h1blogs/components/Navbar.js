@@ -77,28 +77,28 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <Button
+          {/* <Button
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
             href={"#"}
           >
-            Sign In
-          </Button>
+            Get Brochure
+          </Button> */}
           <Button
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"#101C32"}
             href={"#"}
             _hover={{
               bg: "pink.300",
             }}
           >
-            Sign Up
+            Get Brochure
           </Button>
         </Stack>
       </Flex>
