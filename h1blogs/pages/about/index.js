@@ -51,9 +51,9 @@ const About = () => {
         {/* Our Vision Start */}
         <SimpleGrid columns={[1, 2]}>
           <Box>
-            <Image src={"/test/ourmission.jpeg"} />
+            <Image src={"/test/ourmission.jpeg"} minH={"330px"} />
           </Box>
-          <Box textAlign={"center"} my={10}>
+          <Box textAlign={"center"} px={5}>
             <Heading textAlign={"center"}>Our Vision</Heading>
             <Text>
               We have the vision to expand our Institute's branches all around
