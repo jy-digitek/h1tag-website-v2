@@ -1,5 +1,6 @@
 import { Banner } from "./partials/Banner";
 import Layout from "../../components/layout";
+import styles from "../../styles/Home.module.css";
 import { Instutute } from "./partials/Institute";
 import { TransFormingCourse } from "./partials/TransFormingCourse";
 import { TraningHightLight } from "./partials/TraningHightLight";

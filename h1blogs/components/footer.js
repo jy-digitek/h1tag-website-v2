@@ -153,9 +153,15 @@ export default function Footer() {
           </Flex>
         </Box>
       </SimpleGrid>
-      <Text fontSize={"14px"} color="white" textAlign={"center"} py={10}>
-        Copyright ©2023 All rights reserved | Website Design and Developed by
-        Online Strikers
+      <Text
+        fontSize={"12px"}
+        color="white"
+        textAlign={"center"}
+        py={5}
+        mt={5}
+        // border={"1px solid red"}
+      >
+        Copyright ©2023, All rights reserved.
       </Text>
     </Container>
   );

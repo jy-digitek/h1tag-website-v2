@@ -1,1 +1,9 @@
-@import url(globals.css);
+/* @import url(globals.css); */
+
+.container{
+    color: red;
+    background-color: black;
+}
+.border{
+    border: 1px solid red;
+}

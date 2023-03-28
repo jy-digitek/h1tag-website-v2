@@ -8,10 +8,16 @@ import {
   Box,
   Button,
 } from "@chakra-ui/react";
+import styles from "../../../styles/Home.module.css";
 
 export const Benifits = () => {
   return (
-    <Container maxW={"full"} py={10} px={[5, 10]}>
+    <Container
+      className={`${styles.container} ${styles.border}`}
+      maxW={"full"}
+      py={10}
+      px={[5, 10]}
+    >
       <Heading textAlign={"center"} py={10}>
         <Highlight
           query="Benefits"
