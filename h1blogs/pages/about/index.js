@@ -22,7 +22,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 const About = () => {
   return (
     <Layout>
-      <Container maxW={"full"}>
+      <Container maxW={"full"} className={styles.background}>
         {/* image start here  */}
         <Box>
           <Image src={"/test/aboutbanner.jpeg"} />
@@ -32,7 +32,7 @@ const About = () => {
 
         {/* digital marketing Start */}
         <Box textAlign={"center"} my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"}>
+          <Heading textAlign={"center"} py={5}>
             Best Digital Marketing Course in Delhi
           </Heading>
           <Text>
@@ -56,7 +56,9 @@ const About = () => {
             <Image src={"/test/ourmission.jpeg"} minH={"330px"} />
           </Box>
           <Box textAlign={"center"} px={5}>
-            <Heading textAlign={"center"}>Our Vision</Heading>
+            <Heading textAlign={"center"} py={5}>
+              Our Vision
+            </Heading>
             <Text fontSize={"18px"} lineHeight={"26px"}>
               We have the vision to expand our Institute's branches all around
               India so we can train the student to acquire the top Digital
@@ -74,7 +76,7 @@ const About = () => {
 
         {/* Track record start */}
         <Box textAlign={"center"} my={10} mx={[5, 20]}>
-          <Heading>Our Track Record…</Heading>
+          <Heading py={5}>Our Track Record…</Heading>
           <Text>
             We are a Digital Marketing Agency-based Institute that has strong
             partnerships with several IT companies. Well-reputed and known
@@ -141,7 +143,12 @@ const About = () => {
               pr={5}
             />
           </Box>
-          <Box>
+          <Box
+            className={styles.portfolio_background}
+            color="white"
+            p={5}
+            borderRadius={10}
+          >
             <Heading>MESSAGE FROM DIRECTOR</Heading>
             <Text>
               Our sole and complete mission is to teach the value of Digital
@@ -168,15 +175,21 @@ const About = () => {
         {/* cofounder portfolio starts here */}
 
         <SimpleGrid columns={[1, 2]} my={10} mx={[5, 20]}>
-          <Box>
-            <Heading>AKSHAY </Heading>
+          <Box
+            className={styles.portfolio_background}
+            color="white"
+            py={5}
+            borderRadius={10}
+          >
+            <Heading ml={5}>AKSHAY </Heading>
             <Highlight
+              ml={5}
               query="Co-founder"
-              styles={{ px: "1", py: "1", color: "red" }}
+              styles={{ px: "1", py: "1", color: "red", ml: "5" }}
             >
               Co-founder
             </Highlight>
-            <Text>
+            <Text w={"70%"} ml={5}>
               He is very good at organizing Digital Marketing Strategies and
               developing new and innovative SEO strategies. His planning skills
               for digital marketing strategies, SEO (on-page and off-page), and
@@ -192,7 +205,7 @@ const About = () => {
           <Box>
             {" "}
             <Image
-              src={"https://via.placeholder.com/600x300"}
+              src={"https://via.placeholder.com/600x400"}
               maxH={"500px"}
               w={"100%"}
               //style={{ float: "right" }}
@@ -204,7 +217,9 @@ const About = () => {
 
         {/* why choose us starts here */}
         <Box my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"}>Why Choose US?</Heading>
+          <Heading textAlign={"center"} py={5}>
+            Why Choose US?
+          </Heading>
           <Text>
             H1 Tags -School of Digital Marketing and Web Development is one of
             India's top Digital Marketing institutions in Delhi-NCR. We studied
@@ -220,7 +235,9 @@ const About = () => {
 
         {/* your carrer matters starts here */}
         <Box my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"}>Your Career Matters to us</Heading>
+          <Heading textAlign={"center"} py={5}>
+            Your Career Matters to us
+          </Heading>
           <UnorderedList>
             <ListItem>
               We provide our students with counseling and professional and
