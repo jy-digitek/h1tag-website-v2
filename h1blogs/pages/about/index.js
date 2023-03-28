@@ -12,22 +12,27 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon,
+  Image,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
+import styles from "../../styles/About.module.css";
 
 const About = () => {
   return (
     <Layout>
-      <Container maxW={"4xl"}>
+      <Container maxW={"2xl"} className={styles.background}>
         {/* image start here  */}
-        <Box>Image here</Box>
+        <Box>
+          <Image src={"/test/aboutbanner.jpeg"} />
+        </Box>
 
         {/* image end here  */}
 
         {/* digital marketing Start */}
-        <Box>
-          <Heading>Best Digital Marketing Course in Delhi</Heading>
+        <Box textAlign={"center"} my={10}>
+          <Heading textAlign={"center"}>
+            Best Digital Marketing Course in Delhi
+          </Heading>
           <Text>
             <strong>H1 Tags:</strong> A School of Digital Marketing provides the
             Best Digital Marketing Course in Delhi with training programs in a
@@ -44,24 +49,29 @@ const About = () => {
         {/* digital marketing end */}
 
         {/* Our Vision Start */}
-
-        <Box>
-          <Heading>Our Vision</Heading>
-          <Text>
-            We have the vision to expand our Institute's branches all around
-            India so we can train the student to acquire the top Digital
-            Marketing skill which is essential for building their future.
-            Considering the demands of the professional world, we aim to provide
-            the Best Digital Marketing Course with practical and theoretical
-            knowledge. Digital Marketing is a booming career in India, which is
-            expected to provide significant growth to the IT sectors.
-          </Text>
-        </Box>
+        <SimpleGrid columns={[1, 2]}>
+          <Box>
+            <Image src={"/test/ourmission.jpeg"} />
+          </Box>
+          <Box textAlign={"center"} my={10}>
+            <Heading textAlign={"center"}>Our Vision</Heading>
+            <Text>
+              We have the vision to expand our Institute's branches all around
+              India so we can train the student to acquire the top Digital
+              Marketing skill which is essential for building their future.
+              Considering the demands of the professional world, we aim to
+              provide the Best Digital Marketing Course with practical and
+              theoretical knowledge. Digital Marketing is a booming career in
+              India, which is expected to provide significant growth to the IT
+              sectors.
+            </Text>
+          </Box>
+        </SimpleGrid>
 
         {/* our vision end */}
 
         {/* Track record start */}
-        <Box>
+        <Box textAlign={"center"} my={10}>
           <Heading>Our Track Record…</Heading>
           <Text>
             We are a Digital Marketing Agency-based Institute that has strong
@@ -69,21 +79,31 @@ const About = () => {
             organizations actively seek out our students, as we provide on-site
             training.
           </Text>
-          <SimpleGrid columns={[1, 2]}>
-            <Box>1000+ Students Trained</Box>
-            <Box>100+ Hiring Partners</Box>
-            <Box>700+ Students Placed</Box>
-            <Box>300+ Salary Hike</Box>
+          <SimpleGrid columns={[1, 2]} my={10}>
+            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
+              1000+ Students Trained
+            </Box>
+            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
+              100+ Hiring Partners
+            </Box>
+            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
+              700+ Students Placed
+            </Box>
+            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
+              300+ Salary Hike
+            </Box>
           </SimpleGrid>
         </Box>
         {/* Track record end */}
 
         {/* director portfolio starts here */}
-        <SimpleGrid border={"1px solid black"} columns={[1, 2]}>
-          <Box>Image</Box>
+        <SimpleGrid border={"1px solid black"} columns={[1, 2]} my={10}>
           <Box>
+            <Image src={"/test/yuviraj.png"} w={"100%"} p={3} />
+          </Box>
+          <Box p={3} textAlign={"center"}>
             <Heading>MESSAGE FROM DIRECTOR</Heading>
-            <Text>
+            <Text p={5}>
               Our sole and complete mission is to teach the value of Digital
               Marketing by utilizing and creating a viable digital career path
               for you. We assist you in providing an understanding of the
@@ -97,7 +117,7 @@ const About = () => {
             >
               Director
             </Highlight>
-            <Text>
+            <Text p={5}>
               Our sole and complete mission is to teach the value of Digital
               Marketing by utilizing and creating a viable digital career path
               for you. We assist you in providing an understanding of the
@@ -110,16 +130,16 @@ const About = () => {
 
         {/* cofounder portfolio starts here */}
 
-        <SimpleGrid columns={[1, 2]} border={"1px solid black"}>
-          <Box>
+        <SimpleGrid columns={[1, 2]} border={"1px solid black"} my={10}>
+          <Box textAlign={"center"}>
             <Heading>AKSHAY</Heading>
             <Highlight
               query="Co-founder"
-              styles={{ px: "1", py: "1", bg: "orange.100" }}
+              styles={{ px: "1", py: "1", color: "red" }}
             >
               Co-founder
             </Highlight>
-            <Text>
+            <Text p={5}>
               He is very good at organizing Digital Marketing Strategies and
               developing new and innovative SEO strategies. His planning skills
               for digital marketing strategies, SEO (on-page and off-page), and
@@ -132,13 +152,16 @@ const About = () => {
               possible to his students.
             </Text>
           </Box>
-          <Box>Image</Box>
+          <Box>
+            {" "}
+            <Image src={"/test/yuviraj.png"} maxH={"500px"} w={"100%"} p={3} />
+          </Box>
         </SimpleGrid>
         {/* cofounder portfolio ends here */}
 
         {/* why choose us starts here */}
-        <Box>
-          <Heading>Why Choose US?</Heading>
+        <Box my={10}>
+          <Heading textAlign={"center"}>Why Choose US?</Heading>
           <Text>
             H1 Tags -School of Digital Marketing and Web Development is one of
             India's top Digital Marketing institutions in Delhi-NCR. We studied
@@ -154,7 +177,7 @@ const About = () => {
 
         {/* your carrer matters starts here */}
         <Box>
-          <Heading>Your Career Matters to us</Heading>
+          <Heading textAlign={"center"}>Your Career Matters to us</Heading>
           <UnorderedList>
             <ListItem>
               We provide our students with counseling and professional and
@@ -176,8 +199,8 @@ const About = () => {
           </UnorderedList>
         </Box>
         {/* your carrer matters ends here */}
-        <Box>
-          <Heading>FAQ’s</Heading>
+        <Box my={10}>
+          <Heading textAlign={"center"}>FAQ’s</Heading>
           <Accordion allowMultiple>
             <AccordionItem>
               {({ isExpanded }) => (
