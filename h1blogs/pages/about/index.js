@@ -13,14 +13,16 @@ import {
   AccordionButton,
   AccordionPanel,
   Image,
+  Flex,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../../styles/About.module.css";
+import { FaQuestionCircle } from "react-icons/fa";
 
 const About = () => {
   return (
     <Layout>
-      <Container maxW={"2xl"} className={styles.background}>
+      <Container maxW={"full"}>
         {/* image start here  */}
         <Box>
           <Image src={"/test/aboutbanner.jpeg"} />
@@ -29,7 +31,7 @@ const About = () => {
         {/* image end here  */}
 
         {/* digital marketing Start */}
-        <Box textAlign={"center"} my={10}>
+        <Box textAlign={"center"} my={10} mx={[5, 20]}>
           <Heading textAlign={"center"}>
             Best Digital Marketing Course in Delhi
           </Heading>
@@ -49,13 +51,13 @@ const About = () => {
         {/* digital marketing end */}
 
         {/* Our Vision Start */}
-        <SimpleGrid columns={[1, 2]}>
+        <SimpleGrid columns={[1, 2]} mx={[5, 20]}>
           <Box>
             <Image src={"/test/ourmission.jpeg"} minH={"330px"} />
           </Box>
           <Box textAlign={"center"} px={5}>
             <Heading textAlign={"center"}>Our Vision</Heading>
-            <Text>
+            <Text fontSize={"18px"} lineHeight={"26px"}>
               We have the vision to expand our Institute's branches all around
               India so we can train the student to acquire the top Digital
               Marketing skill which is essential for building their future.
@@ -71,7 +73,7 @@ const About = () => {
         {/* our vision end */}
 
         {/* Track record start */}
-        <Box textAlign={"center"} my={10}>
+        <Box textAlign={"center"} my={10} mx={[5, 20]}>
           <Heading>Our Track Record…</Heading>
           <Text>
             We are a Digital Marketing Agency-based Institute that has strong
@@ -79,31 +81,69 @@ const About = () => {
             organizations actively seek out our students, as we provide on-site
             training.
           </Text>
-          <SimpleGrid columns={[1, 2]} my={10}>
-            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
-              1000+ Students Trained
+          <SimpleGrid columns={[1, 4]} py={20} spacing={6} bg={"white"} px={10}>
+            <Box
+              p={10}
+              // boxShadow={"10px 10px 5px 12px lightblue"}
+              bg={"blue.100"}
+              borderRadius={10}
+            >
+              <Text color={"blue"} fontWeight={"bold"} fontSize={"2rem"}>
+                1000+
+              </Text>{" "}
+              Students Trained
             </Box>
-            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
-              100+ Hiring Partners
+            <Box
+              p={10} //boxShadow={"10px 10px 5px 12px red"}
+              bg={"red.100"}
+              borderRadius={10}
+            >
+              <Text color={"red.300"} fontWeight={"bold"} fontSize={"2rem"}>
+                {" "}
+                100+
+              </Text>
+              Hiring Partners
             </Box>
-            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
-              700+ Students Placed
+            <Box
+              p={10} //</SimpleGrid>boxShadow={"10px 10px 5px 12px lightblue"}
+              bg={"green.100"}
+              borderRadius={10}
+            >
+              <Text color={"green.300"} fontWeight={"bold"} fontSize={"2rem"}>
+                700+
+              </Text>
+              Students Placed
             </Box>
-            <Box p={10} boxShadow={"10px 10px 5px 12px lightblue"}>
-              300+ Salary Hike
+            <Box
+              p={10}
+              //boxShadow={"10px 10px 5px 12px lightblue"}
+              bg={"orange.100"}
+              borderRadius={10}
+            >
+              <Text color={"orange.300"} fontWeight={"bold"} fontSize={"2rem"}>
+                {" "}
+                300+
+              </Text>
+              Salary Hike
             </Box>
           </SimpleGrid>
         </Box>
         {/* Track record end */}
 
         {/* director portfolio starts here */}
-        <SimpleGrid border={"1px solid black"} columns={[1, 2]} my={10}>
+        <SimpleGrid columns={[1, 2]} my={10} mx={[5, 20]}>
           <Box>
-            <Image src={"/test/yuviraj.png"} w={"100%"} p={3} />
+            <Image
+              src={"https://via.placeholder.com/600x400"}
+              maxH={"500px"}
+              w={"100%"}
+              //style={{ float: "right" }}
+              pr={5}
+            />
           </Box>
-          <Box p={3} textAlign={"center"}>
+          <Box>
             <Heading>MESSAGE FROM DIRECTOR</Heading>
-            <Text p={5}>
+            <Text>
               Our sole and complete mission is to teach the value of Digital
               Marketing by utilizing and creating a viable digital career path
               for you. We assist you in providing an understanding of the
@@ -111,13 +151,10 @@ const About = () => {
               own pace and put extra efforts into the program that you like.
             </Text>
             <Heading>YUVRAJ SINGH</Heading>
-            <Highlight
-              query="Director"
-              styles={{ px: "1", py: "1", bg: "orange.100" }}
-            >
+            <Highlight query="Director" styles={{ color: "red" }}>
               Director
             </Highlight>
-            <Text p={5}>
+            <Text>
               Our sole and complete mission is to teach the value of Digital
               Marketing by utilizing and creating a viable digital career path
               for you. We assist you in providing an understanding of the
@@ -130,16 +167,16 @@ const About = () => {
 
         {/* cofounder portfolio starts here */}
 
-        <SimpleGrid columns={[1, 2]} border={"1px solid black"} my={10}>
-          <Box textAlign={"center"}>
-            <Heading>AKSHAY</Heading>
+        <SimpleGrid columns={[1, 2]} my={10} mx={[5, 20]}>
+          <Box>
+            <Heading>AKSHAY </Heading>
             <Highlight
               query="Co-founder"
               styles={{ px: "1", py: "1", color: "red" }}
             >
               Co-founder
             </Highlight>
-            <Text p={5}>
+            <Text>
               He is very good at organizing Digital Marketing Strategies and
               developing new and innovative SEO strategies. His planning skills
               for digital marketing strategies, SEO (on-page and off-page), and
@@ -154,13 +191,19 @@ const About = () => {
           </Box>
           <Box>
             {" "}
-            <Image src={"/test/yuviraj.png"} maxH={"500px"} w={"100%"} p={3} />
+            <Image
+              src={"https://via.placeholder.com/600x300"}
+              maxH={"500px"}
+              w={"100%"}
+              //style={{ float: "right" }}
+              px={5}
+            />
           </Box>
         </SimpleGrid>
         {/* cofounder portfolio ends here */}
 
         {/* why choose us starts here */}
-        <Box my={10}>
+        <Box my={10} mx={[5, 20]}>
           <Heading textAlign={"center"}>Why Choose US?</Heading>
           <Text>
             H1 Tags -School of Digital Marketing and Web Development is one of
@@ -176,7 +219,7 @@ const About = () => {
         {/* why choose us ends here */}
 
         {/* your carrer matters starts here */}
-        <Box>
+        <Box my={10} mx={[5, 20]}>
           <Heading textAlign={"center"}>Your Career Matters to us</Heading>
           <UnorderedList>
             <ListItem>
@@ -200,8 +243,10 @@ const About = () => {
         </Box>
         {/* your carrer matters ends here */}
         <Box my={10}>
-          <Heading textAlign={"center"}>FAQ’s</Heading>
-          <Accordion allowMultiple>
+          <Heading textAlign={"center"} py={5}>
+            FAQ’s
+          </Heading>
+          <Accordion allowMultiple mx={[5, 60]}>
             <AccordionItem>
               {({ isExpanded }) => (
                 <>

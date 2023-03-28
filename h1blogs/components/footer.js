@@ -22,7 +22,7 @@ import { SlPhone } from "react-icons/sl";
 
 export default function Footer() {
   return (
-    <Container bg={"#101C32"} maxW="full" mt={10}>
+    <Container bg={"#101C32"} maxW="full">
       <SimpleGrid
         columns={[1, 2, 4]}
         spacing={10}
