@@ -20,13 +20,13 @@ export const Map = () => {
         <Heading>
           <Highlight
             query="career"
-            styles={{ px: "1", py: "1", color: "#be1e2d" }}
+            styles={{ px: "1", py: "1", color: "#101C32" }}
           >
             Map your career with
           </Highlight>
           <Highlight
             query="DIDM"
-            styles={{ px: "1", py: "1", color: "#be1e2d" }}
+            styles={{ px: "1", py: "1", color: "#101C32" }}
           >
             DIDM
           </Highlight>
@@ -44,94 +44,22 @@ export const Map = () => {
             <Box>
               <Card py={10}>
                 <CardHeader py={1}>
-                  <Heading size="md" color={"#be1e2d"}>
+                  <Heading size="md" color={"#101C32"}>
                     {" "}
                     {item.branch_location}
                   </Heading>
                 </CardHeader>
                 <CardBody py={3}>
                   <Text>{item.address}</Text>
-                  <Text py={1}>
-                    {/* <Highlight
-                      query="Call @"
-                      styles={{
-                        px: "1",
-                        py: "1",
-                        color: "black.500",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      Call @ 08383883621
-                    </Highlight> */}
-                    {item.conatct_No}
-                  </Text>
-                  <Text py={3}>
-                    {/* <Highlight
-                      query="Helpline No - "
-                      styles={{
-                        px: "1",
-                        py: "1",
-                        color: "black.500",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      Helpline No - +91 - 08800505151
-                    </Highlight> */}
-                    {item.email}
-                  </Text>
-                  <Text py={3}>
-                    {/* <Highlight
-                      query="Email ID - "
-                      styles={{
-                        px: "1",
-                        py: "1",
-                        color: "black.500",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      Email ID - info@didm.in
-                    </Highlight> */}
-                  </Text>
+                  <Text py={1}>{item.conatct_No}</Text>
+                  <Text py={3}>{item.email}</Text>
+                  <Text py={3}></Text>
                 </CardBody>
-                <CardFooter>
-                  {/* <Button rounded={"full"} bg="#be1e2d" px={10} color="white">
-                    Get Direction
-                  </Button> */}
-                  {<iframe src={item?.map_url}></iframe>}
-                </CardFooter>
+                <CardFooter>{<iframe src={item?.map_url}></iframe>}</CardFooter>
               </Card>
             </Box>
           );
         })}
-
-        {/* <Box>
-                <Card py={10}>
-                        <CardHeader py={1}>
-                            <Heading size='md' color={'#be1e2d'}> Dwarka</Heading>
-                        </CardHeader>
-                        <CardBody py={3}>
-                            <Text>E-557, 2nd Floor, Opp, Goyal sons, Near Ramphal Chawk, West Delhi, Dwarka, Sector-7, New Delhi-110077</Text>
-                            <Text py={1}>
-                                <Highlight query='Call @' styles={{ px: '1', py: '1', color: 'black.500',fontWeight:"bold" }}>
-                                Call @ 08383883621
-                                </Highlight>
-                            </Text>
-                            <Text py={3}>
-                                <Highlight query='Helpline No - ' styles={{ px: '1', py: '1', color: 'black.500',fontWeight:"bold" }}>
-                                Helpline No - +91 - 08800505151
-                                </Highlight>
-                            </Text>
-                            <Text py={3}>
-                                <Highlight query='Email ID - ' styles={{ px: '1', py: '1', color: 'black.500',fontWeight:"bold" }}>
-                                Email ID - info@didm.in
-                                </Highlight>
-                            </Text>
-                        </CardBody>
-                        <CardFooter>
-                            <Button rounded={'full'} bg='#be1e2d' px={10} color='white'>Get Direction</Button>
-                        </CardFooter>
-                    </Card>
-                </Box> */}
       </SimpleGrid>
     </Container>
   );
