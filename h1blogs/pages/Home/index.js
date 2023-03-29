@@ -6,7 +6,7 @@ import { TransFormingCourse } from "./partials/TransFormingCourse";
 // import { TraningHightLight } from "./partials/TraningHightLight";
 // import { UpSkillCarrier } from "./partials/UpSKillCarrier";
 // import { Tranding } from "./partials/Tranding";
-import { ComparisionChar } from "./partials/CoparisionChart";
+import { WhyUs } from "./partials/WhyUs";
 // import { EndToEnd } from "./partials/EndToEnd";
 import { Benifits } from "./partials/Benifits";
 import { StandsOut } from "./partials/StandsOut";
@@ -23,7 +23,7 @@ const Home = () => {
       <TransFormingCourse />
       <PickCourseTab />
       <Benifits />
-      <ComparisionChar />
+      <WhyUs />
       <StandsOut />
       <Suitable />
       <ExperienceH1tags />
