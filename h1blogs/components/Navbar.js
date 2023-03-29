@@ -21,10 +21,13 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-
+import ReturnFocus from "../pages/admin/Components/modal";
+import React from "react";
 import Link from "next/link";
+import ContactForm from "./contactform";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const [openModal, openModalSet] = React.useState(false);
 
   return (
     <Box style={{ position: "sticky", top: "0" }} zIndex={1}>
@@ -86,7 +89,13 @@ export default function WithSubnavigation() {
           >
             Get Brochure
           </Button> */}
-          <Button
+          <ReturnFocus
+            btnText={`Get Brochure`}
+            children={<ContactForm />}
+            openModalSet={openModalSet}
+            // isEditingSet={isEditingSet}
+          />
+          {/* <Button
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
@@ -99,7 +108,7 @@ export default function WithSubnavigation() {
             }}
           >
             Get Brochure
-          </Button>
+          </Button> */}
         </Stack>
       </Flex>
 

@@ -14,6 +14,7 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 // import { useFormik } from "formik";
 
@@ -32,6 +33,7 @@ export default function ContactForm() {
   // const handleSubmit = (data) => {
   //   alert("hello");
   // };
+  const [place, setPlace] = useState("");
 
   return (
     <Flex
@@ -58,16 +60,17 @@ export default function ContactForm() {
             email: "",
             phone: "",
             rememberMe: false,
-            place: "",
+            place: place,
           }}
           onSubmit={(values, error) => {
             alert(JSON.stringify(values, null, 2));
+            console.log(place);
           }}
         >
           {({ handleSubmit, errors, touched }) => (
             <form onSubmit={handleSubmit}>
               <VStack spacing={4} align="flex-start">
-                <FormControl>
+                <FormControl isInvalid={!!errors.name && touched.name}>
                   <Field
                     as={Input}
                     id="name"
@@ -79,16 +82,16 @@ export default function ContactForm() {
                     validate={(value) => {
                       let error;
 
-                      value.length < 6
-                        ? (error =
-                            "Password must contain at least 6 characters")
+                      value.length < 3
+                        ? (error = "Please insert valid name")
                         : "";
 
                       return error;
                     }}
                   />
                 </FormControl>
-                <FormControl>
+                <FormErrorMessage>{errors.name}</FormErrorMessage>
+                <FormControl isInvalid={!!errors.email && touched.email}>
                   <Field
                     as={Input}
                     id="email"
@@ -97,30 +100,42 @@ export default function ContactForm() {
                     variant="filled"
                     bg={"#607d8b29"}
                     Placeholder="Email Address"
+                    validate={(value) => {
+                      let error;
+
+                      if (!value) {
+                        error = "Required";
+                      } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+                      ) {
+                        error = "Invalid email address";
+                      }
+
+                      return error;
+                    }}
                   />
                 </FormControl>
-
-                <FormControl isInvalid={!!errors.password && touched.password}>
+                <FormErrorMessage>{errors.email}</FormErrorMessage>
+                <FormControl isInvalid={!!errors.phone && touched.phone}>
                   <Field
                     as={Input}
                     id="phone"
                     name="phone"
                     type="phone"
                     variant="filled"
-                    Placeholder="Enter Phone"
+                    Placeholder="Enter Contact"
                     bg={"#607d8b29"}
                     validate={(value) => {
                       let error;
 
-                      value.length < 6
-                        ? (error =
-                            "Password must contain at least 6 characters")
+                      value.length < 10
+                        ? (error = "Number must contain  10 Numbers")
                         : (error = "");
 
                       return error;
                     }}
                   />
-                  <FormErrorMessage>{errors.password}</FormErrorMessage>
+                  <FormErrorMessage>{errors.phone}</FormErrorMessage>
                 </FormControl>
                 <FormControl>
                   <Select
@@ -128,12 +143,13 @@ export default function ContactForm() {
                     color={"gray"}
                     bg={"#607d8b29"}
                     name="place"
+                    onChange={(e) => setPlace(e.target.value)}
                   >
                     <option variant="filled" value={"Neta ji subhas palace"}>
                       Neta ji subhas palace
                     </option>
-                    <option variant="filled" value={"Nigeria"}>
-                      Nigeria
+                    <option variant="filled" value={"Budh Vihar"}>
+                      Budh Vihar
                     </option>
                   </Select>
                 </FormControl>

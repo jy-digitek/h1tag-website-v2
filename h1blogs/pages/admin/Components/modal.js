@@ -15,11 +15,9 @@ import { useDisclosure } from "@chakra-ui/react";
 export default function ReturnFocus({
   btnText,
   modalTitle,
-  isEditing,
   isEditingSet,
+  openModalSet,
   children,
-  onAddHandle,
-  onUpdateHandle,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = React.useRef(null);
@@ -27,9 +25,15 @@ export default function ReturnFocus({
   return (
     <>
       <Button
-        mt={4}
+        display={{ base: "none", md: "inline-flex" }}
+        p={5}
+        fontSize={"sm"}
+        fontWeight={600}
+        color={"white"}
+        bg={"#101C32"}
         onClick={(e) => {
-          isEditingSet(true), onOpen(e);
+          openModalSet(true);
+          onOpen(e);
         }}
       >
         {btnText}

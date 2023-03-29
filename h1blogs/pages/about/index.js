@@ -162,11 +162,13 @@ const About = () => {
               Director
             </Highlight>
             <Text>
-              Our sole and complete mission is to teach the value of Digital
-              Marketing by utilizing and creating a viable digital career path
-              for you. We assist you in providing an understanding of the
-              section-wise method so that you can comprehend the process at your
-              own pace and put extra efforts into the program that you like.
+              Mr. Yuvraj Singh, born to be an entrepreneur, began his career by
+              accomplishing many ventures like H1 TAGS, the top Digital
+              Marketing Institute in Delhi NCR with a proven track record of
+              developing and directing high-impact Digital Marketing Strategies.
+              Skilled in overseeing web strategy and development, digital
+              engagement, and consumer-facing tools. Adept in guiding strategic
+              relationships to achieve company goals.
             </Text>
           </Box>
         </SimpleGrid>
