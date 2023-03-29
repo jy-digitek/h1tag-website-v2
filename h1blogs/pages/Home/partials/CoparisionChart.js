@@ -25,7 +25,7 @@ export const ComparisionChar = () => {
       <Heading textAlign={"center"}>
         <Highlight
           query="Chart"
-          styles={{ px: "1", py: "1", color: "#dc3545", fontWeight: "bold" }}
+          styles={{ px: "1", py: "1", color: "#101C32", fontWeight: "bold" }}
         >
           Why H1 Tags
         </Highlight>
@@ -39,6 +39,7 @@ export const ComparisionChar = () => {
         spacing={10}
         pt={10}
         px={[0, 10]}
+        fontFamily={"bold"}
         fontSize={"20px"}
       >
         <Box>
@@ -48,7 +49,7 @@ export const ComparisionChar = () => {
                 <MdCurrencyRupee size={"100px"} />
               </Center>
               <Stack mt="6" spacing="3">
-                <Heading size="md" color={"#dc3545"}>
+                <Heading size="md" color={"#101C32"}>
                   Flexible Fee Structure
                 </Heading>
                 <Text>
@@ -74,7 +75,7 @@ export const ComparisionChar = () => {
               </Center>
 
               <Stack mt="6" spacing="3">
-                <Heading size="md" color={"#dc3545"}>
+                <Heading size="md" color={"#101C32"}>
                   Training Facilities
                 </Heading>
                 <Text>
@@ -99,7 +100,7 @@ export const ComparisionChar = () => {
               </Center>
 
               <Stack mt="6" spacing="3">
-                <Heading size="md" color={"#dc3545"}>
+                <Heading size="md" color={"#101C32"}>
                   Job Placement
                 </Heading>
                 <Text>
@@ -123,7 +124,7 @@ export const ComparisionChar = () => {
                 <FaUserGraduate size={"100px"} />
               </Center>
               <Stack mt="6" spacing="3">
-                <Heading size="md" color={"#dc3545"}>
+                <Heading size="md" color={"#101C32"}>
                   Paid Internship
                 </Heading>
                 <Text>
@@ -149,7 +150,7 @@ export const ComparisionChar = () => {
               </Center>
 
               <Stack mt="6" spacing="3">
-                <Heading size="md" color={"#dc3545"}>
+                <Heading size="md" color={"#101C32"}>
                   Advanced Experience
                 </Heading>
                 <Text>
@@ -173,7 +174,7 @@ export const ComparisionChar = () => {
                 <FaHistory size={"100px"} />
               </Center>
               <Stack mt="6" spacing="3">
-                <Heading size="md" color={"#dc3545"}>
+                <Heading size="md" color={"#101C32"}>
                   Proven Track Record
                 </Heading>
                 <Text>

@@ -17,7 +17,7 @@ export const Suitable = () => {
       <Heading textAlign={"center"} py={10}>
         <Highlight
           query="suitable"
-          styles={{ px: "1", py: "1", color: "#dc3545" }}
+          styles={{ px: "1", py: "1", color: "#101C32" }}
         >
           This Course is suitable for
         </Highlight>
@@ -30,7 +30,7 @@ export const Suitable = () => {
                 <Heading size="md">
                   <Highlight
                     query="⦁ Students/Fresher’s"
-                    styles={{ px: "1", py: "1", color: "#dc3545" }}
+                    styles={{ px: "1", py: "1", color: "#101C32" }}
                   >
                     ⦁ Students/Fresher’s
                   </Highlight>
@@ -50,7 +50,7 @@ export const Suitable = () => {
                 <Heading size="md">
                   <Highlight
                     query="⦁ Professionals"
-                    styles={{ px: "1", py: "1", color: "#dc3545" }}
+                    styles={{ px: "1", py: "1", color: "#101C32" }}
                   >
                     ⦁ Professionals
                   </Highlight>
@@ -70,7 +70,7 @@ export const Suitable = () => {
                 <Heading size="md">
                   <Highlight
                     query="⦁ Coaches"
-                    styles={{ px: "1", py: "1", color: "#dc3545" }}
+                    styles={{ px: "1", py: "1", color: "#101C32" }}
                   >
                     ⦁ Coaches
                   </Highlight>
@@ -91,7 +91,7 @@ export const Suitable = () => {
                 <Heading size="md">
                   <Highlight
                     query="⦁ Homepreneurs"
-                    styles={{ px: "1", py: "1", color: "#dc3545" }}
+                    styles={{ px: "1", py: "1", color: "#101C32" }}
                   >
                     ⦁ Homepreneurs
                   </Highlight>
@@ -111,7 +111,7 @@ export const Suitable = () => {
                 <Heading size="md">
                   <Highlight
                     query="⦁ Agency Owners"
-                    styles={{ px: "1", py: "1", color: "#dc3545" }}
+                    styles={{ px: "1", py: "1", color: "#101C32" }}
                   >
                     ⦁ Agency Owners
                   </Highlight>
@@ -132,7 +132,7 @@ export const Suitable = () => {
                 <Heading size="md">
                   <Highlight
                     query="⦁ Freelancers"
-                    styles={{ px: "1", py: "1", color: "#dc3545" }}
+                    styles={{ px: "1", py: "1", color: "#101C32" }}
                   >
                     ⦁ Freelancers
                   </Highlight>
