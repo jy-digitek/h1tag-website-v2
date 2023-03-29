@@ -109,6 +109,12 @@ export const CourseBuiltForData = [
   },
 ];
 
+export const vdoFeedback = [
+  "https://www.youtube.com/embed/d2lWQSFCiCo",
+  "https://www.youtube.com/embed/Em6Z1LMSQIA",
+  "https://www.youtube.com/embed/RXMIi5QblN8",
+  "https://www.youtube.com/embed/hS5-F7w6xDk",
+];
 export const AddressesData = [
   {
     branch_location: "Netaji Subhash Place",
