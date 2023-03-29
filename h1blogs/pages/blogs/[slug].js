@@ -15,22 +15,22 @@ import Head from "next/head";
 
 const Post = ({}) => {
   const router = useRouter();
-  const { _id } = router.query;
+  const { slug } = router.query;
   const post = useSelector((state) => state.post);
-  console.log("post", post);
+  console.log("post", post.data[0]);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (_id) {
-      dispatch(getSinglePost(_id));
+    if (slug) {
+      dispatch(getSinglePost(slug));
     }
-  }, [_id]);
+  }, [slug]);
 
   return (
     <ChakraProvider>
       <Container maxW={"full"}>
-        {!post.isLoading && post.data.isVisible && (
+        {!post.isLoading && post.data[0] && (
           <>
             <Head>
               <title>
@@ -50,29 +50,27 @@ const Post = ({}) => {
             </Head>
             <Box mx={[0, "20%"]}>
               <Heading textAlign={"center"} my={10}>
-                {post.data.title}{" "}
+                {post.data[0].title}{" "}
               </Heading>
 
               <Box style={{ alignItems: "center" }}>
                 <Image
-                  src={`../uploads/${post.data.image}`}
+                  src={`../uploads/${post.data[0].image}`}
                   alt="Dan Abramov"
                   boxSize={"100%"}
                   maxH={"400px"}
                   position={"cover"}
                 />
               </Box>
-
-              <Text>{post.data.slug}</Text>
               <Text
                 style={{ fontSize: "17px" }}
-                dangerouslySetInnerHTML={{ __html: post.data.body }}
+                dangerouslySetInnerHTML={{ __html: post.data[0].body }}
               ></Text>
               <Box>
                 <Heading as={"h4"} fontSize={"18px"}>
                   Summary
                 </Heading>
-                <Text>{post.data.summary}</Text>
+                <Text>{post.data[0].summary}</Text>
               </Box>
             </Box>
           </>

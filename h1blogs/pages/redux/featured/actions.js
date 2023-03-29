@@ -31,9 +31,10 @@ export const getPostList = createAsyncThunk(
 
 export const getSinglePost = createAsyncThunk(
   "post/getPostId",
-  async (id, { rejectWithValue }) => {
+  async (slug, { rejectWithValue }) => {
     try {
-      const res = await getPostById(id);
+      const res = await getPostById({ slug });
+      console.log("action single", res);
       return res.data.post;
     } catch (error) {
       return rejectWithValue(error.message);

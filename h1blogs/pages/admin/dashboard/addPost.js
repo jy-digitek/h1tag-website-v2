@@ -19,7 +19,15 @@ const AddPost = () => {
     console.log("data====>", data, "body=====>", body);
 
     formData.append("title", data.title);
-    formData.append("slug", data.slug);
+    formData.append(
+      "slug",
+      data.title
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/[\s_-]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+    );
     formData.append("image", data.image);
     formData.append("summary", data.summary);
     formData.append("categories", data.categories);
