@@ -1,12 +1,12 @@
 import Layout from "../../components/layout";
 import { ContactBanner } from "./partials/Banner";
-import { MoreSegment } from "./partials/More_Segment";
+import { QuickContact } from "./partials/QuickContact";
 import Addresses from "./partials/Addresses";
 const Contact = () => {
   return (
     <Layout>
       {/* <ContactBanner /> */}
-      {/* <MoreSegment /> */}
+      <QuickContact />
       <Addresses />
     </Layout>
   );

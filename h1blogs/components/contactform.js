@@ -46,10 +46,10 @@ export default function ContactForm() {
         <Text fontSize={["1.5rem", "2rem"]} fontWeight={"bold"}>
           Take a free session today!!
         </Text>
-        <Text fontSize={["1rem", "1.5rem"]} p={2}>
+        {/* <Text fontSize={["1rem", "1.5rem"]} p={2}>
           Go Digital | Go Global
-        </Text>
-        <Text fontSize={["0.9rem", "1rem"]} p={2}>
+        </Text> */}
+        <Text fontSize={["0.9rem", "1rem"]} p={2} mb={2} fontWeight="bold">
           Speak To Our Specialist - +91 - 8800505151
         </Text>
         <Formik
