@@ -1,19 +1,20 @@
 import {
   Box,
-  Image,
+  // Image,
   Heading,
   SimpleGrid,
-  Highlight,
-  Text,
+  // Highlight,
+  // Text,
   Stack,
   Card,
   CardBody,
   Container,
   CardFooter,
   Button,
-  Center,
+  // Center,
   Tabs,
   TabList,
+  ListIcon,
   Tab,
   TabPanel,
   TabPanels,
@@ -23,6 +24,8 @@ import {
   Hide,
 } from "@chakra-ui/react";
 import Link from "next/link";
+
+import { MdCheckCircle, MdSettings } from "react-icons/md";
 
 import { SectionTitle } from "../../../components/SectionTitle";
 
@@ -35,7 +38,7 @@ export const PickCourseTab = () => {
           <Box>
             <Tabs orientation={"horizontal"}>
               <TabList aria-orientation="verticasd">
-                <Tab>Digital Marketing jhgwfefjfwje </Tab>
+                <Tab>Digital Marketing</Tab>
                 <Tab>Graphic Designing </Tab>
               </TabList>
 
@@ -90,7 +93,9 @@ export const PickCourseTab = () => {
         <Show above="md">
           <Box>
             <Tabs orientation={"vertical"}>
-              <TabList aria-orientation="verticasd" width={200}>
+              <TabList
+                style={{ whiteSpace: "pre", borderInlineStart: "unset" }}
+              >
                 <Tab>Digital Marketing </Tab>
                 <Tab>Graphic Designing </Tab>
               </TabList>
@@ -99,43 +104,69 @@ export const PickCourseTab = () => {
                 <TabPanel>
                   <Card W={["100%", "100%"]}>
                     <CardBody>
-                      <Stack mt="6" spacing="3">
+                      <Stack>
                         <Heading size="md" my={3}>
                           Digital Marketing
                         </Heading>
                       </Stack>
-                      <List>
-                        <ListItem>Job Oriented Course</ListItem>
-                        <ListItem>Foundation Course</ListItem>
-                        <ListItem>Customized Course</ListItem>
-                        <ListItem>Master Course</ListItem>
+
+                      <List spacing={3}>
+                        <ListItem>
+                          <ListIcon as={MdCheckCircle} color="green.500" />
+                          Job Oriented Course
+                        </ListItem>
+                        <ListItem>
+                          <ListIcon as={MdCheckCircle} color="green.500" />
+                          Foundation Course
+                        </ListItem>
+                        <ListItem>
+                          <ListIcon as={MdSettings} color="green.500" />
+                          Customized Course
+                        </ListItem>
+                        {/* You can also use custom icons from react-icons */}
+                        <ListItem>
+                          <ListIcon as={MdCheckCircle} color="green.500" />
+                          Master Course
+                        </ListItem>
                       </List>
                     </CardBody>
-                    <CardFooter>
+
+                    <Box sx={{ mb: 3, mx: 3 }}>
                       <Link href="#!">
-                        <Button bg={"yellow.300"}>Learn More</Button>
+                        <Button bg={"yellow.300"} width={"full"}>
+                          Learn More
+                        </Button>
                       </Link>
-                    </CardFooter>
+                    </Box>
                   </Card>
                 </TabPanel>
                 <TabPanel>
                   <Card W={"100%"}>
                     <CardBody>
-                      <Stack mt="6" spacing="3">
+                      <Stack>
                         <Heading size="md" my={3}>
                           Graphic Designing
                         </Heading>
                       </Stack>
                       <List>
-                        <ListItem>Foundation Course</ListItem>
-                        <ListItem>Master Course</ListItem>
+                        <ListItem>
+                          <ListIcon as={MdCheckCircle} color="green.500" />
+                          Foundation Course
+                        </ListItem>
+                        <ListItem>
+                          <ListIcon as={MdCheckCircle} color="green.500" />
+                          Master Course
+                        </ListItem>
                       </List>
                     </CardBody>
-                    <CardFooter>
+
+                    <Box sx={{ mb: 3, mx: 3 }}>
                       <Link href="#!">
-                        <Button bg={"yellow.300"}>Learn More</Button>
+                        <Button bg={"yellow.300"} width={"full"}>
+                          Learn More
+                        </Button>
                       </Link>
-                    </CardFooter>
+                    </Box>
                   </Card>
                 </TabPanel>
               </TabPanels>

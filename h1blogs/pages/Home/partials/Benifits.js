@@ -3,8 +3,8 @@ import {
   Wrap,
   WrapItem,
   Center,
-  Heading,
-  Highlight,
+  // Heading,
+  // Highlight,
   Box,
   Button,
 } from "@chakra-ui/react";
@@ -20,13 +20,8 @@ export const Benifits = () => {
       px={[5, 10]}
     >
       <SectionTitle>Benefits to Students</SectionTitle>
-      <Wrap
-        spacing={["10px", "20px"]}
-        py={5}
-        px={[0, 10]}
-        fontFamily="bold"
-        fontSize={"20px"}
-      >
+
+      <Wrap spacing={["10px", "20px"]} py={5} px={[0, 10]} fontSize={"20px"}>
         <WrapItem>
           <Box boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)" p={[2, 5]}>
             <Center>Earn While You Learning</Center>
