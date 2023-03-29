@@ -19,7 +19,7 @@ export const CarrerOption = () => {
         columns={[0, 5]}
         px={[0, 10]}
         spacing={5}
-        fontFamily={"bold"}
+        fontWeight={"bold"}
         fontSize={"20px"}
       >
         <Box p={10} boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)">

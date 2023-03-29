@@ -14,12 +14,7 @@ export const StandsOut = () => {
       <Heading textAlign={"center"} py={10}>
         How H1 Tags stands out from others?
       </Heading>
-      <SimpleGrid
-        columns={[1, 2, 2]}
-        px={[0, 10]}
-        fontFamily="bold"
-        fontSize={"20px"}
-      >
+      <SimpleGrid columns={[1, 2, 2]} px={[0, 10]} fontSize={"20px"}>
         <Box>
           <Image src={"/h1Standout.png"} boxSize={"100%"} />
         </Box>

@@ -7,15 +7,10 @@ export const ExperienceH1tags = () => {
       <Heading textAlign={"center"} pt={10}>
         Experience at H1 Tags
       </Heading>
-      <Text textAlign={"center"} pb={10} fontFamily={"bold"} fontSize={"20px"}>
+      <Text textAlign={"center"} pb={10} fontSize={"20px"}>
         Real-world marketing work experience
       </Text>
-      <SimpleGrid
-        columns={[1, 2]}
-        px={[0, 10]}
-        fontFamily={"bold"}
-        fontSize={"20px"}
-      >
+      <SimpleGrid columns={[1, 2]} px={[0, 10]} fontSize={"20px"}>
         <Box px={[0, 5]}>
           <Text>
             H1 TAGS is the only Digital Marketing Institute in Delhi to give you

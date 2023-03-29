@@ -22,13 +22,7 @@ export const Suitable = () => {
           This Course is suitable for
         </Highlight>
       </Heading>
-      <SimpleGrid
-        columns={[1, 3]}
-        px={[0, 10]}
-        spacing={6}
-        fontFamily="bold"
-        fontSize={"20px"}
-      >
+      <SimpleGrid columns={[1, 3]} px={[0, 10]} spacing={6} fontSize={"20px"}>
         <Box>
           <Card>
             <CardBody>

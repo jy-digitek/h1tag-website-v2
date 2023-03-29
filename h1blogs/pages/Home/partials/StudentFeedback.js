@@ -15,7 +15,7 @@ export const StudentFeedback = () => {
       <Heading textAlign={"center"} my={10}>
         Students’ Feedback
       </Heading>
-      <SimpleGrid columns={[1, 2]} textAlign={"center"} fontFamily={"bold"}>
+      <SimpleGrid columns={[1, 2]} textAlign={"center"}>
         <Box>
           <Carousel />
         </Box>

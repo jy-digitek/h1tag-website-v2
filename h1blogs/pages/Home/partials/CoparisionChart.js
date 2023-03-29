@@ -39,7 +39,6 @@ export const ComparisionChar = () => {
         spacing={10}
         pt={10}
         px={[0, 10]}
-        fontFamily={"bold"}
         fontSize={"20px"}
       >
         <Box>
