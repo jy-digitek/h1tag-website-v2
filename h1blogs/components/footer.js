@@ -109,8 +109,8 @@ export default function Footer() {
             </Box>
             <Box>
               <Text ml={2}>
-                :Plot No-12, 3rd Floor, Satya Niketan, Near Moti Bagh - South
-                Delhi, Opp. Venketeshwar College, New Delhi-110021
+                : FF 18, First Floor, Pearls Omaxe Tower Netaji Subhash Place,
+                Delhi-110034
               </Text>
             </Box>
           </Flex>

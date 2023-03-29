@@ -72,3 +72,9 @@ export const comparision = [
     text: "Our students tend to grow and enhance their careers; in many ways, our students are happy a satisfied as with our institute they got placement in well-known companies.",
   },
 ];
+
+export const Address = {
+  {
+  conatct_No:
+  }
+}
