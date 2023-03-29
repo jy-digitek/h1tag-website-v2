@@ -23,18 +23,13 @@ import {
   Hide,
 } from "@chakra-ui/react";
 import Link from "next/link";
-export const Instutute = () => {
+
+import { SectionTitle } from "../../../components/SectionTitle";
+
+export const PickCourseTab = () => {
   return (
     <Container maxW={"768px"}>
-      <Heading
-        size="xl"
-        px={{ base: "0", sm: "10", md: "20" }}
-        py={50}
-        textAlign={"center"}
-      >
-        <Text> Pick a Course to Enhance Your Career</Text>
-      </Heading>
-
+      <SectionTitle>Pick a Course to Enhance to career</SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
         <Hide above="md">
           <Box>

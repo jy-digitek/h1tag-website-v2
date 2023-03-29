@@ -1,13 +1,13 @@
 import { Banner } from "./partials/Banner";
 import Layout from "../../components/layout";
-import styles from "../../styles/Home.module.css";
-import { Instutute } from "./partials/Institute";
+// import styles from "../../styles/Home.module.css";
+import { PickCourseTab } from "./partials/PickCourseTab";
 import { TransFormingCourse } from "./partials/TransFormingCourse";
-import { TraningHightLight } from "./partials/TraningHightLight";
-import { UpSkillCarrier } from "./partials/UpSKillCarrier";
-import { Tranding } from "./partials/Tranding";
+// import { TraningHightLight } from "./partials/TraningHightLight";
+// import { UpSkillCarrier } from "./partials/UpSKillCarrier";
+// import { Tranding } from "./partials/Tranding";
 import { ComparisionChar } from "./partials/CoparisionChart";
-import { EndToEnd } from "./partials/EndToEnd";
+// import { EndToEnd } from "./partials/EndToEnd";
 import { Benifits } from "./partials/Benifits";
 import { StandsOut } from "./partials/StandsOut";
 import { Suitable } from "./partials/Suitable";
@@ -15,12 +15,13 @@ import { ExperienceH1tags } from "./partials/ExperienceH1tags";
 import { CarrerOption } from "./partials/CarrerOption";
 import { StudentFeedback } from "./partials/StudentFeedback";
 import { TrustedPartner } from "./partials/TrustedPartner";
+
 const Home = () => {
   return (
     <Layout>
       <Banner />
       <TransFormingCourse />
-      <Instutute />
+      <PickCourseTab />
       <Benifits />
       <ComparisionChar />
       <StandsOut />

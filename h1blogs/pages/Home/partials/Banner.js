@@ -1,4 +1,4 @@
-import { Box, Image, Container } from "@chakra-ui/react";
+import { Container, Image } from "@chakra-ui/react";
 
 export const Banner = () => {
   return (

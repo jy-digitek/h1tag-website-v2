@@ -9,23 +9,17 @@ import {
   Button,
 } from "@chakra-ui/react";
 import styles from "../../../styles/Home.module.css";
+import { SectionTitle } from "../../../components/SectionTitle";
 
 export const Benifits = () => {
   return (
     <Container
-      className={`${styles.container} ${styles.border}`}
+      // className={`${styles.container} ${styles.border}`}
       maxW={"full"}
       py={10}
       px={[5, 10]}
     >
-      <Heading textAlign={"center"} py={10}>
-        <Highlight
-          query="Benefits"
-          styles={{ px: "1", py: "1", color: "#dc3545", fontWeight: "bold" }}
-        >
-          Benefits to Students
-        </Highlight>
-      </Heading>
+      <SectionTitle>Benefits to Students</SectionTitle>
       <Wrap
         spacing={["10px", "20px"]}
         py={5}
