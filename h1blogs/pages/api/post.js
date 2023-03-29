@@ -10,8 +10,8 @@ export const getPost = (page, querySearch) => {
   return axios.get(`/post/posts?searchQuery=${querySearch}&page=${page}`);
 };
 
-export const getPostById = (id) => {
-  return axios.get(`/post/${id}`);
+export const getPostById = ({ slug }) => {
+  return axios.get(`/post/${slug}`);
 };
 
 export const updatePost = (id, data) => {

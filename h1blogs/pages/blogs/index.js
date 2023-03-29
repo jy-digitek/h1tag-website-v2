@@ -63,7 +63,7 @@ const Blog = () => {
                 <>
                   {data.isVisible && (
                     <Box py={[5]} key={index}>
-                      <Link href={`/blogs/${data._id}`}>
+                      <Link href={`/blogs/${data.slug}`}>
                         <Card maxW="xs">
                           <Image
                             objectFit="cover"

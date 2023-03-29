@@ -52,13 +52,14 @@ const DashBoard = () => {
   const deleteItem = () => {};
 
   var data = [page, querySearch];
+  const { isLogin, userToken } = useSelector((state) => state.auth);
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
+    if (!isLogin) {
       router.replace("/admin");
     } else {
       dispatch(getPostList(data));
     }
-  }, [page, dispatch]);
+  }, [dispatch, page]);
 
   const onChangeSerachHandel = (e) => {
     data[1] = e.target.value;
@@ -124,7 +125,7 @@ const DashBoard = () => {
                     <Td>{data.title}</Td>
                     <Td>{data.isVisible ? "visible" : "Not Visble"}</Td>
                     <Td gap={10}>
-                      <Link href={`/admin/dashboard/updatepost/${data._id}`}>
+                      <Link href={`/admin/dashboard/updatepost/${data.slug}`}>
                         <Button bg={"yellow.200"} mr={5}>
                           Edit
                         </Button>

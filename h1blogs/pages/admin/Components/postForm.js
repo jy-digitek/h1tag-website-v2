@@ -60,7 +60,6 @@ const PostForm = (props) => {
                   );
                 })}
             </Select>
-
             <Input
               type="text"
               placeholder="Give title here"
@@ -78,31 +77,30 @@ const PostForm = (props) => {
                       [e.target.name]: e.target.value,
                     })
               }
-              // onChange={(e) =>
-              // props.spostSet({
-              //   ...props.spost,
-              // [e.target.name]: e.target.value,
-              // })
-              // }
             />
-            <Input
+            {/* <Input
               type="text"
               placeholder="slug here"
               name="slug"
-              value={props.spost ? props.spost.slug : props.data.slug}
-              onChange={(e) =>
-                props.spostSet
-                  ? props.spostSet({
-                      ...props.spost,
-                      [e.target.name]: e.target.value,
-                    })
-                  : props.setData({
-                      ...props.data,
-                      [e.target.name]: e.target.value,
-                    })
+              value={props.spost ? props.spost.slug : props.data.title}
+              onChange={
+                (e) =>
+                  props.setData({
+                    ...props.data,
+                    [e.target.name]: props.data.title,
+                  })
+                // props.spostSet
+                //   ? props.spostSet({
+                //       ...props.spost,
+                //       [e.target.name]: e.target.value,
+                //     })
+                //   : props.setData({
+                //       ...props.data,
+                //       [e.target.name]: props.data.title,
+                //     })
               }
               my={4}
-            />
+            /> */}
             <Input
               type="file"
               placeholder="Upload image"
@@ -120,7 +118,6 @@ const PostForm = (props) => {
                     })
               }
             />
-            {/* <img src={`uploads/${props.data.image}`} /> */}
             <Textarea
               placeholder="Text your summary here"
               my={4}
@@ -138,20 +135,12 @@ const PostForm = (props) => {
                     })
               }
             />
-
-            {/* <Textarea
-              placeholder="Text your body here"
-              my={4}
-              name="body"
-              onChange={(e) => props.setBody(e.target.value)}
-            />
-            {props.body} */}
+            =
             <ReactQuill
               theme="snow"
               value={props.spost ? props.body : props.body}
               onChange={props.spost ? props.setBody : props.setBody}
             />
-
             {props.spost ? (
               <Button onClick={(e) => props.updateSubmitHandle(e)}>
                 {" "}

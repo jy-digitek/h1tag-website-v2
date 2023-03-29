@@ -12,7 +12,7 @@ router
   .route("/postcreate")
   .post(adminAuth.adminAuth, upload.single("image"), postController.postCreate);
 router.route("/posts").get(postController.allPosts);
-router.route("/:id").get(postController.getPost);
+router.route("/:slug").get(postController.getPost);
 router.route("/:id").put(adminAuth.adminAuth, postController.updatePost);
 router.route("/:id").delete(adminAuth.adminAuth, postController.deletePost);
 router

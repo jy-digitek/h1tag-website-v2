@@ -15,7 +15,7 @@ import {
   Flex,
   Heading,
 } from "@chakra-ui/react";
-import Link from "next/link";
+
 import {
   getCategories,
   createCategories,
@@ -23,15 +23,13 @@ import {
   updateCategories,
 } from "../../redux/featured/actions";
 
-import { updateCategory } from "../../api/category";
-
 import CategoryForm from "../../admin/Components/CategoryForm";
 
 import ReturnFocus from "../Components/modal";
-
+import { useRouter } from "next/router";
 const categories = () => {
   const dispatch = useDispatch();
-
+  const router = useRouter();
   const [isEditing, isEditingSet] = React.useState(false);
 
   const [name, setName] = React.useState("");
@@ -46,34 +44,24 @@ const categories = () => {
   };
   const onUpdateHandle = (e) => {
     e.preventDefault();
-    //console.log(id);
-    //dispatch(updateCategories(id, name, description));
-    // console.log("avdibjh", updateName, updateDescription);
-    // const data = updateCategory(id, {
-    //   name: updateName,
-    //   description: updateDescription,
-    // });
     console.log("asads", updateName, updateDescription);
     const data = { name: updateName, description: updateDescription };
     console.log("data1", data);
     dispatch(updateCategories([id, data]));
     dispatch(getCategories());
   };
+  const { isLogin, userToken } = useSelector((state) => state.auth);
   const categoriesData = useSelector((state) => state.category);
   useEffect(() => {
-    dispatch(getCategories());
+    if (!isLogin) {
+      router.replace("/admin");
+    } else {
+      dispatch(getCategories());
+    }
   }, [dispatch]);
 
   return (
     <AdminLayout>
-      {/* <Box>
-        <Link href="/admin/dashboard/createcategory">
-          <Button bg={"blue.500"} px={10} my={5} color={"white"} ml={10}>
-            Add Category
-          </Button>
-        </Link>
-      </Box> */}
-
       <SimpleGrid columns={2} spacing={10}>
         <Box>
           <Heading p={0} textAlign={"center"}>

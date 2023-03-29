@@ -3,11 +3,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postCreate } from "../../redux/featured/actions";
 const AddPost = () => {
-  // const [title, setTitle] = useState("");
-  // const [slug, setSlug] = useState("");
-  // const [image, setImage] = useState(undefined);
-  // const [summary, setSummary] = useState("");
-  // const [categories, setCategories] = useState("");
   const [body, setBody] = useState("");
 
   const [data, setData] = useState({});
@@ -24,7 +19,15 @@ const AddPost = () => {
     console.log("data====>", data, "body=====>", body);
 
     formData.append("title", data.title);
-    formData.append("slug", data.slug);
+    formData.append(
+      "slug",
+      data.title
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/[\s_-]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+    );
     formData.append("image", data.image);
     formData.append("summary", data.summary);
     formData.append("categories", data.categories);
@@ -43,14 +46,7 @@ const AddPost = () => {
   return (
     <PostForm
       title="Add Post Here"
-      // setTitle={setTitle}
-      // setSlug={setSlug}
-      // setImage={setImage}
-      // setSummary={setSummary}
-      // setCategories={setCategories}
-      // setBody={setBody}
       addsubmitHandle={addsubmitHandle}
-      // body={body}
       data={data}
       setData={setData}
       setBody={setBody}

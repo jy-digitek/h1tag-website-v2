@@ -64,8 +64,10 @@ module.exports = {
   },
   getPost: async (req, res) => {
     try {
-      const id = req.params.id;
-      const post = await Post.findById(id).populate("categories");
+      console.log(req.params.slug);
+      const slug = req.params.slug;
+      const post = await Post.find({ slug }).populate("categories");
+      console.log("post", post);
       return res.status(201).json({ post: post });
     } catch (error) {
       return res.status(500).json();

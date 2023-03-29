@@ -13,6 +13,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -20,10 +21,13 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-
+import ReturnFocus from "../pages/admin/Components/modal";
+import React from "react";
 import Link from "next/link";
+import ContactForm from "./contactform";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const [openModal, openModalSet] = React.useState(false);
 
   return (
     <Box style={{ position: "sticky", top: "0" }} zIndex={1}>
@@ -62,7 +66,7 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            Logo
+            <Image src="/h1logo.png" w={"162px"} />
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -76,29 +80,35 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <Button
+          {/* <Button
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
             href={"#"}
           >
-            Sign In
-          </Button>
-          <Button
+            Get Brochure
+          </Button> */}
+          <ReturnFocus
+            btnText={`Get Brochure`}
+            children={<ContactForm />}
+            openModalSet={openModalSet}
+            // isEditingSet={isEditingSet}
+          />
+          {/* <Button
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"#101C32"}
             href={"#"}
             _hover={{
               bg: "pink.300",
             }}
           >
-            Sign Up
-          </Button>
+            Get Brochure
+          </Button> */}
         </Stack>
       </Flex>
 
@@ -115,7 +125,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={4} alignItems="center">
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -296,5 +306,9 @@ const NAV_ITEMS = [
   {
     label: "Contact",
     href: "/contact",
+  },
+  {
+    label: "Galary",
+    href: "#",
   },
 ];

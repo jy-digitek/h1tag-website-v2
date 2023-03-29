@@ -14,10 +14,12 @@ const UpdatePost = () => {
   const dispatch = useDispatch();
   const [loading, loadingSet] = useState(false);
   const router = useRouter();
-  const { _id } = router.query;
+  const { slug } = router.query;
+  console.log("updatePost_id", slug);
   const [body, setBody] = useState("");
   // const { data, isLoading, isSuccess } = useSelector((state) => state.post);
-
+  const post = useSelector((state) => state.post);
+  console.log("post", post);
   const updateSubmitHandle = async (e) => {
     e.preventDefault();
 
@@ -37,7 +39,7 @@ const UpdatePost = () => {
 
     Object.assign(spost, { body: body });
 
-    const data = [_id, spost];
+    const data = [slug, spost];
 
     //  const res = await updatePost(_id, spost);
     // console.log(res);
@@ -45,15 +47,16 @@ const UpdatePost = () => {
   };
 
   useEffect(() => {
-    if (_id) {
+    if (slug) {
       loadingSet(true);
-      getSinglePostData(_id);
+      getSinglePostData({ slug });
       loadingSet(false);
     }
-  }, [_id]);
+  }, [slug]);
 
-  const getSinglePostData = async (_id) => {
-    const res = await getPostById(_id);
+  const getSinglePostData = async (slug) => {
+    const res = await getPostById(slug);
+    console.log("res", res);
     var copied = Object.assign({}, res.data.post);
     delete copied._id;
     delete copied.body;
@@ -62,13 +65,14 @@ const UpdatePost = () => {
   };
 
   const [spost, spostSet] = useState({});
+  console.log("spost", spost[0]);
 
   return (
     <>
-      {!loading && (
+      {!loading && spost && (
         <PostForm
           title="Update Post here"
-          spost={spost}
+          spost={spost[0]}
           spostSet={spostSet}
           body={body}
           setBody={setBody}
