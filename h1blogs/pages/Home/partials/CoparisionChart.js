@@ -19,6 +19,8 @@ import {
   FaHistory,
   FaCogs,
 } from "react-icons/fa";
+
+import { comparision } from "../../../components/DATA";
 export const ComparisionChar = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
@@ -39,36 +41,29 @@ export const ComparisionChar = () => {
         spacing={10}
         pt={10}
         px={[0, 10]}
-        fontFamily={"bold"}
         fontSize={"20px"}
       >
-        <Box>
+        {comparision.map((item, key) => {
+          return (
+            <Box key={key}>
+              <Card maxW="sm">
+                <CardBody>
+                  <Center>{item.icon}</Center>
+                  <Stack mt="6" spacing="3">
+                    <Heading size="md" color={"#101C32"}>
+                      {item.title}
+                    </Heading>
+                    <Text>{item.text}</Text>
+                  </Stack>
+                </CardBody>
+              </Card>
+            </Box>
+          );
+        })}
+
+        {/* <Box>
           <Card maxW="sm">
             <CardBody>
-              <Center>
-                <MdCurrencyRupee size={"100px"} />
-              </Center>
-              <Stack mt="6" spacing="3">
-                <Heading size="md" color={"#101C32"}>
-                  Flexible Fee Structure
-                </Heading>
-                <Text>
-                  H1 Tags offers a reasonable and flexible fee structure (on EMI
-                  basis), by which the students don't have to pay the full fee
-                  altogether but can make EMI's.
-                </Text>
-              </Stack>
-            </CardBody>
-          </Card>
-        </Box>
-        <Box>
-          <Card maxW="sm">
-            <CardBody>
-              {/* <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Green double couch with wooden legs"
-                borderRadius="lg"
-              /> */}
               <Center>
                 {" "}
                 <FaChalkboardTeacher size={"100px"} />
@@ -90,11 +85,6 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              {/* <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Green double couch with wooden legs"
-                borderRadius="lg"
-              /> */}
               <Center>
                 <BsFillHandbagFill size={"100px"} />
               </Center>
@@ -115,11 +105,6 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              {/* <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Green double couch with wooden legs"
-                borderRadius="lg"
-              /> */}
               <Center>
                 <FaUserGraduate size={"100px"} />
               </Center>
@@ -140,11 +125,6 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              {/* <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Green double couch with wooden legs"
-                borderRadius="lg"
-              /> */}
               <Center>
                 <FaCogs size={"100px"} />
               </Center>
@@ -165,11 +145,6 @@ export const ComparisionChar = () => {
         <Box>
           <Card maxW="sm">
             <CardBody>
-              {/* <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Green double couch with wooden legs"
-                borderRadius="lg"
-              /> */}
               <Center>
                 <FaHistory size={"100px"} />
               </Center>
@@ -185,7 +160,7 @@ export const ComparisionChar = () => {
               </Stack>
             </CardBody>
           </Card>
-        </Box>
+        </Box> */}
       </SimpleGrid>
     </Container>
   );
