@@ -38,19 +38,18 @@ export default function ContactForm() {
       align={"center"}
       textAlign={"center"}
       justify="center"
-      h="100vh"
+      // h="100vh"
       style={{ width: "100%" }}
       width={"100%"}
-      color={"white"}
     >
-      <Box bg="#dc3545" rounded="md" p={10}>
-        <Text fontSize={["1.5rem", "2rem"]} fontWeight={"bold"} color={"white"}>
+      <Box sx={{ background: "#fff", shadow: "2xl" }} rounded="md" p={10}>
+        <Text fontSize={["1.5rem", "2rem"]} fontWeight={"bold"}>
           Take a free session today!!
         </Text>
-        <Text fontSize={["1rem", "1.5rem"]} p={2}>
+        {/* <Text fontSize={["1rem", "1.5rem"]} p={2}>
           Go Digital | Go Global
-        </Text>
-        <Text fontSize={["0.9rem", "1rem"]} p={2}>
+        </Text> */}
+        <Text fontSize={["0.9rem", "1rem"]} p={2} mb={2} fontWeight="bold">
           Speak To Our Specialist - +91 - 8800505151
         </Text>
         <Formik
@@ -75,7 +74,7 @@ export default function ContactForm() {
                     name="name"
                     type="text"
                     variant="filled"
-                    bg={"white"}
+                    bg={"#607d8b29"}
                     Placeholder="Full Name"
                     validate={(value) => {
                       let error;
@@ -96,7 +95,7 @@ export default function ContactForm() {
                     name="email"
                     type="email"
                     variant="filled"
-                    bg={"white"}
+                    bg={"#607d8b29"}
                     Placeholder="Email Address"
                   />
                 </FormControl>
@@ -109,7 +108,7 @@ export default function ContactForm() {
                     type="phone"
                     variant="filled"
                     Placeholder="Enter Phone"
-                    bg={"white"}
+                    bg={"#607d8b29"}
                     validate={(value) => {
                       let error;
 
@@ -127,7 +126,7 @@ export default function ContactForm() {
                   <Select
                     placeholder="Choose your Center"
                     color={"gray"}
-                    bg={"white"}
+                    bg={"#607d8b29"}
                     name="place"
                   >
                     <option variant="filled" value={"Neta ji subhas palace"}>
