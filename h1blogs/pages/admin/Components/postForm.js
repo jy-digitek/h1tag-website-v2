@@ -60,7 +60,6 @@ const PostForm = (props) => {
                   );
                 })}
             </Select>
-
             <Input
               type="text"
               placeholder="Give title here"
@@ -119,7 +118,6 @@ const PostForm = (props) => {
                     })
               }
             />
-            {/* <img src={`uploads/${props.data.image}`} /> */}
             <Textarea
               placeholder="Text your summary here"
               my={4}
@@ -137,20 +135,12 @@ const PostForm = (props) => {
                     })
               }
             />
-
-            {/* <Textarea
-              placeholder="Text your body here"
-              my={4}
-              name="body"
-              onChange={(e) => props.setBody(e.target.value)}
-            />
-            {props.body} */}
+            =
             <ReactQuill
               theme="snow"
               value={props.spost ? props.body : props.body}
               onChange={props.spost ? props.setBody : props.setBody}
             />
-
             {props.spost ? (
               <Button onClick={(e) => props.updateSubmitHandle(e)}>
                 {" "}
