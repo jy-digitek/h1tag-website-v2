@@ -80,17 +80,8 @@ export const Address = [
       "FF 18, First Floor, Pearls Omaxe Tower Netaji Subhash Place, Delhi-110034",
     conatct_No: "+91 77700-07683",
     email: " info@h1tags.com",
-    map_url: (
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27999.749303036984!2d77.151797!3d28.690584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0332a9eb6003%3A0x11b19c5ca3150063!2sH1%20Tags%20-%20School%20of%20Digital%20Marketing%20and%20Web%20Development!5e0!3m2!1sen!2sin!4v1680081485111!5m2!1sen!2sin"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    ),
+    map_url:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27999.749303036984!2d77.151797!3d28.690584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0332a9eb6003%3A0x11b19c5ca3150063!2sH1%20Tags%20-%20School%20of%20Digital%20Marketing%20and%20Web%20Development!5e0!3m2!1sen!2sin!4v1680081485111!5m2!1sen!2sin",
   },
   {
     branch_location: "Budh Vihar",
