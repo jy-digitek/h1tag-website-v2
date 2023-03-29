@@ -76,6 +76,39 @@ export const comparision = [
   },
 ];
 
+export const CourseBuiltForData = [
+  {
+    icon: <FcMoneyTransfer />,
+    title: "Students/Fresher’s",
+    text: "College students interested in pursuing a job in Digital Marketing",
+  },
+  {
+    icon: <FcOrgUnit />,
+    title: "Professionals",
+    text: "Professionals seeking to advance their jobs in the more hopeful field of Digital Marketing.",
+  },
+  {
+    icon: <FcOk />,
+    title: "Coaches",
+    text: "Coaches and trainers who want to expand their training company online and attract more students.",
+  },
+  {
+    icon: <FcApproval />,
+    title: "Homepreneurs",
+    text: "Homepreneurs who want to improve their digital marketing skills and create a source of passive revenue.",
+  },
+  {
+    icon: <FcOnlineSupport />,
+    title: "Agency Owners",
+    text: " Entrepreneurs and agency owners who want to develop their companies and produce leads on digital platforms.",
+  },
+  {
+    icon: <FcComboChart />,
+    title: "Freelancers",
+    text: "Freelance marketers seeking more national and foreign customers and a stable income.",
+  },
+];
+
 export const AddressesData = [
   {
     branch_location: "Netaji Subhash Place",

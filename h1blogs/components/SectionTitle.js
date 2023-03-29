@@ -4,9 +4,9 @@ import { Heading } from "@chakra-ui/react";
 export function SectionTitle({ children }) {
   return (
     <Heading
-      size="xl"
+      fontSize={{ base: "2xl", sm: "4xl" }}
+      fontWeight={"bold"}
       px={{ base: "0", sm: "10", md: "20" }}
-      py={50}
       textAlign={"center"}
     >
       {children}

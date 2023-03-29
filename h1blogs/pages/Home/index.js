@@ -10,7 +10,7 @@ import { WhyUs } from "./partials/WhyUs";
 // import { EndToEnd } from "./partials/EndToEnd";
 import { Benifits } from "./partials/Benifits";
 import { StandsOut } from "./partials/StandsOut";
-import { Suitable } from "./partials/Suitable";
+import { CourseBuiltFor } from "./partials/CourseBuiltFor";
 import { ExperienceH1tags } from "./partials/ExperienceH1tags";
 import { CarrerOption } from "./partials/CarrerOption";
 import { StudentFeedback } from "./partials/StudentFeedback";
@@ -25,7 +25,7 @@ const Home = () => {
       <Benifits />
       <WhyUs />
       <StandsOut />
-      <Suitable />
+      <CourseBuiltFor />
       <ExperienceH1tags />
       <CarrerOption />
       {/* <EndToEnd /> */}

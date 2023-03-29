@@ -2,14 +2,13 @@ import { Container, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { CustomCard } from "../../../components/CustomCard";
 
 import { comparision } from "../../../components/DATA";
+import { SectionTitle } from "../../../components/SectionTitle";
 
 export const WhyUs = () => {
   return (
     <>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-          Why H1Tags
-        </Heading>
+        <SectionTitle>Why H1Tags</SectionTitle>
         <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
           What makes <strong>H1 Tags</strong> the Best Digital Marketing
           training institute in Delhi?
