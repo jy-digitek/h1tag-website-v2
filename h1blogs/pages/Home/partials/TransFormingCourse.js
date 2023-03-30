@@ -8,7 +8,16 @@ import {
   Text,
   Container,
 } from "@chakra-ui/react";
-// import { CheckCircleIcon } from "@chakra-ui/icons";
+
+import {
+  FcMoneyTransfer,
+  FcOrgUnit,
+  FcOk,
+  FcApproval,
+  FcComboChart,
+  FcOnlineSupport,
+} from "react-icons/fc";
+
 export const TransFormingCourse = () => {
   return (
     <Container
@@ -20,44 +29,56 @@ export const TransFormingCourse = () => {
     >
       <SimpleGrid columns={[1, null, 4]} spacing={6} mx={2} px={10}>
         <Box
-          bg="white"
+          bg="#fff"
+          sx={{ borderLeft: "5px solid #3950a1" }}
           boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
           display={"flex"}
-          p={3}
+          p={5}
           borderRadius={8}
+          alignItems="center"
+          justifyContent={"center"}
         >
-          <Image src="icon.png" alt="Dan Abramov" />{" "}
-          <Center ml={5}>100% Placement </Center>
+          <FcOnlineSupport size={30} style={{ marginRight: 10 }} /> 100%
+          Placement
         </Box>
         <Box
-          bg="white"
+          bg="#fff"
+          sx={{ borderLeft: "5px solid #3950a1" }}
           boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
           display={"flex"}
-          p={3}
+          p={5}
+          alignItems="center"
+          justifyContent={"center"}
           borderRadius={8}
         >
-          <Image src="icon.png" alt="Dan Abramov" />{" "}
-          <Center ml={5}>Paid Internship</Center>
+          <FcMoneyTransfer size={30} style={{ marginRight: 10 }} />
+          Paid Internship
         </Box>
         <Box
-          bg="white"
+          bg="#fff"
+          sx={{ borderLeft: "5px solid #3950a1" }}
           boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
           display={"flex"}
-          p={3}
+          p={5}
+          alignItems="center"
+          justifyContent={"center"}
           borderRadius={8}
         >
-          <Image src="icon.png" alt="Dan Abramov" />
-          <Center ml={5}>Classroom Training </Center>
+          <FcOrgUnit size={30} style={{ marginRight: 10 }} />
+          Classroom Training
         </Box>
         <Box
-          bg="white"
+          bg="#fff"
+          sx={{ borderLeft: "5px solid #3950a1" }}
           boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
           display={"flex"}
-          px={2}
+          p={5}
+          alignItems="center"
+          justifyContent={"center"}
           borderRadius={8}
         >
-          <Image src="icon.png" alt="Dan Abramov" />
-          <Center ml={5}>Experienced Instructors</Center>
+          <FcApproval size={30} style={{ marginRight: 10 }} />
+          Experienced Instructors
         </Box>
       </SimpleGrid>
     </Container>
