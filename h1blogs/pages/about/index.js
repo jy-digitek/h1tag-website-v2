@@ -21,6 +21,7 @@ import {
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../../styles/About.module.css";
 import { FiArrowRightCircle } from "react-icons/fi";
+import { VscArrowCircleRight } from "react-icons/vsc";
 
 const About = () => {
   return (
@@ -217,7 +218,8 @@ const About = () => {
           <Box>
             <Flex justifyContent="space-around">
               <Heading>Why Choose US?</Heading>
-              <FiArrowRightCircle fontSize={"30px"} />
+
+              <VscArrowCircleRight fontSize={"40px"} />
             </Flex>
           </Box>
           <Box>
@@ -237,15 +239,11 @@ const About = () => {
         <Divider py={5} />
         {/* your carrer matters starts here */}
 
-        <SimpleGrid
-          columns={[1, 2, 2]}
-          pt={10}
-          bg={"linear - gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)"}
-        >
+        <SimpleGrid columns={[1, 2, 2]} pt={10}>
           <Box>
             <Flex justifyContent="space-around">
               <Heading> Your Career Matters to us</Heading>
-              <FiArrowRightCircle fontSize={"30px"} />
+              <VscArrowCircleRight fontSize={"40px"} />
             </Flex>
           </Box>
           <Box pl={5}>
