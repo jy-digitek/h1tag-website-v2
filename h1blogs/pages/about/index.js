@@ -28,13 +28,13 @@ const About = () => {
       <Container maxW={"full"} className={styles.background}>
         {/* image start here  */}
         <Box>
-          <Image src={"/test/aboutbanner.jpeg"} />
+          <Image src={"/test/aboutbanner.jpeg"} w={"100%"} />
         </Box>
 
         {/* image end here  */}
 
         {/* digital marketing Start */}
-        <Box textAlign={"center"} my={10} mx={[5, 20]}>
+        <Box textAlign={"center"}>
           <Heading textAlign={"center"} py={5}>
             Best Digital Marketing Course in Delhi
           </Heading>
@@ -54,7 +54,7 @@ const About = () => {
         {/* digital marketing end */}
 
         {/* Our Vision Start */}
-        <SimpleGrid columns={[1, 2]} mx={[5, 20]}>
+        <SimpleGrid columns={[1, 2]}>
           <Box>
             <Image src={"/test/ourmission.jpeg"} minH={"330px"} />
           </Box>
@@ -78,7 +78,7 @@ const About = () => {
         {/* our vision end */}
 
         {/* Track record start */}
-        <Box textAlign={"center"} my={10} mx={[5, 20]}>
+        <Box textAlign={"center"} my={10}>
           <Heading py={5}>Our Track Record…</Heading>
           <Text>
             We are a Digital Marketing Agency-based Institute that has strong
@@ -86,7 +86,7 @@ const About = () => {
             organizations actively seek out our students, as we provide on-site
             training.
           </Text>
-          <SimpleGrid columns={[1, 4]} py={20} spacing={6} bg={"white"} px={10}>
+          <SimpleGrid columns={[1, 4]} py={20} spacing={6} px={10}>
             <Box
               p={10}
               // boxShadow={"10px 10px 5px 12px lightblue"}
@@ -136,7 +136,7 @@ const About = () => {
         {/* Track record end */}
 
         {/* director portfolio starts here */}
-        <SimpleGrid columns={[1, 2]} my={10} mx={[5, 20]}>
+        <SimpleGrid columns={[1, 2]} my={10}>
           <Box>
             <Image
               src={"https://via.placeholder.com/600x400"}
@@ -146,12 +146,7 @@ const About = () => {
               pr={5}
             />
           </Box>
-          <Box
-            className={styles.portfolio_background}
-            color="white"
-            p={5}
-            borderRadius={10}
-          >
+          <Box className={styles.portfolio_background} p={5} borderRadius={10}>
             <Heading>MESSAGE FROM DIRECTOR</Heading>
             <Text>
               Our sole and complete mission is to teach the value of Digital
@@ -179,13 +174,8 @@ const About = () => {
 
         {/* cofounder portfolio starts here */}
 
-        <SimpleGrid columns={[1, 2]} my={10} mx={[5, 20]}>
-          <Box
-            className={styles.portfolio_background}
-            color="white"
-            py={5}
-            borderRadius={10}
-          >
+        <SimpleGrid columns={[1, 2]} my={10}>
+          <Box className={styles.portfolio_background} py={5} borderRadius={10}>
             <Heading ml={5}>AKSHAY </Heading>
             <Highlight
               ml={5}
@@ -223,10 +213,10 @@ const About = () => {
         {/* why choose us starts here */}
 
         <Divider />
-        <SimpleGrid columns={[1, 2, 2]} mx={[5, 20]} pt={10}>
+        <SimpleGrid columns={[1, 2, 2]} pt={10}>
           <Box>
             <Flex justifyContent="space-around">
-              <Heading fontWeight={"normal"}>Why Choose US?</Heading>
+              <Heading>Why Choose US?</Heading>
               <FiArrowRightCircle fontSize={"30px"} />
             </Flex>
           </Box>
@@ -249,17 +239,13 @@ const About = () => {
 
         <SimpleGrid
           columns={[1, 2, 2]}
-          mx={[5, 20]}
           pt={10}
           bg={"linear - gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)"}
         >
           <Box>
             <Flex justifyContent="space-around">
-              <Heading fontWeight={"normal"}>
-                {" "}
-                Your Career Matters to us
-              </Heading>
-              <FiArrowRightCircle fontSize={"30px"} fontWeight={"normal"} />
+              <Heading> Your Career Matters to us</Heading>
+              <FiArrowRightCircle fontSize={"30px"} />
             </Flex>
           </Box>
           <Box pl={5}>
@@ -287,7 +273,7 @@ const About = () => {
         </SimpleGrid>
         {/* your carrer matters ends here */}
         <Box my={10}>
-          <Heading textAlign={"center"} py={5}>
+          <Heading textAlign={"center"} py={5} fontWeight={"normal"}>
             FAQ’s
           </Heading>
           <Accordion allowMultiple mx={[5, 60]}>
