@@ -13,11 +13,14 @@ import {
   AccordionButton,
   AccordionPanel,
   Image,
+  Grid,
+  GridItem,
   Flex,
+  Divider,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../../styles/About.module.css";
-import { FaQuestionCircle } from "react-icons/fa";
+import { FiArrowRightCircle } from "react-icons/fi";
 
 const About = () => {
   return (
@@ -218,48 +221,70 @@ const About = () => {
         {/* cofounder portfolio ends here */}
 
         {/* why choose us starts here */}
-        <Box my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"} py={5}>
-            Why Choose US?
-          </Heading>
-          <Text>
-            H1 Tags -School of Digital Marketing and Web Development is one of
-            India's top Digital Marketing institutions in Delhi-NCR. We studied
-            several entry-level marketing job openings and designed our syllabus
-            according to the market demand for our students to get easy
-            placements. Companies hiring from H1 Tags include Amazon, Axis Bank,
-            Google, PC Solutions, DH IT Solutions, Wipro, Accenture, Genpact,
-            360 Realtors, HCL, NVidia, Microsoft, HDFC Bank, Ogilvy, and many
-            more.
-          </Text>
-        </Box>
-        {/* why choose us ends here */}
 
+        <Divider />
+        <SimpleGrid columns={[1, 2, 2]} mx={[5, 20]} pt={10}>
+          <Box>
+            <Flex justifyContent="space-around">
+              <Heading fontWeight={"normal"}>Why Choose US?</Heading>
+              <FiArrowRightCircle fontSize={"30px"} />
+            </Flex>
+          </Box>
+          <Box>
+            <Text pl={5}>
+              H1 Tags -School of Digital Marketing and Web Development is one of
+              India's top Digital Marketing institutions in Delhi-NCR. We
+              studied several entry-level marketing job openings and designed
+              our syllabus according to the market demand for our students to
+              get easy placements. Companies hiring from H1 Tags include Amazon,
+              Axis Bank, Google, PC Solutions, DH IT Solutions, Wipro,
+              Accenture, Genpact, 360 Realtors, HCL, NVidia, Microsoft, HDFC
+              Bank, Ogilvy, and many more.
+            </Text>
+          </Box>
+        </SimpleGrid>
+        {/* why choose us ends here */}
+        <Divider py={5} />
         {/* your carrer matters starts here */}
-        <Box my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"} py={5}>
-            Your Career Matters to us
-          </Heading>
-          <UnorderedList>
-            <ListItem>
-              We provide our students with counseling and professional and
-              placement services
-            </ListItem>
-            <ListItem>
-              Our work training program makes students easily adjust to the
-              actual work culture.
-            </ListItem>
-            <ListItem>
-              Our trainer provides follow-up sessions with each student
-              separately so that they can clear every doubt.
-            </ListItem>
-            <ListItem>
-              During training, these sessions include career counseling, resume
-              preparation, and practice job interviews with proper reports. Our
-              trainers focus on topics mostly asked during interviews.
-            </ListItem>
-          </UnorderedList>
-        </Box>
+
+        <SimpleGrid
+          columns={[1, 2, 2]}
+          mx={[5, 20]}
+          pt={10}
+          bg={"linear - gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)"}
+        >
+          <Box>
+            <Flex justifyContent="space-around">
+              <Heading fontWeight={"normal"}>
+                {" "}
+                Your Career Matters to us
+              </Heading>
+              <FiArrowRightCircle fontSize={"30px"} fontWeight={"normal"} />
+            </Flex>
+          </Box>
+          <Box pl={5}>
+            <UnorderedList>
+              <ListItem>
+                We provide our students with counseling and professional and
+                placement services
+              </ListItem>
+              <ListItem>
+                Our work training program makes students easily adjust to the
+                actual work culture.
+              </ListItem>
+              <ListItem>
+                Our trainer provides follow-up sessions with each student
+                separately so that they can clear every doubt.
+              </ListItem>
+              <ListItem>
+                During training, these sessions include career counseling,
+                resume preparation, and practice job interviews with proper
+                reports. Our trainers focus on topics mostly asked during
+                interviews.
+              </ListItem>
+            </UnorderedList>
+          </Box>
+        </SimpleGrid>
         {/* your carrer matters ends here */}
         <Box my={10}>
           <Heading textAlign={"center"} py={5}>
