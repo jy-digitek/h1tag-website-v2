@@ -15,6 +15,7 @@ import { ExperienceH1tags } from "./partials/ExperienceH1tags";
 import { CarrerOption } from "./partials/CarrerOption";
 import { StudentFeedback } from "./partials/StudentFeedback";
 import { TrustedPartner } from "./partials/TrustedPartner";
+import { Cta } from "./partials/Cta";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <TransFormingCourse />
       <PickCourseTab />
       <Benifits />
+      <Cta />
       <WhyUs />
       <StandsOut />
       <CourseBuiltFor />

@@ -6,12 +6,13 @@ import {
   // Heading,
   // Highlight,
   Box,
-  Button,
 } from "@chakra-ui/react";
 import styles from "../../../styles/Home.module.css";
 import { SectionTitle } from "../../../components/SectionTitle";
 
 import { Benefits } from "../../../components/DATA";
+
+import GlobalButton from "../../../components/Button";
 
 export const Benifits = () => {
   return (
@@ -32,11 +33,6 @@ export const Benifits = () => {
           </WrapItem>
         ))}
       </Wrap>
-      <Center>
-        <Button px={20} py={5} rounded={20} bg={"yellow"}>
-          Book Counseling Session
-        </Button>
-      </Center>
     </Container>
   );
 };
