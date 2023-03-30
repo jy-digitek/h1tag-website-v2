@@ -17,6 +17,7 @@ import {
   GridItem,
   Flex,
   Divider,
+  Center,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../../styles/About.module.css";
@@ -36,9 +37,10 @@ const About = () => {
 
         {/* digital marketing Start */}
         <Box textAlign={"center"}>
-          <Heading textAlign={"center"} py={5}>
+          <Heading textAlign={"center"} my={5}>
             Best Digital Marketing Course in Delhi
           </Heading>
+
           <Text>
             <strong>H1 Tags:</strong> A School of Digital Marketing provides the
             Best Digital Marketing Course in Delhi with training programs in a
@@ -213,7 +215,7 @@ const About = () => {
 
         {/* why choose us starts here */}
 
-        <Divider />
+        <Divider borderColor={"red.900"} borderWidth={1} />
         <SimpleGrid columns={[1, 2, 2]} pt={10}>
           <Box>
             <Flex justifyContent="space-around">
@@ -223,7 +225,7 @@ const About = () => {
             </Flex>
           </Box>
           <Box>
-            <Text pl={5}>
+            <Text>
               H1 Tags -School of Digital Marketing and Web Development is one of
               India's top Digital Marketing institutions in Delhi-NCR. We
               studied several entry-level marketing job openings and designed
@@ -236,7 +238,7 @@ const About = () => {
           </Box>
         </SimpleGrid>
         {/* why choose us ends here */}
-        <Divider py={5} />
+        <Divider borderColor={"red.900"} borderWidth={1} my={5} />
         {/* your carrer matters starts here */}
 
         <SimpleGrid columns={[1, 2, 2]} pt={10}>
@@ -246,7 +248,7 @@ const About = () => {
               <VscArrowCircleRight fontSize={"40px"} />
             </Flex>
           </Box>
-          <Box pl={5}>
+          <Box>
             <UnorderedList>
               <ListItem>
                 We provide our students with counseling and professional and
