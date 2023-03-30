@@ -112,16 +112,9 @@ export const PickCourseTab = () => {
                         item_2={`Foundation Course`}
                         item_3={`Customized Course`}
                         item_4={`Master Course`}
+                        btnText={"Learn More"}
                       />
                     </CardBody>
-
-                    <Box sx={{ mb: 3, mx: 3 }}>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"} width={"full"}>
-                          Learn More
-                        </Button>
-                      </Link>
-                    </Box>
                   </Card>
                 </TabPanel>
                 <TabPanel>
@@ -132,16 +125,9 @@ export const PickCourseTab = () => {
                         description={`Our Graphic Designing courses provide you with a diverse range of options. With our wide range of options, you can gain a solid foundation in graphic designing and take your skills to the next level.`}
                         item_1={`Foundation Course`}
                         item_2={`Master Course`}
+                        btnText={"Learn More"}
                       />
                     </CardBody>
-
-                    <Box sx={{ mb: 3, mx: 3 }}>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"} width={"full"}>
-                          Learn More
-                        </Button>
-                      </Link>
-                    </Box>
                   </Card>
                 </TabPanel>
               </TabPanels>

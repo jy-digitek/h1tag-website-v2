@@ -8,6 +8,9 @@ import {
   Stack,
   StackDivider,
   Icon,
+  Box,
+  Link,
+  Button,
   useColorModeValue,
 } from "@chakra-ui/react";
 import {
@@ -103,6 +106,13 @@ export default function ListCardImg({
               />
             )}
           </Stack>
+          <Box sx={{ mb: 3, mx: 3 }}>
+            <Link href="#!">
+              <Button bg={"yellow.300"} width={"full"}>
+                Learn More
+              </Button>
+            </Link>
+          </Box>
         </Stack>
         <Flex>
           <Image
