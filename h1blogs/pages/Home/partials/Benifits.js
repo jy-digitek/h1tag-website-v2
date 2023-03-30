@@ -5,15 +5,16 @@ import {
   Center,
   // Heading,
   // Highlight,
-  Box,
   SimpleGrid,
-  Button,
+  Box,
 } from "@chakra-ui/react";
 import styles from "../../../styles/Home.module.css";
 import { SectionTitle } from "../../../components/SectionTitle";
 
 import { Benefits } from "../../../components/DATA";
 import { IoBulb } from "react-icons/io5";
+
+import GlobalButton from "../../../components/Button";
 
 export const Benifits = () => {
   const DataItem = ({ item, key }) => (

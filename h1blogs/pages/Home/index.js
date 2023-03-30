@@ -23,28 +23,14 @@ const Home = () => {
     <Layout>
       <Banner />
       <TransFormingCourse />
-      <Box py={{ base: "0", sm: "10", md: "20" }}>
-        <PickCourseTab />
-      </Box>
-      <Box py={{ base: "0", sm: "10", md: "20" }}>
-        <Benifits />
-      </Box>
-      <Box py={{ base: "0", sm: "10", md: "20" }}>
-        <WhyUs />
-      </Box>
-      <Box py={{ base: "0", sm: "10", md: "20" }}>
-        <StandsOut />
-      </Box>
-
-      <Box py={{ base: "0", sm: "10", md: "20" }}>
-        <CourseBuiltFor />
-      </Box>
-      <Box py={{ base: "0", sm: "10", md: "20" }}>
-        <ExperienceH1tags />
-      </Box>
-      <Box py={{ base: "0", sm: "10", md: "20" }}>
-        <CarrerOption />
-      </Box>
+      <PickCourseTab />
+      <Benifits />
+      <Cta />
+      <WhyUs />
+      <StandsOut />
+      <CourseBuiltFor />
+      <ExperienceH1tags />
+      <CarrerOption />
       {/* <EndToEnd /> */}
       <Box py={{ base: "0", sm: "10", md: "20" }}>
         <StudentFeedback />
