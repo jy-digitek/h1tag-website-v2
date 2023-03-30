@@ -25,14 +25,14 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { MdCheckCircle, MdSettings } from "react-icons/md";
+// import { MdCheckCircle, MdSettings } from "react-icons/md";
 import ListCardImg from "../../../components/ListCardImg";
 
 import { SectionTitle } from "../../../components/SectionTitle";
 
 export const PickCourseTab = () => {
   return (
-    <Container maxW={"7xl"}>
+    <Container maxW={"5xl"}>
       <SectionTitle>Pick a Course to Enhance to career</SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
         <Hide above="md">
@@ -95,14 +95,34 @@ export const PickCourseTab = () => {
           <Box>
             <Tabs orientation={"vertical"}>
               <TabList
-                style={{ whiteSpace: "pre", borderInlineStart: "unset" }}
+                style={{
+                  whiteSpace: "pre",
+                  borderInlineStart: "unset",
+                }}
               >
-                <Tab>Digital Marketing </Tab>
-                <Tab>Graphic Designing </Tab>
+                <Tab
+                  sx={{
+                    backgroundColor: "#3950a1",
+                    color: "white",
+                  }}
+                  _selected={{ color: "white", bg: "blue.500" }}
+                  aria-selected={true}
+                >
+                  Digital Marketing
+                </Tab>
+                <Tab
+                  _selected={{ color: "white", bg: "blue.500" }}
+                  sx={{
+                    backgroundColor: "#3950a1",
+                    color: "white",
+                  }}
+                >
+                  Graphic Designing
+                </Tab>
               </TabList>
 
               <TabPanels>
-                <TabPanel>
+                <TabPanel sx={{ p: 0 }}>
                   <Card W={["100%", "100%"]}>
                     <CardBody>
                       <ListCardImg

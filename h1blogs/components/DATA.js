@@ -13,33 +13,40 @@ import {
 export const Benefits = [
   {
     label: "Earn While You Learning",
+    bg: "purple",
   },
   {
     label: "100% Practical Course",
+    bg: "green",
   },
   {
     label: "Classroom Training",
+    bg: "red",
   },
   {
     label: "20+ Globally Recognized Certifications",
+    bg: "teal",
   },
   {
     label: "EMIs Available",
+    bg: "green",
   },
   {
     label: "100% Placement Assistance",
+    bg: "orange",
   },
-  {
-    label: "Grow Your Startup Business",
-  },
+
   {
     label: "Paid Internship from 1st Month",
-  },
-  {
-    label: "Live Projects",
+    bg: "teal",
   },
   {
     label: "Weekday and Weekend Batches",
+    bg: "orange",
+  },
+  {
+    label: "Live Projects",
+    bg: "purple",
   },
 ];
 

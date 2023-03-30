@@ -1,5 +1,6 @@
 import { Banner } from "./partials/Banner";
 import Layout from "../../components/layout";
+import { Box } from "@chakra-ui/react";
 // import styles from "../../styles/Home.module.css";
 import { PickCourseTab } from "./partials/PickCourseTab";
 import { TransFormingCourse } from "./partials/TransFormingCourse";
@@ -21,16 +22,35 @@ const Home = () => {
     <Layout>
       <Banner />
       <TransFormingCourse />
-      <PickCourseTab />
-      <Benifits />
-      <WhyUs />
-      <StandsOut />
-      <CourseBuiltFor />
-      <ExperienceH1tags />
-      <CarrerOption />
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <PickCourseTab />
+      </Box>
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <Benifits />
+      </Box>
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <WhyUs />
+      </Box>
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <StandsOut />
+      </Box>
+
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <CourseBuiltFor />
+      </Box>
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <ExperienceH1tags />
+      </Box>
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <CarrerOption />
+      </Box>
       {/* <EndToEnd /> */}
-      <StudentFeedback />
-      <TrustedPartner />
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <StudentFeedback />
+      </Box>
+      <Box py={{ base: "0", sm: "10", md: "20" }}>
+        <TrustedPartner />
+      </Box>
     </Layout>
   );
 };
