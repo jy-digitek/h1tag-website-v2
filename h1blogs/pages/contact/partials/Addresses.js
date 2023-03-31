@@ -19,14 +19,19 @@ export default function Addresses() {
   return (
     <Container
       maxW={"full"}
-      px={16}
+      px={[5, 16]}
       style={{
         background: "rgb(2,0,36)",
         background:
           "linear-gradient(342deg, #101C32 61%, rgba(255,255,255,1) 61%)",
       }}
     >
-      <SimpleGrid columns={[1, 2]} spacing={10} alignItems="flex-start" py={12}>
+      <SimpleGrid
+        columns={[1, 2]}
+        spacing={[0, 10]}
+        alignItems="flex-start"
+        py={[12]}
+      >
         <Box>
           {AddressesData.map((i, k) => (
             <Card sx={{ mb: 10 }}>

@@ -111,7 +111,7 @@ export default function ContactForm() {
                 mt={5}
               >
                 <option value="Neta ji subhas palace">
-                  Neta ji subhas palace 1
+                  Neta ji subhas palace
                 </option>
                 <option value="Budh Vihar">Budh Vihar</option>
               </SelectControl>
