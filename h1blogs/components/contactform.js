@@ -116,7 +116,7 @@ export default function ContactForm() {
                 <option value="Budh Vihar">Budh Vihar</option>
               </SelectControl>
               <CheckboxSingleControl name="employed" my={5}>
-                I agree to the h1tags
+                I agree to the h1tags{" "}
                 <Link href="/" style={{ color: "#ffb4b3", fontWeight: "bold" }}>
                   Terms of Use
                 </Link>
