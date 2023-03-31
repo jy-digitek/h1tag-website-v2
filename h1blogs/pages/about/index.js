@@ -23,25 +23,26 @@ import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../../styles/About.module.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { VscArrowCircleRight } from "react-icons/vsc";
+import { SectionTitle } from "../../components/SectionTitle";
 
 const About = () => {
   return (
     <Layout>
-      <Container maxW={"full"} className={styles.background}>
+      <Container maxW={"full"}>
         {/* image start here  */}
         <Box>
-          <Image src={"/test/aboutbanner.jpeg"} w={"100%"} />
+          <Image src={"/bg-img.jpeg"} sx={{ rounded: 25, mt: 5 }} />
         </Box>
 
         {/* image end here  */}
 
         {/* digital marketing Start */}
         <Box textAlign={"center"}>
-          <Heading textAlign={"center"} my={5}>
+          <SectionTitle sx={{ pb: 0, mt: 20 }}>
             Best Digital Marketing Course in Delhi
-          </Heading>
+          </SectionTitle>
 
-          <Text>
+          <Box sx={{ padding: 10 }}>
             <strong>H1 Tags:</strong> A School of Digital Marketing provides the
             Best Digital Marketing Course in Delhi with training programs in a
             variety of areas, such as SEO, PPC, Social Media Marketing, Content
@@ -52,7 +53,7 @@ const About = () => {
             Marketing experts who have years of knowledge in their field and are
             well-experienced. Our team is dedicated to providing the students
             with the best knowledge possible.
-          </Text>
+          </Box>
         </Box>
         {/* digital marketing end */}
 
@@ -140,9 +141,13 @@ const About = () => {
 
         {/* director portfolio starts here */}
         <SimpleGrid columns={[1, 2]} my={10}>
-          <Box>
+          <Box
+            sx={{
+              maxW: 450,
+            }}
+          >
             <Image
-              src={"https://via.placeholder.com/600x400"}
+              src={"https://director.jydigitek.com/Yuvraj-Singh.png"}
               maxH={"500px"}
               w={"100%"}
               //style={{ float: "right" }}
