@@ -90,7 +90,7 @@ export default function ContactForm() {
         </Text>
 
         <Text fontSize={["0.9rem", "1rem"]} p={2} mb={2} fontWeight="bold">
-          Speak To Our Specialist - +91 - 8800505151
+          Speak To Our Specialist - +91 77700-07683
         </Text>
 
         <Formik
