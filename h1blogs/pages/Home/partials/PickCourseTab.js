@@ -30,70 +30,16 @@ import ListCardImg from "../../../components/ListCardImg";
 
 import { SectionTitle } from "../../../components/SectionTitle";
 
+// Increase tab fonts
+// Enclose tabs
 export const PickCourseTab = () => {
   return (
     <Container maxW={"5xl"}>
       <SectionTitle>Pick a Course to Enhance to career</SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
-        <Hide above="md">
-          <Box>
-            <Tabs orientation={"horizontal"}>
-              <TabList aria-orientation="verticasd">
-                <Tab>Digital Marketing</Tab>
-                <Tab>Graphic Designing </Tab>
-              </TabList>
-
-              <TabPanels>
-                <TabPanel>
-                  <Card W={["100%", "100%"]}>
-                    <CardBody>
-                      <Stack mt="6" spacing="3">
-                        <Heading size="md" my={3}>
-                          Digital Marketingsdedcsdc
-                        </Heading>
-                      </Stack>
-                      <List>
-                        <ListItem>Job Oriented Course</ListItem>
-                        <ListItem>Foundation Course</ListItem>
-                        <ListItem>Customized Course</ListItem>
-                        <ListItem>Master Course</ListItem>
-                      </List>
-                    </CardBody>
-                    <CardFooter>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"}>Learn More</Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                </TabPanel>
-                <TabPanel>
-                  <Card W={"100%"}>
-                    <CardBody>
-                      <Stack mt="6" spacing="3">
-                        <Heading size="md" my={3}>
-                          Graphic Designing
-                        </Heading>
-                      </Stack>
-                      <List>
-                        <ListItem>Foundation Course</ListItem>
-                        <ListItem>Master Course</ListItem>
-                      </List>
-                    </CardBody>
-                    <CardFooter>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"}>Learn More</Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                </TabPanel>
-              </TabPanels>
-            </Tabs>
-          </Box>
-        </Hide>
-
         <Show above="md">
           <Box>
-            <Tabs orientation={"vertical"}>
+            <Tabs variant="enclosed" isFitted>
               <TabList
                 style={{
                   whiteSpace: "pre",
@@ -101,10 +47,13 @@ export const PickCourseTab = () => {
                 }}
               >
                 <Tab
-                  sx={{
-                    backgroundColor: "#3950a1",
-                    color: "white",
-                  }}
+                  sx={
+                    {
+                      // backgroundColor: "#3950a1",
+                      // color: "white",
+                      // fontsize: "200px",
+                    }
+                  }
                   _selected={{ color: "white", bg: "blue.500" }}
                   aria-selected={true}
                 >
@@ -112,10 +61,12 @@ export const PickCourseTab = () => {
                 </Tab>
                 <Tab
                   _selected={{ color: "white", bg: "blue.500" }}
-                  sx={{
-                    backgroundColor: "#3950a1",
-                    color: "white",
-                  }}
+                  sx={
+                    {
+                      // backgroundColor: "#3950a1",
+                      // color: "white",
+                    }
+                  }
                 >
                   Graphic Designing
                 </Tab>

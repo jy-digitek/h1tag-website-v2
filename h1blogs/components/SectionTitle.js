@@ -6,7 +6,7 @@ export function SectionTitle({ children }) {
     <Heading
       fontSize={{ base: "2xl", sm: "4xl" }}
       fontWeight={"bold"}
-      px={{ base: "0", sm: "10", md: "20" }}
+      // px={{ base: "0", sm: "10", md: "20" }}
       textAlign={"center"}
     >
       {children}

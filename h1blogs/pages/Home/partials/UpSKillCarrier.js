@@ -57,7 +57,7 @@ export const UpSkillCarrier = () => {
                 </Highlight>
               </Text>
               <Text>
-                DIDM has designed a practical oriented advanced digital
+                H1Tags has designed a practical oriented advanced digital
                 marketing course that best suits from student to a marketing
                 specialist. While learning, get exposure to website designing
                 without coding, live projects, and case studies to enhance your
@@ -83,7 +83,7 @@ export const UpSkillCarrier = () => {
                 </Highlight>
               </Text>
               <Text>
-                DIDM is committed to delivering the best digital marketing
+                H1Tags is committed to delivering the best digital marketing
                 course learning outcomes with the facility of online/offline
                 training and the option of choosing flexible batch timings by
                 just dialing a number to our 24x7 customer support.
@@ -108,7 +108,7 @@ export const UpSkillCarrier = () => {
                 </Highlight>
               </Text>
               <Text>
-                Being a professional training institute, DIDM believes in
+                Being a professional training institute, H1Tags believes in
                 high-quality practical training as per market standard. We
                 provide online training sessions through LMS and provide study
                 materials in video and text format so that students can refer to

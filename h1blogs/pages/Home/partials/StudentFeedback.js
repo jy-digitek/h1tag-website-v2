@@ -12,7 +12,7 @@ import Carousel from "../../../components/Carousel";
 import { GlobalButton } from "../../../components/Button";
 export const StudentFeedback = () => {
   return (
-    <Container maxW={"full"} px={[5, 10]}>
+    <Container maxW={"full"} px={[5, 10]} id={"review"}>
       <Heading textAlign={"center"} my={10}>
         Students’ Feedback
       </Heading>

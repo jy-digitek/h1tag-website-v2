@@ -11,6 +11,7 @@ import {
   UnorderedList,
   Flex,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import {
   SiGooglemaps,
   SiYoutube,
@@ -57,8 +58,10 @@ export default function Footer() {
               Graphic Design Course
             </ListItem>
             <ListItem>
-              <ListIcon as={ChevronRightIcon} color="white" />
-              Student Reviews
+              <Link href="#review">
+                <ListIcon as={ChevronRightIcon} color="white" />
+                Student Reviews
+              </Link>
             </ListItem>
             {/* You can also use custom icons from react-icons */}
             <ListItem>
@@ -109,7 +112,7 @@ export default function Footer() {
             </Box>
             <Box>
               <Text ml={2}>
-                : FF 18, First Floor, Pearls Omaxe Tower Netaji Subhash Place,
+                FF 18, First Floor, Pearls Omaxe Tower Netaji Subhash Place,
                 Delhi-110034
               </Text>
             </Box>
@@ -122,33 +125,33 @@ export default function Footer() {
               <SlPhone fontSize={"25px"} />
             </Box>
             <Box>
-              <Text ml={2}>:+91 77700-07683</Text>
+              <Text ml={2}>+91 77700-07683</Text>
             </Box>
           </Flex>
-          {/* <Text pt={3}> info@didm.in</Text> */}
+
           <Flex pt={3}>
             <Box>
               <EmailIcon fontSize={"25px"} />
             </Box>
             <Box>
-              <Text ml={2}>: info@h1tags.com</Text>
+              <Text ml={2}>info@h1tags.com</Text>
             </Box>
           </Flex>
           <Heading as={"h2"} fontSize="20px" pt={4}>
             Subscribe & Follow us :
           </Heading>
           <Flex pt={3}>
-            <Box mr={10}>
-              <SiYoutube fontSize={"30px"} />
+            <Box mr={5}>
+              <SiYoutube fontSize={"20px"} />
             </Box>
-            <Box mr={10}>
-              <SiInstagram fontSize={"30px"} />
+            <Box mr={5}>
+              <SiInstagram fontSize={"20px"} />
             </Box>
-            <Box mr={10}>
-              <SiFacebook fontSize={"30px"} />
+            <Box mr={5}>
+              <SiFacebook fontSize={"20px"} />
             </Box>
-            <Box mr={10}>
-              <SiLinkedin fontSize={"30px"} />
+            <Box mr={5}>
+              <SiLinkedin fontSize={"20px"} />
             </Box>
           </Flex>
         </Box>

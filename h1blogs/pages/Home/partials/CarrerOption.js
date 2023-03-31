@@ -38,9 +38,9 @@ export const CarrerOption = () => {
           Become Blogger / Vlogger / Influencer
         </Box>
       </SimpleGrid>
-      <Center>
+      <Box sx={{ mt: 7, display: "flex", justifyContent: "center" }}>
         <GlobalButton children={"Kick Start Your Career"} color={"yellow"} />
-      </Center>
+      </Box>
     </Container>
   );
 };
