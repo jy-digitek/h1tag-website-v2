@@ -10,11 +10,12 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import React from "react";
+import { SectionTitle } from "../../../components/SectionTitle";
 
 export const TrustedPartner = () => {
   return (
     <Container maxW={"full"} mt={10} px={[5, 10]}>
-      <Heading textAlign={"center"}>Our Trusted Partners</Heading>
+      <SectionTitle>Our Trusted Partners</SectionTitle>
       <Text textAlign={"center"} mb={10}>
         Our Digital Marketing Institute in Delhi is trusted by the following
         partners:

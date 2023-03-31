@@ -304,11 +304,11 @@ const NAV_ITEMS = [
     href: "/blogs",
   },
   {
-    label: "Contact",
-    href: "/contact",
-  },
-  {
     label: "Galary",
     href: "#",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
   },
 ];

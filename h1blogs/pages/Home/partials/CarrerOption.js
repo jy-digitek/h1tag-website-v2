@@ -9,12 +9,17 @@ import {
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { GlobalButton } from "../../../components/Button";
+import { SectionTitle } from "../../../components/SectionTitle";
 export const CarrerOption = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
-      <Heading textAlign={"center"} py={10}>
+      {/* <Heading textAlign={"center"} py={10}>
+       
+      </Heading> */}
+      <SectionTitle>
+        {" "}
         Career Options after Digital Marketing Course
-      </Heading>
+      </SectionTitle>
       <SimpleGrid
         columns={[0, 5]}
         px={[0, 10]}
