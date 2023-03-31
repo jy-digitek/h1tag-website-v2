@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-
+import { GlobalButton } from "../../../components/Button";
 export const CarrerOption = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
@@ -39,9 +39,7 @@ export const CarrerOption = () => {
         </Box>
       </SimpleGrid>
       <Center>
-        <Button py={5} px={20} mt={5} bg={"yellow"} rounded={20} fontSize={30}>
-          Kick Start Your Career <FaArrowRight />
-        </Button>
+        <GlobalButton children={"Kick Start Your Career"} color={"yellow"} />
       </Center>
     </Container>
   );

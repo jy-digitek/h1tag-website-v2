@@ -15,6 +15,8 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Benefits } from "../../../components/DATA";
 import { IoBulb } from "react-icons/io5";
 
+import GlobalButton from "../../../components/Button";
+
 export const Benifits = () => {
   const DataItem = ({ item, key }) => (
     <WrapItem
@@ -63,11 +65,6 @@ export const Benifits = () => {
           ))}
         </SimpleGrid>
       </Wrap>
-      <Center>
-        <Button px={20} py={5} rounded={20} bg={"yellow"}>
-          Book Counseling Session
-        </Button>
-      </Center>
     </Container>
   );
 };

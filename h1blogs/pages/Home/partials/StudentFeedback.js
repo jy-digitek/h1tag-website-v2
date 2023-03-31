@@ -9,6 +9,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import Carousel from "../../../components/Carousel";
+import { GlobalButton } from "../../../components/Button";
 export const StudentFeedback = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
@@ -27,9 +28,7 @@ export const StudentFeedback = () => {
             Get A Free Demo Class Today!
           </Text>
           <Center>
-            <Button bg="yellow" px={20} py={5} rounded={20}>
-              Let’s Get Started
-            </Button>
+            <GlobalButton children={" Let’s Get Started"} color="yellow" />
           </Center>
           <Text my={5}>Join the Best Digital Marketing Institute in Delhi</Text>
         </Box>
