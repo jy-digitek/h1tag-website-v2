@@ -64,7 +64,7 @@ const validationSchema = Yup.object({
   name: Yup.string().required(),
   email: Yup.string()
     .email("Invalid email format")
-    .required("Mail is required"),
+    .required("Email is required"),
   phone: Yup.string()
     .matches(phoneRegExp, "Phone number is not valid")
     .min(10, "too short")
@@ -84,7 +84,7 @@ export default function ContactForm() {
       style={{ width: "100%" }}
       width={"100%"}
     >
-      <Box sx={{ background: "#fff" }} rounded="md" p={[0, 10]}>
+      <Box sx={{ background: "#fff" }} rounded="md">
         <Text fontSize={["1.5rem", "2rem"]} fontWeight={"bold"}>
           Take a free session today!!
         </Text>
@@ -100,17 +100,7 @@ export default function ContactForm() {
           bg={"blue"}
         >
           {({ handleSubmit, values, errors }) => (
-            <Box
-              bg={""}
-              borderWidth="1px"
-              rounded="lg"
-              shadow="1px 1px 3px rgba(0,0,0,0.3)"
-              maxWidth={["full", 800]}
-              p={6}
-              // m={["0px", "10px 10px"]}
-              as="form"
-              onSubmit={handleSubmit}
-            >
+            <Box bg={""} rounded="lg" p={6} as="form" onSubmit={handleSubmit}>
               <InputControl name="name" label="Enter Name" />
               <InputControl name="email" label="Enter Email" />
               <InputControl name="phone" label="Enter Phone" />
@@ -126,11 +116,11 @@ export default function ContactForm() {
                 <option value="Budh Vihar">Budh Vihar</option>
               </SelectControl>
               <CheckboxSingleControl name="employed" my={5}>
-                I agree to the DIDM{" "}
+                I agree to the h1tags
                 <Link href="/" style={{ color: "#ffb4b3", fontWeight: "bold" }}>
                   Terms of Use
-                </Link>{" "}
-                and{" "}
+                </Link>
+                and
                 <Link href="/" style={{ color: "#ffb4b3", fontWeight: "bold" }}>
                   Privacy Policy
                 </Link>
