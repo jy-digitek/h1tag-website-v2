@@ -22,7 +22,7 @@ export const WhyUs = () => {
       <Stack spacing={0} as={Container} maxW={"3xl"} textAlign={"center"}>
         <SectionTitle desc={<Description />}>Why H1Tags</SectionTitle>
       </Stack>
-      <Container maxW={"full"} mt={5}>
+      <Container maxW={"full"} mt={2}>
         <SimpleGrid
           columns={[1, 2, 3]}
           spacing={10}

@@ -14,12 +14,16 @@ import { SectionTitle } from "../../../components/SectionTitle";
 
 export const TrustedPartner = () => {
   return (
-    <Container maxW={"full"} mt={10} px={[5, 10]}>
-      <SectionTitle>Our Trusted Partners</SectionTitle>
-      <Text textAlign={"center"} mb={5}>
-        Our Digital Marketing Institute in Delhi is trusted by the following
-        partners:
-      </Text>
+    <Container maxW={"full"} px={[5, 10]}>
+      <SectionTitle
+        desc={
+          "  Our Digital Marketing Institute in Delhi is trusted by the following partners"
+        }
+        mb={10}
+      >
+        Our Trusted Partners
+      </SectionTitle>
+
       <Heading as={"h3"} px={[0, 10]} mb={[5, 10]} size="md">
         Our Placement Partners
       </Heading>

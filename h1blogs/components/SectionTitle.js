@@ -4,7 +4,7 @@ import { Box, Text, Center } from "@chakra-ui/react";
 const Decorator = () => {
   return (
     <Center>
-      <Box sx={{ borderBottom: "4px solid #3950a1", width: 10 }}></Box>
+      <Box sx={{ borderBottom: "4px solid #3950a1", width: 10 }} mt={2}></Box>
     </Center>
   );
 };
@@ -18,8 +18,8 @@ export function SectionTitle({ children, desc, ...rest }) {
         </Box>
 
         <Text>{desc}</Text>
+        <Decorator />
       </Box>
-      <Decorator />
     </>
   );
 }

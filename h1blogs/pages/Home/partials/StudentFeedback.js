@@ -14,7 +14,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 export const StudentFeedback = () => {
   return (
     <Container maxW={"full"} px={[5, 10]} id={"review"}>
-      <SectionTitle>Students’ Feedback</SectionTitle>
+      <SectionTitle mb={10}>Students’ Feedback</SectionTitle>
       <SimpleGrid columns={[1, 2]} textAlign={"center"} alignItems={"center"}>
         <Box>
           <Carousel />

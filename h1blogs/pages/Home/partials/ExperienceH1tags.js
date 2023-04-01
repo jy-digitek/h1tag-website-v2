@@ -14,7 +14,7 @@ export const ExperienceH1tags = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <Stack>
-        <SectionTitle desc={"Real-world marketing work experience"}>
+        <SectionTitle mb={10} desc={"Real-world marketing work experience"}>
           Experience at H1 Tags
         </SectionTitle>
       </Stack>

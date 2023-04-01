@@ -16,10 +16,9 @@ export const CarrerOption = () => {
       {/* <Heading textAlign={"center"} py={10}>
        
       </Heading> */}
-      <SectionTitle
-        mb={5}
-        desc={"Career Options after Digital Marketing Course"}
-      ></SectionTitle>
+      <SectionTitle mb={10}>
+        Career Options after Digital Marketing Course
+      </SectionTitle>
       <SimpleGrid
         columns={[0, 5]}
         px={[0, 10]}

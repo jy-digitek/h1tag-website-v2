@@ -35,7 +35,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 export const PickCourseTab = () => {
   return (
     <Container maxW={"5xl"}>
-      <SectionTitle>Pick a Course to Enhance to career</SectionTitle>
+      <SectionTitle mb={10}>Pick a Course to Enhance to career</SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]} mt={5}>
         <Box>
           <Tabs variant="enclosed" isFitted>
