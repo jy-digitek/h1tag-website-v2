@@ -142,3 +142,11 @@ export const AddressesData = [
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55987.1485623417!2d77.00817445820313!3d28.713664499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07400a3ccea1%3A0xc76b847400a15cdb!2sH1%20Tags%20Institute%20-%20Advanced%20Digital%20Marketing%20course%20in%20Budh%20Vihar%20Phase%201%2C%20Delhi!5e0!3m2!1sen!2sin!4v1680083814656!5m2!1sen!2sin",
   },
 ];
+
+export const CarrerOptionData = [
+  "Full Time/Part Time Job",
+  "Start Your Own Global Digital Marketing Agency",
+  "Become A Freelancer",
+  "Grow Your Own Business",
+  "Grow Your Own Business",
+];
