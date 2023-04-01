@@ -18,7 +18,9 @@ export const StandsOut = () => {
           <Box>{/* <Image src={"/h1Standout.png"} boxSize={"100%"} /> */}</Box>
           <Box px={[0, 10]} my={10}>
             <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
-              <SectionTitle>How H1 Tags stands out from others?</SectionTitle>
+              <SectionTitle lineHeight="50px" mb={2}>
+                How H1 Tags stands out from others?
+              </SectionTitle>
               <Box as="p" sx={{ mb: 2 }}>
                 H1 Tags is an agency-based Digital Marketing Institute in Delhi
                 that provides top Digital Marketing Courses and a solid platform

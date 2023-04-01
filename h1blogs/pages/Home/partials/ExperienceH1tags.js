@@ -9,14 +9,14 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { SectionTitle } from "../../../components/SectionTitle";
+
 export const ExperienceH1tags = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <Stack>
-        <SectionTitle>Experience at H1 Tags</SectionTitle>
-        <Text textAlign={"center"} pb={10} fontSize={"20px"}>
-          Real-world marketing work experience
-        </Text>
+        <SectionTitle desc={"Real-world marketing work experience"}>
+          Experience at H1 Tags
+        </SectionTitle>
       </Stack>
       <SimpleGrid columns={[1, 2]} px={[0, 10]} fontSize={"20px"}>
         <Box px={[0, 5]}>

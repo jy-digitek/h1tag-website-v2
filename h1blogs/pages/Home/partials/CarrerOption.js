@@ -16,8 +16,7 @@ export const CarrerOption = () => {
       {/* <Heading textAlign={"center"} py={10}>
        
       </Heading> */}
-      <SectionTitle>
-        {" "}
+      <SectionTitle mb={5}>
         Career Options after Digital Marketing Course
       </SectionTitle>
       <SimpleGrid

@@ -1,17 +1,20 @@
 import React from "react";
-import { Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
-export function SectionTitle({ children, ...rest }) {
+export function SectionTitle({ children, desc, ...rest }) {
   return (
-    <Heading
-      fontSize={{ base: "2xl", sm: "4xl" }}
-      fontWeight={"bold"}
-      {...rest}
-      // px={{ base: "0", sm: "10", md: "20" }}
-      textAlign={"center"}
-      py={10}
-    >
-      {children}
-    </Heading>
+    <>
+      <Box
+        fontSize={{ base: "2xl", sm: "4xl" }}
+        fontWeight={"bold"}
+        mb={4}
+        {...rest}
+        textAlign={"center"}
+      >
+        {children}
+
+        {desc}
+      </Box>
+    </>
   );
 }
