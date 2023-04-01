@@ -150,3 +150,38 @@ export const CarrerOptionData = [
   "Grow Your Own Business",
   "Grow Your Own Business",
 ];
+
+export const PlacementPartner = [
+  "/TrustedPartner/1.png",
+  "/TrustedPartner/2.png",
+  "/TrustedPartner/3.png",
+  "/TrustedPartner/4.png",
+  "/TrustedPartner/5.png",
+  "/TrustedPartner/6.png",
+  "/TrustedPartner/7.png",
+  "/TrustedPartner/8.png",
+  "/TrustedPartner/9.png",
+  "/TrustedPartner/10.png",
+  "/TrustedPartner/11.png",
+  "/TrustedPartner/12.png",
+  "/TrustedPartner/13.png",
+  "/TrustedPartner/14.png",
+  "/TrustedPartner/15.png",
+  "/TrustedPartner/16.png",
+  "/TrustedPartner/17.png",
+  "/TrustedPartner/18.png",
+];
+
+export const AdvertisingPartner = [
+  "/adver/1.png",
+  "/adver/2.png",
+  "/adver/3.png",
+  "/adver/4.png",
+  "/adver/5.png",
+  "/adver/6.png",
+  "/adver/7.png",
+  "/adver/8.png",
+  "/adver/9.png",
+  "/adver/10.png",
+  "/adver/11.png",
+];
