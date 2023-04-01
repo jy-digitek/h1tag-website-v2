@@ -4,15 +4,23 @@ import { CustomCard } from "../../../components/CustomCard";
 import { comparision } from "../../../components/DATA";
 import { SectionTitle } from "../../../components/SectionTitle";
 
+const Description = () => {
+  return (
+    <Text
+      color={"gray.600"}
+      fontSize={{ base: "sm", sm: "lg" }}
+      fontWeight="normal"
+    >
+      What makes <strong>H1 Tags</strong> the Best Digital Marketing training
+      institute in Delhi?
+    </Text>
+  );
+};
 export const WhyUs = () => {
   return (
     <>
       <Stack spacing={0} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <SectionTitle>Why H1Tags</SectionTitle>
-        <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
-          What makes <strong>H1 Tags</strong> the Best Digital Marketing
-          training institute in Delhi?
-        </Text>
+        <SectionTitle desc={<Description />}>Why H1Tags</SectionTitle>
       </Stack>
       <Container maxW={"full"} mt={5}>
         <SimpleGrid
