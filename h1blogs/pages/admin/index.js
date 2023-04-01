@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../redux/featured/actions";
 import { useRouter } from "next/router";
+
 const index = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,22 +24,22 @@ const index = () => {
   };
 
   return (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <LoginForm
-          setEmail={setEmail}
-          setPassword={setPassword}
-          onSubmitHandle={onSubmitHandle}
-        />
-        {/* <Button onClick={onSubmitHandle}> submit</Button> */}
-      </div>
-    </div>
+    // <div>
+    //   <div
+    //     style={{
+    //       display: "flex",
+    //       justifyContent: "center",
+    //       alignItems: "center",
+    //     }}
+    //   >
+    <LoginForm
+      setEmail={setEmail}
+      setPassword={setPassword}
+      onSubmitHandle={onSubmitHandle}
+    />
+    //     {/* <Button onClick={onSubmitHandle}> submit</Button> */}
+    //   </div>
+    // </div>
   );
 };
 

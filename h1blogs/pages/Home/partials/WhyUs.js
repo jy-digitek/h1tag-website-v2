@@ -19,9 +19,9 @@ const Description = () => {
 export const WhyUs = () => {
   return (
     <>
-      <Stack spacing={0} as={Container} maxW={"3xl"} textAlign={"center"}>
+      {/* <Stack spacing={0} as={Container} maxW={"3xl"} textAlign={"center"}>
         <SectionTitle desc={<Description />}>Why H1Tags</SectionTitle>
-      </Stack>
+      </Stack> */}
       <Container maxW={"full"} mt={2}>
         <SimpleGrid
           columns={[1, 2, 3]}

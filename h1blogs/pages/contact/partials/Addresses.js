@@ -46,7 +46,7 @@ export default function Addresses() {
       >
         <Box>
           {AddressesData.map((i, k) => (
-            <Card sx={{ mb: 10 }}>
+            <Card sx={{ mb: 10 }} key={k}>
               <CardBody>
                 <>
                   <Text sx={{ fontWeight: "bold", fontSize: 20, mb: 1 }}>

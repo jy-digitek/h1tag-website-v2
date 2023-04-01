@@ -37,10 +37,8 @@ const About = () => {
         {/* image end here  */}
 
         {/* digital marketing Start */}
-        <Box textAlign={"center"}>
-          <SectionTitle sx={{ pb: 0, mt: 20 }}>
-            Best Digital Marketing Course in Delhi
-          </SectionTitle>
+        <Box textAlign={"center"} mt={10}>
+          <SectionTitle>Best Digital Marketing Course in Delhi</SectionTitle>
 
           <Box sx={{ padding: 10 }}>
             <strong>H1 Tags:</strong> A School of Digital Marketing provides the
@@ -78,7 +76,7 @@ const About = () => {
               sectors.
             </Text> */}
             <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
-              <SectionTitle> Our Vision</SectionTitle>
+              <SectionTitle mb={10}> Our Vision</SectionTitle>
               <Box as="p" sx={{ mb: 2 }}>
                 We have the vision to expand our Institute's branches all around
                 India so we can train the student to acquire the top Digital
@@ -102,7 +100,7 @@ const About = () => {
 
         {/* Track record start */}
         <Box textAlign={"center"} my={10}>
-          <Heading py={5}>Our Track Record…</Heading>
+          <SectionTitle mb={10}>Our Track Record…</SectionTitle>
           <Text>
             We are a Digital Marketing Agency-based Institute that has strong
             partnerships with several IT companies. Well-reputed and known
@@ -174,7 +172,7 @@ const About = () => {
             />
           </Box>
           <Box className={styles.portfolio_background} p={5} borderRadius={10}>
-            <Heading>MESSAGE FROM DIRECTOR</Heading>
+            <SectionTitle mb={10}>MESSAGE FROM DIRECTOR</SectionTitle>
             <Text>
               Our sole and complete mission is to teach the value of Digital
               Marketing by utilizing and creating a viable digital career path
@@ -243,7 +241,7 @@ const About = () => {
         <SimpleGrid columns={[1, 2, 2]} pt={10}>
           <Box>
             <Flex justifyContent="space-around">
-              <Heading>Why Choose US?</Heading>
+              <SectionTitle mb={10}>Why Choose US?</SectionTitle>
 
               <VscArrowCircleRight fontSize={"40px"} />
             </Flex>
@@ -268,7 +266,7 @@ const About = () => {
         <SimpleGrid columns={[1, 2, 2]} pt={10}>
           <Box>
             <Flex justifyContent="space-around">
-              <Heading> Your Career Matters to us</Heading>
+              <SectionTitle> Your Career Matters to us</SectionTitle>
               <VscArrowCircleRight fontSize={"40px"} />
             </Flex>
           </Box>
@@ -297,9 +295,7 @@ const About = () => {
         </SimpleGrid>
         {/* your carrer matters ends here */}
         <Box my={10}>
-          <Heading textAlign={"center"} py={5} fontWeight={"normal"}>
-            FAQ’s
-          </Heading>
+          <SectionTitle mb={10}>FAQ’s</SectionTitle>
           <Accordion allowMultiple mx={[5, 60]}>
             <AccordionItem>
               {({ isExpanded }) => (

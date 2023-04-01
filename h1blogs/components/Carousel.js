@@ -39,9 +39,9 @@ export default function Carousel() {
             src={item}
             style={{ background: "red" }}
             title="My experience at H1 Tags - A Digital Marketing Training Institute: SABEENA"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           />
         </Box>
       ))}

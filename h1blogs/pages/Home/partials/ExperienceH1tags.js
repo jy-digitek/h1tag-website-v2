@@ -7,7 +7,7 @@ import {
   Image,
   Stack,
 } from "@chakra-ui/react";
-import React from "react";
+
 import { SectionTitle } from "../../../components/SectionTitle";
 
 export const ExperienceH1tags = () => {

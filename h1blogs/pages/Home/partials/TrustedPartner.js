@@ -9,7 +9,7 @@ import {
   Image,
   Heading,
 } from "@chakra-ui/react";
-import React from "react";
+
 import { SectionTitle } from "../../../components/SectionTitle";
 import { PlacementPartner } from "../../../components/DATA";
 import { AdvertisingPartner } from "../../../components/DATA";
@@ -32,7 +32,7 @@ export const TrustedPartner = () => {
       <Wrap bg={"white"} p={3} spacing={["10px", "20px"]} px={[0, 10]}>
         {PlacementPartner.map((item, i) => {
           return (
-            <WrapItem>
+            <WrapItem key={i}>
               <Card align="center">
                 <CardBody>
                   <Image src={item} boxSize={40} />
@@ -196,7 +196,7 @@ export const TrustedPartner = () => {
       <Wrap bg={"white"} p={3} spacing={["10px", "20px"]} px={[0, 10]}>
         {AdvertisingPartner.map((item, i) => {
           return (
-            <WrapItem>
+            <WrapItem key={i}>
               <Card align="center">
                 <CardBody>
                   <Image src={item} boxSize={40} />

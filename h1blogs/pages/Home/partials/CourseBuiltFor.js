@@ -9,7 +9,7 @@ import {
   Stack,
   Highlight,
 } from "@chakra-ui/react";
-import React from "react";
+
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CustomCard } from "../../../components/CustomCard";
 import { CourseBuiltForData } from "../../../components/DATA";

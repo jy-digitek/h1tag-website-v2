@@ -7,7 +7,7 @@ import {
   Button,
   Flex,
 } from "@chakra-ui/react";
-import React from "react";
+
 import { FaArrowRight } from "react-icons/fa";
 import { GlobalButton } from "../../../components/Button";
 import { SectionTitle } from "../../../components/SectionTitle";
@@ -50,7 +50,7 @@ export const CarrerOption = () => {
           </SectionTitle>
           {CarrerOptionData.map((item, key) => {
             return (
-              <Flex my={10} px={5}>
+              <Flex my={10} px={5} key={key}>
                 <Box
                   boxSize={10}
                   bg={"#e3f2fd"}

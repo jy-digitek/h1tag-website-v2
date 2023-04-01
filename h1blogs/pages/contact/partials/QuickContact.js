@@ -23,18 +23,19 @@ export const QuickContact = () => {
       <SimpleGrid columns={[1, 2]} spacing={10} px={[0, 20]} py={10}>
         <Box>
           <Card align="center">
-            <CardBody>
-              <Text fontSize={"20px"} fontWeight="bold">
-                <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-                  <SlPhone fontSize={"25px"} /> +91 77700-07683
-                </Box>
-              </Text>
+            <CardBody as={"div"}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+                <SlPhone fontSize={"25px"} />
+                <Text fontSize={"20px"} fontWeight="bold">
+                  +91 77700-07683
+                </Text>
+              </Box>
             </CardBody>
           </Card>
         </Box>
         <Box>
           <Card align="center">
-            <CardBody>
+            <CardBody as="div">
               <Text fontSize={"20px"} fontWeight="bold">
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
                   <EmailIcon fontSize={"25px"} />{" "}

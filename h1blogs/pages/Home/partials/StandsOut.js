@@ -6,7 +6,7 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
-import React from "react";
+
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/Button";
 
