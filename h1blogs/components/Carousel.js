@@ -12,9 +12,9 @@ var settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  className: "center",
-  centerMode: true,
-  centerPadding: "60px",
+  // className: "center",
+  // centerMode: true,
+  // centerPadding: "60px",
   autoplay: true,
   pauseOnHover: true,
 };

@@ -287,25 +287,24 @@ const NAV_ITEMS = [
     label: "Courses+",
     children: [
       {
-        label: "Explore Design Work",
+        label: "Digital Marketing Course",
         subLabel: "Trending Design to inspire you",
         href: "#",
       },
       {
-        label: "New & Noteworthy",
+        label: "Graphic Design Course",
         subLabel: "Up-and-coming Designers",
         href: "#",
       },
     ],
   },
-
+  {
+    label: "Gallery",
+    href: "#",
+  },
   {
     label: "Blog",
     href: "/blogs",
-  },
-  {
-    label: "Galary",
-    href: "#",
   },
   {
     label: "Contact",

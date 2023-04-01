@@ -24,7 +24,8 @@ import {
   Hide,
 } from "@chakra-ui/react";
 import Link from "next/link";
-
+import { Fade, ScaleFade, Slide, SlideFade } from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/react";
 // import { MdCheckCircle, MdSettings } from "react-icons/md";
 import ListCardImg from "../../../components/ListCardImg";
 
@@ -33,6 +34,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 // Increase tab fonts
 // Enclose tabs
 export const PickCourseTab = () => {
+  const { isOpen, onToggle } = useDisclosure();
   return (
     <Container maxW={"5xl"}>
       <SectionTitle mb={10}>Pick a Course to Enhance to career</SectionTitle>
