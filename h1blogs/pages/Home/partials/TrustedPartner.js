@@ -16,7 +16,7 @@ export const TrustedPartner = () => {
   return (
     <Container maxW={"full"} mt={10} px={[5, 10]}>
       <SectionTitle>Our Trusted Partners</SectionTitle>
-      <Text textAlign={"center"} mb={10}>
+      <Text textAlign={"center"} mb={5}>
         Our Digital Marketing Institute in Delhi is trusted by the following
         partners:
       </Text>

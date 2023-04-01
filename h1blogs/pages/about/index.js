@@ -58,12 +58,13 @@ const About = () => {
         {/* digital marketing end */}
 
         {/* Our Vision Start */}
-        <SimpleGrid columns={[1, 2]}>
-          <Box>
-            <Image src={"/test/ourmission.jpeg"} minH={"330px"} />
-          </Box>
-          <Box textAlign={"center"} px={5}>
-            <Heading textAlign={"center"} py={5}>
+        <SimpleGrid
+          columns={[1, 2]}
+          sx={{ background: "url(/bg-img.jpeg)" }}
+          py={10}
+        >
+          <Box px={[0, 10]}>
+            {/* <Heading textAlign={"center"} py={5}>
               Our Vision
             </Heading>
             <Text fontSize={"18px"} lineHeight={"26px"}>
@@ -75,7 +76,25 @@ const About = () => {
               theoretical knowledge. Digital Marketing is a booming career in
               India, which is expected to provide significant growth to the IT
               sectors.
-            </Text>
+            </Text> */}
+            <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
+              <SectionTitle> Our Vision</SectionTitle>
+              <Box as="p" sx={{ mb: 2 }}>
+                We have the vision to expand our Institute's branches all around
+                India so we can train the student to acquire the top Digital
+                Marketing skill which is essential for building their future.
+              </Box>
+              <Box as="p" sx={{ mb: 2 }}>
+                Considering the demands of the professional world, we aim to
+                provide the Best Digital Marketing Course with practical and
+                theoretical knowledge. Digital Marketing is a booming career in
+                India, which is expected to provide significant growth to the IT
+                sectors.
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            {/* <Image src={"/test/ourmission.jpeg"} minH={"330px"} /> */}
           </Box>
         </SimpleGrid>
 

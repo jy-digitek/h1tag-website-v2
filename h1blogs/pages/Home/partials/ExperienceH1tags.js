@@ -67,9 +67,8 @@ export const ExperienceH1tags = () => {
             Marketing, Lead Generation, Data Analytics, Content Creation, and
             Copywriting which is way more than 99% of your competition can say
             for entry-level marketing jobs it's because of this work experience
-            that H1 TAGS immediately gives you. `
+            that H1 TAGS immediately gives you.
           </Box>
-          `
         </Box>
         <Box>
           <Image src={"/classroom-image.png"} />
