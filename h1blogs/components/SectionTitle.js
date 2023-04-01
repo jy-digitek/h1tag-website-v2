@@ -9,6 +9,7 @@ export function SectionTitle({ children, ...rest }) {
       {...rest}
       // px={{ base: "0", sm: "10", md: "20" }}
       textAlign={"center"}
+      py={10}
     >
       {children}
     </Heading>

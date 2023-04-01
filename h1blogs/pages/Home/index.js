@@ -24,33 +24,33 @@ const Home = () => {
       <Banner />
       <TransFormingCourse />
 
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <PickCourseTab />
       </Box>
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <Benifits />
       </Box>
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <WhyUs />
       </Box>
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <StandsOut />
       </Box>
 
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <CourseBuiltFor />
       </Box>
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <ExperienceH1tags />
       </Box>
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <CarrerOption />
       </Box>
       {/* <EndToEnd /> */}
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <StudentFeedback />
       </Box>
-      <Box pt={{ base: "0", sm: "10", md: "20" }}>
+      <Box pt={{ base: "0", sm: "10" }}>
         <TrustedPartner />
       </Box>
     </Layout>
