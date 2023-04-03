@@ -87,8 +87,8 @@ export const CareerOption = () => {
               label={"Kick Start Your Career"}
               //color={"yellow"}
               maxW="100%"
-              background="yellow"
-              color={"red"}
+              background="#3950a1"
+              _hover={{ background: "#101C32" }}
             />
           </Box>
         </Box>

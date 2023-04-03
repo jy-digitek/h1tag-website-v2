@@ -37,13 +37,13 @@ export default function CTA({ title }) {
           >
             {title}
           </Text>
-          <Stack direction={"row"}>
+          <Stack direction={"row"} gap={10}>
             <GlobalButton
-              bg={"blue.400"}
               rounded={"full"}
               color={"white"}
-              _hover={{ bg: "blue.500" }}
               label={" Show me more"}
+              background="#3950a1"
+              _hover={{ background: "#101C32" }}
             />
 
             <GlobalButton

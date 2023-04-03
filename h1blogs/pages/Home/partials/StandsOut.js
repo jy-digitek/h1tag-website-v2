@@ -5,6 +5,7 @@ import {
   Text,
   Heading,
   Image,
+  background,
 } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
@@ -48,7 +49,9 @@ export const StandsOut = () => {
               >
                 <GlobalButton
                   label={"Call Now"}
-                  sx={{ width: "100%", background: "#16acff", color: "#fff" }}
+                  sx={{ width: "100%", color: "#fff" }}
+                  background="#3950a1"
+                  _hover={{ background: "#101C32" }}
                 />
               </Box>
             </Box>

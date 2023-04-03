@@ -11,7 +11,7 @@ import {
   ModalBody,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
-
+import { GlobalButton } from "../../../components/GlobalButton";
 export default function ReturnFocus({
   btnText,
   modalTitle,
@@ -24,20 +24,21 @@ export default function ReturnFocus({
 
   return (
     <>
-      <Button
+      <GlobalButton
         display={{ base: "none", md: "inline-flex" }}
-        p={5}
         fontSize={"sm"}
         fontWeight={600}
         color={"white"}
-        bg={"#101C32"}
         onClick={(e) => {
           openModalSet(true);
           onOpen(e);
         }}
-      >
-        {btnText}
-      </Button>
+        label="Get Brochure"
+        background="#3950a1"
+        _hover={{ background: "#101C32" }}
+      />
+      {/* {btnText}
+      </Button> */}
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

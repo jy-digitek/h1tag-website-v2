@@ -94,6 +94,8 @@ export default function WithSubnavigation() {
             children={<ContactForm />}
             openModalSet={openModalSet}
             // isEditingSet={isEditingSet}
+            label="Get Brochure"
+            color="white"
           />
           {/* <Button
             as={"a"}

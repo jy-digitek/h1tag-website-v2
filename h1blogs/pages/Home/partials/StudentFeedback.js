@@ -26,7 +26,12 @@ export const StudentFeedback = () => {
             Get A Free Demo Class Today!
           </Text>
           <Center>
-            <GlobalButton label={"Let’s Get Started"} color="yellow" />
+            <GlobalButton
+              label={"Let’s Get Started"}
+              // color="yellow"
+              background="#3950a1"
+              _hover={{ background: "#101C32" }}
+            />
           </Center>
           <Text my={5}>Join the Best Digital Marketing Institute in Delhi</Text>
         </Box>
