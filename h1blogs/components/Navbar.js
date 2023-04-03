@@ -30,7 +30,7 @@ export default function WithSubnavigation() {
   const [openModal, openModalSet] = React.useState(false);
 
   return (
-    <Box style={{ position: "sticky", top: "0" }} zIndex={1}>
+    <Box style={{ position: "sticky", top: "0" }} zIndex={2}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
