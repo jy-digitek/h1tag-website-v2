@@ -47,10 +47,9 @@ export const StandsOut = () => {
                 }}
               >
                 <GlobalButton
+                  label={"Call Now"}
                   sx={{ width: "100%", background: "#16acff", color: "#fff" }}
-                >
-                  Call Now
-                </GlobalButton>
+                ></GlobalButton>
               </Box>
             </Box>
           </Box>

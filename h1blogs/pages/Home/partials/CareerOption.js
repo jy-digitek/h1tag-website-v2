@@ -1,29 +1,32 @@
 import {
   Container,
-  Heading,
+  // Heading,
   SimpleGrid,
   Box,
-  Center,
-  Button,
+  // Center,
+  // Button,
   Flex,
 } from "@chakra-ui/react";
 
-import { FaArrowRight } from "react-icons/fa";
+// import { FaArrowRight } from "react-icons/fa";
 import { GlobalButton } from "../../../components/Button";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { CarrerOptionData } from "../../../components/DATA";
-export const CarrerOption = () => {
+import { CareerOptionData } from "../../../components/DATA";
+export const CareerOption = () => {
   return (
     <Container
       maxW={"full"}
       px={[5, 10]}
+      // bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       sx={{
-        background: "url(/crbg.jpg)",
+        // background: "url(/crbg.jpg)",
+        backgroundImage:
+          "linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(63 81 181 / 60%)),url(crbg.jpg)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
       }}
-      className="ooo"
+      // className="ooo"
     >
       {/* <Heading textAlign={"center"} py={10}>
        
@@ -38,7 +41,8 @@ export const CarrerOption = () => {
         <Box></Box>
         <Box
           sx={{
-            p: 5,
+            // p: 5,
+            py: 12,
             background: "#ffffffb8",
             backdropFilter: "blur(8px)",
             rounded: 8,
@@ -48,27 +52,37 @@ export const CarrerOption = () => {
           <SectionTitle mb={1}>
             Career Options after Digital Marketing Course
           </SectionTitle>
-          {CarrerOptionData.map((item, key) => {
+          {CareerOptionData.map((item, key) => {
             return (
-              <Flex my={10} px={5} key={key}>
+              <Flex
+                // my={10}
+                px={[5, 10]}
+                py={4}
+                key={key}
+                alignItems={"center"}
+                borderBottom={"1px solid #dcd7e3"}
+                sx={{ ":hover": { background: "#e3e1e5", transition: ".5s" } }}
+              >
                 <Box
-                  boxSize={10}
+                  boxSize={12}
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
                   bg={"#e3f2fd"}
-                  border={"1px solid #3950a1"}
+                  border={"4px solid #3950a1"}
                   borderRadius={40}
                   textAlign={"center"}
                 >
                   {key + 1}
                 </Box>
-                <Box px={3}>{item}</Box>
+                <Box as="h3" fontWeight={"bold"} px={3}>
+                  {item}
+                </Box>
               </Flex>
             );
           })}
           <Box sx={{ mt: 7, display: "flex", justifyContent: "center" }}>
-            <GlobalButton
-              children={"Kick Start Your Career"}
-              color={"yellow"}
-            />
+            <GlobalButton label={"Kick Start Your Career"} color={"yellow"} />
           </Box>
         </Box>
       </SimpleGrid>

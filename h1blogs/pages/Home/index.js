@@ -13,10 +13,10 @@ import { Benifits } from "./partials/Benifits";
 import { StandsOut } from "./partials/StandsOut";
 import { CourseBuiltFor } from "./partials/CourseBuiltFor";
 import { ExperienceH1tags } from "./partials/ExperienceH1tags";
-import { CarrerOption } from "./partials/CarrerOption";
+import { CareerOption } from "./partials/CareerOption";
 import { StudentFeedback } from "./partials/StudentFeedback";
 import { TrustedPartner } from "./partials/TrustedPartner";
-import { Cta } from "./partials/Cta";
+import CTA from "./partials/Cta";
 
 const Home = () => {
   return (
@@ -29,6 +29,7 @@ const Home = () => {
       </Box>
       <Box pt={{ base: "0", sm: "10" }}>
         <Benifits />
+        <CTA />
       </Box>
       <Box pt={{ base: "0", sm: "10" }}>
         <WhyUs />
@@ -39,12 +40,13 @@ const Home = () => {
 
       <Box pt={{ base: "0", sm: "10" }}>
         <CourseBuiltFor />
+        <CTA />
       </Box>
       <Box pt={{ base: "0", sm: "10" }}>
         <ExperienceH1tags />
       </Box>
       <Box pt={{ base: "0", sm: "10" }}>
-        <CarrerOption />
+        <CareerOption />
       </Box>
       {/* <EndToEnd /> */}
       <Box pt={{ base: "0", sm: "10" }}>

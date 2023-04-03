@@ -154,85 +154,113 @@ const About = () => {
             </Box>
           </SimpleGrid>
         </Box>
-        {/* Track record end */}
+      </Container>
+      {/* Track record end */}
 
-        {/* director portfolio starts here */}
-        <SimpleGrid columns={[1, 2]} my={10}>
-          <Box
-            sx={{
-              maxW: 450,
-            }}
-          >
-            <Image
-              src={"https://director.jydigitek.com/Yuvraj-Singh.png"}
-              maxH={"500px"}
-              w={"100%"}
-              //style={{ float: "right" }}
-              pr={5}
-            />
-          </Box>
-          <Box className={styles.portfolio_background} p={5} borderRadius={10}>
-            <SectionTitle mb={10}>MESSAGE FROM DIRECTOR</SectionTitle>
-            <Text>
-              Our sole and complete mission is to teach the value of Digital
-              Marketing by utilizing and creating a viable digital career path
-              for you. We assist you in providing an understanding of the
-              section-wise method so that you can comprehend the process at your
-              own pace and put extra efforts into the program that you like.
-            </Text>
-            <Heading>YUVRAJ SINGH</Heading>
-            <Highlight query="Director" styles={{ color: "red" }}>
-              Director
-            </Highlight>
-            <Text>
-              Mr. Yuvraj Singh, born to be an entrepreneur, began his career by
-              accomplishing many ventures like H1 TAGS, the top Digital
-              Marketing Institute in Delhi NCR with a proven track record of
-              developing and directing high-impact Digital Marketing Strategies.
-              Skilled in overseeing web strategy and development, digital
-              engagement, and consumer-facing tools. Adept in guiding strategic
-              relationships to achieve company goals.
-            </Text>
-          </Box>
-        </SimpleGrid>
-        {/* director portfolio ends here */}
-
-        {/* cofounder portfolio starts here */}
-
-        <SimpleGrid columns={[1, 2]} my={10}>
-          <Box className={styles.portfolio_background} py={5} borderRadius={10}>
-            <Heading ml={5}>AKSHAY </Heading>
-            <Highlight
-              ml={5}
-              query="Co-founder"
-              styles={{ px: "1", py: "1", color: "red", ml: "5" }}
+      {/* director portfolio starts here */}
+      <Container
+        maxW={"full"}
+        sx={{
+          py: 15,
+          background: "rgb(2,0,36)",
+          background:
+            "linear-gradient(342deg, #101C32 61%, rgba(255,255,255,1) 61%)",
+        }}
+      >
+        <Box maxW={"5xl"} mx={"auto"}>
+          <SimpleGrid columns={[1, 2]} gap={0} my={10} alignItems={"center"}>
+            <Box
+              sx={{
+                maxW: 450,
+              }}
             >
-              Co-founder
-            </Highlight>
-            <Text w={"70%"} ml={5}>
-              He is very good at organizing Digital Marketing Strategies and
-              developing new and innovative SEO strategies. His planning skills
-              for digital marketing strategies, SEO (on-page and off-page), and
-              coming up with fresh, innovative ideas for SEO development
-              strategies are top-notch. He has excellent team administration and
-              teaching skills. He has excellent team administration and teaching
-              skills, and his ideas for team-building exercises are fantastic.
-              Under his guidance, students gain the skills of professional
-              Digital Marketers. His mission is to provide the best knowledge
-              possible to his students.
-            </Text>
-          </Box>
-          <Box>
-            {" "}
-            <Image
-              src={"https://via.placeholder.com/600x400"}
-              maxH={"500px"}
-              w={"100%"}
-              //style={{ float: "right" }}
-              px={5}
-            />
-          </Box>
-        </SimpleGrid>
+              <Image src={"/Yuvraj_singh.png"} w={"100%"} />
+            </Box>
+            <Box className={styles.about}>
+              <SectionTitle mb={10} fontSize={10}>
+                MESSAGE FROM DIRECTOR
+              </SectionTitle>
+              <Text>
+                Our sole and complete mission is to teach the value of Digital
+                Marketing by utilizing and creating a viable digital career path
+                for you. We assist you in providing an understanding of the
+                section-wise method so that you can comprehend the process at
+                your own pace and put extra efforts into the program that you
+                like.
+              </Text>
+              <Heading
+                fontSize={28}
+                // sx={{
+                //   fontsize: "12px",
+                // }}
+              >
+                YUVRAJ SINGH
+              </Heading>
+              <Highlight query="Director" styles={{ color: "red" }}>
+                Director
+              </Highlight>
+              <Text>
+                Mr. Yuvraj Singh, born to be an entrepreneur, began his career
+                by accomplishing many ventures like H1 TAGS, the top Digital
+                Marketing Institute in Delhi NCR with a proven track record of
+                developing and directing high-impact Digital Marketing
+                Strategies. Skilled in overseeing web strategy and development,
+                digital engagement, and consumer-facing tools. Adept in guiding
+                strategic relationships to achieve company goals.
+              </Text>
+            </Box>
+          </SimpleGrid>
+        </Box>
+        {/* director portfolio ends here */}
+      </Container>
+
+      {/* cofounder portfolio starts here */}
+      <Container
+        maxW={"full"}
+        sx={{
+          py: 15,
+          background: "rgb(2,0,36)",
+          background:
+            "linear-gradient(342deg, rgba(255,255,255,1) 61%, #101C32 61%)",
+        }}
+      >
+        {/* director portfolio starts here */}
+        <Box maxW={"5xl"} mx={"auto"}>
+          <SimpleGrid columns={[1, 2]} gap={0} my={10} alignItems={"center"}>
+            <Box className={styles.about}>
+              <Heading fontSize={28}>AKSHAY</Heading>
+              <Highlight query="Co-Founder" styles={{ color: "red" }}>
+                Co-Founder
+              </Highlight>
+
+              <Text>
+                He is very good at organizing Digital Marketing Strategies and
+                developing new and innovative SEO strategies. His planning
+                skills for digital marketing strategies, SEO (on-page and
+                off-page), and coming up with fresh, innovative ideas for SEO
+                development strategies are top-notch. He has excellent team
+                administration and teaching skills. He has excellent team
+                administration and teaching skills, and his ideas for
+                team-building exercises are fantastic. Under his guidance,
+                students gain the skills of professional Digital Marketers. His
+                mission is to provide the best knowledge possible to his
+                students.
+              </Text>
+            </Box>
+            <Box
+              sx={{
+                maxW: 450,
+                marginLeft: "auto",
+              }}
+            >
+              <Image src={"/Akshay.png"} w={"100%"} />
+            </Box>
+          </SimpleGrid>
+        </Box>
+        {/* director portfolio ends here */}
+      </Container>
+
+      <Container maxW={"full"}>
         {/* cofounder portfolio ends here */}
 
         {/* why choose us starts here */}
@@ -266,7 +294,7 @@ const About = () => {
         <SimpleGrid columns={[1, 2, 2]} pt={10}>
           <Box>
             <Flex justifyContent="space-around">
-              <SectionTitle> Your Career Matters to us</SectionTitle>
+              <SectionTitle>Your Career Matters to us</SectionTitle>
               <VscArrowCircleRight fontSize={"40px"} />
             </Flex>
           </Box>

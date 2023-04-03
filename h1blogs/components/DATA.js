@@ -143,12 +143,12 @@ export const AddressesData = [
   },
 ];
 
-export const CarrerOptionData = [
+export const CareerOptionData = [
   "Full Time/Part Time Job",
-  "Start Your Own Global Digital Marketing Agency",
+  "Start Your Own Digital Marketing Agency",
   "Become A Freelancer",
   "Grow Your Own Business",
-  "Grow Your Own Business",
+  "Become Blogger / Vlogger / Influencer",
 ];
 
 export const PlacementPartner = [

@@ -9,3 +9,10 @@ background-image: linear-gradient(62deg, #FFC0CB 0%, #ADD8E6 100%);
 .portfolio_background{
     /* background-color: #101C32; */
 }
+
+.about {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+}
