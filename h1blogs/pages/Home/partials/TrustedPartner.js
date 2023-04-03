@@ -29,7 +29,7 @@ export const TrustedPartner = () => {
       <Heading as={"h3"} px={[0, 10]} mb={[5, 10]} size="md">
         Our Placement Partners
       </Heading>
-      <Wrap bg={"white"} p={3} spacing={["10px", "20px"]} px={[0, 10]}>
+      <Wrap bg={"white"} p={3} px={[0, 10]}>
         {PlacementPartner.map((item, i) => {
           return (
             <WrapItem key={i}>
@@ -46,7 +46,7 @@ export const TrustedPartner = () => {
       <Heading as={"h3"} px={[0, 10]} my={[5, 10]} size="md">
         Our Advertising Partners
       </Heading>
-      <Wrap bg={"white"} p={3} spacing={["10px", "20px"]} px={[0, 10]}>
+      <Wrap bg={"white"} p={3} px={[0, 10]}>
         {AdvertisingPartner.map((item, i) => {
           return (
             <WrapItem key={i}>

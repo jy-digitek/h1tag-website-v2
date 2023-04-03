@@ -10,6 +10,7 @@ import {
   ListIcon,
   UnorderedList,
   Flex,
+  Image,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import {
@@ -25,9 +26,16 @@ import CTA from "../pages/Home/partials/Cta";
 export default function Footer() {
   return (
     <>
-      <CTA title={"Struggling to Choose a Career?"} />
+      <CTA title={"Struggling to Choose a Career?"} mt={10} />
 
-      <Container bg={"#101C32"} maxW="full">
+      <Container
+        maxW="full"
+        background={"#101C32 url(/world-map.png)"}
+        backgroundSize={"contain"}
+        backgroundPosition={"center center"}
+        backgroundRepeat={"no-repeat"}
+        py={10}
+      >
         <SimpleGrid
           columns={[1, 2, 4]}
           spacing={10}
@@ -36,9 +44,22 @@ export default function Footer() {
           px={[0, 20]}
         >
           <Box>
-            <Heading as={"h2"} fontSize="20px">
+            {/* <Heading as={"h2"} fontSize="20px">
               About H1 Tags
-            </Heading>
+            </Heading> */}
+            <Box
+              sx={{
+                bg: "white",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                w: "200px",
+                rounded: 8,
+                pb: 1,
+              }}
+            >
+              <Image src="/h1logo.png" w={"full"} />
+            </Box>
             <Text fontSize={"12px"} py={3}>
               <strong> H1 Tags:</strong> A School of Digital Marketing provides
               the Best Digital Marketing Course in Delhi with training programs

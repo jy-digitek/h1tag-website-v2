@@ -9,9 +9,10 @@ import {
 } from "@chakra-ui/react";
 import { GlobalButton } from "../../../components/GlobalButton";
 
-export default function CTA({ title }) {
+export default function CTA({ title, ...rest }) {
   return (
     <Box
+      {...rest}
       w={"full"}
       // h={"100vh"}
       backgroundImage={
