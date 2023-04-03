@@ -48,13 +48,6 @@ export const PickCourseTab = () => {
               }}
             >
               <Tab
-                sx={
-                  {
-                    // backgroundColor: "#3950a1",
-                    // color: "white",
-                    // fontsize: "200px",
-                  }
-                }
                 _selected={{ color: "white", bg: "#3950a1" }}
                 aria-selected={true}
               >
