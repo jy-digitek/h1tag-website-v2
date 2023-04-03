@@ -1,0 +1,102 @@
+.h1Btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.h1BtnShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.h1BtnEdge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background:linear-gradient(
+    to left,
+    #102058 0%,
+    #3053cb 8%,
+    #3053cb 92%,
+    #102058 100%
+  )
+}
+
+.h1BtnFront {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #3850a1;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .h1BtnFront {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.h1Btn:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.h1Btn:hover .h1BtnFront {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.h1Btn:active .h1BtnFront {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.h1Btn:hover .h1BtnShadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.h1Btn:active .h1BtnShadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+/* .h1Btn:focus:not(:focus-visible) {
+  outline: none;
+} */

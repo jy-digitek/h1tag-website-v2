@@ -41,10 +41,19 @@ module.exports = {
       const { page = 1, limit = 9, searchQuery = "" } = req.query;
       //const searchQuery = req.query;
       console.log("searchQuery", searchQuery, page);
+      const categoryArr = (category) =>
+        category.find((x) => [slug].includes(x.slug));
+      const categoryFilter = {}; //Just an Object
+      if (dataFilter.length > 0) {
+        categoryFilter = {
+          category: { $in: categoryArr },
+        };
+      }
       const posts = await Post.find({
         $or: [
           { title: { $regex: searchQuery } },
           // { categories: { $regex: searchQuery } },
+          categoryFilter,
         ],
       })
         .populate("categories")
