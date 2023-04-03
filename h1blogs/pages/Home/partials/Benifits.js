@@ -8,9 +8,9 @@ import {
   // SimpleGrid,
   Box,
   SimpleGrid,
-  Button,
+  // Button,
 } from "@chakra-ui/react";
-// import styles from "../../../styles/Home.module.css";
+
 import { SectionTitle } from "../../../components/SectionTitle";
 
 import { Benefits } from "../../../components/DATA";
@@ -46,7 +46,7 @@ export const Benifits = () => {
           border: `1px solid ${item.bg}`,
         }}
       >
-        <IoBulb size={28} />
+        {item.icon}
       </Box>
       {item.label}
     </WrapItem>

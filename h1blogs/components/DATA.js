@@ -9,44 +9,64 @@ import {
   FcComboChart,
   FcOnlineSupport,
 } from "react-icons/fc";
+import {
+  MdLightbulb,
+  MdOutlineScreenShare,
+  MdOutlineAutoGraph,
+  MdComputer,
+  MdAttachMoney,
+  MdBookmarkAdded,
+  MdOutlineCurrencyRupee,
+  MdSupervisedUserCircle,
+  MdCastForEducation,
+} from "react-icons/md";
 
 export const Benefits = [
   {
     label: "Earn While You Learning",
     bg: "purple",
+    icon: <MdLightbulb size={30} />,
   },
   {
     label: "100% Practical Course",
-    bg: "green",
+    bg: "blue",
+    icon: <MdOutlineScreenShare size={30} />,
   },
   {
     label: "Classroom Training",
     bg: "red",
+    icon: <MdComputer size={30} />,
   },
   {
     label: "20+ Globally Recognized Certifications",
     bg: "teal",
+    icon: <MdOutlineAutoGraph size={30} />,
   },
   {
     label: "EMIs Available",
     bg: "green",
+    icon: <MdAttachMoney size={30} />,
   },
   {
     label: "100% Placement Assistance",
     bg: "orange",
+    icon: <MdBookmarkAdded size={30} />,
   },
 
   {
     label: "Paid Internship from 1st Month",
-    bg: "teal",
+    bg: "red",
+    icon: <MdOutlineCurrencyRupee size={30} />,
   },
   {
     label: "Weekday and Weekend Batches",
     bg: "orange",
+    icon: <MdSupervisedUserCircle size={30} />,
   },
   {
     label: "Live Projects",
     bg: "purple",
+    icon: <MdCastForEducation size={30} />,
   },
 ];
 

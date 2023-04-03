@@ -29,7 +29,7 @@ const Home = () => {
       </Box>
       <Box pt={{ base: "0", sm: "10" }}>
         <Benifits />
-        <CTA />
+        <CTA title={"Unlock 10 Lakhs+ Job Opportunities"} />
       </Box>
       <Box pt={{ base: "0", sm: "10" }}>
         <WhyUs />
@@ -40,7 +40,7 @@ const Home = () => {
 
       <Box pt={{ base: "0", sm: "10" }}>
         <CourseBuiltFor />
-        <CTA />
+        <CTA title={"We are here to Build Your Future"} />
       </Box>
       <Box pt={{ base: "0", sm: "10" }}>
         <ExperienceH1tags />

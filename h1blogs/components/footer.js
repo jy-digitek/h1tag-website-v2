@@ -25,7 +25,7 @@ import CTA from "../pages/Home/partials/Cta";
 export default function Footer() {
   return (
     <>
-      <CTA title={"loremd doldodododododo"} />
+      <CTA title={"Struggling to Choose a Career?"} />
 
       <Container bg={"#101C32"} maxW="full">
         <SimpleGrid
