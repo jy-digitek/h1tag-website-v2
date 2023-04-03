@@ -178,85 +178,85 @@ export const PlacementPartner = [
   },
   {
     src: "/TrustedPartner/2.png",
-    name: "The Golden Cascade",
+    name: "Twigs N Lime",
   },
   {
     src: "/TrustedPartner/3.png",
-    name: "The Golden Cascade",
+    name: "JY Technologies Consulting Pvt Ltd",
   },
   {
     src: "/TrustedPartner/4.png",
-    name: "The Golden Cascade",
+    name: "H1 Tags ",
   },
   {
     src: "/TrustedPartner/5.png",
-    name: "The Golden Cascade",
+    name: "PC Solutions",
   },
   {
     src: "/TrustedPartner/6.png",
-    name: "The Golden Cascade",
+    name: "Google",
   },
   {
     src: "/TrustedPartner/7.png",
-    name: "The Golden Cascade",
+    name: "DNH IT Solutions",
   },
   {
     src: "/TrustedPartner/8.png",
-    name: "The Golden Cascade",
+    name: "MVIKAS",
   },
   {
     src: "/TrustedPartner/9.png",
-    name: "The Golden Cascade",
+    name: "Wipro",
   },
   {
     src: "/TrustedPartner/10.png",
-    name: "The Golden Cascade",
+    name: "Genpact",
   },
 
   {
     src: "/TrustedPartner/11.png",
-    name: "The Golden Cascade",
+    name: "Nvidia",
   },
   {
     src: "/TrustedPartner/12.png",
-    name: "The Golden Cascade",
+    name: "Accenture",
   },
   {
     src: "/TrustedPartner/13.png",
-    name: "The Golden Cascade",
+    name: "HCL",
   },
   {
     src: "/TrustedPartner/14.png",
-    name: "The Golden Cascade",
+    name: "HDFC Bank",
   },
   {
     src: "/TrustedPartner/15.png",
-    name: "The Golden Cascade",
+    name: "Amazon",
   },
   {
     src: "/TrustedPartner/16.png",
-    name: "The Golden Cascade",
+    name: "Microsoft",
   },
   {
     src: "/TrustedPartner/17.png",
-    name: "The Golden Cascade",
+    name: "360 Realtors",
   },
   {
     src: "/TrustedPartner/18.png",
-    name: "The Golden Cascade",
+    name: "Jio",
   },
 ];
 
 export const AdvertisingPartner = [
-  "/adver/1.png",
-  "/adver/2.png",
-  "/adver/3.png",
-  "/adver/4.png",
-  "/adver/5.png",
-  "/adver/6.png",
-  "/adver/7.png",
-  "/adver/8.png",
-  "/adver/9.png",
-  "/adver/10.png",
-  "/adver/11.png",
+  { src: "/adver/1.png", name: "Bisiness Standard" },
+  { src: "/adver/2.png", name: "Hindustan Times" },
+  { src: "/adver/3.png", name: "World News Network" },
+  { src: "/adver/4.png", name: "British News Network" },
+  { src: "/adver/5.png", name: "ANI" },
+  { src: "/adver/6.png", name: "Dailyhunt" },
+  { src: "/adver/7.png", name: "Zee5" },
+  { src: "/adver/8.png", name: "Jio News" },
+  { src: "/adver/9.png", name: "The Print" },
+  { src: "/adver/10.png", name: "Maharastra Samachar" },
+  { src: "/adver/11.png", name: "Sun Times" },
 ];
