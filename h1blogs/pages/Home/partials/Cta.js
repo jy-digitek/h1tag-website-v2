@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { GlobalButton } from "../../../components/GlobalButton";
 
-export default function CTA({ title, ...rest }) {
+export const CTA = ({ title, ...rest }) => {
   return (
     <Box
       {...rest}
@@ -59,4 +59,4 @@ export default function CTA({ title, ...rest }) {
       </VStack>
     </Box>
   );
-}
+};

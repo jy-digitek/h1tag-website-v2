@@ -16,8 +16,9 @@ import { ExperienceH1tags } from "./partials/ExperienceH1tags";
 import { CareerOption } from "./partials/CareerOption";
 import { StudentFeedback } from "./partials/StudentFeedback";
 import { TrustedPartner } from "./partials/TrustedPartner";
-import CTA from "./partials/Cta";
-// import SwiperCar from "../../components/SwiperCar";
+//import { CTA } from "./partials/Cta";
+
+import { CTA } from "./partials/Cta";
 
 const Home = () => {
   return (
