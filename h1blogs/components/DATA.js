@@ -260,3 +260,102 @@ export const AdvertisingPartner = [
   { src: "/adver/10.png", name: "Maharastra Samachar" },
   { src: "/adver/11.png", name: "Sun Times" },
 ];
+
+export const MasterCourseData = [
+  { level: "Website Designing" },
+  { level: "Ads Psychology" },
+  { level: "Content Writing" },
+  { level: "Search Engine Marketing" },
+  { level: "Search Engine Optimization" },
+  { level: "Google AdWords" },
+  { level: "Local SEO" },
+  { level: "Performance Marketing" },
+  { level: "Performance Marketing" },
+  { level: "Online Reputation Management" },
+  { level: "Email Marketing" },
+  { level: "E-Commerce Marketing" },
+  { level: "Designing Skill" },
+  { level: "Influencer Marketing" },
+  { level: "Social Media Marketing" },
+  { level: "Sales and Pitching" },
+  { level: "Social Media Ads" },
+  { level: "Copy Writing" },
+  { level: "YouTube Marketing" },
+  { level: "Instagram Reels Mastery" },
+  { level: "Google Analytics" },
+  { level: "Google Analytics" },
+  { level: "Lead Generation and Nurturing" },
+  { level: "Affiliate Program" },
+  { level: "Digital Marketing Strategy" },
+];
+
+export const FoundationCourse = [
+  { level: "Fundamentals of digital Marketing" },
+  { level: "Email Marketing" },
+  { level: "Digital Marketing" },
+  { level: "Designing Skill" },
+  { level: "Marketing Funnels" },
+  { level: "Social Media Marketing" },
+  { level: " Website Designing" },
+  { level: "Social Media Ads" },
+  { level: "Content Writing" },
+  { level: "Lead Generation" },
+  { level: "Search Engine Optimization" },
+  { level: "Google Analytics" },
+  { level: "Local SEO" },
+  { level: "Affiliate Program" },
+  { level: "Social Media Optimization" },
+];
+
+export const JobOrientedData = [
+  { level: " Fundamentals of Digital Marketing" },
+  { level: "Website Designing" },
+  { level: "Designing Skills" },
+  { level: "Personality Development" },
+  { level: "Search Engine Optimization" },
+];
+
+export const CustomizedCourseData = [
+  { level: "Fundamentals Of Digital Marketing" },
+  { level: "Canva" },
+  { level: " Digital Marketing" },
+  { level: "Google Analytics" },
+  { level: "Search Engine Optimization" },
+  { level: "E-commerce Marketing" },
+  { level: "Social Media Marketing" },
+  { level: "Affiliate Program" },
+  { level: "Youtube Marketing" },
+  { level: "Lead Generation" },
+  { level: "Email Marketing" },
+];
+
+export const AccordionDigitalData = [
+  {
+    que: "What is the duration of the training program?",
+    ans: "The duration is for 3 months. We will provide you with the best training for your bright future during this duration.",
+  },
+  {
+    que: "Who can join the digital marketing training program?",
+    ans: "Students from any stream, working professionals, home-makers, entrepreneurs, etc., can do this course with just a basic knowledge of computers.",
+  },
+  {
+    que: "I need help deciding on a course that suits me. What do I do now?",
+    ans: "Simple! Call us at +91 77700 07683, +91 77700 07698, or inquire. Our representatives will contact you and provide the exact consultation by offering advice and guidance on choosing the right course for your needs.",
+  },
+  {
+    que: "Do I get job assistance from your institute after the training program?",
+    ans: "Yes, we have tie-ups with well-known organizations looking for our institute's candidates. We provide 100% placement assistance.",
+  },
+  {
+    que: "Do you provide any certificates?",
+    ans: "Yes, we provide 20+ globally recognized certificates after the successful completion of the course, which will be recognized worldwide.",
+  },
+  {
+    que: "I am a working professional. Can I ask for Flexible Timing?",
+    ans: "Yes, we do have special weekend batches for working professionals, and they can coordinate with our staff for the same.",
+  },
+  {
+    que: "I am a student; how can this course help me?",
+    ans: "As a student, our Digital Marketing course will assist you in getting a secure job and a bright future.",
+  },
+];
