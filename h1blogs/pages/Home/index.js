@@ -17,6 +17,7 @@ import { CareerOption } from "./partials/CareerOption";
 import { StudentFeedback } from "./partials/StudentFeedback";
 import { TrustedPartner } from "./partials/TrustedPartner";
 import CTA from "./partials/Cta";
+// import SwiperCar from "../../components/SwiperCar";
 
 const Home = () => {
   return (
@@ -37,6 +38,8 @@ const Home = () => {
       <Box pt={{ base: "0", sm: "10" }}>
         <StandsOut />
       </Box>
+
+      {/* <SwiperCar /> */}
 
       <Box pt={{ base: "0", sm: "10" }}>
         <CourseBuiltFor />
