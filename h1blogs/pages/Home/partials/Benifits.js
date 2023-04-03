@@ -10,13 +10,13 @@ import {
   SimpleGrid,
   Button,
 } from "@chakra-ui/react";
-import styles from "../../../styles/Home.module.css";
+// import styles from "../../../styles/Home.module.css";
 import { SectionTitle } from "../../../components/SectionTitle";
 
 import { Benefits } from "../../../components/DATA";
 import { IoBulb } from "react-icons/io5";
 
-import GlobalButton from "../../../components/Button";
+// import { GlobalButton } from "../../../components/GlobalButton";
 
 export const Benifits = () => {
   const DataItem = ({ item, key }) => (

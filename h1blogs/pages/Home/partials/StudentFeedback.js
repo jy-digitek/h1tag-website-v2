@@ -8,7 +8,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import Carousel from "../../../components/Carousel";
-import { GlobalButton } from "../../../components/Button";
+import { GlobalButton } from "../../../components/GlobalButton";
 import { SectionTitle } from "../../../components/SectionTitle";
 export const StudentFeedback = () => {
   return (

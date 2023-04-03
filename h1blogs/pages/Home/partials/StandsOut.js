@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
-import { GlobalButton } from "../../../components/Button";
+import { GlobalButton } from "../../../components/GlobalButton";
 
 export const StandsOut = () => {
   return (

@@ -9,7 +9,8 @@ import {
 } from "@chakra-ui/react";
 
 // import { FaArrowRight } from "react-icons/fa";
-import { GlobalButton } from "../../../components/Button";
+// import { GlobalButton } from "../../../components/GlobalButton";
+import { GlobalButton } from "../../../components/GlobalButton";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CareerOptionData } from "../../../components/DATA";
 export const CareerOption = () => {

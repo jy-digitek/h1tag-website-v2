@@ -1,102 +1,69 @@
+
+
+/* CSS */
 .h1Btn {
-  position: relative;
-  border: none;
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
   background: transparent;
-  padding: 0;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
   cursor: pointer;
-  outline-offset: 4px;
-  transition: filter 250ms;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-.h1BtnShadow {
+.h1Btn::after,
+.h1Btn::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.h1Btn::before {
+  transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
-  will-change: transform;
-  transform: translateY(2px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
+  background: #28282d;
+  border-radius: 10px;
 }
 
-.h1BtnEdge {
-  position: absolute;
-  top: 0;
-  left: 0;
+.h1Btn::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.h1Btn:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.h1Btn:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  background:linear-gradient(
-    to left,
-    #102058 0%,
-    #3053cb 8%,
-    #3053cb 92%,
-    #102058 100%
-  )
 }
 
-.h1BtnFront {
-  display: block;
-  position: relative;
-  padding: 12px 27px;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  color: white;
-  background: #3850a1;
-  will-change: transform;
-  transform: translateY(-4px);
-  transition:
-    transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
+.h1Btn:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
 }
-
-@media (min-width: 768px) {
-  .h1BtnFront {
-    font-size: 1.25rem;
-    padding: 12px 42px;
-  }
-}
-
-.h1Btn:hover {
-  filter: brightness(110%);
-  -webkit-filter: brightness(110%);
-}
-
-.h1Btn:hover .h1BtnFront {
-  transform: translateY(-6px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-.h1Btn:active .h1BtnFront {
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-
-.h1Btn:hover .h1BtnShadow {
-  transform: translateY(4px);
-  transition:
-    transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-.h1Btn:active .h1BtnShadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
-
-/* .h1Btn:focus:not(:focus-visible) {
-  outline: none;
-} */
