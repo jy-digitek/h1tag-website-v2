@@ -35,7 +35,7 @@ export const TrustedPartner = () => {
             <WrapItem key={i}>
               <Card align="center">
                 <CardBody>
-                  <Image src={item} boxSize={40} />
+                  <Image src={item.src} boxSize={40} alt={item.name} />
                 </CardBody>
               </Card>
             </WrapItem>
@@ -52,7 +52,7 @@ export const TrustedPartner = () => {
             <WrapItem key={i}>
               <Card align="center">
                 <CardBody>
-                  <Image src={item} boxSize={40} />
+                  <Image src={item} boxSize={40} alt={item.name} />
                 </CardBody>
               </Card>
             </WrapItem>

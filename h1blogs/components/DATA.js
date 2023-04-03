@@ -172,24 +172,79 @@ export const CareerOptionData = [
 ];
 
 export const PlacementPartner = [
-  "/TrustedPartner/1.png",
-  "/TrustedPartner/2.png",
-  "/TrustedPartner/3.png",
-  "/TrustedPartner/4.png",
-  "/TrustedPartner/5.png",
-  "/TrustedPartner/6.png",
-  "/TrustedPartner/7.png",
-  "/TrustedPartner/8.png",
-  "/TrustedPartner/9.png",
-  "/TrustedPartner/10.png",
-  "/TrustedPartner/11.png",
-  "/TrustedPartner/12.png",
-  "/TrustedPartner/13.png",
-  "/TrustedPartner/14.png",
-  "/TrustedPartner/15.png",
-  "/TrustedPartner/16.png",
-  "/TrustedPartner/17.png",
-  "/TrustedPartner/18.png",
+  {
+    src: "/TrustedPartner/1.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/2.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/3.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/4.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/5.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/6.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/7.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/8.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/9.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/10.png",
+    name: "The Golden Cascade",
+  },
+
+  {
+    src: "/TrustedPartner/11.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/12.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/13.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/14.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/15.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/16.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/17.png",
+    name: "The Golden Cascade",
+  },
+  {
+    src: "/TrustedPartner/18.png",
+    name: "The Golden Cascade",
+  },
 ];
 
 export const AdvertisingPartner = [
