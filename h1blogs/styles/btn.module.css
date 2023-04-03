@@ -1,5 +1,3 @@
-
-
 /* CSS */
 .h1Btn {
   all: unset;
@@ -24,19 +22,19 @@
 
 .h1Btn::after,
 .h1Btn::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: -99999;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .h1Btn::before {
   transform: translate(0%, 0%);
   width: 100%;
-  height: 100%; 
-   background: #28282d;
+  height: 100%;
+  /* background: #28282d; */
   border-radius: 10px;
 }
 
@@ -44,7 +42,7 @@
   transform: translate(10px, 10px);
   width: 35px;
   height: 35px;
- background: #ffffff15;
+  background: #ffffff15;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 50px;

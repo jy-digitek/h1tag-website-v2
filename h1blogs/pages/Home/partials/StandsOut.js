@@ -15,7 +15,7 @@ export const StandsOut = () => {
     <Box sx={{ background: "url(/bg-img.jpeg)" }}>
       <Container maxW={"full"} px={[5, 10]}>
         <SimpleGrid columns={[1, 2, 2]} px={[0, 10]}>
-          <Box>{/* <Image src={"/h1Standout.png"} boxSize={"100%"} /> */}</Box>
+          <Box />
           <Box px={[0, 10]} my={10}>
             <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
               <SectionTitle lineHeight="50px" mb={2}>
@@ -49,7 +49,7 @@ export const StandsOut = () => {
                 <GlobalButton
                   label={"Call Now"}
                   sx={{ width: "100%", background: "#16acff", color: "#fff" }}
-                ></GlobalButton>
+                />
               </Box>
             </Box>
           </Box>
