@@ -7,7 +7,7 @@ export const GlobalButton = ({ label, color, ...rest }) => {
     // <Button colorScheme={color} {...rest}>
     //   {label}
     // </Button>
-    <Button className={styles.h1Btn} role="button">
+    <Button className={styles.h1Btn} role="button" {...rest}>
       {label}
     </Button>
   );

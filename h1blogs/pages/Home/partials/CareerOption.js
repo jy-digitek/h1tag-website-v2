@@ -83,7 +83,13 @@ export const CareerOption = () => {
             );
           })}
           <Box sx={{ mt: 7, display: "flex", justifyContent: "center" }}>
-            <GlobalButton label={"Kick Start Your Career"} color={"yellow"} />
+            <GlobalButton
+              label={"Kick Start Your Career"}
+              //color={"yellow"}
+              maxW="100%"
+              background="yellow"
+              color={"red"}
+            />
           </Box>
         </Box>
       </SimpleGrid>

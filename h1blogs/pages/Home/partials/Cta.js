@@ -7,6 +7,7 @@ import {
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { GlobalButton } from "../../../components/GlobalButton";
 
 export default function CTA({ title }) {
   return (
@@ -37,22 +38,21 @@ export default function CTA({ title }) {
             {title}
           </Text>
           <Stack direction={"row"}>
-            <Button
+            <GlobalButton
               bg={"blue.400"}
               rounded={"full"}
               color={"white"}
               _hover={{ bg: "blue.500" }}
-            >
-              Show me more
-            </Button>
-            <Button
+              label={" Show me more"}
+            />
+
+            <GlobalButton
               bg={"whiteAlpha.300"}
               rounded={"full"}
               color={"white"}
               _hover={{ bg: "whiteAlpha.500" }}
-            >
-              Show me more
-            </Button>
+              label={"Show me more"}
+            />
           </Stack>
         </Stack>
       </VStack>
