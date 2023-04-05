@@ -15,7 +15,7 @@ import { AccordionDigitalData } from "../../../components/DATA";
 import { SectionTitle } from "../../../components/SectionTitle";
 export const Faq = () => {
   return (
-    <Container my={5}>
+    <Container py={10}>
       <SectionTitle children={"FAQ's"} my={10} />
       {AccordionDigitalData.map((item, i) => {
         return (
