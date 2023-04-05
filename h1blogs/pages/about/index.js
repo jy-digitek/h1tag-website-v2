@@ -24,6 +24,7 @@ import styles from "../../styles/About.module.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { VscArrowCircleRight } from "react-icons/vsc";
 import { SectionTitle } from "../../components/SectionTitle";
+import { CTA } from "../Home/partials/Cta";
 
 const About = () => {
   return (
@@ -265,62 +266,63 @@ const About = () => {
 
         {/* why choose us starts here */}
 
-        <Divider borderColor={"red.900"} borderWidth={1} />
-        <SimpleGrid columns={[1, 2, 2]} pt={10}>
-          <Box>
-            <Flex justifyContent="space-around">
-              <SectionTitle mb={10}>Why Choose US?</SectionTitle>
+        <Grid templateColumns="repeat(5, 1fr)" gap={4}>
+          <GridItem colSpan={[5, 1]} bg="#384da4" color={"#fff"} mb={1.5}>
+            <SectionTitle mb={10}>Why Choose us?</SectionTitle>
+          </GridItem>
+          <GridItem colSpan={[5, 2]} bg="papayawhip" mb={1.5}>
+            <Box sx={{ p: 5 }}>
+              <Text>
+                H1 Tags -School of Digital Marketing and Web Development is one
+                of India's top Digital Marketing institutions in Delhi-NCR. We
+                studied several entry-level marketing job openings and designed
+                our syllabus according to the market demand for our students to
+                get easy placements. Companies hiring from H1 Tags include
+                Amazon, Axis Bank, Google, PC Solutions, DH IT Solutions, Wipro,
+                Accenture, Genpact, 360 Realtors, HCL, NVidia, Microsoft, HDFC
+                Bank, Ogilvy, and many more.
+              </Text>
+            </Box>
+          </GridItem>
+          <GridItem colSpan={[5, 2]} bg="papayawhip">
+            <CTA h={"100%"} />
+          </GridItem>
+        </Grid>
+        <Grid templateColumns="repeat(5, 1fr)" gap={4}>
+          <GridItem colSpan={[5, 1]} bg="#384da4" color={"#fff"} mt={1.5}>
+            <SectionTitle>Your Career Matters to us</SectionTitle>
+          </GridItem>
+          <GridItem colSpan={[5, 2]} bg="papayawhip" mt={1.5}>
+            <Box sx={{ p: 5 }}>
+              <UnorderedList>
+                <ListItem>
+                  We provide our students with counseling and professional and
+                  placement services
+                </ListItem>
+                <ListItem>
+                  Our work training program makes students easily adjust to the
+                  actual work culture.
+                </ListItem>
+                <ListItem>
+                  Our trainer provides follow-up sessions with each student
+                  separately so that they can clear every doubt.
+                </ListItem>
+                <ListItem>
+                  During training, these sessions include career counseling,
+                  resume preparation, and practice job interviews with proper
+                  reports. Our trainers focus on topics mostly asked during
+                  interviews.
+                </ListItem>
+              </UnorderedList>
+            </Box>
+          </GridItem>
+          <GridItem colSpan={[5, 2]} bg="papayawhip">
+            <CTA h={"100%"} />
+          </GridItem>
+        </Grid>
 
-              <VscArrowCircleRight fontSize={"40px"} />
-            </Flex>
-          </Box>
-          <Box>
-            <Text>
-              H1 Tags -School of Digital Marketing and Web Development is one of
-              India's top Digital Marketing institutions in Delhi-NCR. We
-              studied several entry-level marketing job openings and designed
-              our syllabus according to the market demand for our students to
-              get easy placements. Companies hiring from H1 Tags include Amazon,
-              Axis Bank, Google, PC Solutions, DH IT Solutions, Wipro,
-              Accenture, Genpact, 360 Realtors, HCL, NVidia, Microsoft, HDFC
-              Bank, Ogilvy, and many more.
-            </Text>
-          </Box>
-        </SimpleGrid>
         {/* why choose us ends here */}
-        <Divider borderColor={"red.900"} borderWidth={1} my={5} />
-        {/* your carrer matters starts here */}
 
-        <SimpleGrid columns={[1, 2, 2]} pt={10}>
-          <Box>
-            <Flex justifyContent="space-around">
-              <SectionTitle>Your Career Matters to us</SectionTitle>
-              <VscArrowCircleRight fontSize={"40px"} />
-            </Flex>
-          </Box>
-          <Box>
-            <UnorderedList>
-              <ListItem>
-                We provide our students with counseling and professional and
-                placement services
-              </ListItem>
-              <ListItem>
-                Our work training program makes students easily adjust to the
-                actual work culture.
-              </ListItem>
-              <ListItem>
-                Our trainer provides follow-up sessions with each student
-                separately so that they can clear every doubt.
-              </ListItem>
-              <ListItem>
-                During training, these sessions include career counseling,
-                resume preparation, and practice job interviews with proper
-                reports. Our trainers focus on topics mostly asked during
-                interviews.
-              </ListItem>
-            </UnorderedList>
-          </Box>
-        </SimpleGrid>
         {/* your carrer matters ends here */}
         <Box my={10}>
           <SectionTitle mb={10}>FAQ’s</SectionTitle>

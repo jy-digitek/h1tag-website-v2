@@ -27,6 +27,7 @@ export const CTA = ({ title, ...rest }) => {
         justify={"center"}
         py={useBreakpointValue({ base: 6, md: 12 })}
         px={useBreakpointValue({ base: 4, md: 8 })}
+        {...rest}
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack maxW={"2xl"} align={"center"} spacing={6}>

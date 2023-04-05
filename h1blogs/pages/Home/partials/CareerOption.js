@@ -18,11 +18,12 @@ export const CareerOption = () => {
     <Container
       maxW={"full"}
       px={[5, 10]}
+      // linear-gradient(to left, rgb(130 146 244 / 81%), rgb(23 33 87 / 80%)),url(crbg.jpg)
       // bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       sx={{
         // background: "url(/crbg.jpg)",
         backgroundImage:
-          "linear-gradient(to left, rgba(245, 246, 252, 0.52), rgb(63 81 181 / 60%)),url(crbg.jpg)",
+          "linear-gradient(to left, rgb(130 146 244 / 81%), rgb(23 33 87 / 80%)),url(crbg.jpg)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
