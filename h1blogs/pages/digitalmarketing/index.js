@@ -5,6 +5,7 @@ import { JoinH1Tags } from "./partials/JoinnH1Tags";
 import { CarrerOption } from "./partials/CarrerOption";
 import { EligibalForCourse } from "./partials/EligibalForCourse";
 import { ScholarshipProgram } from "./partials/ScholarshipProgram";
+import { WithSpeechBubbles } from "./partials/Testimonial";
 
 const index = () => {
   return (
@@ -14,6 +15,8 @@ const index = () => {
       <CarrerOption />
       <EligibalForCourse />
       <ScholarshipProgram />
+      <WithSpeechBubbles />
+
       <Faq />
     </Layout>
   );
