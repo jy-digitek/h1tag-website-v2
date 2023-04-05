@@ -291,7 +291,7 @@ const NAV_ITEMS = [
       {
         label: "Digital Marketing Course",
         subLabel: "Trending Design to inspire you",
-        href: "#",
+        href: "/digitalmarketing",
       },
       {
         label: "Graphic Design Course",
