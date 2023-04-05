@@ -1,7 +1,5 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-// import { IconButton, useBreakpointValue, Card } from "@chakra-ui/react";
-// import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

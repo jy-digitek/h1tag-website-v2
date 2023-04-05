@@ -4,6 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 export const EligibalForCourse = () => {
   return (
     <Container maxW={"full"} my={10}>
+      <SectionTitle children={"Who can do this Course?"} />
       <SimpleGrid
         columns={[2, 3]}
         h="200px"
