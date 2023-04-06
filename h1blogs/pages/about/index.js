@@ -3,11 +3,14 @@ import {
   Container,
   Box,
   Heading,
+  useBreakpointValue,
   Text,
   SimpleGrid,
   Highlight,
-  UnorderedList,
+  List,
   ListItem,
+  Stack,
+  VStack,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -15,8 +18,8 @@ import {
   Image,
   Grid,
   GridItem,
+  ListIcon,
   Flex,
-  Divider,
   Center,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
@@ -24,8 +27,8 @@ import styles from "../../styles/About.module.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { VscArrowCircleRight } from "react-icons/vsc";
 import { SectionTitle } from "../../components/SectionTitle";
-import { CTA } from "../Home/partials/Cta";
-
+import { MdCheckCircle } from "react-icons/md";
+import { GlobalButton } from "../../components/GlobalButton";
 const About = () => {
   return (
     <Layout>
@@ -265,14 +268,59 @@ const About = () => {
         {/* cofounder portfolio ends here */}
 
         {/* why choose us starts here */}
+        <Grid templateColumns="repeat(6, 1fr)" gap={0}>
+          <GridItem colSpan={[5, 3]}>
+            {/*  */}
+            <Box
+              w={"full"}
+              backgroundImage={
+                "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+              }
+              h={"full"}
+              backgroundSize={"cover"}
+              backgroundPosition={"center center"}
+              backgroundAttachment={"fixed"}
+              position={"relative"}
+            >
+              <Box
+                position={"absolute"}
+                sx={{
+                  width: 0,
+                  height: 0,
+                  right: 0,
+                  top: "25%",
+                  borderTop: "40px solid transparent",
+                  borderBottom: "40px solid transparent",
+                  borderRight: "40px solid #3950a1",
+                }}
+              />
 
-        <Grid templateColumns="repeat(5, 1fr)" gap={4}>
-          <GridItem colSpan={[5, 1]} bg="#384da4" color={"#fff"} mb={1.5}>
-            <SectionTitle mb={10}>Why Choose us?</SectionTitle>
+              <VStack
+                w={"full"}
+                justify={"center"}
+                h={"full"}
+                bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+              >
+                <Stack maxW={"2xl"} align={"center"} spacing={6}>
+                  <SectionTitle py={5} color={"#fff"}>
+                    Why Choose us?
+                  </SectionTitle>
+                </Stack>
+                <Stack direction={"row"} gap={10}>
+                  <GlobalButton
+                    rounded={"full"}
+                    color={"white"}
+                    label={" Show me more"}
+                    background="#3950a1"
+                    _hover={{ background: "#101C32" }}
+                  />
+                </Stack>
+              </VStack>
+            </Box>
           </GridItem>
-          <GridItem colSpan={[5, 2]} bg="papayawhip" mb={1.5}>
-            <Box sx={{ p: 5 }}>
-              <Text>
+          <GridItem colSpan={[5, 3]} bg="#3950a1" color={"#fff"}>
+            <Box sx={{ p: 10 }}>
+              <Text lineHeight={2}>
                 H1 Tags -School of Digital Marketing and Web Development is one
                 of India's top Digital Marketing institutions in Delhi-NCR. We
                 studied several entry-level marketing job openings and designed
@@ -284,40 +332,95 @@ const About = () => {
               </Text>
             </Box>
           </GridItem>
-          <GridItem colSpan={[5, 2]} bg="papayawhip">
-            <CTA h={"100%"} />
-          </GridItem>
         </Grid>
-        <Grid templateColumns="repeat(5, 1fr)" gap={4}>
-          <GridItem colSpan={[5, 1]} bg="#384da4" color={"#fff"} mt={1.5}>
-            <SectionTitle>Your Career Matters to us</SectionTitle>
-          </GridItem>
-          <GridItem colSpan={[5, 2]} bg="papayawhip" mt={1.5}>
-            <Box sx={{ p: 5 }}>
-              <UnorderedList>
-                <ListItem>
+
+        <Grid templateColumns="repeat(6, 1fr)" gap={0}>
+          <GridItem colSpan={[5, 3]} bg="papayawhip">
+            <Box sx={{ p: 10 }}>
+              <List>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 3] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
                   We provide our students with counseling and professional and
                   placement services
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 5] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
                   Our work training program makes students easily adjust to the
                   actual work culture.
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 5] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
                   Our trainer provides follow-up sessions with each student
                   separately so that they can clear every doubt.
                 </ListItem>
-                <ListItem>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 5] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
                   During training, these sessions include career counseling,
                   resume preparation, and practice job interviews with proper
                   reports. Our trainers focus on topics mostly asked during
                   interviews.
                 </ListItem>
-              </UnorderedList>
+              </List>
             </Box>
           </GridItem>
-          <GridItem colSpan={[5, 2]} bg="papayawhip">
-            <CTA h={"100%"} />
+          <GridItem colSpan={[5, 3]}>
+            {/*  */}
+            <Box
+              w={"full"}
+              // h={"100vh"}
+              backgroundImage={
+                "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+              }
+              h={"full"}
+              backgroundSize={"cover"}
+              backgroundPosition={"center center"}
+              backgroundAttachment={"fixed"}
+              position={"relative"}
+            >
+              <Box
+                position={"absolute"}
+                sx={{
+                  width: 0,
+                  height: 0,
+                  left: 0,
+                  top: "25%",
+                  borderTop: "40px solid transparent",
+                  borderBottom: "40px solid transparent",
+                  borderLeft: "40px solid papayawhip",
+                }}
+              />
+              <VStack
+                w={"full"}
+                justify={"center"}
+                h={"full"}
+                // py={useBreakpointValue({ base: 6, md: 12 })}
+                // px={useBreakpointValue({ base: 4, md: 8 })}
+                bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+              >
+                <Stack maxW={"2xl"} align={"center"} spacing={6}>
+                  <SectionTitle py={5} color={"#fff"}>
+                    Why Choose us?
+                  </SectionTitle>
+                </Stack>
+                <Stack direction={"row"} gap={10}>
+                  <GlobalButton
+                    rounded={"full"}
+                    color={"white"}
+                    label={" Show me more"}
+                    background="#3950a1"
+                    _hover={{ background: "#101C32" }}
+                  />
+                </Stack>
+              </VStack>
+            </Box>
           </GridItem>
         </Grid>
 
