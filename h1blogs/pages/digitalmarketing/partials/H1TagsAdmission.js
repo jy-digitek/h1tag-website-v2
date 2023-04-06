@@ -11,7 +11,7 @@ export const H1TagsAdmission = () => {
         py={10}
         children={"Why Should You Take Admission In H1 Tags Institute?"}
       />
-      <SimpleGrid columns={[1, 2]} px={[5, 20]} gap={5}>
+      <SimpleGrid columns={[1, 4]} px={[5, 20]} gap={5}>
         {digitalMaeketingH1Admission.map((item, key) => {
           return (
             <CustomCard

@@ -14,7 +14,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 
 export const EligibalForCourse = () => {
   return (
-    <Container maxW={"full"} my={10} bg="gray.400">
+    <Container maxW={"full"} bg="gray.400">
       <Grid templateColumns="repeat(5, 1fr)" gap={4}>
         <GridItem rowSpan={[1]} colSpan={[5, 1]} py={2}>
           <SectionTitle children={"Who can do this Course?"} />
