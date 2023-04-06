@@ -19,6 +19,7 @@ import {
   MasterCourseData,
   FoundationCourse,
   JobOrientedData,
+  CustomizedCourseData,
 } from "../../../components/DATA";
 
 export const CourseTab = () => {
@@ -187,7 +188,7 @@ export const CourseTab = () => {
                   programs according to your choice.
                 </Text>
                 <SimpleGrid columns={2}>
-                  {JobOrientedData.map((item, i) => {
+                  {CustomizedCourseData.map((item, i) => {
                     return (
                       <Box key={i}>
                         <Text>{item.level}</Text>
