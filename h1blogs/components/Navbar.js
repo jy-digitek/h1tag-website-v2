@@ -189,7 +189,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           >
             {label}
           </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          {/* <Text fontSize={"sm"}>{subLabel}</Text> */}
         </Box>
         <Flex
           transition={"all .3s ease"}
@@ -290,12 +290,12 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Digital Marketing Course",
-        subLabel: "Trending Design to inspire you",
+        // subLabel: "Trending Design to inspire you",
         href: "/digitalmarketing",
       },
       {
         label: "Graphic Design Course",
-        subLabel: "Up-and-coming Designers",
+        // subLabel: "Up-and-coming Designers",
         href: "#",
       },
     ],

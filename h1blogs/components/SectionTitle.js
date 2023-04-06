@@ -13,7 +13,7 @@ export function SectionTitle({ children, desc, ...rest }) {
   return (
     <>
       <Box {...rest} textAlign={"center"}>
-        <Box as="h2" fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
+        <Box fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
           {children}
         </Box>
 
