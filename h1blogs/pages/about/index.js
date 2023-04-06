@@ -21,6 +21,7 @@ import {
   ListIcon,
   Flex,
   Center,
+  Hide,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../../styles/About.module.css";
@@ -269,7 +270,7 @@ const About = () => {
 
         {/* why choose us starts here */}
         <Grid templateColumns="repeat(6, 1fr)" gap={0}>
-          <GridItem colSpan={[5, 3]}>
+          <GridItem colSpan={[6, 3]}>
             {/*  */}
             <Box
               w={"full"}
@@ -282,23 +283,25 @@ const About = () => {
               backgroundAttachment={"fixed"}
               position={"relative"}
             >
-              <Box
-                position={"absolute"}
-                sx={{
-                  width: 0,
-                  height: 0,
-                  right: 0,
-                  top: "25%",
-                  borderTop: "40px solid transparent",
-                  borderBottom: "40px solid transparent",
-                  borderRight: "40px solid #3950a1",
-                }}
-              />
-
+              <Hide below="sm">
+                <Box
+                  position={"absolute"}
+                  sx={{
+                    width: 0,
+                    height: 0,
+                    right: 0,
+                    top: "25%",
+                    borderTop: "40px solid transparent",
+                    borderBottom: "40px solid transparent",
+                    borderRight: "40px solid #3950a1",
+                  }}
+                />
+              </Hide>
               <VStack
                 w={"full"}
                 justify={"center"}
                 h={"full"}
+                mb={14}
                 bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
               >
                 <Stack maxW={"2xl"} align={"center"} spacing={6}>
@@ -318,7 +321,7 @@ const About = () => {
               </VStack>
             </Box>
           </GridItem>
-          <GridItem colSpan={[5, 3]} bg="#3950a1" color={"#fff"}>
+          <GridItem colSpan={[6, 3]} bg="#3950a1" color={"#fff"}>
             <Box sx={{ p: 10 }}>
               <Text lineHeight={2}>
                 H1 Tags -School of Digital Marketing and Web Development is one
@@ -335,8 +338,60 @@ const About = () => {
         </Grid>
 
         <Grid templateColumns="repeat(6, 1fr)" gap={0}>
-          <GridItem colSpan={[5, 3]} bg="papayawhip">
-            <Box sx={{ p: 10 }}>
+          <GridItem colSpan={[6, 3]} bg="papayawhip">
+            <Hide above="sm">
+              <Box
+                w={"full"}
+                // h={"100vh"}
+                backgroundImage={
+                  "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+                }
+                h={["auto", "full"]}
+                backgroundSize={"cover"}
+                backgroundPosition={"center center"}
+                backgroundAttachment={"fixed"}
+                position={"relative"}
+              >
+                <Hide below="sm">
+                  <Box
+                    position={"absolute"}
+                    sx={{
+                      width: 0,
+                      height: 0,
+                      left: 0,
+                      top: "25%",
+                      borderTop: "40px solid transparent",
+                      borderBottom: "40px solid transparent",
+                      borderLeft: "40px solid papayawhip",
+                    }}
+                  />
+                </Hide>
+                <VStack
+                  w={"full"}
+                  justify={"center"}
+                  h={"full"}
+                  mb={8}
+                  bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+                >
+                  <Stack maxW={"2xl"} align={"center"} spacing={6}>
+                    <SectionTitle py={5} color={"#fff"}>
+                      Why Choose us?
+                    </SectionTitle>
+                  </Stack>
+                  <Stack direction={"row"} gap={10}>
+                    <GlobalButton
+                      rounded={"full"}
+                      color={"white"}
+                      mb={10}
+                      label={" Show me more"}
+                      background="#3950a1"
+                      _hover={{ background: "#101C32" }}
+                    />
+                  </Stack>
+                </VStack>
+              </Box>
+            </Hide>
+            <Box sx={{ p: [5, 10] }}>
               <List>
                 <ListItem
                   sx={{ display: "flex", alignItems: "top", mb: [2, 3] }}
@@ -371,56 +426,60 @@ const About = () => {
               </List>
             </Box>
           </GridItem>
-          <GridItem colSpan={[5, 3]}>
-            {/*  */}
-            <Box
-              w={"full"}
-              // h={"100vh"}
-              backgroundImage={
-                "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
-              }
-              h={"full"}
-              backgroundSize={"cover"}
-              backgroundPosition={"center center"}
-              backgroundAttachment={"fixed"}
-              position={"relative"}
-            >
+          <GridItem colSpan={[6, 3]}>
+            <Hide below="sm">
+              {/*  */}
               <Box
-                position={"absolute"}
-                sx={{
-                  width: 0,
-                  height: 0,
-                  left: 0,
-                  top: "25%",
-                  borderTop: "40px solid transparent",
-                  borderBottom: "40px solid transparent",
-                  borderLeft: "40px solid papayawhip",
-                }}
-              />
-              <VStack
                 w={"full"}
-                justify={"center"}
+                // h={"100vh"}
+                backgroundImage={
+                  "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+                }
                 h={"full"}
-                // py={useBreakpointValue({ base: 6, md: 12 })}
-                // px={useBreakpointValue({ base: 4, md: 8 })}
-                bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+                backgroundSize={"cover"}
+                backgroundPosition={"center center"}
+                backgroundAttachment={"fixed"}
+                position={"relative"}
               >
-                <Stack maxW={"2xl"} align={"center"} spacing={6}>
-                  <SectionTitle py={5} color={"#fff"}>
-                    Why Choose us?
-                  </SectionTitle>
-                </Stack>
-                <Stack direction={"row"} gap={10}>
-                  <GlobalButton
-                    rounded={"full"}
-                    color={"white"}
-                    label={" Show me more"}
-                    background="#3950a1"
-                    _hover={{ background: "#101C32" }}
-                  />
-                </Stack>
-              </VStack>
-            </Box>
+                <Box
+                  position={"absolute"}
+                  sx={{
+                    width: 0,
+                    height: 0,
+                    left: 0,
+                    top: "25%",
+                    borderTop: "40px solid transparent",
+                    borderBottom: "40px solid transparent",
+                    borderLeft: "40px solid papayawhip",
+                  }}
+                />
+
+                <VStack
+                  w={"full"}
+                  justify={"center"}
+                  h={"full"}
+                  mb={14}
+                  // py={useBreakpointValue({ base: 6, md: 12 })}
+                  // px={useBreakpointValue({ base: 4, md: 8 })}
+                  bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+                >
+                  <Stack maxW={"2xl"} align={"center"} spacing={6}>
+                    <SectionTitle py={5} color={"#fff"}>
+                      Why Choose us?
+                    </SectionTitle>
+                  </Stack>
+                  <Stack direction={"row"} gap={10}>
+                    <GlobalButton
+                      rounded={"full"}
+                      color={"white"}
+                      label={" Show me more"}
+                      background="#3950a1"
+                      _hover={{ background: "#101C32" }}
+                    />
+                  </Stack>
+                </VStack>
+              </Box>
+            </Hide>
           </GridItem>
         </Grid>
 
