@@ -30,6 +30,7 @@ export default function Tabs2() {
           console.log(tabId);
         }}
         vertical
+        background={"blue"}
       >
         <TabList>
           <Tab tabFor="one">MASTER COURSE</Tab>
@@ -60,9 +61,6 @@ export default function Tabs2() {
             <Center>
               <GlobalButton
                 label={"Download Brochure"}
-                //color={"yellow"}
-                // sx={{ width: "350px" }}
-
                 maxW="100%"
                 background="#3950a1"
                 _hover={{ background: "#101C32" }}
@@ -93,9 +91,6 @@ export default function Tabs2() {
             <Center>
               <GlobalButton
                 label={"Download Brochure"}
-                //color={"yellow"}
-                // sx={{ width: "350px" }}
-
                 maxW="100%"
                 background="#3950a1"
                 _hover={{ background: "#101C32" }}
@@ -126,9 +121,6 @@ export default function Tabs2() {
             <Center>
               <GlobalButton
                 label={"Download Brochure"}
-                //color={"yellow"}
-                // sx={{ width: "350px" }}
-
                 maxW="100%"
                 background="#3950a1"
                 _hover={{ background: "#101C32" }}
@@ -159,9 +151,6 @@ export default function Tabs2() {
             <Center>
               <GlobalButton
                 label={"Download Brochure"}
-                //color={"yellow"}
-                // sx={{ width: "350px" }}
-
                 maxW="100%"
                 background="#3950a1"
                 _hover={{ background: "#101C32" }}

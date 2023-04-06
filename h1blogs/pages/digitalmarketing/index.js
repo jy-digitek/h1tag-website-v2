@@ -15,7 +15,7 @@ const index = () => {
     <Layout>
       <DigitalmarketingBox />
       <Tabs2 />
-      <CourseTab />
+      {/* <CourseTab /> */}
       <JoinH1Tags />
       <CarrerOption />
       <EligibalForCourse />

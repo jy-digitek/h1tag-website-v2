@@ -296,7 +296,7 @@ const NAV_ITEMS = [
       {
         label: "Graphic Design Course",
         // subLabel: "Up-and-coming Designers",
-        href: "#",
+        href: "/graphicdesign",
       },
     ],
   },
