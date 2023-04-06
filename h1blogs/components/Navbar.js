@@ -302,7 +302,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Gallery",
-    href: "#",
+    href: "/gallery",
   },
   {
     label: "Blog",
