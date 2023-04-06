@@ -34,7 +34,9 @@ export default function App() {
   return (
     <Layout>
       <Container maxW={"5xl"} my={[10, 20]}>
-        <SectionTitle as={"h1"}>H1 Gallery</SectionTitle>
+        <SectionTitle as={"h1"} mb={6}>
+          H1 Gallery
+        </SectionTitle>
         <PhotoAlbum
           photos={photos}
           layout="rows"
