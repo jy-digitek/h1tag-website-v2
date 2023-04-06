@@ -6,16 +6,20 @@ import { CarrerOption } from "./partials/CarrerOption";
 import { EligibalForCourse } from "./partials/EligibalForCourse";
 import { ScholarshipProgram } from "./partials/ScholarshipProgram";
 import { WithSpeechBubbles } from "./partials/Testimonial";
+import { DigitalmarketingBox } from "./partials/DigitalmarketingBox";
+import { H1TagsAdmission } from "./partials/H1TagsAdmission";
 
 const index = () => {
   return (
     <Layout>
+      <DigitalmarketingBox />
       <CourseTab />
       <JoinH1Tags />
       <CarrerOption />
       <EligibalForCourse />
       <ScholarshipProgram />
       <WithSpeechBubbles />
+      <H1TagsAdmission />
 
       <Faq />
     </Layout>

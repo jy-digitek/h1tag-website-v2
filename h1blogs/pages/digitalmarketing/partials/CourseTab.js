@@ -21,8 +21,8 @@ import { JobOrientedData } from "../../../components/DATA";
 
 export const CourseTab = () => {
   return (
-    <Container maxW={"full"} py={10}>
-      <SectionTitle children={"Courses We Offer"} my={10} />
+    <Container maxW={"full"}>
+      <SectionTitle children={"Courses We Offer"} mb={10} />
       <Box as="p">
         During your Digital Marketing Course, you will learn different
         techniques of Digital Marketing and how to apply them in real life. We

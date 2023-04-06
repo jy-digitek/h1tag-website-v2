@@ -1,14 +1,4 @@
-import {
-  Container,
-  Heading,
-  SimpleGrid,
-  Box,
-  Card,
-  CardBody,
-  Text,
-  Stack,
-  Highlight,
-} from "@chakra-ui/react";
+import { Container, SimpleGrid } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CustomCard } from "../../../components/CustomCard";

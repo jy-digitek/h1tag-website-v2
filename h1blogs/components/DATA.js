@@ -8,6 +8,10 @@ import {
   FcApproval,
   FcComboChart,
   FcOnlineSupport,
+  FcGraduationCap,
+  FcReadingEbook,
+  FcReading,
+  FcIdea,
 } from "react-icons/fc";
 import {
   MdLightbulb,
@@ -357,5 +361,28 @@ export const AccordionDigitalData = [
   {
     que: "I am a student; how can this course help me?",
     ans: "As a student, our Digital Marketing course will assist you in getting a secure job and a bright future.",
+  },
+];
+
+export const digitalMaeketingH1Admission = [
+  {
+    icon: <FcIdea />,
+    title: "Quality Training",
+    text: "Our quality training program will provide you with a competitive edge and provide you a better understanding of your work.",
+  },
+  {
+    icon: <FcReadingEbook />,
+    title: "Industry Based learning",
+    text: "It will allow you to solve an open-ended problem in many different ways and build your skills.",
+  },
+  {
+    icon: <FcReading />,
+    title: "Regular Batches",
+    text: "Our institute provides offline classes to the students, assuring a better understanding of their doubts.",
+  },
+  {
+    icon: <FcGraduationCap />,
+    title: "Placement Assurance",
+    text: "We ensure that our students get placed in a good firm and earn a decent amount.",
   },
 ];
