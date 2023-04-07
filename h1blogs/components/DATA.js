@@ -434,3 +434,100 @@ export const AdvanceCourseData = [
   { level: "Adobe Premier Pro " },
   { level: "Figma (Basic) " },
 ];
+
+export const H1TagsCourseGraphic = [
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "100% Placement Assistance",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "Doubt-Clearing Sessions",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "Access of Paid Software",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "Live Projects / Practical Training",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "High-Quality Training",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "High-Quality Training",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "Classroom Training",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "Learn from Experts",
+  },
+  {
+    icon: <FcIdea fontSize={30} />,
+    title: "",
+    label: "Portfolio and Resume Building",
+  },
+];
+
+export const JobRolesData = [
+  {
+    label: "Graphic Designer",
+    bg: "purple",
+    icon: <MdLightbulb size={30} />,
+  },
+  {
+    label: "User Interface (UI) Designer",
+    bg: "blue",
+    icon: <MdOutlineScreenShare size={30} />,
+  },
+  {
+    label: "Art Director",
+    bg: "red",
+    icon: <MdComputer size={30} />,
+  },
+  {
+    label: "Creative Director",
+    bg: "teal",
+    icon: <MdOutlineAutoGraph size={30} />,
+  },
+  {
+    label: "Production Artist",
+    bg: "green",
+    icon: <MdAttachMoney size={30} />,
+  },
+  {
+    label: "Marketing Specialist",
+    bg: "orange",
+    icon: <MdBookmarkAdded size={30} />,
+  },
+
+  {
+    label: "User Experience (UX) Designer",
+    bg: "red",
+    icon: <MdOutlineCurrencyRupee size={30} />,
+  },
+  {
+    label: "Product Developer",
+    bg: "orange",
+    icon: <MdSupervisedUserCircle size={30} />,
+  },
+  {
+    label: "Multimedia Artist or Animator",
+    bg: "purple",
+    icon: <MdCastForEducation size={30} />,
+  },
+];

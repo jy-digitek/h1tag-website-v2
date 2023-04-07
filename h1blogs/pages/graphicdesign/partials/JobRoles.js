@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Container,
   Wrap,
@@ -6,14 +7,12 @@ import {
   Box,
   SimpleGrid,
 } from "@chakra-ui/react";
-
-import { SectionTitle } from "../../../components/SectionTitle";
-
 import { Benefits } from "../../../components/DATA";
+import { SectionTitle } from "../../../components/SectionTitle";
+import { JobRolesData } from "../../../components/DATA";
+import { Si1001Tracklists } from "react-icons/si";
 
-// import { GlobalButton } from "../../../components/GlobalButton";
-
-export const Benifits = () => {
+export const JobRoles = () => {
   const DataItem = ({ item, key }) => (
     <WrapItem
       key={key}
@@ -47,16 +46,11 @@ export const Benifits = () => {
     </WrapItem>
   );
   return (
-    <Container
-      // className={`${styles.container} ${styles.border}`}
-      maxW={"full"}
-      px={[5, 10]}
-    >
-      <SectionTitle>Benefits to Students</SectionTitle>
-
+    <Container maxW={"full"} sx={{}}>
+      <SectionTitle children="Job Roles after Graphic Design Course" />
       <Wrap spacing={["10px", "20px"]} py={5} px={[0, 10]} fontSize={"20px"}>
         <SimpleGrid columns={[1, null, 3]} spacing={6} mx={2} px={10}>
-          {Benefits.map((item, key) => (
+          {JobRolesData.map((item, key) => (
             <DataItem item={item} key={key} />
           ))}
         </SimpleGrid>
