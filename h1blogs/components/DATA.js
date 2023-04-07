@@ -366,22 +366,22 @@ export const AccordionDigitalData = [
 
 export const digitalMaeketingH1Admission = [
   {
-    icon: <FcIdea />,
+    icon: <FcIdea fontSize={30} />,
     title: "Quality Training",
     text: "Our quality training program will provide you with a competitive edge and provide you a better understanding of your work.",
   },
   {
-    icon: <FcReadingEbook />,
+    icon: <FcReadingEbook fontSize={30} />,
     title: "Industry Based learning",
     text: "It will allow you to solve an open-ended problem in many different ways and build your skills.",
   },
   {
-    icon: <FcReading />,
+    icon: <FcReading fontSize={30} />,
     title: "Regular Batches",
     text: "Our institute provides offline classes to the students, assuring a better understanding of their doubts.",
   },
   {
-    icon: <FcGraduationCap />,
+    icon: <FcGraduationCap fontSize={30} />,
     title: "Placement Assurance",
     text: "We ensure that our students get placed in a good firm and earn a decent amount.",
   },
@@ -416,4 +416,21 @@ export const AccordionGraphicsData = [
     que: "Can I attend a demo session before enrollment?",
     ans: "Yes, students can attend a demo session before enrollment. This will assist students in having a better understanding of the teacher, and teachers can understand the learning needs of the students.",
   },
+];
+
+export const BasicCourseData = [
+  { level: "Adobe Illustrator  " },
+  { level: "Adobe Photoshop" },
+  { level: "CorelDraw" },
+  { level: "Adobe InDesign" },
+];
+
+export const AdvanceCourseData = [
+  { level: "Adobe Illustrator" },
+  { level: "Adobe Photoshop" },
+  { level: "CorelDraw" },
+  { level: "Adobe InDesign" },
+  { level: "Adobe After Effects" },
+  { level: "Adobe Premier Pro " },
+  { level: "Figma (Basic) " },
 ];

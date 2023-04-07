@@ -12,20 +12,22 @@ export const DigitalmarketingBox = () => {
         <Box
           p={10}
           // boxShadow={"10px 10px 5px 12px lightblue"}
-          bg={"blue.100"}
+          bg={"radial-gradient(#1fe4f5, #3fbafe)"}
           borderRadius={10}
+          color={"#fff"}
         >
-          <Text color={"blue"} fontWeight={"bold"} fontSize={"2rem"}>
+          <Text fontWeight={"bold"} fontSize={"2rem"}>
             1000+
           </Text>{" "}
           Students Trained
         </Box>
         <Box
           p={10} //boxShadow={"10px 10px 5px 12px red"}
-          bg={"red.100"}
+          bg={"radial-gradient(#fbc1cc, #fa99b2)"}
           borderRadius={10}
+          color={"#fff"}
         >
-          <Text color={"red.300"} fontWeight={"bold"} fontSize={"2rem"}>
+          <Text fontWeight={"bold"} fontSize={"2rem"}>
             {" "}
             100+
           </Text>
@@ -33,10 +35,15 @@ export const DigitalmarketingBox = () => {
         </Box>
         <Box
           p={10} //</SimpleGrid>boxShadow={"10px 10px 5px 12px lightblue"}
-          bg={"green.100"}
+          bg={"radial-gradient(#76b2fe, #b69efe)"}
           borderRadius={10}
+          color={"#fff"}
         >
-          <Text color={"green.300"} fontWeight={"bold"} fontSize={"2rem"}>
+          <Text
+            //color={"radial-gradient(#76b2fe, #b69efe)"}
+            fontWeight={"bold"}
+            fontSize={"2rem"}
+          >
             700+
           </Text>
           Students Placed
@@ -44,10 +51,11 @@ export const DigitalmarketingBox = () => {
         <Box
           p={10}
           //boxShadow={"10px 10px 5px 12px lightblue"}
-          bg={"orange.100"}
+          bg={"radial-gradient(#60efbc, #58d5c9)"}
           borderRadius={10}
+          color={"#fff"}
         >
-          <Text color={"orange.300"} fontWeight={"bold"} fontSize={"2rem"}>
+          <Text color={"#ffffff"} fontWeight={"bold"} fontSize={"2rem"}>
             {" "}
             300+
           </Text>

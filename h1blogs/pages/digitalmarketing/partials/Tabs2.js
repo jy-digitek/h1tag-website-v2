@@ -21,13 +21,20 @@ import {
 } from "../../../components/DATA";
 
 import { GlobalButton } from "../../../components/GlobalButton";
-import { FcAndroidOs } from "react-icons/fc";
+import { FcAndroidOs, FcNext } from "react-icons/fc";
 
 export default function Tabs2() {
   return (
-    <Container maxW={"full"}>
+    <Container maxW={"6xl"}>
       <SectionTitle children={"Courses We Offer"} mb={10} />
-      <Box as="p" my={[3, 5]} maxW={"5xl"} mx={"auto"}>
+      <Box
+        as="p"
+        my={[3, 5]}
+        maxW={"5xl"}
+        mx={"auto"}
+        textAlign={"center"}
+        px={20}
+      >
         During your Digital Marketing Course, you will learn different
         techniques of Digital Marketing and how to apply them in real life. We
         will make you a skilled professional, and you will acquire the skills
@@ -88,7 +95,7 @@ export default function Tabs2() {
                       justifyContent={"center"}
                       marginRight={4}
                     >
-                      <FcManager fontSize={30} />{" "}
+                      <FcNext />{" "}
                     </Box>
                     <Text>{item.level}</Text>
                   </Flex>
@@ -108,10 +115,11 @@ export default function Tabs2() {
         <TabPanel tabId="two">
           <Box boxShadow="sm">
             <SectionTitle
-              children={"FOUNDATION COURSE"}
+              mb={5}
+              children={"Foundation Course"}
               desc="Module Info and Overview"
             />
-            <Text as="p">
+            <Text as="p" mb={5}>
               Get practical experiences using Digital Marketing tools to manage
               and optimize a Digital Marketing campaign with our Foundation
               Course, which combines theory and practice.
@@ -119,14 +127,37 @@ export default function Tabs2() {
             <SimpleGrid columns={2}>
               {FoundationCourse.map((item, i) => {
                 return (
-                  <Box key={i}>
+                  <Flex
+                    key={i}
+                    alignItems={"center"}
+                    boxShadow={"sm"}
+                    py={2}
+                    px={[5]}
+                    cursor={"pointer"}
+                    sx={{
+                      transition: ".5s",
+                      ":hover": { backgroundColor: "tomato", color: "#fff" },
+                    }}
+                  >
+                    <Box
+                      rounded={"full"}
+                      boxSize={10}
+                      backgroundColor={"gray.200"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                      marginRight={4}
+                    >
+                      <FcNext />
+                    </Box>
                     <Text>{item.level}</Text>
-                  </Box>
+                  </Flex>
                 );
               })}
             </SimpleGrid>
             <Center>
               <GlobalButton
+                sx={{ mt: 8, mb: 4 }}
                 label={"Download Brochure"}
                 maxW="100%"
                 background="#3950a1"
@@ -138,10 +169,11 @@ export default function Tabs2() {
         <TabPanel tabId="three">
           <Box>
             <SectionTitle
-              children={"JOB ORIENTED PROGRAM "}
+              children={"Job Oriented Program "}
               desc="Module Info & Overview"
+              mb={5}
             />
-            <Text as="p">
+            <Text as="p" mb={5}>
               Our job-oriented course is mainly created with the intention that
               a reputable organization can hire you following the training;
               finding your ideal job is our top priority.
@@ -149,9 +181,31 @@ export default function Tabs2() {
             <SimpleGrid columns={2}>
               {JobOrientedData.map((item, i) => {
                 return (
-                  <Box key={i}>
+                  <Flex
+                    key={i}
+                    alignItems={"center"}
+                    boxShadow={"sm"}
+                    py={2}
+                    px={[5]}
+                    cursor={"pointer"}
+                    sx={{
+                      transition: ".5s",
+                      ":hover": { backgroundColor: "tomato", color: "#fff" },
+                    }}
+                  >
+                    <Box
+                      rounded={"full"}
+                      boxSize={10}
+                      backgroundColor={"gray.200"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                      marginRight={4}
+                    >
+                      <FcNext />
+                    </Box>
                     <Text>{item.level}</Text>
-                  </Box>
+                  </Flex>
                 );
               })}
             </SimpleGrid>
@@ -161,6 +215,7 @@ export default function Tabs2() {
                 maxW="100%"
                 background="#3950a1"
                 _hover={{ background: "#101C32" }}
+                sx={{ mt: 8, mb: 4 }}
               />
             </Center>
           </Box>
@@ -168,10 +223,11 @@ export default function Tabs2() {
         <TabPanel tabId="fourth">
           <Box>
             <SectionTitle
-              children={"CUSTOMIZED COURSE"}
+              children={"Customized Course"}
               desc="Module Info & Overview"
+              mb={5}
             />
-            <Text as="p">
+            <Text as="p" mb={5}>
               Our customized course assist in altering our training program
               according to your needs and preferences; you can alter the
               programs according to your choice.
@@ -179,9 +235,31 @@ export default function Tabs2() {
             <SimpleGrid columns={2}>
               {CustomizedCourseData.map((item, i) => {
                 return (
-                  <Box key={i}>
+                  <Flex
+                    key={i}
+                    alignItems={"center"}
+                    boxShadow={"sm"}
+                    py={2}
+                    px={[5]}
+                    cursor={"pointer"}
+                    sx={{
+                      transition: ".5s",
+                      ":hover": { backgroundColor: "tomato", color: "#fff" },
+                    }}
+                  >
+                    <Box
+                      rounded={"full"}
+                      boxSize={10}
+                      backgroundColor={"gray.200"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                      marginRight={4}
+                    >
+                      <FcNext />
+                    </Box>
                     <Text>{item.level}</Text>
-                  </Box>
+                  </Flex>
                 );
               })}
             </SimpleGrid>
@@ -191,6 +269,7 @@ export default function Tabs2() {
                 maxW="100%"
                 background="#3950a1"
                 _hover={{ background: "#101C32" }}
+                sx={{ mt: 8, mb: 4 }}
               />
             </Center>
           </Box>

@@ -13,8 +13,8 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { AccordionGraphicsData } from "../../../components/DATA";
 export const Faq = () => {
   return (
-    <Container>
-      <SectionTitle children={"FAQ’S"} />
+    <Container py={10}>
+      <SectionTitle children={"FAQ’S"} mb={10} />
       <Accordion allowMultiple>
         {AccordionGraphicsData.map((item, i) => {
           return (

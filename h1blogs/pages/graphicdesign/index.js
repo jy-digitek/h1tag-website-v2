@@ -8,7 +8,7 @@ import { CarrerOportunity } from "./partials/CarrerOportunity";
 const index = () => {
   return (
     <Layout>
-      <PageBanner title="Graphic Design Course" />
+      <PageBanner title="Graphic Design Course" py={20} />
       <CourseTabs />
       <CarrerOportunity />
       <Faq />
