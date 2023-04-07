@@ -47,7 +47,7 @@ export const JobRoles = () => {
   );
   return (
     <Container maxW={"full"} sx={{}}>
-      <SectionTitle children="Job Roles after Graphic Design Course" />
+      <SectionTitle children="Job Roles After Graphic Design Course" />
       <Wrap spacing={["10px", "20px"]} py={5} px={[0, 10]} fontSize={"20px"}>
         <SimpleGrid columns={[1, null, 3]} spacing={6} mx={2} px={10}>
           {JobRolesData.map((item, key) => (

@@ -6,6 +6,9 @@ import { Faq } from "./partials/Faq";
 import { CarrerOportunity } from "./partials/CarrerOportunity";
 import { ChooseGraphicDesign } from "./partials/ChooseGraphicDesign";
 import { JobRoles } from "./partials/JobRoles";
+import { PerSueGraphicDesign } from "./partials/PerSueGraphicDesign";
+import { Eligibility } from "./partials/Eligibility";
+import { ScholarShipProgram } from "./partials/ScholarShipProgram";
 
 const index = () => {
   return (
@@ -13,6 +16,9 @@ const index = () => {
       <PageBanner title="Graphic Design Course" />
       <TabsCourse />
       <CarrerOportunity />
+      <Eligibility />
+      <PerSueGraphicDesign />
+      <ScholarShipProgram />
       <ChooseGraphicDesign />
       <JobRoles />
       <Faq />
