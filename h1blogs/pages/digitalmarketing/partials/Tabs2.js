@@ -1,9 +1,18 @@
 import React from "react";
-import { Container, Box, Text, SimpleGrid, Center } from "@chakra-ui/react";
-import { render } from "react-dom";
+import {
+  Container,
+  Box,
+  Text,
+  SimpleGrid,
+  Center,
+  Flex,
+} from "@chakra-ui/react";
+// import { render } from "react-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
 import "react-web-tabs/dist/react-web-tabs.css";
+import Styles from "../../../styles/Tabs.module.css";
+import { FcManager, FcRules, FcAssistant, FcSettings } from "react-icons/fc";
 import {
   FoundationCourse,
   MasterCourseData,
@@ -12,6 +21,7 @@ import {
 } from "../../../components/DATA";
 
 import { GlobalButton } from "../../../components/GlobalButton";
+import { FcAndroidOs } from "react-icons/fc";
 
 export default function Tabs2() {
   return (
@@ -24,16 +34,20 @@ export default function Tabs2() {
         you need to succeed in life. You can choose from a variety of courses
         that H1 Tags is offering.
       </Box>
+
       <Tabs
         defaultTab="one"
         onChange={(tabId) => {
           console.log(tabId);
         }}
+        className={Styles.tabsContainer}
         vertical
         background={"blue"}
       >
         <TabList>
-          <Tab tabFor="one">MASTER COURSE</Tab>
+          <Tab className={Styles.Tab_default} tabFor="one">
+            MASTER COURSE
+          </Tab>
           <Tab tabFor="two">FOUNDATION COURSE</Tab>
           <Tab tabFor="three"> JOB ORIENTED PROGRAM</Tab>
           <Tab tabFor="fourth">CUSTOMIZED COURSE</Tab>
@@ -41,10 +55,11 @@ export default function Tabs2() {
         <TabPanel tabId="one">
           <Box>
             <SectionTitle
-              children={"MASTER COURSE"}
+              mb={5}
+              children={"Master Course"}
               desc="Module Info & Overview"
             />
-            <Text as="p">
+            <Text as="p" mb={5}>
               This program is designed to make you an expert in Digital
               Marketing; with this course, we provide deep learning of Digital
               Marketing.
@@ -52,13 +67,35 @@ export default function Tabs2() {
             <SimpleGrid columns={2}>
               {MasterCourseData.map((item, i) => {
                 return (
-                  <Box key={i}>
+                  <Flex
+                    key={i}
+                    alignItems={"center"}
+                    boxShadow={"sm"}
+                    py={2}
+                    px={[5]}
+                    cursor={"pointer"}
+                    sx={{
+                      transition: ".5s",
+                      ":hover": { backgroundColor: "tomato", color: "#fff" },
+                    }}
+                  >
+                    <Box
+                      rounded={"full"}
+                      boxSize={10}
+                      backgroundColor={"gray.200"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                      marginRight={4}
+                    >
+                      <FcManager fontSize={30} />{" "}
+                    </Box>
                     <Text>{item.level}</Text>
-                  </Box>
+                  </Flex>
                 );
               })}
             </SimpleGrid>
-            <Center>
+            <Center sx={{ mt: 8, mb: 4 }}>
               <GlobalButton
                 label={"Download Brochure"}
                 maxW="100%"
