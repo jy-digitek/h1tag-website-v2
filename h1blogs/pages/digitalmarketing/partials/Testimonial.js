@@ -1,4 +1,13 @@
 import { ReactNode } from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper";
 import {
   Box,
   Flex,
@@ -12,7 +21,7 @@ import {
 import { SectionTitle } from "../../../components/SectionTitle";
 
 const Testimonial = ({ children }) => {
-  return <Box>{children}</Box>;
+  return <Box maxW={"6xl"}>{children}</Box>;
 };
 
 const TestimonialContent = ({ children }) => {
@@ -85,65 +94,202 @@ export const WithSpeechBubbles = () => {
     <Box bg={useColorModeValue("gray.100", "gray.700")}>
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
-          {/* <Heading>Our Clients Speak</Heading> */}
           <SectionTitle
             children={"1,000+ students trust H1 Tags"}
             desc="Thousands of students’ trust makes us - the Best Digital Marketing Training Institute in Delhi"
           />
         </Stack>
-        <Stack
+        {/* <Stack
           direction={{ base: "column", md: "row" }}
           spacing={{ base: 10, md: 4, lg: 10 }}
+        > */}
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          spaceBetween={30}
+          loop={true}
+          autoplay={100}
+          slidesPerView={4}
+          coverflowEffect={{
+            // rotate: 50,
+            // stretch: 0,
+            // depth: 100,
+            // modifier: 1,
+            // slideShadows: true,
+            rotate: 20,
+            stretch: 0,
+            depth: 20,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper"
         >
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-              }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
-            />
-          </Testimonial>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Intuitive Design</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-              }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
-            />
-          </Testimonial>
-          <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>Mindblowing Service</TestimonialHeading>
-              <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
-              </TestimonialText>
-            </TestimonialContent>
-            <TestimonialAvatar
-              src={
-                "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
-              }
-              name={"Jane Cooper"}
-              title={"CEO at ABC Corporation"}
-            />
-          </Testimonial>
-        </Stack>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Intuitive Design</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Testimonial>
+              <TestimonialContent>
+                <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                <TestimonialText>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                </TestimonialText>
+              </TestimonialContent>
+              <TestimonialAvatar
+                src={
+                  "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                }
+                name={"Jane Cooper"}
+                title={"CEO at ABC Corporation"}
+              />
+            </Testimonial>
+          </SwiperSlide>
+        </Swiper>
       </Container>
     </Box>
   );
