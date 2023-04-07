@@ -21,7 +21,7 @@ import {
   SiLinkedin,
 } from "react-icons/si";
 import { SlPhone } from "react-icons/sl";
-import { CTA } from "../pages/Home/partials/Cta";
+import { CTA } from "../pages/Home/partials/CTA";
 
 export default function Footer() {
   return (

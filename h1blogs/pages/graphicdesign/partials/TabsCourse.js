@@ -11,10 +11,11 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/GlobalButton";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
 import "react-web-tabs/dist/react-web-tabs.css";
+import Styles from "../../../styles/Tabs.module.css";
 import { BasicCourseData, AdvanceCourseData } from "../../../components/DATA";
 import { FcNext } from "react-icons/fc";
-import Styles from "../../../styles/Tabs.module.css";
-export const CourseTabs = () => {
+
+export const TabsCourse = () => {
   return (
     <Container maxW={"6xl"} py={10}>
       <SectionTitle
