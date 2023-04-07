@@ -13,7 +13,7 @@ import {
 import { SectionTitle } from "../../../components/SectionTitle";
 import { PlacementPartner } from "../../../components/DATA";
 import { AdvertisingPartner } from "../../../components/DATA";
-
+import { Fade, AttentionSeeker } from "react-awesome-reveal";
 export const TrustedPartner = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
@@ -30,34 +30,38 @@ export const TrustedPartner = () => {
         Our Placement Partners
       </Heading>
       <Wrap bg={"white"} p={3} px={[0, 10]}>
-        {PlacementPartner.map((item, i) => {
-          return (
-            <WrapItem key={i}>
-              <Card align="center">
-                <CardBody>
-                  <Image src={item.src} boxSize={40} alt={item.name} />
-                </CardBody>
-              </Card>
-            </WrapItem>
-          );
-        })}
+        <Fade cascade>
+          {PlacementPartner.map((item, i) => {
+            return (
+              <WrapItem key={i}>
+                <Card align="center">
+                  <CardBody>
+                    <Image src={item.src} boxSize={40} alt={item.name} />
+                  </CardBody>
+                </Card>
+              </WrapItem>
+            );
+          })}
+        </Fade>
       </Wrap>
 
       <Heading as={"h3"} px={[0, 10]} my={[5, 10]} size="md">
         Our Advertising Partners
       </Heading>
       <Wrap bg={"white"} p={3} px={[0, 10]}>
-        {AdvertisingPartner.map((item, i) => {
-          return (
-            <WrapItem key={i}>
-              <Card align="center">
-                <CardBody>
-                  <Image src={item.src} boxSize={40} alt={item.name} />
-                </CardBody>
-              </Card>
-            </WrapItem>
-          );
-        })}
+        <Fade cascade>
+          {AdvertisingPartner.map((item, i) => {
+            return (
+              <WrapItem key={i}>
+                <Card align="center">
+                  <CardBody>
+                    <Image src={item.src} boxSize={40} alt={item.name} />
+                  </CardBody>
+                </Card>
+              </WrapItem>
+            );
+          })}
+        </Fade>
       </Wrap>
     </Container>
   );
