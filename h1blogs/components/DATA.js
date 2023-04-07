@@ -386,3 +386,34 @@ export const digitalMaeketingH1Admission = [
     text: "We ensure that our students get placed in a good firm and earn a decent amount.",
   },
 ];
+
+export const AccordionGraphicsData = [
+  {
+    que: "Can I become a Graphic Designer if I don't have basic knowledge of designing?",
+    ans: "To become a Graphic Designer, one is not required to have basic design abilities. We will teach you how to become a professional Graphic Designer by teaching you how to create eye-catching designs utilizing elements such as pictures, typography, and illustrations ",
+  },
+  {
+    que: "Who can do this course?",
+    ans: "Students who have passion for design and a creative mind is welcome to enroll in this course and obtain a high-paying career.",
+  },
+  {
+    que: "What is the eligibility to learn Graphic Design Course?",
+    ans: "For enrolling in our Graphic Designing course is compulsory that you have completed your 12th or must be pursuing graduation or post-graduation.",
+  },
+  {
+    que: "Is this a practical course or will only theory is covered?    ",
+    ans: "Our Graphic Design course is divided into 70% theory and 30% practical. Color theory, typography, layout, graphic design tools, and software will all be covered. We will make you familiar with the theoretical as well as the practical knowledge of the topic.",
+  },
+  {
+    que: "Do you also provide weekend batches?    ",
+    ans: "Yes, we have special weekend batches for working professionals who cannot attend weekend classes.",
+  },
+  {
+    que: "What is the duration of this course?",
+    ans: "The duration of the basic course is 3 months, and for the advance, it's 4 months.",
+  },
+  {
+    que: "Can I attend a demo session before enrollment?",
+    ans: "Yes, students can attend a demo session before enrollment. This will assist students in having a better understanding of the teacher, and teachers can understand the learning needs of the students.",
+  },
+];

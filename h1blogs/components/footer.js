@@ -26,7 +26,7 @@ import { CTA } from "../pages/Home/partials/Cta";
 export default function Footer() {
   return (
     <>
-      <CTA title={"Struggling to Choose a Career?"} mt={10} />
+      <CTA title={"Struggling to Choose a Career?"} />
 
       <Container
         maxW="full"

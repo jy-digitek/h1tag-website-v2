@@ -28,7 +28,6 @@ export const StudentFeedback = () => {
           <Center>
             <GlobalButton
               label={"Let’s Get Started"}
-              // color="yellow"
               background="#3950a1"
               _hover={{ background: "#101C32" }}
             />
