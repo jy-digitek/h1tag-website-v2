@@ -8,7 +8,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { GlobalButton } from "../../../components/GlobalButton";
-
+import { Fade } from "react-awesome-reveal";
 export const CTA = ({ title, ...rest }) => {
   return (
     <Box
@@ -31,14 +31,16 @@ export const CTA = ({ title, ...rest }) => {
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack maxW={"2xl"} align={"center"} spacing={6}>
-          <Text
-            color={"white"}
-            fontWeight={700}
-            lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
-          >
-            {title}
-          </Text>
+          <Fade cascade>
+            <Text
+              color={"white"}
+              fontWeight={700}
+              lineHeight={1.2}
+              fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+            >
+              {title}
+            </Text>
+          </Fade>
           <Stack direction={"row"} gap={10}>
             <GlobalButton
               rounded={"full"}

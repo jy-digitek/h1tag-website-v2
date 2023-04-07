@@ -24,7 +24,7 @@ import {
   Hide,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { Fade, ScaleFade, Slide, SlideFade } from "@chakra-ui/react";
+
 import { useDisclosure } from "@chakra-ui/react";
 // import { MdCheckCircle, MdSettings } from "react-icons/md";
 import ListCardImg from "../../../components/ListCardImg";

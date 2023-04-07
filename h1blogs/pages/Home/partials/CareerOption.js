@@ -13,6 +13,7 @@ import {
 import { GlobalButton } from "../../../components/GlobalButton";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CareerOptionData } from "../../../components/DATA";
+import { Fade, AttentionSeeker } from "react-awesome-reveal";
 export const CareerOption = () => {
   return (
     <Container
@@ -56,31 +57,35 @@ export const CareerOption = () => {
           </SectionTitle>
           {CareerOptionData.map((item, key) => {
             return (
-              <Flex
-                // my={10}
-                px={[5, 10]}
-                py={4}
-                key={key}
-                alignItems={"center"}
-                borderBottom={"1px solid #dcd7e3"}
-                sx={{ ":hover": { background: "#e3e1e5", transition: ".5s" } }}
-              >
-                <Box
-                  boxSize={12}
-                  display={"flex"}
+              <Fade cascade damping={0.1}>
+                <Flex
+                  // my={10}
+                  px={[5, 10]}
+                  py={4}
+                  key={key}
                   alignItems={"center"}
-                  justifyContent={"center"}
-                  bg={"#e3f2fd"}
-                  border={"4px solid #3950a1"}
-                  borderRadius={40}
-                  textAlign={"center"}
+                  borderBottom={"1px solid #dcd7e3"}
+                  sx={{
+                    ":hover": { background: "#e3e1e5", transition: ".5s" },
+                  }}
                 >
-                  {key + 1}
-                </Box>
-                <Box as="h3" fontWeight={"bold"} px={3}>
-                  {item}
-                </Box>
-              </Flex>
+                  <Box
+                    boxSize={12}
+                    display={"flex"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                    bg={"#e3f2fd"}
+                    border={"4px solid #3950a1"}
+                    borderRadius={40}
+                    textAlign={"center"}
+                  >
+                    {key + 1}
+                  </Box>
+                  <Box as="h3" fontWeight={"bold"} px={3}>
+                    <AttentionSeeker shakeX>{item}</AttentionSeeker>
+                  </Box>
+                </Flex>
+              </Fade>
             );
           })}
           <Box sx={{ mt: 7, display: "flex", justifyContent: "center" }}>

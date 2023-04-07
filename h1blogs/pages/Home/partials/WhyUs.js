@@ -3,7 +3,7 @@ import { CustomCard } from "../../../components/CustomCard";
 
 import { comparision } from "../../../components/DATA";
 import { SectionTitle } from "../../../components/SectionTitle";
-
+import { Fade, AttentionSeeker } from "react-awesome-reveal";
 const Description = () => {
   return (
     <Text
@@ -32,14 +32,18 @@ export const WhyUs = () => {
         >
           {comparision.map((item, key) => {
             return (
-              <CustomCard
-                key={key}
-                heading={item.title}
-                icon={item.icon}
-                description={item.text}
-                // href={"#"}
-                // actionText={"Learn more"}
-              />
+              <Fade cascade>
+                <CustomCard
+                  key={key}
+                  heading={
+                    <AttentionSeeker pulse>{item.title}</AttentionSeeker>
+                  }
+                  icon={item.icon}
+                  description={item.text}
+                  // href={"#"}
+                  // actionText={"Learn more"}
+                />
+              </Fade>
             );
           })}
         </SimpleGrid>
