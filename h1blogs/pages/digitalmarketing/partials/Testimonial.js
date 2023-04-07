@@ -110,20 +110,28 @@ export const WithSpeechBubbles = () => {
           spaceBetween={30}
           loop={true}
           autoplay={100}
-          slidesPerView={4}
+          // slidesPerView={"4"}
           coverflowEffect={{
-            // rotate: 50,
-            // stretch: 0,
-            // depth: 100,
-            // modifier: 1,
-            // slideShadows: true,
             rotate: 20,
             stretch: 0,
             depth: 20,
             modifier: 1,
             slideShadows: false,
           }}
-          pagination={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          }}
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
         >
