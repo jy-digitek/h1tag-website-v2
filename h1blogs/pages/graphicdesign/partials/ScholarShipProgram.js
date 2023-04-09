@@ -6,20 +6,27 @@ import { GlobalButton } from "../../../components/GlobalButton";
 export const ScholarShipProgram = () => {
   return (
     <Box
-    // background={" #3950a1 url(/bg-p.jpg)"}
-    // backgroundPosition={"cover"}
-    // backgroundRepeat={"no-repeat"}
-    // backgroundColor={"#3950a1"}
-    //opacity={".7"}
+      background={" #3950a1 url(/bg-p.jpg)"}
+      backgroundPosition={"cover"}
+      backgroundRepeat={"no-repeat"}
+      backgroundColor={"#3950a1"}
+      opacity={".7"}
     >
-      <Container maxw="full" position={"relative"}>
-        <Box>
-          <Image src="/bg-p.jpg" width={"full"} />
-        </Box>
+      <Container maxw="full">
+        {/* <Box>
+          <Image src="/bg-p.jpg" width={"full"} minW={"full"} />
+        </Box> */}
 
-        <Box position={"absolute"} right={10} zIndex={1} top={10}>
+        <Box
+          // position={"absolute"}
+          // right={10}
+          // zIndex={1}
+          // top={10}
+          //color={"#fff"}
+          py={20}
+        >
           <SectionTitle children="Our Scholarship Program" />
-          <Text textAlign={"center"} fontWeight={"normal"}>
+          <Text textAlign={"center"} fontWeight={"bold"} fontSize={"14px"}>
             Our scholarship program is for those performing well academically
             but not financially stable. This program is based on your percentage
             and marks, eliminating financial issues. We are the only Graphic
