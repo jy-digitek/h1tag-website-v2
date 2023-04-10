@@ -12,7 +12,7 @@ import {
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FcManager, FcRules, FcAssistant, FcSettings } from "react-icons/fc";
 
-export const JoinH1Tags = () => {
+const JoinH1Tags = () => {
   return (
     <Container maxW={"full"} py={10} bg="gray.100">
       <SectionTitle children={"Benefits of Joining H1 Tags"} />
@@ -72,3 +72,4 @@ export const JoinH1Tags = () => {
     </Container>
   );
 };
+export default JoinH1Tags;

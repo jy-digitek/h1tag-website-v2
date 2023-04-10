@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FcReadingEbook, FcOrganization, FcBriefcase } from "react-icons/fc";
-export const CarrerOportunity = () => {
+export default function CarrerOportunity() {
   return (
     <Container maxW={"full"} py={10}>
       <SectionTitle
@@ -134,4 +134,4 @@ export const CarrerOportunity = () => {
       </SimpleGrid>
     </Container>
   );
-};
+}

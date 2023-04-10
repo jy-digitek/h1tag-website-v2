@@ -13,7 +13,8 @@ import {
 import { AccordionDigitalData } from "../../../components/DATA";
 
 import { SectionTitle } from "../../../components/SectionTitle";
-export const Faq = () => {
+
+const FAQ = () => {
   return (
     <Container py={10}>
       <SectionTitle children={"FAQ's"} my={10} />
@@ -37,3 +38,4 @@ export const Faq = () => {
     </Container>
   );
 };
+export default FAQ;

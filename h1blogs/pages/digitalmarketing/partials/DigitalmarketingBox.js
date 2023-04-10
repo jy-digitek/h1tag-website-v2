@@ -1,6 +1,6 @@
 import { Container, Box, SimpleGrid, Text } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
-export const DigitalmarketingBox = () => {
+const DigitalmarketingBox = () => {
   return (
     <Container maxW={"full"}>
       <SectionTitle
@@ -65,3 +65,4 @@ export const DigitalmarketingBox = () => {
     </Container>
   );
 };
+export default DigitalmarketingBox;

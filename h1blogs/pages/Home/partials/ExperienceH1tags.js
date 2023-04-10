@@ -9,8 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
-
-export const ExperienceH1tags = () => {
+const ExperienceH1tags = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <Stack>
@@ -77,3 +76,5 @@ export const ExperienceH1tags = () => {
     </Container>
   );
 };
+
+export default ExperienceH1tags;

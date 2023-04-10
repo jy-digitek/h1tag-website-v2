@@ -16,7 +16,7 @@ const Description = () => {
     </Text>
   );
 };
-export const WhyUs = () => {
+const WhyUs = () => {
   return (
     <>
       {/* <Stack spacing={0} as={Container} maxW={"3xl"} textAlign={"center"}>
@@ -32,7 +32,7 @@ export const WhyUs = () => {
         >
           {comparision.map((item, key) => {
             return (
-              <Fade cascade>
+              <Fade cascade key={key}>
                 <CustomCard
                   key={key}
                   heading={
@@ -51,3 +51,5 @@ export const WhyUs = () => {
     </>
   );
 };
+
+export default WhyUs;

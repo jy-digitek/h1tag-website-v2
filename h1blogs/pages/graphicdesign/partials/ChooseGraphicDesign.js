@@ -11,7 +11,7 @@ import {
 import { SectionTitle } from "../../../components/SectionTitle";
 import { H1TagsCourseGraphic } from "../../../components/DATA";
 
-export const ChooseGraphicDesign = () => {
+export default function ChooseGraphicDesign() {
   return (
     <Container maxW={"full"} px={20} py={10}>
       <SectionTitle
@@ -43,4 +43,4 @@ export const ChooseGraphicDesign = () => {
       </SimpleGrid>
     </Container>
   );
-};
+}

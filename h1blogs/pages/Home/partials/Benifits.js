@@ -15,7 +15,7 @@ import { Fade, AttentionSeeker } from "react-awesome-reveal";
 
 // import { GlobalButton } from "../../../components/GlobalButton";
 
-export const Benifits = () => {
+const Benifits = () => {
   const DataItem = ({ item, key }) => (
     <Fade cascade damping={0.25}>
       <WrapItem
@@ -62,10 +62,14 @@ export const Benifits = () => {
       <Wrap spacing={["10px", "20px"]} py={5} px={[0, 10]} fontSize={"20px"}>
         <SimpleGrid columns={[1, null, 3]} spacing={6} mx={2} px={10}>
           {Benefits.map((item, key) => (
-            <DataItem item={item} key={key} />
+            <Box key={key}>
+              <DataItem item={item} />
+            </Box>
           ))}
         </SimpleGrid>
       </Wrap>
     </Container>
   );
 };
+
+export default Benifits;

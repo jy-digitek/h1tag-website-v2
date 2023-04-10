@@ -14,7 +14,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { PlacementPartner } from "../../../components/DATA";
 import { AdvertisingPartner } from "../../../components/DATA";
 import { Fade, AttentionSeeker } from "react-awesome-reveal";
-export const TrustedPartner = () => {
+const TrustedPartner = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <SectionTitle
@@ -66,3 +66,5 @@ export const TrustedPartner = () => {
     </Container>
   );
 };
+
+export default TrustedPartner;

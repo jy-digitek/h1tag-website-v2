@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { CustomCard } from "../../../components/CustomCard";
 import { CourseBuiltForData } from "../../../components/DATA";
 
-export const CourseBuiltFor = () => {
+const CourseBuiltFor = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <SectionTitle mb={10}>This Course is suitable for</SectionTitle>
@@ -23,3 +23,5 @@ export const CourseBuiltFor = () => {
     </Container>
   );
 };
+
+export default CourseBuiltFor;

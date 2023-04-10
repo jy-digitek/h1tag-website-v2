@@ -14,7 +14,7 @@ import { GlobalButton } from "../../../components/GlobalButton";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CareerOptionData } from "../../../components/DATA";
 import { Fade, AttentionSeeker } from "react-awesome-reveal";
-export const CareerOption = () => {
+const CareerOption = () => {
   return (
     <Container
       maxW={"full"}
@@ -57,7 +57,7 @@ export const CareerOption = () => {
           </SectionTitle>
           {CareerOptionData.map((item, key) => {
             return (
-              <Fade cascade damping={0.1}>
+              <Fade cascade damping={0.1} key={key}>
                 <Flex
                   // my={10}
                   px={[5, 10]}
@@ -102,3 +102,5 @@ export const CareerOption = () => {
     </Container>
   );
 };
+
+export default CareerOption;

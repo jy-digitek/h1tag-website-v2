@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { AccordionGraphicsData } from "../../../components/DATA";
-export const Faq = () => {
+export default function Faq() {
   return (
     <Container py={10}>
       <SectionTitle children={"FAQ’S"} mb={10} />
@@ -34,4 +34,4 @@ export const Faq = () => {
       </Accordion>
     </Container>
   );
-};
+}

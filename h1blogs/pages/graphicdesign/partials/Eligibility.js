@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Image, Grid, Hide, Box, GridItem } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 
-export const Eligibility = () => {
+export default function Eligibility() {
   return (
     <Box py={10}>
       <Container maxW={"6xl"} backgroundColor={"#e4f0e7"}>
@@ -34,4 +34,4 @@ export const Eligibility = () => {
       </Container>
     </Box>
   );
-};
+}

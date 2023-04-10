@@ -3,14 +3,16 @@ import { Container, Box, Text, Heading, Center, Image } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/GlobalButton";
 
-export const ScholarShipProgram = () => {
+export default function ScholarShipProgram() {
   return (
     <Box
-      background={" #3950a1 url(/bg-p.jpg)"}
-      backgroundPosition={"cover"}
+      background={"  url(/bg-p.jpg) #3950a1"}
+      backgroundPosition={"center"}
       backgroundRepeat={"no-repeat"}
       backgroundColor={"#3950a1"}
       opacity={".7"}
+      backgroundSize={"cover"}
+      // backdropFilter={"blur(8px)"}
     >
       <Container maxw="full">
         {/* <Box>
@@ -22,11 +24,10 @@ export const ScholarShipProgram = () => {
           // right={10}
           // zIndex={1}
           // top={10}
-          //color={"#fff"}
           py={20}
         >
           <SectionTitle children="Our Scholarship Program" />
-          <Text textAlign={"center"} fontWeight={"bold"} fontSize={"14px"}>
+          <Text textAlign={"center"} bg={""}>
             Our scholarship program is for those performing well academically
             but not financially stable. This program is based on your percentage
             and marks, eliminating financial issues. We are the only Graphic
@@ -50,4 +51,4 @@ export const ScholarShipProgram = () => {
       </Container>
     </Box>
   );
-};
+}

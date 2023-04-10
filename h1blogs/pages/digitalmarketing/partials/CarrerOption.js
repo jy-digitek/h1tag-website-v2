@@ -7,7 +7,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
-export const CarrerOption = () => {
+const CarrerOption = () => {
   return (
     <Box bg={"blue.100"} py={10}>
       <Container maxW={"6xl"}>
@@ -50,3 +50,5 @@ export const CarrerOption = () => {
     </Box>
   );
 };
+
+export default CarrerOption;

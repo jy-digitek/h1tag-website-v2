@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, SimpleGrid, Box, Card, CardBody } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
-export const PerSueGraphicDesign = () => {
+export default function PerSueGraphicDesign() {
   return (
     <Container maxW={"6xl"}>
       <SectionTitle
@@ -35,4 +35,4 @@ export const PerSueGraphicDesign = () => {
       </SimpleGrid>
     </Container>
   );
-};
+}

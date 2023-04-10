@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { GlobalButton } from "../../../components/GlobalButton";
 import { Fade } from "react-awesome-reveal";
-export const CTA = ({ title, ...rest }) => {
+const CTA = ({ title, ...rest }) => {
   return (
     <Box
       {...rest}
@@ -63,3 +63,5 @@ export const CTA = ({ title, ...rest }) => {
     </Box>
   );
 };
+
+export default CTA;

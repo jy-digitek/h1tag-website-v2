@@ -15,7 +15,7 @@ import Styles from "../../../styles/Tabs.module.css";
 import { BasicCourseData, AdvanceCourseData } from "../../../components/DATA";
 import { FcNext } from "react-icons/fc";
 
-export const TabsCourse = () => {
+export default function TabsCourse() {
   return (
     <Container maxW={"6xl"} py={10}>
       <SectionTitle
@@ -175,4 +175,4 @@ export const TabsCourse = () => {
       </Tabs>
     </Container>
   );
-};
+}

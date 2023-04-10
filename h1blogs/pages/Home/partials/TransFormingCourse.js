@@ -19,7 +19,7 @@ import {
 } from "react-icons/fc";
 import { Fade } from "react-awesome-reveal";
 
-export const TransFormingCourse = () => {
+const TransFormingCourse = () => {
   return (
     <Container
       maxW={"full"}
@@ -87,3 +87,5 @@ export const TransFormingCourse = () => {
     </Container>
   );
 };
+
+export default TransFormingCourse;

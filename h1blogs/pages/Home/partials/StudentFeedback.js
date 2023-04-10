@@ -10,7 +10,7 @@ import {
 import Carousel from "../../../components/Carousel";
 import { GlobalButton } from "../../../components/GlobalButton";
 import { SectionTitle } from "../../../components/SectionTitle";
-export const StudentFeedback = () => {
+const StudentFeedback = () => {
   return (
     <Container maxW={"full"} px={[5, 10]} id={"review"}>
       <SectionTitle mb={10}>Students’ Feedback</SectionTitle>
@@ -38,3 +38,5 @@ export const StudentFeedback = () => {
     </Container>
   );
 };
+
+export default StudentFeedback;

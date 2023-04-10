@@ -33,7 +33,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 
 // Increase tab fonts
 // Enclose tabs
-export const PickCourseTab = () => {
+const PickCourseTab = () => {
   const { isOpen, onToggle } = useDisclosure();
   return (
     <Container maxW={"5xl"}>
@@ -106,3 +106,5 @@ export const PickCourseTab = () => {
     </Container>
   );
 };
+
+export default PickCourseTab;

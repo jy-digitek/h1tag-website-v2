@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 
-export const EligibalForCourse = () => {
+const EligibalForCourse = () => {
   return (
     <Container maxW={"full"}>
       <Grid templateColumns="repeat(5, 1fr)" gap={4}>
@@ -154,3 +154,5 @@ export const EligibalForCourse = () => {
     </Container>
   );
 };
+
+export default EligibalForCourse;

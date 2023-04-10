@@ -11,7 +11,7 @@ import {
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/GlobalButton";
 
-export const StandsOut = () => {
+const StandsOut = () => {
   return (
     <Box sx={{ background: "url(/bg-img.jpeg)" }}>
       <Container maxW={"full"} px={[5, 10]}>
@@ -61,3 +61,4 @@ export const StandsOut = () => {
     </Box>
   );
 };
+export default StandsOut;

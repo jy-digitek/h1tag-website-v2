@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Container, SimpleGrid } from "@chakra-ui/react";
 import { digitalMaeketingH1Admission } from "../../../components/DATA";
 
-export const H1TagsAdmission = () => {
+const H1TagsAdmission = () => {
   return (
     <Container maxW={"full"}>
       <SectionTitle
@@ -26,3 +26,4 @@ export const H1TagsAdmission = () => {
     </Container>
   );
 };
+export default H1TagsAdmission;
