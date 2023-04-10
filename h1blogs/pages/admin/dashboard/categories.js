@@ -39,7 +39,18 @@ const categories = () => {
   const [id, setId] = React.useState("");
   const onAddHandle = (e) => {
     e.preventDefault();
-    dispatch(createCategories({ name, description }));
+    dispatch(
+      createCategories({
+        name,
+        description,
+        slug: description
+          .toLowerCase()
+          .trim()
+          .replace(/[^\w\s-]/g, "")
+          .replace(/[\s_-]+/g, "-")
+          .replace(/^-+|-+$/g, ""),
+      })
+    );
     dispatch(getCategories());
   };
   const onUpdateHandle = (e) => {

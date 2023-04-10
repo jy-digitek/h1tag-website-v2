@@ -17,16 +17,16 @@ import Layout from "../../components/layout";
 import { Container } from "@chakra-ui/layout";
 import { SectionTitle } from "../../components/SectionTitle";
 
-const slides = photos.map(({ src, width, height, images }) => ({
-  src,
-  width,
-  height,
-  srcSet: images.map((image) => ({
-    src: image.src,
-    width: image.width,
-    height: image.height,
-  })),
-}));
+// const slides = photos.map(({ src, width, height, images }) => ({
+//   src,
+//   width,
+//   height,
+//   srcSet: images.map((image) => ({
+//     src: image.src,
+//     width: image.width,
+//     height: image.height,
+//   })),
+// }));
 
 export default function App() {
   const [index, setIndex] = useState(-1);
@@ -38,14 +38,14 @@ export default function App() {
           H1 Gallery
         </SectionTitle>
         <PhotoAlbum
-          photos={photos}
+          // photos={photos}
           layout="rows"
           targetRowHeight={150}
           onClick={({ index }) => setIndex(index)}
         />
 
         <Lightbox
-          slides={slides}
+          // slides={slides}
           open={index >= 0}
           index={index}
           close={() => setIndex(-1)}

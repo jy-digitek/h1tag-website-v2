@@ -16,12 +16,12 @@ export default function ReturnFocus({
   btnText,
   modalTitle,
   isEditingSet,
-  openModalSet,
+  // openModalSet,
   children,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = React.useRef(null);
-
+  const [openModal, openModalSet] = React.useState(false);
   return (
     <>
       <GlobalButton
@@ -33,7 +33,7 @@ export default function ReturnFocus({
           openModalSet(true);
           onOpen(e);
         }}
-        label="Get Brochure"
+        label={btnText}
         background="#3950a1"
         _hover={{ background: "#101C32" }}
       />

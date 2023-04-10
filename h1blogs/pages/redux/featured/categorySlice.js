@@ -13,7 +13,7 @@ const initialState = {
   errorMessage: "",
 };
 
-const categorySlice = createSlice({
+export const categorySlice = createSlice({
   name: "category",
   initialState,
   extraReducers: {
@@ -80,4 +80,6 @@ const categorySlice = createSlice({
   },
 });
 
-export default categorySlice;
+export default function ok() {
+  return "ok";
+}

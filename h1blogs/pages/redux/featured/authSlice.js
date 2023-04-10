@@ -10,7 +10,7 @@ const initialState = {
   isLogin: false,
 };
 
-const authSlice = createSlice({
+export const authSlice = createSlice({
   name: "auth",
   initialState,
   extraReducers: {
@@ -46,4 +46,6 @@ const authSlice = createSlice({
   },
 });
 
-export default authSlice;
+export default function ok() {
+  return "ok";
+}

@@ -19,9 +19,9 @@ import { updateCategory } from "../../api/category";
 export const getPostList = createAsyncThunk(
   "post/getPostList",
   async (data, { rejectWithValue }) => {
+    console.log("bmk", data);
     try {
       const res = await getPost(data[0], data[1]);
-
       return res.data.posts;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -135,3 +135,7 @@ export const userLogin = createAsyncThunk(
 export const userLogout = createAsyncThunk("auth/useLogout", () => {
   return window.localStorage.clear();
 });
+
+export default function ok() {
+  return "ok";
+}

@@ -7,7 +7,9 @@ export const createPost = (data) => {
 //post/posts?serchQuery=abcred&page=1
 //serchQuery=a&page=1
 export const getPost = (page, querySearch) => {
-  return axios.get(`/post/posts?searchQuery=${querySearch}&page=${page}`);
+  const ans = axios.get(`/post/posts?searchQuery=${querySearch}&page=${page}`);
+  console.log("ans", ans);
+  return ans;
 };
 
 export const getPostById = ({ slug }) => {

@@ -531,3 +531,66 @@ export const JobRolesData = [
     icon: <MdCastForEducation size={30} />,
   },
 ];
+
+export const Reviews = [
+  {
+    img: "/reviews/Budhdeep Gautam.jpg",
+    name: "Budhdeep Gautam",
+    review:
+      "Great encounter. The H1 TAGS Digital Marketing course is convenient and easy to comprehend. As I come from a commerce background, I was concerned about understanding correctly, but thanks to the professors, who are lovely and friendly and took care of every worry and query.",
+  },
+  {
+    img: "/reviews/Harsh.jpg",
+    name: "Harsh",
+    review:
+      "The mentor handled my worry effectively and assisted me in developing new and unique Digital Marketing techniques to help me create a steady career.",
+  },
+  {
+    img: "/reviews/Himanshu kumar.jpg",
+    name: "Himanshu kumar",
+    review:
+      "Delhi's best digital marketing institute. The best thing to observe is that each student receives personalized attention from the digital marketing trainer. H1 TAGS provides its students with excellent practical experience, which is significant in digital marketing.",
+  },
+  {
+    img: "/reviews/Sabeena.jpg",
+    name: "Sabeena",
+    review:
+      "Best institute to learn Digital Marketing in Delhi. Here i learned everything under one roof. Fantastic professional to teach you the best from the industry with advanced techniques. I will suggest this training institute to anyone who wants to get in-depth knowledge of Digital Marketing.",
+  },
+  {
+    img: "/reviews/Hemant Dhaiya.jpg",
+    name: "Hemant Dhaiya",
+    review:
+      "I've been looking for a marketing course that covered everything from the basics to the most advanced and I feel like this course definitely fits the bill. The course is taught by industry experts who are passionate about the skills they are teaching.",
+  },
+  {
+    img: "/reviews/Lokesh.jpg",
+    name: "Lokesh",
+    review:
+      "I like H1 Tags because it is one of the best digital marketing institutes in Delhi. It provides the most effective practices and courses that I need in order to excel in my career.They have EMI options available for the course. This is a great option because I can learn and commit to the course without spending a lot of money upfront.",
+  },
+  {
+    img: "/reviews/Musharaf.jpg",
+    name: "Musharaf",
+    review:
+      "I took this course because I wanted to learn how to get started in digital marketing and gain more experience in the field. I found the course to be very helpful and it allowed me to learn about new areas of digital marketing. I loved learning about marketing channels, analytics, and conversion rates.",
+  },
+  {
+    img: "/reviews/Omkar.jpg",
+    name: "Omkar",
+    review:
+      "H1 Tags delivers the most comprehensive digital marketing courses at affordable rates. I thoroughly enjoy pursuing the advance Course. The team is very accessible, flexible and empathetic which is rare to find in educational institutions.",
+  },
+  {
+    img: "/reviews/Prince Yadav.jpg",
+    name: "Prince Yadav",
+    review:
+      "I recently completed my Digital Marketing Advanced course and believed the content and resources were excellent.  I highly recommend H1 Tags as a training institution.",
+  },
+  {
+    img: "/reviews/Priyansh.jpg",
+    name: "Priyansh",
+    review:
+      "H1tags is not just a common institute for learning digital marketing but an agency-based institute where we get practical knowledge and paid internships within a month of joining the course. As per my experience, H1 Tags is the best institute in Delhi.",
+  },
+];

@@ -15,7 +15,7 @@ const initialState = {
   errorMessage: "",
 };
 
-const postSlice = createSlice({
+export const postSlice = createSlice({
   name: "post",
   initialState,
   extraReducers: {
@@ -126,4 +126,6 @@ const postSlice = createSlice({
   },
 });
 
-export default postSlice;
+export default function ok() {
+  return "ok";
+}

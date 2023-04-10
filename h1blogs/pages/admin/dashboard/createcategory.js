@@ -1,6 +1,6 @@
 import Category from "../Components/CategoryForm";
 import AdminLayout from "../Components/AdminLayout";
-const PostCreate = () => {
+const CreateCategory = () => {
   return (
     <AdminLayout>
       <Category title="Create Category" />
@@ -8,4 +8,4 @@ const PostCreate = () => {
   );
 };
 
-export default PostCreate;
+export default CreateCategory;

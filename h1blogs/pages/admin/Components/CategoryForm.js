@@ -10,12 +10,13 @@ import {
 } from "@chakra-ui/react";
 
 const Category = (props) => {
-  const [name, setName] = useState(props.name ? props.name : "");
+  console.log(props);
+  const [name, setName] = useState(props.name ? props.name : null);
   const [description, setDescription] = useState(
-    props.description ? props.description : ""
+    props.description ? props.description : null
   );
   if (props.item) {
-    props.setId(props.item._id);
+    props?.setId(props.item._id);
   }
   props.setName(name);
   props.setDescription(description);
@@ -49,14 +50,14 @@ const Category = (props) => {
         />
 
         <Box textAlign="center" py={10}>
-          {props.isEditing ? (
+          {props?.isEditing ? (
             <Button
               px={10}
               bg={"blue.500"}
               onClick={(e) => {
                 props.onClickEvent(e);
                 setName("");
-                setDescription("");
+                setDescription(null);
               }}
             >
               Update Category
@@ -68,7 +69,7 @@ const Category = (props) => {
               onClick={(e) => {
                 props.onClickEvent(e);
                 setName("");
-                setDescription("");
+                setDescription(null);
               }}
             >
               Save Category

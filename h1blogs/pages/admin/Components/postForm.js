@@ -63,7 +63,7 @@ const PostForm = (props) => {
             <Input
               type="text"
               placeholder="Give title here"
-              value={props.spost ? props.spost.title : props.data.title}
+              value={props.spost ? props.spost?.title : props?.data?.title}
               my={4}
               name="title"
               onChange={(e) =>
@@ -78,29 +78,6 @@ const PostForm = (props) => {
                     })
               }
             />
-            {/* <Input
-              type="text"
-              placeholder="slug here"
-              name="slug"
-              value={props.spost ? props.spost.slug : props.data.title}
-              onChange={
-                (e) =>
-                  props.setData({
-                    ...props.data,
-                    [e.target.name]: props.data.title,
-                  })
-                // props.spostSet
-                //   ? props.spostSet({
-                //       ...props.spost,
-                //       [e.target.name]: e.target.value,
-                //     })
-                //   : props.setData({
-                //       ...props.data,
-                //       [e.target.name]: props.data.title,
-                //     })
-              }
-              my={4}
-            /> */}
             <Input
               type="file"
               placeholder="Upload image"
@@ -122,7 +99,7 @@ const PostForm = (props) => {
               placeholder="Text your summary here"
               my={4}
               name="summary"
-              value={props.spost ? props.spost.summary : props.data.summary}
+              value={props.spost ? props.spost?.summary : props?.data?.summary}
               onChange={(e) =>
                 props.spost
                   ? props.spostSet({
@@ -135,7 +112,7 @@ const PostForm = (props) => {
                     })
               }
             />
-            =
+
             <ReactQuill
               theme="snow"
               value={props.spost ? props.body : props.body}
