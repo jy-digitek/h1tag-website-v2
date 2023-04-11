@@ -299,7 +299,7 @@ const Home = () => {
           </SimpleGrid>
         </Box>
 
-        {/* <Box
+        <Box
           maxW={"full"}
           px={[5, 10]}
           sx={{
@@ -330,18 +330,20 @@ const Home = () => {
               <SectionTitle mb={1}>
                 Career Options after Digital Marketing Course
               </SectionTitle>
-              {CareerOptionData.map((item, key) => {
-                return (
-                  <Fade cascade damping={0.1}>
+              {CareerOptionData &&
+                CareerOptionData.map((item, index) => {
+                  return (
                     <Flex
-                      // my={10}
                       px={[5, 10]}
                       py={4}
-                      key={key}
+                      key={index}
                       alignItems={"center"}
                       borderBottom={"1px solid #dcd7e3"}
                       sx={{
-                        ":hover": { background: "#e3e1e5", transition: ".5s" },
+                        ":hover": {
+                          background: "#e3e1e5",
+                          transition: ".5s",
+                        },
                       }}
                     >
                       <Box
@@ -354,19 +356,17 @@ const Home = () => {
                         borderRadius={40}
                         textAlign={"center"}
                       >
-                        {key + 1}
+                        {index + 1}
                       </Box>
                       <Box as="h3" fontWeight={"bold"} px={3}>
-                        <AttentionSeeker shakeX>{item}</AttentionSeeker>
+                        {item.label}
                       </Box>
                     </Flex>
-                  </Fade>
-                );
-              })}
+                  );
+                })}
               <Box sx={{ mt: 7, display: "flex", justifyContent: "center" }}>
                 <GlobalButton
                   label={"Kick Start Your Career"}
-                  //color={"yellow"}
                   maxW="100%"
                   background="#3950a1"
                   _hover={{ background: "#101C32" }}
@@ -374,7 +374,7 @@ const Home = () => {
               </Box>
             </Box>
           </SimpleGrid>
-        </Box> */}
+        </Box>
       </Container>
     </Layout>
   );

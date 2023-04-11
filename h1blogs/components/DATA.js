@@ -168,11 +168,11 @@ export const AddressesData = [
 ];
 
 export const CareerOptionData = [
-  "Full Time/Part Time Job",
-  "Start Your Own Digital Marketing Agency",
-  "Become A Freelancer",
-  "Grow Your Own Business",
-  "Become Blogger / Vlogger / Influencer",
+  { label: "Full Time/Part Time Job" },
+  { label: "Start Your Own Digital Marketing Agency" },
+  { label: "Become A Freelancer" },
+  { label: "Grow Your Own Business" },
+  { label: "Become Blogger / Vlogger / Influencer" },
 ];
 
 export const PlacementPartner = [
