@@ -1,12 +1,4 @@
-import {
-  Stack,
-  Flex,
-  Box,
-  Button,
-  Text,
-  VStack,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Stack, Flex, Box, Button, Text, VStack } from "@chakra-ui/react";
 import { GlobalButton } from "../../../components/GlobalButton";
 import { Fade } from "react-awesome-reveal";
 const CTA = ({ title, ...rest }) => {
@@ -25,10 +17,10 @@ const CTA = ({ title, ...rest }) => {
       <VStack
         w={"full"}
         justify={"center"}
-        py={useBreakpointValue({ base: 6, md: 12 })}
-        px={useBreakpointValue({ base: 4, md: 8 })}
+        py={[6, 12]}
+        px={[4, 8]}
         {...rest}
-        bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+        // bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack maxW={"2xl"} align={"center"} spacing={6}>
           <Fade cascade>
@@ -36,7 +28,7 @@ const CTA = ({ title, ...rest }) => {
               color={"white"}
               fontWeight={700}
               lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+              fontSize={["3xl", "4xl"]}
             >
               {title}
             </Text>
