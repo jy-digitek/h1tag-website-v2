@@ -109,8 +109,10 @@ export default function Footer() {
                 </Link>
               </ListItem>
               <ListItem>
-                <ListIcon as={ChevronRightIcon} color="white" />
-                Privacy Policy
+                <Link href={"/privacy-policy"}>
+                  <ListIcon as={ChevronRightIcon} color="white" />
+                  Privacy Policy
+                </Link>
               </ListItem>
             </List>
           </Box>
