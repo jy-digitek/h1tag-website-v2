@@ -7,11 +7,14 @@ import {
   Image,
   background,
 } from "@chakra-ui/react";
-
+import React from "react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/GlobalButton";
+import ReturnFocus from "../../../components/Modal";
+import ContactForm from "../../../components/contactform";
 
 const StandsOut = () => {
+  const [openModal, openModalSet] = React.useState(false);
   return (
     <Box sx={{ background: "url(/bg-img.jpeg)" }}>
       <Container maxW={"full"} px={[5, 10]}>
@@ -47,11 +50,14 @@ const StandsOut = () => {
                   justifyContent: "end",
                 }}
               >
-                <GlobalButton
-                  label={"Call Now"}
+                <ReturnFocus
+                  btnText={`Call`}
+                  children={<ContactForm />}
+                  openModalSet={openModalSet}
+                  // isEditingSet={isEditingSet}
+                  label="Call"
+                  color="white"
                   sx={{ width: "100%", color: "#fff" }}
-                  background="#3950a1"
-                  _hover={{ background: "#101C32" }}
                 />
               </Box>
             </Box>

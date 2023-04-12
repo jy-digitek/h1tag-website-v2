@@ -51,7 +51,7 @@ const PickCourseTab = () => {
                 _selected={{ color: "white", bg: "#3950a1" }}
                 aria-selected={true}
               >
-                <Box sx={{ fontSize: 20, fontWeight: "bold" }}>
+                <Box sx={{ fontWeight: "bold" }} fontSize={[10, 20]}>
                   Digital Marketing
                 </Box>
               </Tab>
@@ -64,7 +64,7 @@ const PickCourseTab = () => {
                   }
                 }
               >
-                <Box sx={{ fontSize: 20, fontWeight: "bold" }}>
+                <Box sx={{ fontWeight: "bold" }} fontSize={[10, 20]}>
                   Graphic Designing
                 </Box>
               </Tab>

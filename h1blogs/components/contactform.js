@@ -1,22 +1,5 @@
 import Link from "next/link";
-// import { Formik, Field } from "formik";
-// import {
-//   Box,
-//   Button,
-//   Checkbox,
-//   Flex,
-//   FormControl,
-//   FormErrorMessage,
-//   Input,
-//   VStack,
-//   Select,
-//   option,
-//   Heading,
-//   Text,
-// } from "@chakra-ui/react";
-// import { useState } from "react";
-
-// import { useFormik } from "formik";
+import axios from "axios";
 import { Box, ButtonGroup, Radio, Flex, Text } from "@chakra-ui/react";
 import { Formik } from "formik";
 import {
@@ -43,13 +26,20 @@ const onSubmit = (values) => {
   // sleep(300).then(() => {
   //   window.alert(JSON.stringify(values, null, 2));
   // });
-  console.log(JSON.stringify(values));
+  // console.log(JSON.stringify(values));
   alert(JSON.stringify(values));
   initialValues;
 };
 
 const submitHandle = (values) => {
-  alert(JSON.stringify(values));
+  console.log(values);
+  axios({
+    method: "post",
+    url: "http://localhost:5000/api/vi/user/gmail",
+    data: {
+      values,
+    },
+  });
 };
 const phoneRegExp =
   /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;

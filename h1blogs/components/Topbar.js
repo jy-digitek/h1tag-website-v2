@@ -20,9 +20,9 @@ const Topbar = () => {
       color="white"
       py={2}
     >
-      <Box py={"auto"}>
+      <Box py={"auto"} px={40}>
         <List spacing={3}>
-          <Flex justify={"center"}>
+          <Flex justify={"space-between"}>
             <ListItem px={4}>Branches</ListItem>
             <ListItem px={4}>Careers</ListItem>
           </Flex>

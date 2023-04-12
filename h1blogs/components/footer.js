@@ -27,7 +27,10 @@ import CTA from "../components/CTA";
 export default function Footer() {
   return (
     <>
-      <CTA title={"Struggling to Choose a Career?"} />
+      <CTA
+        title={"Struggling to Choose a Career?"}
+        label={"Get instant Career Counselling"}
+      />
 
       <Container
         maxW="full"
@@ -76,12 +79,16 @@ export default function Footer() {
 
             <List spacing={3} fontSize="14px" py={3}>
               <ListItem p={0}>
-                <ListIcon as={ChevronRightIcon} color="white" />
-                Digital marketing Course
+                <Link href={"digitalmarketing"}>
+                  <ListIcon as={ChevronRightIcon} color="white" />
+                  Digital marketing Course
+                </Link>
               </ListItem>
               <ListItem p={0}>
-                <ListIcon as={ChevronRightIcon} color="white" />
-                Graphic Design Course
+                <Link href="/graphicdesign">
+                  <ListIcon as={ChevronRightIcon} color="white" />
+                  Graphic Design Course
+                </Link>
               </ListItem>
               <ListItem>
                 <Link href="#review">
@@ -91,12 +98,15 @@ export default function Footer() {
               </ListItem>
               {/* You can also use custom icons from react-icons */}
               <ListItem>
-                <ListIcon as={ChevronRightIcon} color="white" />
-                About Us
+                <Link href={"/about"}>
+                  <ListIcon as={ChevronRightIcon} color="white" /> About Us
+                </Link>
               </ListItem>
               <ListItem>
-                <ListIcon as={ChevronRightIcon} color="white" />
-                Contact Us
+                <Link href={"/contact"}>
+                  <ListIcon as={ChevronRightIcon} color="white" />
+                  Contact Us
+                </Link>
               </ListItem>
               <ListItem>
                 <ListIcon as={ChevronRightIcon} color="white" />

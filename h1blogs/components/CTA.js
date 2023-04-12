@@ -1,8 +1,11 @@
 import { Stack, Flex, Box, Button, Text, VStack } from "@chakra-ui/react";
-
+import React from "react";
 import { GlobalButton } from "./GlobalButton";
 import { Fade } from "react-awesome-reveal";
-const CTA = ({ title, ...rest }) => {
+import ReturnFocus from "./Modal";
+import ContactForm from "./contactform";
+const CTA = ({ title, label, ...rest }) => {
+  const [openModal, openModalSet] = React.useState(false);
   return (
     <Box
       {...rest}
@@ -30,26 +33,35 @@ const CTA = ({ title, ...rest }) => {
               fontWeight={700}
               lineHeight={1.2}
               fontSize={["3xl", "4xl"]}
+              textAlign={"center"}
             >
               {title}
             </Text>
+            <ReturnFocus
+              btnText={label}
+              children={<ContactForm />}
+              openModalSet={openModalSet}
+              // isEditingSet={isEditingSet}
+              label={label}
+              color="white"
+            />
           </Fade>
           <Stack direction={"row"} gap={10}>
-            <GlobalButton
+            {/* <GlobalButton
               rounded={"full"}
               color={"white"}
-              label={" Show me more"}
+              label={"Get instant Career Counselling"}
               background="#3950a1"
               _hover={{ background: "#101C32" }}
-            />
+            /> */}
 
-            <GlobalButton
+            {/* <GlobalButton
               bg={"whiteAlpha.300"}
               rounded={"full"}
               color={"white"}
               _hover={{ bg: "whiteAlpha.500" }}
               label={"Show me more"}
-            />
+            /> */}
           </Stack>
         </Stack>
       </VStack>

@@ -8,6 +8,8 @@ import {
   Text,
   Image,
   Heading,
+  SimpleGrid,
+  Box,
 } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
@@ -29,40 +31,40 @@ const TrustedPartner = () => {
       <Heading as={"h3"} px={[0, 10]} size="md">
         Our Placement Partners
       </Heading>
-      <Wrap bg={"white"} p={3} px={[0, 10]}>
+      <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 5]} spacing={5}>
         <Fade cascade>
           {PlacementPartner.map((item, i) => {
             return (
-              <WrapItem key={i}>
+              <Box key={i}>
                 <Card align="center">
                   <CardBody>
                     <Image src={item.src} boxSize={40} alt={item.name} />
                   </CardBody>
                 </Card>
-              </WrapItem>
+              </Box>
             );
           })}
         </Fade>
-      </Wrap>
+      </SimpleGrid>
 
       <Heading as={"h3"} px={[0, 10]} size="md">
         Our Advertising Partners
       </Heading>
-      <Wrap bg={"white"} p={3} px={[0, 10]}>
+      <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 5]} spacing={5}>
         <Fade cascade>
           {AdvertisingPartner.map((item, i) => {
             return (
-              <WrapItem key={i}>
+              <Box key={i}>
                 <Card align="center">
                   <CardBody>
                     <Image src={item.src} boxSize={40} alt={item.name} />
                   </CardBody>
                 </Card>
-              </WrapItem>
+              </Box>
             );
           })}
         </Fade>
-      </Wrap>
+      </SimpleGrid>
     </Container>
   );
 };

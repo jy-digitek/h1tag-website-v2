@@ -21,7 +21,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-// import ReturnFocus from "../pages/admin/Components/modal";
+import ReturnFocus from "./Modal";
 import React from "react";
 import Link from "next/link";
 import ContactForm from "./contactform";
@@ -89,14 +89,14 @@ export default function WithSubnavigation() {
           >
             Get Brochure
           </Button> */}
-          {/* <ReturnFocus
+          <ReturnFocus
             btnText={`Get Brochure`}
             children={<ContactForm />}
             openModalSet={openModalSet}
             // isEditingSet={isEditingSet}
             label="Get Brochure"
             color="white"
-          /> */}
+          />
           {/* <Button
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}

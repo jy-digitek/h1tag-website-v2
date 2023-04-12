@@ -55,7 +55,7 @@ const Benifits = () => {
     <Container
       // className={`${styles.container} ${styles.border}`}
       maxW={"full"}
-      px={[5, 10]}
+      px={[0, 10]}
     >
       <SectionTitle my={10}>Benefits to Students</SectionTitle>
 

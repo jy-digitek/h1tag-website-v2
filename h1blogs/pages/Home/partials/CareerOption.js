@@ -7,14 +7,17 @@ import {
   // Button,
   Flex,
 } from "@chakra-ui/react";
-
+import React from "react";
 // import { FaArrowRight } from "react-icons/fa";
 // import { GlobalButton } from "../../../components/GlobalButton";
 import { GlobalButton } from "../../../components/GlobalButton";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CareerOptionData } from "../../../components/DATA";
 import { Fade, AttentionSeeker } from "react-awesome-reveal";
+import ReturnFocus from "../../../components/Modal";
+import ContactForm from "../../../components/contactform";
 const CareerOption = () => {
+  const [openModal, openModalSet] = React.useState(false);
   return (
     <Container
       maxW={"full"}
@@ -40,6 +43,7 @@ const CareerOption = () => {
         spacing={5}
         fontSize={"20px"}
         padding={[0, 20]}
+        py={[5]}
       >
         <Box />
         <Box
@@ -87,12 +91,20 @@ const CareerOption = () => {
             );
           })}
           <Box sx={{ mt: 7, display: "flex", justifyContent: "center" }}>
-            <GlobalButton
+            {/* <GlobalButton
               label={"Kick Start Your Career"}
               //color={"yellow"}
               maxW="100%"
               background="#3950a1"
               _hover={{ background: "#101C32" }}
+            /> */}
+            <ReturnFocus
+              btnText={`Kick Start Your Career`}
+              children={<ContactForm />}
+              openModalSet={openModalSet}
+              // isEditingSet={isEditingSet}
+              label="Kick Start Your Career"
+              color="white"
             />
           </Box>
         </Box>
