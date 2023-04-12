@@ -41,7 +41,6 @@ const CTA = ({ title, label, ...rest }) => {
               btnText={label}
               children={<ContactForm />}
               openModalSet={openModalSet}
-              // isEditingSet={isEditingSet}
               label={label}
               color="white"
             />
