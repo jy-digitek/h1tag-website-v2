@@ -78,7 +78,7 @@ const Privacy = () => {
             strongly encourage you to contact us immediately and we will do our
             best efforts to promptly remove such information from our records.
           </Text>
-          <Heading fontSize={"20px"} pb={5}>
+          <Heading fontSize={"20px"} pt={5}>
             Online Privacy Policy Only
           </Heading>
           <Text pb={10}>
