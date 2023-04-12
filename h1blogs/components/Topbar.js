@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { SlPhone } from "react-icons/sl";
+import Link from "next/link";
 
 const Topbar = () => {
   return (
@@ -22,9 +23,11 @@ const Topbar = () => {
     >
       <Box py={"auto"} px={40}>
         <List spacing={3}>
-          <Flex justify={"space-between"}>
-            <ListItem px={4}>Branches</ListItem>
-            <ListItem px={4}>Careers</ListItem>
+          <Flex>
+            <ListItem px={4}>
+              <Link href={"/contact"}>Branches</Link>
+            </ListItem>
+            {/* <ListItem px={4}>Careers</ListItem> */}
           </Flex>
         </List>
       </Box>
