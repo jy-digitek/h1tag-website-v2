@@ -5,9 +5,11 @@ import {
   ListItem,
   List,
   Center,
+  Text,
   Hide,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
+import { SlPhone } from "react-icons/sl";
 
 const Topbar = () => {
   return (
@@ -21,9 +23,7 @@ const Topbar = () => {
       <Box py={"auto"}>
         <List spacing={3}>
           <Flex justify={"center"}>
-            <ListItem px={4}>Blogs</ListItem>
-            <ListItem px={4}>News & Events</ListItem>
-            <ListItem px={4}>Franchise</ListItem>
+            <ListItem px={4}>Branches</ListItem>
             <ListItem px={4}>Careers</ListItem>
           </Flex>
         </List>
@@ -35,9 +35,14 @@ const Topbar = () => {
             <Center>
               <Flex>
                 <ListItem px={10}>
-                  <EmailIcon /> test@gmail.com
+                  <EmailIcon fontSize={"25px"} /> info@h1tags.com
                 </ListItem>
-                <ListItem px={10}>News & Events</ListItem>
+
+                <ListItem px={10}>
+                  <Flex>
+                    <SlPhone fontSize={"25px"} /> <Text>+91 77700-07683</Text>
+                  </Flex>
+                </ListItem>
               </Flex>
             </Center>
           </List>

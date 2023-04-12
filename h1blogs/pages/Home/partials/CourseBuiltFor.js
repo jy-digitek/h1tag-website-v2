@@ -1,23 +1,13 @@
-import {
-  Container,
-  Heading,
-  SimpleGrid,
-  Box,
-  Card,
-  CardBody,
-  Text,
-  Stack,
-  Highlight,
-} from "@chakra-ui/react";
-import React from "react";
+import { Container, SimpleGrid } from "@chakra-ui/react";
+
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CustomCard } from "../../../components/CustomCard";
 import { CourseBuiltForData } from "../../../components/DATA";
 
-export const CourseBuiltFor = () => {
+const CourseBuiltFor = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
-      <SectionTitle>This Course is suitable for</SectionTitle>
+      <SectionTitle py={10}>This Course is suitable for</SectionTitle>
       <SimpleGrid columns={[1, 3]} px={[0, 10]} spacing={6} fontSize={"20px"}>
         {CourseBuiltForData.map((item, key) => (
           <CustomCard
@@ -33,3 +23,5 @@ export const CourseBuiltFor = () => {
     </Container>
   );
 };
+
+export default CourseBuiltFor;

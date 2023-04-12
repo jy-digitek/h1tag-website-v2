@@ -1,40 +1,80 @@
 import Link from "next/link";
-import { Formik, Field } from "formik";
-import {
-  Box,
-  Button,
-  Checkbox,
-  Flex,
-  FormControl,
-  FormErrorMessage,
-  Input,
-  VStack,
-  Select,
-  option,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
-import { useState } from "react";
+// import { Formik, Field } from "formik";
+// import {
+//   Box,
+//   Button,
+//   Checkbox,
+//   Flex,
+//   FormControl,
+//   FormErrorMessage,
+//   Input,
+//   VStack,
+//   Select,
+//   option,
+//   Heading,
+//   Text,
+// } from "@chakra-ui/react";
+// import { useState } from "react";
 
 // import { useFormik } from "formik";
+import { Box, ButtonGroup, Radio, Flex, Text } from "@chakra-ui/react";
+import { Formik } from "formik";
+import {
+  CheckboxContainer,
+  CheckboxControl,
+  CheckboxSingleControl,
+  InputControl,
+  NumberInputControl,
+  PercentComplete,
+  RadioGroupControl,
+  ResetButton,
+  SelectControl,
+  SliderControl,
+  SubmitButton,
+  SwitchControl,
+  TextareaControl,
+} from "formik-chakra-ui";
+import * as React from "react";
+import * as Yup from "yup";
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const onSubmit = (values) => {
+  // sleep(300).then(() => {
+  //   window.alert(JSON.stringify(values, null, 2));
+  // });
+  console.log(JSON.stringify(values));
+  alert(JSON.stringify(values));
+  initialValues;
+};
+
+const submitHandle = (values) => {
+  alert(JSON.stringify(values));
+};
+const phoneRegExp =
+  /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+const initialValues = {
+  name: "",
+  email: "",
+  phone: "",
+  employed: false,
+  place: "",
+};
+const validationSchema = Yup.object({
+  name: Yup.string().required(),
+  email: Yup.string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  phone: Yup.string()
+    .matches(phoneRegExp, "Phone number is not valid")
+    .min(10, "too short")
+    .max(10, "too long")
+    .required("Phone Number is required"),
+  place: Yup.string().required(),
+  employed: Yup.boolean().equals([true]),
+});
 
 export default function ContactForm() {
-  // const formik = useFormik({
-  //   initialValues: {
-  //     name: "",
-  //     email: "",
-  //     email: "",
-  //     rememberMe: false,
-  //   },
-  //   onSubmit: (valuse) => {
-  //     alert(JSON.stringify(values, 0, null));
-  //   },
-  // });
-  // const handleSubmit = (data) => {
-  //   alert("hello");
-  // };
-  const [place, setPlace] = useState("");
-
   return (
     <Flex
       align={"center"}
@@ -44,146 +84,52 @@ export default function ContactForm() {
       style={{ width: "100%" }}
       width={"100%"}
     >
-      <Box sx={{ background: "#fff" }} rounded="md" p={10}>
+      <Box sx={{ background: "#fff" }} rounded="md">
         <Text fontSize={["1.5rem", "2rem"]} fontWeight={"bold"}>
           Take a free session today!!
         </Text>
-        {/* <Text fontSize={["1rem", "1.5rem"]} p={2}>
-          Go Digital | Go Global
-        </Text> */}
+
         <Text fontSize={["0.9rem", "1rem"]} p={2} mb={2} fontWeight="bold">
-          Speak To Our Specialist - +91 - 8800505151
+          Speak To Our Specialist - +91 77700-07683
         </Text>
+
         <Formik
-          initialValues={{
-            name: "",
-            email: "",
-            phone: "",
-            rememberMe: false,
-            place: place,
-          }}
-          onSubmit={(values, error) => {
-            alert(JSON.stringify(values, null, 2));
-            console.log(place);
-          }}
+          initialValues={initialValues}
+          onSubmit={submitHandle}
+          validationSchema={validationSchema}
+          bg={"blue"}
         >
-          {({ handleSubmit, errors, touched }) => (
-            <form onSubmit={handleSubmit}>
-              <VStack spacing={4} align="flex-start">
-                <FormControl isInvalid={!!errors.name && touched.name}>
-                  <Field
-                    as={Input}
-                    id="name"
-                    name="name"
-                    type="text"
-                    variant="filled"
-                    bg={"#607d8b29"}
-                    Placeholder="Full Name"
-                    validate={(value) => {
-                      let error;
+          {({ handleSubmit, values, errors }) => (
+            <Box bg={""} rounded="lg" p={6} as="form" onSubmit={handleSubmit}>
+              <InputControl name="name" label="Enter Name" />
+              <InputControl name="email" label="Enter Email" />
+              <InputControl name="phone" label="Enter Phone" />
 
-                      value.length < 3
-                        ? (error = "Please insert valid name")
-                        : "";
+              <SelectControl
+                name="place"
+                selectProps={{ placeholder: "Select Place" }}
+                mt={5}
+              >
+                <option value="Neta ji subhas palace">
+                  Neta ji subhas palace
+                </option>
+                <option value="Budh Vihar">Budh Vihar</option>
+              </SelectControl>
+              <CheckboxSingleControl name="employed" my={5}>
+                I agree to the h1tags{" "}
+                <Link href="/" style={{ color: "#ffb4b3", fontWeight: "bold" }}>
+                  Terms of Use
+                </Link>
+                and
+                <Link href="/" style={{ color: "#ffb4b3", fontWeight: "bold" }}>
+                  Privacy Policy
+                </Link>
+              </CheckboxSingleControl>
 
-                      return error;
-                    }}
-                  />
-                </FormControl>
-                <FormErrorMessage>{errors.name}</FormErrorMessage>
-                <FormControl isInvalid={!!errors.email && touched.email}>
-                  <Field
-                    as={Input}
-                    id="email"
-                    name="email"
-                    type="email"
-                    variant="filled"
-                    bg={"#607d8b29"}
-                    Placeholder="Email Address"
-                    validate={(value) => {
-                      let error;
-
-                      if (!value) {
-                        error = "Required";
-                      } else if (
-                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-                      ) {
-                        error = "Invalid email address";
-                      }
-
-                      return error;
-                    }}
-                  />
-                </FormControl>
-                <FormErrorMessage>{errors.email}</FormErrorMessage>
-                <FormControl isInvalid={!!errors.phone && touched.phone}>
-                  <Field
-                    as={Input}
-                    id="phone"
-                    name="phone"
-                    type="phone"
-                    variant="filled"
-                    Placeholder="Enter Contact"
-                    bg={"#607d8b29"}
-                    validate={(value) => {
-                      let error;
-
-                      value.length < 10
-                        ? (error = "Number must contain  10 Numbers")
-                        : (error = "");
-
-                      return error;
-                    }}
-                  />
-                  <FormErrorMessage>{errors.phone}</FormErrorMessage>
-                </FormControl>
-                <FormControl>
-                  <Select
-                    placeholder="Choose your Center"
-                    color={"gray"}
-                    bg={"#607d8b29"}
-                    name="place"
-                    onChange={(e) => setPlace(e.target.value)}
-                  >
-                    <option variant="filled" value={"Neta ji subhas palace"}>
-                      Neta ji subhas palace
-                    </option>
-                    <option variant="filled" value={"Budh Vihar"}>
-                      Budh Vihar
-                    </option>
-                  </Select>
-                </FormControl>
-                <Field
-                  as={Checkbox}
-                  id="rememberMe"
-                  name="rememberMe"
-                  colorScheme="purple"
-                >
-                  I agree to the DIDM{" "}
-                  <Link
-                    href="/"
-                    style={{ color: "#ffb4b3", fontWeight: "bold" }}
-                  >
-                    Terms of Use
-                  </Link>{" "}
-                  and{" "}
-                  <Link
-                    href="/"
-                    style={{ color: "#ffb4b3", fontWeight: "bold" }}
-                  >
-                    Privacy Policy
-                  </Link>
-                </Field>
-                <Button
-                  type="submit"
-                  bg={"#b52828"}
-                  width="full"
-                  onClick={() => handleSubmit}
-                >
-                  Submit
-                </Button>
-              </VStack>
-            </form>
+              <SubmitButton bg={"#b52828"} w={"full"}>
+                Submit
+              </SubmitButton>
+            </Box>
           )}
         </Formik>
       </Box>

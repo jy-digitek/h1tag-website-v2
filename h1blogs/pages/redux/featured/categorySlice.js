@@ -79,3 +79,7 @@ export const categorySlice = createSlice({
     },
   },
 });
+
+export default function ok() {
+  return "ok";
+}

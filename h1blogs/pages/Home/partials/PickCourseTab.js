@@ -25,155 +25,86 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { MdCheckCircle, MdSettings } from "react-icons/md";
+import { useDisclosure } from "@chakra-ui/react";
+// import { MdCheckCircle, MdSettings } from "react-icons/md";
+import ListCardImg from "../../../components/ListCardImg";
 
 import { SectionTitle } from "../../../components/SectionTitle";
 
-export const PickCourseTab = () => {
+// Increase tab fonts
+// Enclose tabs
+const PickCourseTab = () => {
+  const { isOpen, onToggle } = useDisclosure();
   return (
-    <Container maxW={"768px"}>
-      <SectionTitle>Pick a Course to Enhance to career</SectionTitle>
+    <Container maxW={"5xl"}>
+      <SectionTitle my={10}>Pick a Course to Enhance to career</SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
-        <Hide above="md">
-          <Box>
-            <Tabs orientation={"horizontal"}>
-              <TabList aria-orientation="verticasd">
-                <Tab>Digital Marketing</Tab>
-                <Tab>Graphic Designing </Tab>
-              </TabList>
-
-              <TabPanels>
-                <TabPanel>
-                  <Card W={["100%", "100%"]}>
-                    <CardBody>
-                      <Stack mt="6" spacing="3">
-                        <Heading size="md" my={3}>
-                          Digital Marketingsdedcsdc
-                        </Heading>
-                      </Stack>
-                      <List>
-                        <ListItem>Job Oriented Course</ListItem>
-                        <ListItem>Foundation Course</ListItem>
-                        <ListItem>Customized Course</ListItem>
-                        <ListItem>Master Course</ListItem>
-                      </List>
-                    </CardBody>
-                    <CardFooter>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"}>Learn More</Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                </TabPanel>
-                <TabPanel>
-                  <Card W={"100%"}>
-                    <CardBody>
-                      <Stack mt="6" spacing="3">
-                        <Heading size="md" my={3}>
-                          Graphic Designing
-                        </Heading>
-                      </Stack>
-                      <List>
-                        <ListItem>Foundation Course</ListItem>
-                        <ListItem>Master Course</ListItem>
-                      </List>
-                    </CardBody>
-                    <CardFooter>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"}>Learn More</Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                </TabPanel>
-              </TabPanels>
-            </Tabs>
-          </Box>
-        </Hide>
-
-        <Show above="md">
-          <Box>
-            <Tabs orientation={"vertical"}>
-              <TabList
-                style={{ whiteSpace: "pre", borderInlineStart: "unset" }}
+        <Box>
+          <Tabs variant="enclosed" isFitted>
+            <TabList
+              style={{
+                whiteSpace: "pre",
+                borderInlineStart: "unset",
+              }}
+            >
+              <Tab
+                _selected={{ color: "white", bg: "#3950a1" }}
+                aria-selected={true}
               >
-                <Tab>Digital Marketing </Tab>
-                <Tab>Graphic Designing </Tab>
-              </TabList>
+                <Box sx={{ fontSize: 20, fontWeight: "bold" }}>
+                  Digital Marketing
+                </Box>
+              </Tab>
+              <Tab
+                _selected={{ color: "white", bg: "#3950a1" }}
+                sx={
+                  {
+                    // backgroundColor: "#3950a1",
+                    // color: "white",
+                  }
+                }
+              >
+                <Box sx={{ fontSize: 20, fontWeight: "bold" }}>
+                  Graphic Designing
+                </Box>
+              </Tab>
+            </TabList>
 
-              <TabPanels>
-                <TabPanel>
-                  <Card W={["100%", "100%"]}>
-                    <CardBody>
-                      <Stack>
-                        <Heading size="md" my={3}>
-                          Digital Marketing
-                        </Heading>
-                      </Stack>
-
-                      <List spacing={3}>
-                        <ListItem>
-                          <ListIcon as={MdCheckCircle} color="green.500" />
-                          Job Oriented Course
-                        </ListItem>
-                        <ListItem>
-                          <ListIcon as={MdCheckCircle} color="green.500" />
-                          Foundation Course
-                        </ListItem>
-                        <ListItem>
-                          <ListIcon as={MdSettings} color="green.500" />
-                          Customized Course
-                        </ListItem>
-                        {/* You can also use custom icons from react-icons */}
-                        <ListItem>
-                          <ListIcon as={MdCheckCircle} color="green.500" />
-                          Master Course
-                        </ListItem>
-                      </List>
-                    </CardBody>
-
-                    <Box sx={{ mb: 3, mx: 3 }}>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"} width={"full"}>
-                          Learn More
-                        </Button>
-                      </Link>
-                    </Box>
-                  </Card>
-                </TabPanel>
-                <TabPanel>
-                  <Card W={"100%"}>
-                    <CardBody>
-                      <Stack>
-                        <Heading size="md" my={3}>
-                          Graphic Designing
-                        </Heading>
-                      </Stack>
-                      <List>
-                        <ListItem>
-                          <ListIcon as={MdCheckCircle} color="green.500" />
-                          Foundation Course
-                        </ListItem>
-                        <ListItem>
-                          <ListIcon as={MdCheckCircle} color="green.500" />
-                          Master Course
-                        </ListItem>
-                      </List>
-                    </CardBody>
-
-                    <Box sx={{ mb: 3, mx: 3 }}>
-                      <Link href="#!">
-                        <Button bg={"yellow.300"} width={"full"}>
-                          Learn More
-                        </Button>
-                      </Link>
-                    </Box>
-                  </Card>
-                </TabPanel>
-              </TabPanels>
-            </Tabs>
-          </Box>
-        </Show>
+            <TabPanels>
+              <TabPanel sx={{ p: 0 }}>
+                <Card>
+                  <CardBody>
+                    <ListCardImg
+                      courseTitle={"Digital Marketing"}
+                      description={`We offer a variety of options with our Digital Marketing courses, so you can choose the one that best suits your needs and preferences.`}
+                      item_1={`Job Oriented Course`}
+                      item_2={`Foundation Course`}
+                      item_3={`Customized Course`}
+                      item_4={`Master Course`}
+                      btnText={"Learn More"}
+                    />
+                  </CardBody>
+                </Card>
+              </TabPanel>
+              <TabPanel sx={{ p: 0 }}>
+                <Card>
+                  <CardBody>
+                    <ListCardImg
+                      courseTitle={"Graphic Designing"}
+                      description={`Our Graphic Designing courses provide you with a diverse range of options. With our wide range of options, you can gain a solid foundation in graphic designing and take your skills to the next level.`}
+                      item_1={`Foundation Course`}
+                      item_2={`Master Course`}
+                      btnText={"Learn More"}
+                    />
+                  </CardBody>
+                </Card>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+        </Box>
       </SimpleGrid>
     </Container>
   );
 };
+
+export default PickCourseTab;

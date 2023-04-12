@@ -45,3 +45,7 @@ export const authSlice = createSlice({
     },
   },
 });
+
+export default function ok() {
+  return "ok";
+}

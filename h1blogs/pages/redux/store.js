@@ -9,3 +9,7 @@ export const store = configureStore({
     auth: authSlice.reducer,
   },
 });
+
+export default function ok() {
+  return "ok";
+}

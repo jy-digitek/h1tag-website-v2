@@ -1,20 +1,16 @@
-import { Banner } from "./partials/Banner";
 import Layout from "../../components/layout";
-// import styles from "../../styles/Home.module.css";
-import { PickCourseTab } from "./partials/PickCourseTab";
-import { TransFormingCourse } from "./partials/TransFormingCourse";
-// import { TraningHightLight } from "./partials/TraningHightLight";
-// import { UpSkillCarrier } from "./partials/UpSKillCarrier";
-// import { Tranding } from "./partials/Tranding";
-import { WhyUs } from "./partials/WhyUs";
-// import { EndToEnd } from "./partials/EndToEnd";
-import { Benifits } from "./partials/Benifits";
-import { StandsOut } from "./partials/StandsOut";
-import { CourseBuiltFor } from "./partials/CourseBuiltFor";
-import { ExperienceH1tags } from "./partials/ExperienceH1tags";
-import { CarrerOption } from "./partials/CarrerOption";
-import { StudentFeedback } from "./partials/StudentFeedback";
-import { TrustedPartner } from "./partials/TrustedPartner";
+import Banner from "./partials/Banner";
+import TransFormingCourse from "./partials/TransFormingCourse";
+import PickCourseTab from "./partials/PickCourseTab";
+import Benifits from "./partials/Benifits";
+import WhyUs from "./partials/WhyUs";
+import CareerOption from "./partials/CareerOption";
+import StudentFeedback from "./partials/StudentFeedback";
+import TrustedPartner from "./partials/TrustedPartner";
+import CourseBuiltFor from "./partials/CourseBuiltFor";
+import ExperienceH1tags from "./partials/ExperienceH1tags";
+import StandsOut from "./partials/StandsOut";
+import Testimonial from "../digitalmarketing/partials/Testimonial";
 
 const Home = () => {
   return (
@@ -27,9 +23,9 @@ const Home = () => {
       <StandsOut />
       <CourseBuiltFor />
       <ExperienceH1tags />
-      <CarrerOption />
-      {/* <EndToEnd /> */}
+      <CareerOption />
       <StudentFeedback />
+      <Testimonial />
       <TrustedPartner />
     </Layout>
   );

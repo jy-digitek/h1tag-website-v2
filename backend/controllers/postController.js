@@ -42,10 +42,7 @@ module.exports = {
       //const searchQuery = req.query;
       console.log("searchQuery", searchQuery, page);
       const posts = await Post.find({
-        $or: [
-          { title: { $regex: searchQuery } },
-          // { categories: { $regex: searchQuery } },
-        ],
+        $or: [{ title: { $regex: searchQuery } }],
       })
         .populate("categories")
         .limit(limit * 1)

@@ -21,7 +21,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import ReturnFocus from "../pages/admin/Components/modal";
+// import ReturnFocus from "../pages/admin/Components/modal";
 import React from "react";
 import Link from "next/link";
 import ContactForm from "./contactform";
@@ -30,7 +30,7 @@ export default function WithSubnavigation() {
   const [openModal, openModalSet] = React.useState(false);
 
   return (
-    <Box style={{ position: "sticky", top: "0" }} zIndex={1}>
+    <Box style={{ position: "sticky", top: "0" }} zIndex={2}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -66,7 +66,7 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <Image src="/h1logo.png" w={"162px"} />
+            <Image src={"/h1logo.png"} w={"162px"} />
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -89,12 +89,14 @@ export default function WithSubnavigation() {
           >
             Get Brochure
           </Button> */}
-          <ReturnFocus
+          {/* <ReturnFocus
             btnText={`Get Brochure`}
             children={<ContactForm />}
             openModalSet={openModalSet}
             // isEditingSet={isEditingSet}
-          />
+            label="Get Brochure"
+            color="white"
+          /> */}
           {/* <Button
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
@@ -187,7 +189,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           >
             {label}
           </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          {/* <Text fontSize={"sm"}>{subLabel}</Text> */}
         </Box>
         <Flex
           transition={"all .3s ease"}
@@ -287,18 +289,21 @@ const NAV_ITEMS = [
     label: "Courses+",
     children: [
       {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
+        label: "Digital Marketing Course",
+        // subLabel: "Trending Design to inspire you",
+        href: "/digitalmarketing",
       },
       {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
+        label: "Graphic Design Course",
+        // subLabel: "Up-and-coming Designers",
+        href: "/graphicdesign",
       },
     ],
   },
-
+  {
+    label: "Gallery",
+    href: "/gallery",
+  },
   {
     label: "Blog",
     href: "/blogs",
@@ -306,9 +311,5 @@ const NAV_ITEMS = [
   {
     label: "Contact",
     href: "/contact",
-  },
-  {
-    label: "Galary",
-    href: "#",
   },
 ];

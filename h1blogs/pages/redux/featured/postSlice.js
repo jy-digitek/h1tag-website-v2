@@ -125,3 +125,7 @@ export const postSlice = createSlice({
     },
   },
 });
+
+export default function ok() {
+  return "ok";
+}

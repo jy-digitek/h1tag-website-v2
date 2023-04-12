@@ -8,8 +8,16 @@ import {
   Text,
   Container,
 } from "@chakra-ui/react";
-// import { CheckCircleIcon } from "@chakra-ui/icons";
-export const TransFormingCourse = () => {
+
+import {
+  FcMoneyTransfer,
+  FcOrgUnit,
+  FcApproval,
+  FcOnlineSupport,
+} from "react-icons/fc";
+import { Fade } from "react-awesome-reveal";
+
+const TransFormingCourse = () => {
   return (
     <Container
       maxW={"full"}
@@ -19,47 +27,63 @@ export const TransFormingCourse = () => {
       style={{ background: "#f0f0f0" }}
     >
       <SimpleGrid columns={[1, null, 4]} spacing={6} mx={2} px={10}>
-        <Box
-          bg="white"
-          boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
-          display={"flex"}
-          p={3}
-          borderRadius={8}
-        >
-          <Image src="icon.png" alt="Dan Abramov" />{" "}
-          <Center ml={5}>100% Placement </Center>
-        </Box>
-        <Box
-          bg="white"
-          boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
-          display={"flex"}
-          p={3}
-          borderRadius={8}
-        >
-          <Image src="icon.png" alt="Dan Abramov" />{" "}
-          <Center ml={5}>Paid Internship</Center>
-        </Box>
-        <Box
-          bg="white"
-          boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
-          display={"flex"}
-          p={3}
-          borderRadius={8}
-        >
-          <Image src="icon.png" alt="Dan Abramov" />
-          <Center ml={5}>Classroom Training </Center>
-        </Box>
-        <Box
-          bg="white"
-          boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
-          display={"flex"}
-          px={2}
-          borderRadius={8}
-        >
-          <Image src="icon.png" alt="Dan Abramov" />
-          <Center ml={5}>Experienced Instructors</Center>
-        </Box>
+        <Fade cascade damping={0.1}>
+          <Box
+            bg="#fff"
+            sx={{ borderLeft: "5px solid #3950a1" }}
+            boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
+            display={"flex"}
+            p={5}
+            borderRadius={8}
+            alignItems="center"
+            justifyContent={"center"}
+          >
+            <FcOnlineSupport size={30} style={{ marginRight: 10 }} /> 100%
+            Placement
+          </Box>
+          <Box
+            bg="#fff"
+            sx={{ borderLeft: "5px solid #3950a1" }}
+            boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
+            display={"flex"}
+            p={5}
+            alignItems="center"
+            justifyContent={"center"}
+            borderRadius={8}
+          >
+            <FcMoneyTransfer size={30} style={{ marginRight: 10 }} />
+            Paid Internship
+          </Box>
+          <Box
+            bg="#fff"
+            sx={{ borderLeft: "5px solid #3950a1" }}
+            boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
+            display={"flex"}
+            p={5}
+            alignItems="center"
+            justifyContent={"center"}
+            borderRadius={8}
+          >
+            <FcOrgUnit size={30} style={{ marginRight: 10 }} />
+            Classroom Training
+          </Box>
+          <Box
+            bg="#fff"
+            sx={{ borderLeft: "5px solid #3950a1" }}
+            boxShadow="2px 0 35px 0 rgb(68 88 144 / 12%)"
+            display={"flex"}
+            p={5}
+            alignItems="center"
+            justifyContent={"center"}
+            borderRadius={8}
+          >
+            <FcApproval size={30} style={{ marginRight: 10 }} />
+            Experienced Instructors
+          </Box>
+        </Fade>
       </SimpleGrid>
     </Container>
   );
 };
+
+export default TransFormingCourse;

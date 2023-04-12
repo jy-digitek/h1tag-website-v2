@@ -12,9 +12,9 @@ import {
 import { EmailIcon } from "@chakra-ui/icons";
 import { SlPhone } from "react-icons/sl";
 
-export const QuickContact = () => {
+export default function QuickContact() {
   return (
-    <Box sx={{ background: "#101C32 url(/contact-bg.svg)" }}>
+    <Box backgroundColor={"#101C32"}>
       <Box textAlign={"center"} pt={10}>
         <Heading fontWeight={"bold"} color={`#fff`}>
           Quick Enquiry
@@ -22,29 +22,24 @@ export const QuickContact = () => {
       </Box>
       <SimpleGrid columns={[1, 2]} spacing={10} px={[0, 20]} py={10}>
         <Box>
-          <Card align="center">
-            <CardBody>
+          <Card align="center" sx={{ background: "#fff", py: [2, 4] }}>
+            <CardBody as={"div"} display={"flex"}>
+              <SlPhone fontSize={"25px"} style={{ marginRight: 8 }} />
               <Text fontSize={"20px"} fontWeight="bold">
-                <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-                  <SlPhone fontSize={"25px"} /> +91 77700-07683
-                </Box>
+                +91 77700-07683
               </Text>
             </CardBody>
           </Card>
         </Box>
         <Box>
-          <Card align="center">
-            <CardBody>
-              <Text fontSize={"20px"} fontWeight="bold">
-                <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-                  <EmailIcon fontSize={"25px"} />{" "}
-                  <Text>wsy@ysuedcusdc.scsdc</Text>
-                </Box>
-              </Text>
+          <Card align="center" sx={{ background: "#fff", py: [2, 4] }}>
+            <CardBody as="div" display={"flex"}>
+              <EmailIcon fontSize={"25px"} mr={[3]} />{" "}
+              <Text>wsy@ysuedcusdc.scsdc</Text>
             </CardBody>
           </Card>
         </Box>
       </SimpleGrid>
     </Box>
   );
-};
+}

@@ -3,39 +3,49 @@ import {
   Container,
   Box,
   Heading,
+  useBreakpointValue,
   Text,
   SimpleGrid,
   Highlight,
-  UnorderedList,
+  List,
   ListItem,
+  Stack,
+  VStack,
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   Image,
+  Grid,
+  GridItem,
+  ListIcon,
   Flex,
+  Center,
+  Hide,
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../../styles/About.module.css";
-import { FaQuestionCircle } from "react-icons/fa";
-
+import { FiArrowRightCircle } from "react-icons/fi";
+import { VscArrowCircleRight } from "react-icons/vsc";
+import { SectionTitle } from "../../components/SectionTitle";
+import { MdCheckCircle } from "react-icons/md";
+import { GlobalButton } from "../../components/GlobalButton";
 const About = () => {
   return (
     <Layout>
-      <Container maxW={"full"} className={styles.background}>
+      <Container maxW={"full"}>
         {/* image start here  */}
         <Box>
-          <Image src={"/test/aboutbanner.jpeg"} />
+          <Image src={"/bg-img.jpeg"} sx={{ rounded: 25, mt: 5 }} />
         </Box>
 
         {/* image end here  */}
 
         {/* digital marketing Start */}
-        <Box textAlign={"center"} my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"} py={5}>
-            Best Digital Marketing Course in Delhi
-          </Heading>
-          <Text>
+        <Box textAlign={"center"} mt={10}>
+          <SectionTitle>Best Digital Marketing Course in Delhi</SectionTitle>
+
+          <Box sx={{ padding: 10 }}>
             <strong>H1 Tags:</strong> A School of Digital Marketing provides the
             Best Digital Marketing Course in Delhi with training programs in a
             variety of areas, such as SEO, PPC, Social Media Marketing, Content
@@ -46,17 +56,18 @@ const About = () => {
             Marketing experts who have years of knowledge in their field and are
             well-experienced. Our team is dedicated to providing the students
             with the best knowledge possible.
-          </Text>
+          </Box>
         </Box>
         {/* digital marketing end */}
 
         {/* Our Vision Start */}
-        <SimpleGrid columns={[1, 2]} mx={[5, 20]}>
-          <Box>
-            <Image src={"/test/ourmission.jpeg"} minH={"330px"} />
-          </Box>
-          <Box textAlign={"center"} px={5}>
-            <Heading textAlign={"center"} py={5}>
+        <SimpleGrid
+          columns={[1, 2]}
+          sx={{ background: "url(/bg-img.jpeg)" }}
+          py={10}
+        >
+          <Box px={[0, 10]}>
+            {/* <Heading textAlign={"center"} py={5}>
               Our Vision
             </Heading>
             <Text fontSize={"18px"} lineHeight={"26px"}>
@@ -68,39 +79,59 @@ const About = () => {
               theoretical knowledge. Digital Marketing is a booming career in
               India, which is expected to provide significant growth to the IT
               sectors.
-            </Text>
+            </Text> */}
+            <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
+              <SectionTitle mb={10}> Our Vision</SectionTitle>
+              <Box as="p" sx={{ mb: 2 }}>
+                We have the vision to expand our Institute's branches all around
+                India so we can train the student to acquire the top Digital
+                Marketing skill which is essential for building their future.
+              </Box>
+              <Box as="p" sx={{ mb: 2 }}>
+                Considering the demands of the professional world, we aim to
+                provide the Best Digital Marketing Course with practical and
+                theoretical knowledge. Digital Marketing is a booming career in
+                India, which is expected to provide significant growth to the IT
+                sectors.
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            {/* <Image src={"/test/ourmission.jpeg"} minH={"330px"} /> */}
           </Box>
         </SimpleGrid>
 
         {/* our vision end */}
 
         {/* Track record start */}
-        <Box textAlign={"center"} my={10} mx={[5, 20]}>
-          <Heading py={5}>Our Track Record…</Heading>
+        <Box textAlign={"center"} my={10}>
+          <SectionTitle mb={10}>Our Track Record…</SectionTitle>
           <Text>
             We are a Digital Marketing Agency-based Institute that has strong
             partnerships with several IT companies. Well-reputed and known
             organizations actively seek out our students, as we provide on-site
             training.
           </Text>
-          <SimpleGrid columns={[1, 4]} py={20} spacing={6} bg={"white"} px={10}>
+          <SimpleGrid columns={[1, 4]} py={20} spacing={6} px={10}>
             <Box
               p={10}
               // boxShadow={"10px 10px 5px 12px lightblue"}
-              bg={"blue.100"}
+              bg={"radial-gradient(#1fe4f5, #3fbafe)"}
               borderRadius={10}
+              color={"#fff"}
             >
-              <Text color={"blue"} fontWeight={"bold"} fontSize={"2rem"}>
+              <Text fontWeight={"bold"} fontSize={"2rem"}>
                 1000+
               </Text>{" "}
               Students Trained
             </Box>
             <Box
               p={10} //boxShadow={"10px 10px 5px 12px red"}
-              bg={"red.100"}
+              bg={"radial-gradient(#fbc1cc, #fa99b2)"}
               borderRadius={10}
+              color="#fff"
             >
-              <Text color={"red.300"} fontWeight={"bold"} fontSize={"2rem"}>
+              <Text fontWeight={"bold"} fontSize={"2rem"}>
                 {" "}
                 100+
               </Text>
@@ -108,10 +139,11 @@ const About = () => {
             </Box>
             <Box
               p={10} //</SimpleGrid>boxShadow={"10px 10px 5px 12px lightblue"}
-              bg={"green.100"}
+              bg={"radial-gradient(#76b2fe, #b69efe)"}
               borderRadius={10}
+              color={"#fff"}
             >
-              <Text color={"green.300"} fontWeight={"bold"} fontSize={"2rem"}>
+              <Text fontWeight={"bold"} fontSize={"2rem"}>
                 700+
               </Text>
               Students Placed
@@ -119,10 +151,11 @@ const About = () => {
             <Box
               p={10}
               //boxShadow={"10px 10px 5px 12px lightblue"}
-              bg={"orange.100"}
+              bg={"radial-gradient(#60efbc, #58d5c9)"}
               borderRadius={10}
+              color={"#fff"}
             >
-              <Text color={"orange.300"} fontWeight={"bold"} fontSize={"2rem"}>
+              <Text fontWeight={"bold"} fontSize={"2rem"}>
                 {" "}
                 300+
               </Text>
@@ -130,141 +163,335 @@ const About = () => {
             </Box>
           </SimpleGrid>
         </Box>
-        {/* Track record end */}
+      </Container>
+      {/* Track record end */}
 
-        {/* director portfolio starts here */}
-        <SimpleGrid columns={[1, 2]} my={10} mx={[5, 20]}>
-          <Box>
-            <Image
-              src={"https://via.placeholder.com/600x400"}
-              maxH={"500px"}
-              w={"100%"}
-              //style={{ float: "right" }}
-              pr={5}
-            />
-          </Box>
-          <Box
-            className={styles.portfolio_background}
-            color="white"
-            p={5}
-            borderRadius={10}
-          >
-            <Heading>MESSAGE FROM DIRECTOR</Heading>
-            <Text>
-              Our sole and complete mission is to teach the value of Digital
-              Marketing by utilizing and creating a viable digital career path
-              for you. We assist you in providing an understanding of the
-              section-wise method so that you can comprehend the process at your
-              own pace and put extra efforts into the program that you like.
-            </Text>
-            <Heading>YUVRAJ SINGH</Heading>
-            <Highlight query="Director" styles={{ color: "red" }}>
-              Director
-            </Highlight>
-            <Text>
-              Mr. Yuvraj Singh, born to be an entrepreneur, began his career by
-              accomplishing many ventures like H1 TAGS, the top Digital
-              Marketing Institute in Delhi NCR with a proven track record of
-              developing and directing high-impact Digital Marketing Strategies.
-              Skilled in overseeing web strategy and development, digital
-              engagement, and consumer-facing tools. Adept in guiding strategic
-              relationships to achieve company goals.
-            </Text>
-          </Box>
-        </SimpleGrid>
-        {/* director portfolio ends here */}
-
-        {/* cofounder portfolio starts here */}
-
-        <SimpleGrid columns={[1, 2]} my={10} mx={[5, 20]}>
-          <Box
-            className={styles.portfolio_background}
-            color="white"
-            py={5}
-            borderRadius={10}
-          >
-            <Heading ml={5}>AKSHAY </Heading>
-            <Highlight
-              ml={5}
-              query="Co-founder"
-              styles={{ px: "1", py: "1", color: "red", ml: "5" }}
+      {/* director portfolio starts here */}
+      <Container
+        maxW={"full"}
+        sx={{
+          py: 15,
+          background: "rgb(2,0,36)",
+          background:
+            "linear-gradient(342deg, #101C32 61%, rgba(255,255,255,1) 61%)",
+        }}
+      >
+        <Box maxW={"5xl"} mx={"auto"}>
+          <SimpleGrid columns={[1, 2]} gap={0} my={10} alignItems={"center"}>
+            <Box
+              sx={{
+                maxW: 450,
+              }}
             >
-              Co-founder
-            </Highlight>
-            <Text w={"70%"} ml={5}>
-              He is very good at organizing Digital Marketing Strategies and
-              developing new and innovative SEO strategies. His planning skills
-              for digital marketing strategies, SEO (on-page and off-page), and
-              coming up with fresh, innovative ideas for SEO development
-              strategies are top-notch. He has excellent team administration and
-              teaching skills. He has excellent team administration and teaching
-              skills, and his ideas for team-building exercises are fantastic.
-              Under his guidance, students gain the skills of professional
-              Digital Marketers. His mission is to provide the best knowledge
-              possible to his students.
-            </Text>
-          </Box>
-          <Box>
-            {" "}
-            <Image
-              src={"https://via.placeholder.com/600x400"}
-              maxH={"500px"}
-              w={"100%"}
-              //style={{ float: "right" }}
-              px={5}
-            />
-          </Box>
-        </SimpleGrid>
+              <Image src={"/Yuvraj_singh.png"} w={"100%"} />
+            </Box>
+            <Box className={styles.about}>
+              <SectionTitle mb={10} fontSize={10}>
+                MESSAGE FROM DIRECTOR
+              </SectionTitle>
+              <Text>
+                Our sole and complete mission is to teach the value of Digital
+                Marketing by utilizing and creating a viable digital career path
+                for you. We assist you in providing an understanding of the
+                section-wise method so that you can comprehend the process at
+                your own pace and put extra efforts into the program that you
+                like.
+              </Text>
+              <Heading
+                fontSize={28}
+                // sx={{
+                //   fontsize: "12px",
+                // }}
+              >
+                YUVRAJ SINGH
+              </Heading>
+              <Highlight query="Director" styles={{ color: "red" }}>
+                Director
+              </Highlight>
+              <Text>
+                Mr. Yuvraj Singh, born to be an entrepreneur, began his career
+                by accomplishing many ventures like H1 TAGS, the top Digital
+                Marketing Institute in Delhi NCR with a proven track record of
+                developing and directing high-impact Digital Marketing
+                Strategies. Skilled in overseeing web strategy and development,
+                digital engagement, and consumer-facing tools. Adept in guiding
+                strategic relationships to achieve company goals.
+              </Text>
+            </Box>
+          </SimpleGrid>
+        </Box>
+        {/* director portfolio ends here */}
+      </Container>
+
+      {/* cofounder portfolio starts here */}
+      <Container
+        maxW={"full"}
+        sx={{
+          py: 15,
+          background: "rgb(2,0,36)",
+          background:
+            "linear-gradient(342deg, rgba(255,255,255,1) 61%, #101C32 61%)",
+        }}
+      >
+        {/* director portfolio starts here */}
+        <Box maxW={"5xl"} mx={"auto"}>
+          <SimpleGrid columns={[1, 2]} gap={0} my={10} alignItems={"center"}>
+            <Box className={styles.about}>
+              <Heading fontSize={28}>AKSHAY</Heading>
+              <Highlight query="Co-Founder" styles={{ color: "red" }}>
+                Co-Founder
+              </Highlight>
+
+              <Text>
+                He is very good at organizing Digital Marketing Strategies and
+                developing new and innovative SEO strategies. His planning
+                skills for digital marketing strategies, SEO (on-page and
+                off-page), and coming up with fresh, innovative ideas for SEO
+                development strategies are top-notch. He has excellent team
+                administration and teaching skills. He has excellent team
+                administration and teaching skills, and his ideas for
+                team-building exercises are fantastic. Under his guidance,
+                students gain the skills of professional Digital Marketers. His
+                mission is to provide the best knowledge possible to his
+                students.
+              </Text>
+            </Box>
+            <Box
+              sx={{
+                maxW: 450,
+                marginLeft: "auto",
+              }}
+            >
+              <Image src={"/Akshay.png"} w={"100%"} />
+            </Box>
+          </SimpleGrid>
+        </Box>
+        {/* director portfolio ends here */}
+      </Container>
+
+      <Container maxW={"full"}>
         {/* cofounder portfolio ends here */}
 
         {/* why choose us starts here */}
-        <Box my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"} py={5}>
-            Why Choose US?
-          </Heading>
-          <Text>
-            H1 Tags -School of Digital Marketing and Web Development is one of
-            India's top Digital Marketing institutions in Delhi-NCR. We studied
-            several entry-level marketing job openings and designed our syllabus
-            according to the market demand for our students to get easy
-            placements. Companies hiring from H1 Tags include Amazon, Axis Bank,
-            Google, PC Solutions, DH IT Solutions, Wipro, Accenture, Genpact,
-            360 Realtors, HCL, NVidia, Microsoft, HDFC Bank, Ogilvy, and many
-            more.
-          </Text>
-        </Box>
+        <Grid templateColumns="repeat(6, 1fr)" gap={0}>
+          <GridItem colSpan={[6, 3]}>
+            {/*  */}
+            <Box
+              w={"full"}
+              backgroundImage={
+                "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+              }
+              h={"full"}
+              backgroundSize={"cover"}
+              backgroundPosition={"center center"}
+              backgroundAttachment={"fixed"}
+              position={"relative"}
+            >
+              <Hide below="sm">
+                <Box
+                  position={"absolute"}
+                  sx={{
+                    width: 0,
+                    height: 0,
+                    right: 0,
+                    top: "25%",
+                    borderTop: "40px solid transparent",
+                    borderBottom: "40px solid transparent",
+                    borderRight: "40px solid #3950a1",
+                  }}
+                />
+              </Hide>
+              <VStack
+                w={"full"}
+                justify={"center"}
+                h={"full"}
+                mb={14}
+                bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+              >
+                <Stack maxW={"2xl"} align={"center"} spacing={6}>
+                  <SectionTitle py={5} color={"#fff"}>
+                    Why Choose us?
+                  </SectionTitle>
+                </Stack>
+                <Stack direction={"row"} gap={10}>
+                  <GlobalButton
+                    rounded={"full"}
+                    color={"white"}
+                    label={" Show me more"}
+                    background="#3950a1"
+                    _hover={{ background: "#101C32" }}
+                  />
+                </Stack>
+              </VStack>
+            </Box>
+          </GridItem>
+          <GridItem colSpan={[6, 3]} bg="#3950a1" color={"#fff"}>
+            <Box sx={{ p: 10 }}>
+              <Text lineHeight={2}>
+                H1 Tags -School of Digital Marketing and Web Development is one
+                of India's top Digital Marketing institutions in Delhi-NCR. We
+                studied several entry-level marketing job openings and designed
+                our syllabus according to the market demand for our students to
+                get easy placements. Companies hiring from H1 Tags include
+                Amazon, Axis Bank, Google, PC Solutions, DH IT Solutions, Wipro,
+                Accenture, Genpact, 360 Realtors, HCL, NVidia, Microsoft, HDFC
+                Bank, Ogilvy, and many more.
+              </Text>
+            </Box>
+          </GridItem>
+        </Grid>
+
+        <Grid templateColumns="repeat(6, 1fr)" gap={0}>
+          <GridItem colSpan={[6, 3]} bg="papayawhip">
+            <Hide above="sm">
+              <Box
+                w={"full"}
+                // h={"100vh"}
+                backgroundImage={
+                  "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+                }
+                h={["auto", "full"]}
+                backgroundSize={"cover"}
+                backgroundPosition={"center center"}
+                backgroundAttachment={"fixed"}
+                position={"relative"}
+              >
+                <Hide below="sm">
+                  <Box
+                    position={"absolute"}
+                    sx={{
+                      width: 0,
+                      height: 0,
+                      left: 0,
+                      top: "25%",
+                      borderTop: "40px solid transparent",
+                      borderBottom: "40px solid transparent",
+                      borderLeft: "40px solid papayawhip",
+                    }}
+                  />
+                </Hide>
+                <VStack
+                  w={"full"}
+                  justify={"center"}
+                  h={"full"}
+                  mb={8}
+                  bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+                >
+                  <Stack maxW={"2xl"} align={"center"} spacing={6}>
+                    <SectionTitle py={5} color={"#fff"}>
+                      Why Choose us?
+                    </SectionTitle>
+                  </Stack>
+                  <Stack direction={"row"} gap={10}>
+                    <GlobalButton
+                      rounded={"full"}
+                      color={"white"}
+                      mb={10}
+                      label={" Show me more"}
+                      background="#3950a1"
+                      _hover={{ background: "#101C32" }}
+                    />
+                  </Stack>
+                </VStack>
+              </Box>
+            </Hide>
+            <Box sx={{ p: [5, 10] }}>
+              <List>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 3] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
+                  We provide our students with counseling and professional and
+                  placement services
+                </ListItem>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 5] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
+                  Our work training program makes students easily adjust to the
+                  actual work culture.
+                </ListItem>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 5] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
+                  Our trainer provides follow-up sessions with each student
+                  separately so that they can clear every doubt.
+                </ListItem>
+                <ListItem
+                  sx={{ display: "flex", alignItems: "top", mb: [2, 5] }}
+                >
+                  <ListIcon as={MdCheckCircle} color="#3950a1" mt={1} />
+                  During training, these sessions include career counseling,
+                  resume preparation, and practice job interviews with proper
+                  reports. Our trainers focus on topics mostly asked during
+                  interviews.
+                </ListItem>
+              </List>
+            </Box>
+          </GridItem>
+          <GridItem colSpan={[6, 3]}>
+            <Hide below="sm">
+              {/*  */}
+              <Box
+                w={"full"}
+                // h={"100vh"}
+                backgroundImage={
+                  "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+                }
+                h={"full"}
+                backgroundSize={"cover"}
+                backgroundPosition={"center center"}
+                backgroundAttachment={"fixed"}
+                position={"relative"}
+              >
+                <Box
+                  position={"absolute"}
+                  sx={{
+                    width: 0,
+                    height: 0,
+                    left: 0,
+                    top: "25%",
+                    borderTop: "40px solid transparent",
+                    borderBottom: "40px solid transparent",
+                    borderLeft: "40px solid papayawhip",
+                  }}
+                />
+
+                <VStack
+                  w={"full"}
+                  justify={"center"}
+                  h={"full"}
+                  mb={14}
+                  // py={useBreakpointValue({ base: 6, md: 12 })}
+                  // px={useBreakpointValue({ base: 4, md: 8 })}
+                  bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+                >
+                  <Stack maxW={"2xl"} align={"center"} spacing={6}>
+                    <SectionTitle py={5} color={"#fff"}>
+                      Why Choose us?
+                    </SectionTitle>
+                  </Stack>
+                  <Stack direction={"row"} gap={10}>
+                    <GlobalButton
+                      rounded={"full"}
+                      color={"white"}
+                      label={" Show me more"}
+                      background="#3950a1"
+                      _hover={{ background: "#101C32" }}
+                    />
+                  </Stack>
+                </VStack>
+              </Box>
+            </Hide>
+          </GridItem>
+        </Grid>
+
         {/* why choose us ends here */}
 
-        {/* your carrer matters starts here */}
-        <Box my={10} mx={[5, 20]}>
-          <Heading textAlign={"center"} py={5}>
-            Your Career Matters to us
-          </Heading>
-          <UnorderedList>
-            <ListItem>
-              We provide our students with counseling and professional and
-              placement services
-            </ListItem>
-            <ListItem>
-              Our work training program makes students easily adjust to the
-              actual work culture.
-            </ListItem>
-            <ListItem>
-              Our trainer provides follow-up sessions with each student
-              separately so that they can clear every doubt.
-            </ListItem>
-            <ListItem>
-              During training, these sessions include career counseling, resume
-              preparation, and practice job interviews with proper reports. Our
-              trainers focus on topics mostly asked during interviews.
-            </ListItem>
-          </UnorderedList>
-        </Box>
         {/* your carrer matters ends here */}
         <Box my={10}>
-          <Heading textAlign={"center"} py={5}>
-            FAQ’s
-          </Heading>
+          <SectionTitle mb={10}>FAQ’s</SectionTitle>
           <Accordion allowMultiple mx={[5, 60]}>
             <AccordionItem>
               {({ isExpanded }) => (

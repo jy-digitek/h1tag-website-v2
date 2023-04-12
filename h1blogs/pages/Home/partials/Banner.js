@@ -1,6 +1,8 @@
-import { Container, Image } from "@chakra-ui/react";
+import { Container, Image, Text } from "@chakra-ui/react";
 
-export const Banner = () => {
+import React from "react";
+
+const Banner = () => {
   return (
     <>
       <Container maxW={"full"} p={0}>
@@ -9,3 +11,5 @@ export const Banner = () => {
     </>
   );
 };
+
+export default Banner;
