@@ -22,11 +22,12 @@ import {
 } from "react-icons/si";
 import { SlPhone } from "react-icons/sl";
 // import CTA from "../pages/Home/partials/CTA";
+import CTA from "../components/CTA";
 
 export default function Footer() {
   return (
     <>
-      {/* <CTA title={"Struggling to Choose a Career?"} /> */}
+      <CTA title={"Struggling to Choose a Career?"} />
 
       <Container
         maxW="full"
@@ -96,10 +97,6 @@ export default function Footer() {
               <ListItem>
                 <ListIcon as={ChevronRightIcon} color="white" />
                 Contact Us
-              </ListItem>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} color="white" />
-                Terms & Conditions
               </ListItem>
               <ListItem>
                 <ListIcon as={ChevronRightIcon} color="white" />
