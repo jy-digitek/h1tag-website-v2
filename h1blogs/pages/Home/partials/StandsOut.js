@@ -51,11 +51,11 @@ const StandsOut = () => {
                 }}
               >
                 <ReturnFocus
-                  btnText={`Call`}
+                  btnText={`Call Now`}
                   children={<ContactForm />}
                   openModalSet={openModalSet}
                   // isEditingSet={isEditingSet}
-                  label="Call"
+                  label="Call Now"
                   color="white"
                   sx={{ width: "100%", color: "#fff" }}
                 />
