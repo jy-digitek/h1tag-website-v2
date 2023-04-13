@@ -28,42 +28,38 @@ const TrustedPartner = () => {
         Our Trusted Partners
       </SectionTitle>
 
-      <Heading as={"h3"} px={[0, 10]} size="md">
+      <Heading as={"h3"} px={[0, 10]} size="md" py={10}>
         Our Placement Partners
       </Heading>
       <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 5]} spacing={5}>
-        <Fade cascade>
-          {PlacementPartner.map((item, i) => {
-            return (
-              <Box key={i}>
-                <Card align="center">
-                  <CardBody>
-                    <Image src={item.src} boxSize={40} alt={item.name} />
-                  </CardBody>
-                </Card>
-              </Box>
-            );
-          })}
-        </Fade>
+        {PlacementPartner.map((item, i) => {
+          return (
+            <Box key={i}>
+              <Card align="center">
+                <CardBody>
+                  <Image src={item.src} boxSize={40} alt={item.name} />
+                </CardBody>
+              </Card>
+            </Box>
+          );
+        })}
       </SimpleGrid>
 
-      <Heading as={"h3"} px={[0, 10]} size="md">
+      <Heading as={"h3"} px={[0, 10]} size="md" py={10}>
         Our Advertising Partners
       </Heading>
       <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 5]} spacing={5}>
-        <Fade cascade>
-          {AdvertisingPartner.map((item, i) => {
-            return (
-              <Box key={i}>
-                <Card align="center">
-                  <CardBody>
-                    <Image src={item.src} boxSize={40} alt={item.name} />
-                  </CardBody>
-                </Card>
-              </Box>
-            );
-          })}
-        </Fade>
+        {AdvertisingPartner.map((item, i) => {
+          return (
+            <Box key={i}>
+              <Card align="center">
+                <CardBody>
+                  <Image src={item.src} boxSize={40} alt={item.name} />
+                </CardBody>
+              </Card>
+            </Box>
+          );
+        })}
       </SimpleGrid>
     </Container>
   );

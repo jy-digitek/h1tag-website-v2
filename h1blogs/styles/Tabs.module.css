@@ -5,12 +5,15 @@
   flex: 0 0 auto !important;
 
 }
-
+.rwt__tabpanel{
+  background-color: red;
+}
 .tabsContainer button[aria-selected="false"] {
   background-color: #f0f0f0 !important;
 }
 .Tabs_tabsContainer .rwt__tablist {
   margin-right: 0 !important;
+  
 }
 .tabsContainer button[aria-selected="true"] {
   background-color: #3950a1 !important;
@@ -24,13 +27,8 @@
 .tabsContainer button[aria-selected="true"]:after {
   border-right: 6px solid #4666d4 !important;
 }
-/* .tabsContainer button[aria-selected="true"]:after {
-  width: 0 !important;
-  height: 0 !important;
-  top: 10px !important;
-  right: 0px !important;
-  border-top: 20px solid transparent !important;
-  border-bottom: 20px solid transparent !important;
-  border-right: transparent !important;
-  border-right: 20px solid #fff !important;
-} */
+
+.Tabs_tabsContainer .rwt__tabpanel {
+  background-color: red !important;
+}
+

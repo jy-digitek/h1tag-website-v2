@@ -66,7 +66,10 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <Image src={"/h1logo.png"} w={"162px"} />
+            <Link href="/">
+              {" "}
+              <Image src={"/h1logo.png"} w={"162px"} />
+            </Link>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>

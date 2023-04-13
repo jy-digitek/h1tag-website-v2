@@ -81,7 +81,7 @@ export const comparision = [
     text: "H1 Tags offers a reasonable and flexible fee structure (on EMI basis), by which the students don't have to pay the full fee altogether but can make EMI's.",
   },
   {
-    icon: <FcOrgUnit />,
+    icon: <FcReadingEbook />,
     title: "Training Facilities",
     text: " Easy for students to understand and study. Keen students can stay updated with their personalized Laptops relating to theirsubjects latest advancements and curriculum.",
   },

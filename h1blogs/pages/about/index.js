@@ -35,8 +35,18 @@ const About = () => {
     <Layout>
       <Container maxW={"full"}>
         {/* image start here  */}
-        <Box>
+        <Box position="relative">
           <Image src={"/bg-img.jpeg"} sx={{ rounded: 25, mt: 5 }} />
+          <Heading
+            position="absolute"
+            as="h1"
+            fontSize={["30px", "150px"]}
+            color={["white", "black"]}
+            top={"30%"}
+            left={"30%"}
+          >
+            About Us
+          </Heading>
         </Box>
 
         {/* image end here  */}

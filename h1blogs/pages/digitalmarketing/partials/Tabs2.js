@@ -326,13 +326,18 @@ export default function Tabs2() {
           background={"blue"}
         >
           <TabList style={{ display: "flex" }} className={Styles.mTab}>
-            <Tab className={Styles.Tab_default} tabFor="one">
+            <Tab
+              className={Styles.Tab_default}
+              tabFor="one"
+              style={{ background: "#b1beeb" }}
+            >
               Master Course
             </Tab>
             <Tab tabFor="two">Foundation Course</Tab>
-            <Tab tabFor="three"> Job Oriented Program</Tab>
+            <Tab tabFor="three">Job Oriented Program</Tab>
             <Tab tabFor="fourth">Customized Course</Tab>
           </TabList>
+
           <TabPanel tabId="one">
             <Box>
               <SectionTitle
