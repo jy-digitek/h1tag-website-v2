@@ -27,7 +27,7 @@ export default function ReturnFocus({
   return (
     <>
       <GlobalButton
-        display={{ base: "none", md: "inline-flex" }}
+        display={{ base: "block", md: "inline-flex" }}
         fontSize={"sm"}
         fontWeight={600}
         color={"white"}

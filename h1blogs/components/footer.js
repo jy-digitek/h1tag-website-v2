@@ -30,6 +30,8 @@ export default function Footer() {
       <CTA
         title={"Struggling to Choose a Career?"}
         label={"Get instant Career Counselling"}
+        color="white"
+        mt={10}
       />
 
       <Container

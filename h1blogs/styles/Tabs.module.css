@@ -1,3 +1,11 @@
+.mTab {
+  display: flex; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.mTab button{
+  flex: 0 0 auto !important;
+
+}
+
 .tabsContainer button[aria-selected="false"] {
   background-color: #f0f0f0 !important;
 }

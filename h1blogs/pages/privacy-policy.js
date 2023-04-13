@@ -5,8 +5,8 @@ import { Container, Heading, Box, Text } from "@chakra-ui/react";
 const Privacy = () => {
   return (
     <Layout>
-      <Container maxW={"6xl"}>
-        <Heading textAlign={"center"} size="4xl" as="h1" py={10}>
+      <Container maxW={"6xl"} py={[5, 10]}>
+        <Heading textAlign={"center"} as="h1" py={10}>
           Privacy Policy
         </Heading>
         <Box>

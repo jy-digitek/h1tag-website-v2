@@ -13,11 +13,8 @@ import { H1TagsCourseGraphic } from "../../../components/DATA";
 
 export default function ChooseGraphicDesign() {
   return (
-    <Container maxW={"full"} px={20} py={10}>
-      <SectionTitle
-        children="Why Choose H1 Tags for Graphic Design Course?"
-        py={10}
-      />
+    <Container maxW={"full"} px={[5, 20]} py={10}>
+      <SectionTitle children="Why Choose H1 Tags for Graphic Design Course?" />
       <Box pb={5}>
         H1 Tags is known for guiding its students to have a better future, as it
         assists them in career advising, preparing for interviews, and providing

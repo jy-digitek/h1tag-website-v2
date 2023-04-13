@@ -6,6 +6,8 @@ import {
   SimpleGrid,
   Flex,
   Center,
+  Show,
+  Hide,
 } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/GlobalButton";
@@ -14,8 +16,12 @@ import "react-web-tabs/dist/react-web-tabs.css";
 import Styles from "../../../styles/Tabs.module.css";
 import { BasicCourseData, AdvanceCourseData } from "../../../components/DATA";
 import { FcNext } from "react-icons/fc";
+import ReturnFocus from "../../../components/Modal";
+import ContactForm from "../../../components/contactform";
+import React from "react";
 
 export default function TabsCourse() {
+  const [openModal, openModalSet] = React.useState(false);
   return (
     <Container maxW={"6xl"} py={10}>
       <SectionTitle
@@ -31,148 +37,327 @@ export default function TabsCourse() {
         to comprehend all areas fully. Skilled educators design our courses to
         satisfy the needs of all students.
       </Box>
-      <Text textAlign="center" fontWeight={"bold"}>
+      <Text textAlign="center" fontWeight={"bold"} fontSize={22} mt={5}>
         Learn the most demanding career skill, and secure your future
       </Text>
       <Center my={5}>
-        <GlobalButton
+        {/* <GlobalButton
           rounded={"full"}
           color={"white"}
           label={"Enroll Now"}
           background={"#3950a1"}
           _hover={{ background: "#101C32" }}
+        /> */}
+        <ReturnFocus
+          btnText={`Get Brochure`}
+          children={<ContactForm />}
+          openModalSet={openModalSet}
+          rounded={"full"}
+          color={"white"}
+          label={"Enroll Now"}
+          background={"#3950a1"}
+          _hover={{ background: "#101C32" }}
+          px={10}
+          mb={[10]}
         />
       </Center>
+      <Show above="md">
+        <Tabs
+          defaultTab="one"
+          onChange={(tabId) => {
+            console.log(tabId);
+          }}
+          className={Styles.tabsContainer}
+          vertical
+          background={"blue"}
+        >
+          <TabList>
+            <Tab tabFor="one">Basic Course</Tab>
+            <Tab tabFor="two">Advance Course</Tab>
+          </TabList>
+          <TabPanel tabId="one">
+            <Box>
+              <SectionTitle
+                children={"Basic Course"}
+                desc="Module Info & Overview"
+                mb={5}
+              />
+              <Text as="p" mb={5}>
+                Our basic Graphic Design Course introduces students to interface
+                design, visual culture, image design, communication and media
+                theory, typography, etc.
+              </Text>
+              <Text fontWeight={"bold"} py={3}>
+                Duration: 3 Months
+              </Text>
+              <SimpleGrid columns={2}>
+                {BasicCourseData.map((item, i) => {
+                  return (
+                    <Flex
+                      key={i}
+                      alignItems={"center"}
+                      boxShadow={"sm"}
+                      py={2}
+                      px={[5]}
+                      cursor={"pointer"}
+                      sx={{
+                        transition: ".5s",
+                        ":hover": { backgroundColor: "tomato", color: "#fff" },
+                      }}
+                    >
+                      <Box
+                        rounded={"full"}
+                        boxSize={10}
+                        backgroundColor={"gray.200"}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        marginRight={4}
+                      >
+                        <FcNext />
+                      </Box>
+                      <Text>{item.level}</Text>
+                    </Flex>
+                  );
+                })}
+              </SimpleGrid>
+              <Center>
+                {/* <GlobalButton
+                label={"Download Brochure"}
+                maxW="100%"
+                background="#3950a1"
+                _hover={{ background: "#101C32" }}
+                sx={{ mt: 8, mb: 4 }}
+              /> */}
+                <ReturnFocus
+                  btnText={`Get Brochure`}
+                  children={<ContactForm />}
+                  openModalSet={openModalSet}
+                  rounded={"full"}
+                  color={"white"}
+                  label={"Download Brochure"}
+                  background={"#3950a1"}
+                  _hover={{ background: "#101C32" }}
+                  px={10}
+                  sx={{ mt: 8, mb: 4 }}
+                />
+              </Center>
+            </Box>
+          </TabPanel>
+          <TabPanel tabId="two">
+            <Box>
+              <SectionTitle
+                children={"Advance Course"}
+                desc="Module Info & Overview"
+                mb={5}
+              />
+              <Text as="p" mb={5}>
+                Our advanced Graphic Design Course combines design ideas, tools
+                and software, typography, digital illustration, digital imaging,
+                page layout, and composition processes, emphasizing the design
+                process from conception to production.
+              </Text>
+              <Text fontWeight={"bold"} py={3}>
+                Duration: 4 Months
+              </Text>
+              <SimpleGrid columns={2}>
+                {AdvanceCourseData.map((item, i) => {
+                  return (
+                    <Flex
+                      key={i}
+                      alignItems={"center"}
+                      boxShadow={"sm"}
+                      py={2}
+                      px={[5]}
+                      cursor={"pointer"}
+                      sx={{
+                        transition: ".5s",
+                        ":hover": { backgroundColor: "tomato", color: "#fff" },
+                      }}
+                    >
+                      <Box
+                        rounded={"full"}
+                        boxSize={10}
+                        backgroundColor={"gray.200"}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        marginRight={4}
+                      >
+                        <FcNext />
+                      </Box>
+                      <Text>{item.level}</Text>
+                    </Flex>
+                  );
+                })}
+              </SimpleGrid>
+              <Center>
+                <ReturnFocus
+                  btnText={`Get Brochure`}
+                  children={<ContactForm />}
+                  openModalSet={openModalSet}
+                  rounded={"full"}
+                  color={"white"}
+                  label={"Download Brochure"}
+                  background={"#3950a1"}
+                  _hover={{ background: "#101C32" }}
+                  px={10}
+                  sx={{ mt: 8, mb: 4 }}
+                />
+              </Center>
+            </Box>
+          </TabPanel>
+        </Tabs>
+      </Show>
 
-      <Tabs
-        defaultTab="one"
-        onChange={(tabId) => {
-          console.log(tabId);
-        }}
-        className={Styles.tabsContainer}
-        vertical
-        background={"blue"}
-      >
-        <TabList>
-          <Tab tabFor="one">Basic Course</Tab>
-          <Tab tabFor="two">Advance Course</Tab>
-        </TabList>
-        <TabPanel tabId="one">
-          <Box>
-            <SectionTitle
-              children={"Basic Course"}
-              desc="Module Info & Overview"
-              mb={5}
-            />
-            <Text as="p" mb={5}>
-              Our basic Graphic Design Course introduces students to interface
-              design, visual culture, image design, communication and media
-              theory, typography, etc.
-            </Text>
-            <Text fontWeight={"bold"} py={3}>
-              Duration: 3 Months
-            </Text>
-            <SimpleGrid columns={2}>
-              {BasicCourseData.map((item, i) => {
-                return (
-                  <Flex
-                    key={i}
-                    alignItems={"center"}
-                    boxShadow={"sm"}
-                    py={2}
-                    px={[5]}
-                    cursor={"pointer"}
-                    sx={{
-                      transition: ".5s",
-                      ":hover": { backgroundColor: "tomato", color: "#fff" },
-                    }}
-                  >
-                    <Box
-                      rounded={"full"}
-                      boxSize={10}
-                      backgroundColor={"gray.200"}
-                      display={"flex"}
+      <Show below="md">
+        <Tabs
+          defaultTab="one"
+          onChange={(tabId) => {
+            console.log(tabId);
+          }}
+          className={Styles.tabsContainer}
+          Horizontal
+          background={"blue"}
+        >
+          <TabList>
+            <Tab tabFor="one">Basic Course</Tab>
+            <Tab tabFor="two">Advance Course</Tab>
+          </TabList>
+          <TabPanel tabId="one">
+            <Box>
+              <SectionTitle
+                children={"Basic Course"}
+                desc="Module Info & Overview"
+                mb={5}
+              />
+              <Text as="p" mb={5}>
+                Our basic Graphic Design Course introduces students to interface
+                design, visual culture, image design, communication and media
+                theory, typography, etc.
+              </Text>
+              <Text fontWeight={"bold"} py={3}>
+                Duration: 3 Months
+              </Text>
+              <SimpleGrid columns={[1, 2]}>
+                {BasicCourseData.map((item, i) => {
+                  return (
+                    <Flex
+                      key={i}
                       alignItems={"center"}
-                      justifyContent={"center"}
-                      marginRight={4}
+                      boxShadow={"sm"}
+                      py={2}
+                      px={[5]}
+                      cursor={"pointer"}
+                      sx={{
+                        transition: ".5s",
+                        ":hover": { backgroundColor: "tomato", color: "#fff" },
+                      }}
                     >
-                      <FcNext />
-                    </Box>
-                    <Text>{item.level}</Text>
-                  </Flex>
-                );
-              })}
-            </SimpleGrid>
-            <Center>
-              <GlobalButton
+                      <Box
+                        rounded={"full"}
+                        boxSize={10}
+                        backgroundColor={"gray.200"}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        marginRight={4}
+                      >
+                        <FcNext />
+                      </Box>
+                      <Text>{item.level}</Text>
+                    </Flex>
+                  );
+                })}
+              </SimpleGrid>
+              <Center>
+                {/* <GlobalButton
                 label={"Download Brochure"}
                 maxW="100%"
                 background="#3950a1"
                 _hover={{ background: "#101C32" }}
                 sx={{ mt: 8, mb: 4 }}
+              /> */}
+                <ReturnFocus
+                  btnText={`Get Brochure`}
+                  children={<ContactForm />}
+                  openModalSet={openModalSet}
+                  rounded={"full"}
+                  color={"white"}
+                  label={"Download Brochure"}
+                  background={"#3950a1"}
+                  _hover={{ background: "#101C32" }}
+                  px={10}
+                  sx={{ mt: 8, mb: 4 }}
+                />
+              </Center>
+            </Box>
+          </TabPanel>
+          <TabPanel tabId="two">
+            <Box>
+              <SectionTitle
+                children={"Advance Course"}
+                desc="Module Info & Overview"
+                mb={5}
               />
-            </Center>
-          </Box>
-        </TabPanel>
-        <TabPanel tabId="two">
-          <Box>
-            <SectionTitle
-              children={"Advance Course"}
-              desc="Module Info & Overview"
-              mb={5}
-            />
-            <Text as="p" mb={5}>
-              Our advanced Graphic Design Course combines design ideas, tools
-              and software, typography, digital illustration, digital imaging,
-              page layout, and composition processes, emphasizing the design
-              process from conception to production.
-            </Text>
-            <Text fontWeight={"bold"} py={3}>
-              Duration: 4 Months
-            </Text>
-            <SimpleGrid columns={2}>
-              {AdvanceCourseData.map((item, i) => {
-                return (
-                  <Flex
-                    key={i}
-                    alignItems={"center"}
-                    boxShadow={"sm"}
-                    py={2}
-                    px={[5]}
-                    cursor={"pointer"}
-                    sx={{
-                      transition: ".5s",
-                      ":hover": { backgroundColor: "tomato", color: "#fff" },
-                    }}
-                  >
-                    <Box
-                      rounded={"full"}
-                      boxSize={10}
-                      backgroundColor={"gray.200"}
-                      display={"flex"}
+              <Text as="p" mb={5}>
+                Our advanced Graphic Design Course combines design ideas, tools
+                and software, typography, digital illustration, digital imaging,
+                page layout, and composition processes, emphasizing the design
+                process from conception to production.
+              </Text>
+              <Text fontWeight={"bold"} py={3}>
+                Duration: 4 Months
+              </Text>
+              <SimpleGrid columns={[1, 2]}>
+                {AdvanceCourseData.map((item, i) => {
+                  return (
+                    <Flex
+                      key={i}
                       alignItems={"center"}
-                      justifyContent={"center"}
-                      marginRight={4}
+                      boxShadow={"sm"}
+                      py={2}
+                      px={[5]}
+                      cursor={"pointer"}
+                      sx={{
+                        transition: ".5s",
+                        ":hover": { backgroundColor: "tomato", color: "#fff" },
+                      }}
                     >
-                      <FcNext />
-                    </Box>
-                    <Text>{item.level}</Text>
-                  </Flex>
-                );
-              })}
-            </SimpleGrid>
-            <Center>
-              <GlobalButton
-                label={"Download Brochure"}
-                maxW="100%"
-                background="#3950a1"
-                _hover={{ background: "#101C32" }}
-                sx={{ mt: 8, mb: 4 }}
-              />
-            </Center>
-          </Box>
-        </TabPanel>
-      </Tabs>
+                      <Box
+                        rounded={"full"}
+                        boxSize={10}
+                        backgroundColor={"gray.200"}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        marginRight={4}
+                      >
+                        <FcNext />
+                      </Box>
+                      <Text>{item.level}</Text>
+                    </Flex>
+                  );
+                })}
+              </SimpleGrid>
+              <Center>
+                <ReturnFocus
+                  btnText={`Get Brochure`}
+                  children={<ContactForm />}
+                  openModalSet={openModalSet}
+                  rounded={"full"}
+                  color={"white"}
+                  label={"Download Brochure"}
+                  background={"#3950a1"}
+                  _hover={{ background: "#101C32" }}
+                  px={10}
+                  sx={{ mt: 8, mb: 4 }}
+                />
+              </Center>
+            </Box>
+          </TabPanel>
+        </Tabs>
+      </Show>
     </Container>
   );
 }

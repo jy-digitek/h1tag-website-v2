@@ -35,7 +35,7 @@ export default function QuickContact() {
           <Card align="center" sx={{ background: "#fff", py: [2, 4] }}>
             <CardBody as="div" display={"flex"}>
               <EmailIcon fontSize={"25px"} mr={[3]} />{" "}
-              <Text>wsy@ysuedcusdc.scsdc</Text>
+              <Text>info@h1tags.com</Text>
             </CardBody>
           </Card>
         </Box>
