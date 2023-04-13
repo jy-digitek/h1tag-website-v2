@@ -52,8 +52,20 @@ const About = () => {
         {/* image end here  */}
 
         {/* digital marketing Start */}
-        <Box textAlign={"center"} mt={10}>
-          <SectionTitle color="red">
+        <Box
+          textAlign={"center"}
+          mt={10}
+          backgroundImage={
+            "linear - gradient(-100deg, rgba(255, 20, 0, 0.2), rgba(255, 20, 0, 0.7) 95 %,rgba(255, 20, 0, 0.1))"
+          }
+          borderRadius={"1em 0 1em 0"}
+        >
+          <SectionTitle
+            backgroundImage={
+              "linear-gradient( -100deg,rgba(255, 20, 0, 0.2), rgba(255, 20, 0, 0.7) 95 %,rgba(255, 20, 0, 0.1))"
+            }
+            borderRadius={" 1em 0 1em 0"}
+          >
             Best Digital Marketing Course in Delhi
           </SectionTitle>
 
@@ -76,7 +88,7 @@ const About = () => {
         <SimpleGrid
           columns={[1, 1]}
           sx={{ background: "url(/bg-img.jpeg)" }}
-          px={60}
+          px={[5, 60]}
           py={10}
         >
           <Box px={[0, 10]}>
