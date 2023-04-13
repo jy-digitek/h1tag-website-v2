@@ -53,7 +53,9 @@ const About = () => {
 
         {/* digital marketing Start */}
         <Box textAlign={"center"} mt={10}>
-          <SectionTitle>Best Digital Marketing Course in Delhi</SectionTitle>
+          <SectionTitle color="red">
+            Best Digital Marketing Course in Delhi
+          </SectionTitle>
 
           <Box sx={{ padding: 10 }}>
             <strong>H1 Tags:</strong> A School of Digital Marketing provides the
@@ -72,8 +74,9 @@ const About = () => {
 
         {/* Our Vision Start */}
         <SimpleGrid
-          columns={[1, 2]}
+          columns={[1, 1]}
           sx={{ background: "url(/bg-img.jpeg)" }}
+          px={60}
           py={10}
         >
           <Box px={[0, 10]}>
@@ -106,9 +109,6 @@ const About = () => {
               </Box>
             </Box>
           </Box>
-          <Box>
-            {/* <Image src={"/test/ourmission.jpeg"} minH={"330px"} /> */}
-          </Box>
         </SimpleGrid>
 
         {/* our vision end */}
@@ -116,7 +116,7 @@ const About = () => {
         {/* Track record start */}
         <Box textAlign={"center"} my={10}>
           <SectionTitle mb={10}>Our Track Record…</SectionTitle>
-          <Text>
+          <Text px={20}>
             We are a Digital Marketing Agency-based Institute that has strong
             partnerships with several IT companies. Well-reputed and known
             organizations actively seek out our students, as we provide on-site
@@ -128,7 +128,7 @@ const About = () => {
               // boxShadow={"10px 10px 5px 12px lightblue"}
               bg={"radial-gradient(#1fe4f5, #3fbafe)"}
               borderRadius={10}
-              color={"#fff"}
+              color={"black"}
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 1000+
@@ -139,7 +139,7 @@ const About = () => {
               p={10} //boxShadow={"10px 10px 5px 12px red"}
               bg={"radial-gradient(#fbc1cc, #fa99b2)"}
               borderRadius={10}
-              color="#fff"
+              color="black"
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 {" "}
@@ -151,7 +151,7 @@ const About = () => {
               p={10} //</SimpleGrid>boxShadow={"10px 10px 5px 12px lightblue"}
               bg={"radial-gradient(#76b2fe, #b69efe)"}
               borderRadius={10}
-              color={"#fff"}
+              color={"black"}
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 700+
@@ -163,7 +163,7 @@ const About = () => {
               //boxShadow={"10px 10px 5px 12px lightblue"}
               bg={"radial-gradient(#60efbc, #58d5c9)"}
               borderRadius={10}
-              color={"#fff"}
+              color={"black"}
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 {" "}
@@ -396,8 +396,7 @@ const About = () => {
                     <GlobalButton
                       rounded={"full"}
                       color={"white"}
-                      mb={10}
-                      label={" Show me more"}
+                      label={"Get started today"}
                       background="#3950a1"
                       _hover={{ background: "#101C32" }}
                     />
@@ -479,14 +478,14 @@ const About = () => {
                 >
                   <Stack maxW={"2xl"} align={"center"} spacing={6}>
                     <SectionTitle py={5} color={"#fff"}>
-                      Why Choose us?
+                      Your career matters to us
                     </SectionTitle>
                   </Stack>
                   <Stack direction={"row"} gap={10}>
                     <GlobalButton
                       rounded={"full"}
                       color={"white"}
-                      label={" Show me more"}
+                      label={"Get started today"}
                       background="#3950a1"
                       _hover={{ background: "#101C32" }}
                     />
