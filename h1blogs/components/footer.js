@@ -163,23 +163,27 @@ export default function Footer() {
             {/* <Text pt={3}>
             
           </Text> */}
-            <Flex pt={3}>
-              <Box>
-                <SlPhone fontSize={"25px"} />
-              </Box>
-              <Box>
-                <Link href="tel:+91 77700-07683">+91 77700-07683</Link>
-              </Box>
-            </Flex>
 
-            <Flex pt={3}>
-              <Box>
-                <EmailIcon fontSize={"25px"} />
-              </Box>
-              <Box>
-                <Text ml={2}>info@h1tags.com</Text>
-              </Box>
-            </Flex>
+            <Link href="tel:+91 77700-07683">
+              <Flex pt={3}>
+                <Box>
+                  <SlPhone fontSize={"25px"} />
+                </Box>
+                <Box>+91 77700-07683</Box>
+              </Flex>
+            </Link>
+
+            <Link href={"mailto:info@h1tags.com"}>
+              <Flex pt={3}>
+                <Box>
+                  <EmailIcon fontSize={"25px"} />
+                </Box>
+                <Box>
+                  <Text ml={2}>info@h1tags.com</Text>
+                </Box>
+              </Flex>
+            </Link>
+
             <Heading as={"h2"} fontSize="20px" pt={4}>
               Subscribe & Follow us :
             </Heading>
