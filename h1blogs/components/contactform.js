@@ -35,7 +35,7 @@ const submitHandle = (values) => {
   console.log(values);
   axios({
     method: "post",
-    url: "http://localhost:5000/api/vi/user/gmail",
+    url: "/mail.php",
     data: {
       values,
     },
@@ -106,7 +106,7 @@ export default function ContactForm() {
               <InputControl name="phone" label="Enter Phone" />
 
               <SelectControl
-                name="place"
+                name="branch"
                 selectProps={{ placeholder: "Select Branch" }}
                 mt={5}
               >

@@ -25,6 +25,9 @@ import ReturnFocus from "./Modal";
 import React from "react";
 import Link from "next/link";
 import ContactForm from "./contactform";
+
+import VideoModal from "./videoModal";
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const [openModal, openModalSet] = React.useState(false);
@@ -71,6 +74,20 @@ export default function WithSubnavigation() {
               <Image src={"/h1logo.png"} w={"162px"} />
             </Link>
           </Text>
+          <Text
+            textAlign={useBreakpointValue({
+              base: "center",
+              md: "center",
+              lg: "center",
+            })}
+            color={useColorModeValue("gray.800", "white")}
+            mx={60}
+            p={2}
+            py={"auto"}
+          >
+            {/* <FcStart fontSize={60} /> */}
+            <VideoModal />
+          </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -83,15 +100,6 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          {/* <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}
-          >
-            Get Brochure
-          </Button> */}
           <ReturnFocus
             btnText={`Get Brochure`}
             children={<ContactForm />}
@@ -100,20 +108,6 @@ export default function WithSubnavigation() {
             label="Get Brochure"
             color="white"
           />
-          {/* <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"#101C32"}
-            href={"#"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Get Brochure
-          </Button> */}
         </Stack>
       </Flex>
 
