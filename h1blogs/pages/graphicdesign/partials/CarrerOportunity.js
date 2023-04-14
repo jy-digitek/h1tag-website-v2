@@ -33,7 +33,7 @@ export default function CarrerOportunity() {
             <CardHeader>
               <Box
                 boxSize={20}
-                background={"gray"}
+                background={"#687bc0"}
                 rounded={"full"}
                 display={"flex"}
                 alignItems={"center"}
@@ -70,7 +70,7 @@ export default function CarrerOportunity() {
             <CardHeader>
               <Box
                 boxSize={20}
-                background={"gray"}
+                background={"#687bc0"}
                 rounded={"full"}
                 display={"flex"}
                 alignItems={"center"}
@@ -103,12 +103,13 @@ export default function CarrerOportunity() {
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",
             }}
+            minH={"255px"}
           >
             <CardHeader>
               {" "}
               <Box
                 boxSize={20}
-                background={"gray"}
+                background={"#687bc0"}
                 rounded={"full"}
                 display={"flex"}
                 alignItems={"center"}

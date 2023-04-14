@@ -9,11 +9,10 @@ export default function PerSueGraphicDesign() {
         py={10}
       />
       <SimpleGrid columns={[1, 3]} gap={3} mb={10}>
-        <Box>
+        <Box color={"black"} fontWeight={"bold"}>
           <Card
             py={[5, 10]}
             bg={"radial-gradient(#1fe4f5, #3fbafe)"}
-            color={"#fff"}
             minH={["auto", 200]}
           >
             <CardBody>
@@ -22,11 +21,10 @@ export default function PerSueGraphicDesign() {
             </CardBody>
           </Card>
         </Box>
-        <Box>
+        <Box color={"black"} fontWeight={"bold"}>
           <Card
             py={[5, 10]}
             bg={"radial-gradient(#fbc1cc, #fa99b2)"}
-            color={"#fff"}
             minH={["auto", 200]}
           >
             <CardBody>
@@ -35,11 +33,10 @@ export default function PerSueGraphicDesign() {
             </CardBody>
           </Card>
         </Box>
-        <Box>
+        <Box color={"black"} fontWeight={"bold"}>
           <Card
             py={[5, 10]}
             bg={"radial-gradient(#76b2fe, #b69efe)"}
-            color={"#fff"}
             minH={["auto", 200]}
           >
             <CardBody>

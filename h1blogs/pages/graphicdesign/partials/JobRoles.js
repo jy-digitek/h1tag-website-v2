@@ -47,14 +47,14 @@ export default function JobRoles() {
   );
   return (
     <Container maxW={"full"}>
-      <SectionTitle children="Job Roles After Graphic Design Course" />
+      <SectionTitle py={10} children="Job Roles After Graphic Design Course" />
 
       <SimpleGrid
         columns={[1, null, 3]}
         spacing={6}
         mx={[5, 10]}
         px={[5, 10]}
-        py={[5, 10]}
+        //py={[5, 10]}
       >
         {JobRolesData.map((item, key) => (
           <Box key={key}>
