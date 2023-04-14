@@ -1,3 +1,4 @@
+import React from "react";
 import Layout from "../../components/layout";
 import {
   Container,
@@ -30,7 +31,10 @@ import { VscArrowCircleRight } from "react-icons/vsc";
 import { SectionTitle } from "../../components/SectionTitle";
 import { MdCheckCircle } from "react-icons/md";
 import { GlobalButton } from "../../components/GlobalButton";
+import ReturnFocus from "../../components/Modal";
+import ContactForm from "../../components/contactform";
 const About = () => {
+  const [openModal, openModalSet] = React.useState(false);
   return (
     <Layout>
       <Container maxW={"full"}>
@@ -55,16 +59,21 @@ const About = () => {
         <Box
           textAlign={"center"}
           mt={10}
-          backgroundImage={
-            "linear - gradient(-100deg, rgba(255, 20, 0, 0.2), rgba(255, 20, 0, 0.7) 95 %,rgba(255, 20, 0, 0.1))"
+          background={
+            "linear - gradient(-100deg,rgba(255, 20, 0, 0.2),rgba(255, 20, 0, 0.7) 95%,rgba(255, 20, 0, 0.1))"
           }
           borderRadius={"1em 0 1em 0"}
         >
           <SectionTitle
-            backgroundImage={
-              "linear-gradient( -100deg,rgba(255, 20, 0, 0.2), rgba(255, 20, 0, 0.7) 95 %,rgba(255, 20, 0, 0.1))"
-            }
-            borderRadius={" 1em 0 1em 0"}
+            // background={
+            //   "linear - gradient(-100deg,rgba(255, 20, 0, 0.2),rgba(255, 20, 0, 0.7) 95%,rgba(255, 20, 0, 0.1))"
+            // }
+            // borderRadius={"1em 0 1em 0"}
+            background={"linear-gradient(45deg, #E91E63, #3F51B5)"}
+            mx={[0, 60]}
+            borderRadius={"0 2.5rem  0 2.5rem "}
+            color={"white"}
+            pb={2}
           >
             Best Digital Marketing Course in Delhi
           </SectionTitle>
@@ -92,21 +101,8 @@ const About = () => {
           py={10}
         >
           <Box px={[0, 10]}>
-            {/* <Heading textAlign={"center"} py={5}>
-              Our Vision
-            </Heading>
-            <Text fontSize={"18px"} lineHeight={"26px"}>
-              We have the vision to expand our Institute's branches all around
-              India so we can train the student to acquire the top Digital
-              Marketing skill which is essential for building their future.
-              Considering the demands of the professional world, we aim to
-              provide the Best Digital Marketing Course with practical and
-              theoretical knowledge. Digital Marketing is a booming career in
-              India, which is expected to provide significant growth to the IT
-              sectors.
-            </Text> */}
             <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
-              <SectionTitle mb={10}> Our Vision</SectionTitle>
+              <SectionTitle mb={10}>Our Vision</SectionTitle>
               <Box as="p" sx={{ mb: 2 }}>
                 We have the vision to expand our Institute's branches all around
                 India so we can train the student to acquire the top Digital
@@ -128,13 +124,13 @@ const About = () => {
         {/* Track record start */}
         <Box textAlign={"center"} my={10}>
           <SectionTitle mb={10}>Our Track Record…</SectionTitle>
-          <Text px={20}>
+          <Text px={20} color={"black"} fontSize={20}>
             We are a Digital Marketing Agency-based Institute that has strong
             partnerships with several IT companies. Well-reputed and known
             organizations actively seek out our students, as we provide on-site
             training.
           </Text>
-          <SimpleGrid columns={[1, 4]} py={20} spacing={6} px={10}>
+          <SimpleGrid columns={[1, 4]} py={10} spacing={6} px={10}>
             <Box
               p={10}
               // boxShadow={"10px 10px 5px 12px lightblue"}
@@ -184,6 +180,17 @@ const About = () => {
               Salary Hike
             </Box>
           </SimpleGrid>
+          <Box>
+            <ReturnFocus
+              btnText={"Book Counselling Today"}
+              rounded={"full"}
+              children={<ContactForm />}
+              openModalSet={openModalSet}
+              label={"Book Counselling Today"}
+              color="white"
+              px={5}
+            />
+          </Box>
         </Box>
       </Container>
       {/* Track record end */}
@@ -208,10 +215,8 @@ const About = () => {
               <Image src={"/Yuvraj_singh.png"} w={"100%"} />
             </Box>
             <Box className={styles.about}>
-              <SectionTitle mb={10} fontSize={10}>
-                MESSAGE FROM DIRECTOR
-              </SectionTitle>
-              <Text>
+              <SectionTitle fontSize={10}>MESSAGE FROM DIRECTOR</SectionTitle>
+              <Text pT={10} pb={5}>
                 Our sole and complete mission is to teach the value of Digital
                 Marketing by utilizing and creating a viable digital career path
                 for you. We assist you in providing an understanding of the
@@ -227,7 +232,15 @@ const About = () => {
               >
                 YUVRAJ SINGH
               </Heading>
-              <Highlight query="Director" styles={{ color: "red" }}>
+              <Highlight
+                query="Director"
+                styles={{
+                  color: "#010b2e",
+                  fontWeight: "bold",
+                  fontSize: "20px",
+                }}
+                py={7}
+              >
                 Director
               </Highlight>
               <Text>
@@ -260,7 +273,15 @@ const About = () => {
           <SimpleGrid columns={[1, 2]} gap={0} my={10} alignItems={"center"}>
             <Box className={styles.about}>
               <Heading fontSize={28}>AKSHAY</Heading>
-              <Highlight query="Co-Founder" styles={{ color: "red" }}>
+              <Highlight
+                query="Co-Founder"
+                styles={{
+                  color: "#010b2e",
+                  fontWeight: "bold",
+                  fontSize: "20px",
+                }}
+                py={7}
+              >
                 Co-Founder
               </Highlight>
 
@@ -339,7 +360,7 @@ const About = () => {
                   <GlobalButton
                     rounded={"full"}
                     color={"white"}
-                    label={" Show me more"}
+                    label={" Get started today"}
                     background="#3950a1"
                     _hover={{ background: "#101C32" }}
                   />

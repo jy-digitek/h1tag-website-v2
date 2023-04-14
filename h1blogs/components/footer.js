@@ -32,11 +32,18 @@ export default function Footer() {
         label={"Get instant Career Counselling"}
         color="white"
         mt={10}
+        backgroundImage={
+          "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"
+        }
+        backgroundPosition={"center"}
+        backgroundRepeat={"no-repeat"}
+        backgroundSize={"cover"}
       />
 
       <Container
         maxW="full"
-        background={"#101C32 url(/world-map.png)"}
+        // background={"#101C32 url(/world-map.png)"}
+        background={"#0b285c url(/world-map.png)"}
         backgroundSize={"contain"}
         backgroundPosition={"center center"}
         backgroundRepeat={"no-repeat"}
@@ -161,7 +168,7 @@ export default function Footer() {
                 <SlPhone fontSize={"25px"} />
               </Box>
               <Box>
-                <Text ml={2}>+91 77700-07683</Text>
+                <Link href="tel:+91 77700-07683">+91 77700-07683</Link>
               </Box>
             </Flex>
 
@@ -178,16 +185,24 @@ export default function Footer() {
             </Heading>
             <Flex pt={3}>
               <Box mr={5}>
-                <SiYoutube fontSize={"20px"} />
+                <Link href={"https://www.youtube.com/@h1tags"}>
+                  <SiYoutube fontSize={"20px"} />
+                </Link>
               </Box>
               <Box mr={5}>
-                <SiInstagram fontSize={"20px"} />
+                <Link href={"https://www.instagram.com/h1tags/"}>
+                  <SiInstagram fontSize={"20px"} />
+                </Link>
               </Box>
               <Box mr={5}>
-                <SiFacebook fontSize={"20px"} />
+                <Link href={"https://www.facebook.com/h1tags/"}>
+                  <SiFacebook fontSize={"20px"} />
+                </Link>
               </Box>
               <Box mr={5}>
-                <SiLinkedin fontSize={"20px"} />
+                <Link href={"https://www.linkedin.com/company/h1tags/"}>
+                  <SiLinkedin fontSize={"20px"} />
+                </Link>
               </Box>
             </Flex>
           </Box>

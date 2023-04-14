@@ -43,6 +43,7 @@ const CTA = ({ title, label, ...rest }) => {
               openModalSet={openModalSet}
               label={label}
               color="white"
+              rounded="full"
             />
           </Fade>
           <Stack direction={"row"} gap={10}>

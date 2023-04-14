@@ -68,18 +68,28 @@ export default function ContactForm() {
   return (
     <Flex
       align={"center"}
-      textAlign={"center"}
+      // textAlign={"center"}
       justify="center"
       // h="100vh"
       style={{ width: "100%" }}
       width={"100%"}
     >
       <Box sx={{ background: "#fff" }} rounded="md">
-        <Text fontSize={["1.5rem", "2rem"]} fontWeight={"bold"}>
+        <Text
+          fontSize={["1.5rem", "2rem"]}
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
           Take a free session today!!
         </Text>
 
-        <Text fontSize={["0.9rem", "1rem"]} p={2} mb={2} fontWeight="bold">
+        <Text
+          fontSize={["0.9rem", "1rem"]}
+          p={2}
+          mb={2}
+          fontWeight="bold"
+          textAlign={"center"}
+        >
           Speak To Our Specialist - +91 77700-07683
         </Text>
 
@@ -97,7 +107,7 @@ export default function ContactForm() {
 
               <SelectControl
                 name="place"
-                selectProps={{ placeholder: "Select Place" }}
+                selectProps={{ placeholder: "Select Branch" }}
                 mt={5}
               >
                 <option value="Neta ji subhas palace">
@@ -107,16 +117,12 @@ export default function ContactForm() {
               </SelectControl>
               <CheckboxSingleControl name="employed" my={5}>
                 I agree to the h1tags{" "}
-                <Link href="/" style={{ color: "#ffb4b3", fontWeight: "bold" }}>
-                  Terms of Use
-                </Link>
-                and
-                <Link href="/" style={{ color: "#ffb4b3", fontWeight: "bold" }}>
+                <Link href="/" style={{ color: "#06113a" }}>
                   Privacy Policy
                 </Link>
               </CheckboxSingleControl>
 
-              <SubmitButton bg={"#b52828"} w={"full"}>
+              <SubmitButton bg={"#06113a"} w={"full"} color={"white"}>
                 Submit
               </SubmitButton>
             </Box>

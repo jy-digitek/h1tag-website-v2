@@ -49,11 +49,11 @@ export default function ReturnFocus({
           <ModalCloseButton />
           <ModalBody>{children}</ModalBody>
 
-          <ModalFooter>
+          {/* <ModalFooter>
             <Button variant="outline" mr={3} onClick={onClose}>
               Close
             </Button>
-          </ModalFooter>
+          </ModalFooter> */}
         </ModalContent>
       </Modal>
     </>

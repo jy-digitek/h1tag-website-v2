@@ -9,7 +9,6 @@ import {
   StackDivider,
   Icon,
   Box,
-  Link,
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -19,6 +18,7 @@ import {
   IoSearchSharp,
 } from "react-icons/io5";
 //   import { ReactElement } from 'react';
+import Link from "next/link";
 
 const Feature = ({ text, icon, iconBg }) => {
   return (
@@ -45,6 +45,7 @@ export default function ListCardImg({
   item_2,
   item_3,
   item_4,
+  href,
 }) {
   return (
     <Container maxW={"5xl"} py={12}>
@@ -107,7 +108,7 @@ export default function ListCardImg({
             )}
           </Stack>
           <Box sx={{ mb: 3, mx: 3 }}>
-            <Link href="#!">
+            <Link href={href}>
               <Button bg={"yellow.300"} width={"full"}>
                 Learn More
               </Button>

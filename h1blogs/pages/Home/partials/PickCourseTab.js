@@ -48,7 +48,7 @@ const PickCourseTab = () => {
               }}
             >
               <Tab
-                _selected={{ color: "white", bg: "#3950a1" }}
+                _selected={{ color: "white", bg: "#04113c" }}
                 aria-selected={true}
               >
                 <Box sx={{ fontWeight: "bold" }} fontSize={[10, 20]}>
@@ -56,7 +56,7 @@ const PickCourseTab = () => {
                 </Box>
               </Tab>
               <Tab
-                _selected={{ color: "white", bg: "#3950a1" }}
+                _selected={{ color: "white", bg: "#04113c" }}
                 sx={
                   {
                     // backgroundColor: "#3950a1",
@@ -82,6 +82,7 @@ const PickCourseTab = () => {
                       item_3={`Customized Course`}
                       item_4={`Master Course`}
                       btnText={"Learn More"}
+                      href={"/digitalmarketing"}
                     />
                   </CardBody>
                 </Card>
@@ -95,6 +96,7 @@ const PickCourseTab = () => {
                       item_1={`Foundation Course`}
                       item_2={`Master Course`}
                       btnText={"Learn More"}
+                      href={"/graphicdesign"}
                     />
                   </CardBody>
                 </Card>
