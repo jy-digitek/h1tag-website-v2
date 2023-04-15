@@ -30,11 +30,13 @@ export default function Footer() {
       <CTA
         title={"Struggling to Choose a Career?"}
         label={"Get instant Career Counselling"}
-        color="white"
+        color="black"
         mt={10}
         backgroundImage={
           "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"
         }
+        //background={"white"}
+        bg={"white"}
         backgroundPosition={"center"}
         backgroundRepeat={"no-repeat"}
         backgroundSize={"cover"}

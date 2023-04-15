@@ -4,7 +4,7 @@ import { GlobalButton } from "./GlobalButton";
 import { Fade } from "react-awesome-reveal";
 import ReturnFocus from "./Modal";
 import ContactForm from "./contactform";
-const CTA = ({ title, label, ...rest }) => {
+const CTA = ({ title, label, bg, ...rest }) => {
   const [openModal, openModalSet] = React.useState(false);
   return (
     <Box
@@ -44,6 +44,7 @@ const CTA = ({ title, label, ...rest }) => {
               label={label}
               color="white"
               rounded="full"
+              bg={bg}
             />
           </Fade>
           <Stack direction={"row"} gap={10}>
