@@ -11,11 +11,13 @@ import CourseBuiltFor from "./partials/CourseBuiltFor";
 import ExperienceH1tags from "./partials/ExperienceH1tags";
 import StandsOut from "./partials/StandsOut";
 import Testimonial from "../digitalmarketing/partials/Testimonial";
+import EnrollCta from "./partials/EnrollCta";
 
 const Home = () => {
   return (
     <Layout>
       <Banner />
+      <EnrollCta />
       <TransFormingCourse />
       <PickCourseTab />
       <Benifits />

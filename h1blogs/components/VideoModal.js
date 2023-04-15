@@ -46,7 +46,7 @@ const VideoModal = () => {
               <Box
                 as="iframe"
                 overflow="hidden"
-                width="100%"
+                width="560"
                 height="450"
                 sx={{
                   aspectRatio: "16/9",
