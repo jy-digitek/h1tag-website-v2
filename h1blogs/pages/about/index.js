@@ -41,16 +41,6 @@ const About = () => {
         {/* image start here  */}
         <Box position="relative">
           <Image src={"/bg-img.jpeg"} sx={{ rounded: 25, mt: 5 }} />
-          <Heading
-            position="absolute"
-            as="h1"
-            fontSize={["30px", "150px"]}
-            color={["white", "black"]}
-            top={"30%"}
-            left={"30%"}
-          >
-            About Us
-          </Heading>
         </Box>
 
         {/* image end here  */}
@@ -69,10 +59,9 @@ const About = () => {
             //   "linear - gradient(-100deg,rgba(255, 20, 0, 0.2),rgba(255, 20, 0, 0.7) 95%,rgba(255, 20, 0, 0.1))"
             // }
             // borderRadius={"1em 0 1em 0"}
-            background={"linear-gradient(45deg, #E91E63, #3F51B5)"}
+
             mx={[0, 60]}
-            borderRadius={"0 2.5rem  0 2.5rem "}
-            color={"white"}
+            color={"black"}
             pb={2}
           >
             Best Digital Marketing Course in Delhi
@@ -212,7 +201,7 @@ const About = () => {
                 maxW: 450,
               }}
             >
-              <Image src={"/Yuvraj_singh.png"} w={"100%"} />
+              <Image src={"/Yuvraj_singh.png"} />
             </Box>
             <Box className={styles.about}>
               <SectionTitle fontSize={10}>MESSAGE FROM DIRECTOR</SectionTitle>
@@ -244,13 +233,35 @@ const About = () => {
                 Director
               </Highlight>
               <Text>
-                Mr. Yuvraj Singh, born to be an entrepreneur, began his career
-                by accomplishing many ventures like H1 TAGS, the top Digital
-                Marketing Institute in Delhi NCR with a proven track record of
-                developing and directing high-impact Digital Marketing
-                Strategies. Skilled in overseeing web strategy and development,
-                digital engagement, and consumer-facing tools. Adept in guiding
-                strategic relationships to achieve company goals.
+                Mr. Yuvraj Singh is an accomplished entrepreneur who has made a
+                name for himself in the world of digital marketing. Born with an
+                innate entrepreneurial spirit, Yuvraj started his career by
+                launching several ventures, including H1 TAGS, which is now
+                recognized as the top Digital Marketing Institute in Delhi NCR.
+                With a proven track record of developing and directing
+                high-impact digital marketing strategies, Yuvraj is an expert in
+                overseeing web strategy and development, digital engagement, and
+                consumer-facing tools. He has a deep understanding of the latest
+                trends and best practices in digital marketing and is skilled in
+                guiding strategic relationships to achieve company goals. Under
+                Yuvraj's leadership, H1 TAGS has become the go-to destination
+                for individuals and businesses looking to improve their digital
+                marketing skills. The institute offers a comprehensive
+                curriculum covering all aspects of digital marketing, including
+                SEO, PPC advertising, social media marketing, email marketing,
+                content marketing, and more. Yuvraj is highly regarded in the
+                industry for his exceptional leadership skills and his ability
+                to inspire and motivate his team. He is a strategic thinker who
+                is always looking for innovative ways to improve the performance
+                of his company and his clients' businesses. In addition to his
+                work at H1 TAGS, Yuvraj is also involved in several other
+                ventures and is a respected thought leader in the field of
+                digital marketing. He is known for his dynamic and engaging
+                speaking style and has been invited to speak at various
+                conferences and events. Outside of work, Yuvraj is a fitness
+                enthusiast who enjoys playing sports and staying active. He is a
+                true entrepreneur at heart and is constantly looking for new and
+                exciting opportunities to make a positive impact in the world.
               </Text>
             </Box>
           </SimpleGrid>
@@ -286,17 +297,34 @@ const About = () => {
               </Highlight>
 
               <Text>
-                He is very good at organizing Digital Marketing Strategies and
-                developing new and innovative SEO strategies. His planning
-                skills for digital marketing strategies, SEO (on-page and
-                off-page), and coming up with fresh, innovative ideas for SEO
-                development strategies are top-notch. He has excellent team
-                administration and teaching skills. He has excellent team
-                administration and teaching skills, and his ideas for
-                team-building exercises are fantastic. Under his guidance,
-                students gain the skills of professional Digital Marketers. His
-                mission is to provide the best knowledge possible to his
-                students.
+                Akshay is a highly skilled digital marketer with over 8 years of
+                experience in the field. He is currently working as the Vice
+                President at JY Technologies Consulting Pvt Ltd., where he
+                oversees the company's digital marketing strategies and ensures
+                that their online presence is optimized for maximum impact.
+                Apart from his role at JY Technologies, Akshay is also a
+                co-founder of a H1 Tags Digital Marketing institute where he is
+                committed to providing high-quality education and training to
+                students and professionals alike. He has developed a
+                comprehensive curriculum covering all aspects of digital
+                marketing, including SEO, PPC advertising, social media
+                marketing, email marketing, content marketing, and more. Akshay
+                is known for his exceptional teaching skills and his ability to
+                make complex concepts easy to understand. He has a passion for
+                helping others succeed in the fast-paced and ever-evolving world
+                of digital marketing. In his role as the Vice President at JY
+                Technologies, Akshay is responsible for developing and executing
+                digital marketing strategies that drive business growth. He is
+                an expert in leveraging various digital platforms and tools to
+                help companies reach their target audience and achieve their
+                marketing goals. With his extensive experience and expertise in
+                digital marketing, Akshay is a thought leader in the industry.
+                He has published articles and spoken at conferences on various
+                topics related to digital marketing, sharing his insights and
+                knowledge with others in the field. Outside of work, Akshay
+                enjoys traveling and exploring new cultures. He is a dedicated
+                professional who is committed to helping individuals and
+                businesses succeed in the dynamic world of digital marketing.
               </Text>
             </Box>
             <Box
