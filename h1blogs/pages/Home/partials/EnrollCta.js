@@ -25,8 +25,8 @@ const EnrollCta = () => {
       backgroundRepeat={"no-repeat"}
       color={"white"}
     >
-      <SimpleGrid columns={[1, 2]}>
-        <Box>
+      <SimpleGrid columns={[1, 1]}>
+        <Box py={10}>
           <SectionTitle pt={10}>
             The Best Place to Enroll for Digital Marketing Institute in Delhi
           </SectionTitle>
