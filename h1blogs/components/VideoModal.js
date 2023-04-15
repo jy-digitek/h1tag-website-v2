@@ -11,6 +11,7 @@ import {
   Button,
   Box,
   Container,
+  Image,
 } from "@chakra-ui/react";
 import { FcStart } from "react-icons/fc";
 const VideoModal = () => {
@@ -20,12 +21,15 @@ const VideoModal = () => {
     <>
       <Container maxW={"6xl"}>
         <Button
-          mt={4}
           onClick={onOpen}
           background={"white"}
           _hover={{ background: "red" }}
+          p={0}
         >
-          <FcStart fontSize={60} />
+          <Box boxSize={"40px"} background={"blue"}>
+            <Image src="/youtube-icon.jpg" />
+          </Box>
+          {/* <FcStart fontSize={60} /> */}
         </Button>
         <Modal
           finalFocusRef={finalRef}

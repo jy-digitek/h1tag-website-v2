@@ -81,9 +81,8 @@ export default function WithSubnavigation() {
               lg: "center",
             })}
             color={useColorModeValue("gray.800", "white")}
-            mx={60}
-            p={2}
-            py={"auto"}
+            mx={20}
+            py={4}
           >
             {/* <FcStart fontSize={60} /> */}
             <VideoModal />
@@ -99,6 +98,7 @@ export default function WithSubnavigation() {
           justify={"flex-end"}
           direction={"row"}
           spacing={6}
+          mr={10}
         >
           <ReturnFocus
             btnText={`Get Brochure`}
