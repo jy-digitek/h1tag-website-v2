@@ -16,7 +16,7 @@ import EnrollCta from "./partials/EnrollCta";
 const Home = () => {
   return (
     <Layout>
-      <Banner />
+      {/* <Banner /> */}
       <EnrollCta />
       <TransFormingCourse />
       <PickCourseTab />
