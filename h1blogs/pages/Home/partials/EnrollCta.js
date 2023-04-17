@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Box,
-  Heading,
-  Center,
-  Text,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Container, Box, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/GlobalButton";
 import ReturnFocus from "../../../components/Modal";
@@ -18,7 +11,7 @@ const EnrollCta = () => {
     <Container
       maxW={"full"}
       background={"url(/topbanner.jpg)"}
-      backgroundSize={"cover"}
+      backgroundSize={["contain", "cover"]}
       backgroundRepeat={"no-repeat"}
       color={"white"}
       paddingInlineStart={[0, "auto"]}
@@ -26,7 +19,7 @@ const EnrollCta = () => {
       backgroundPosition={"center"}
     >
       <SimpleGrid columns={[1, 2]}>
-        <Box ml={10} py={20} color={"black"}>
+        <Box ml={10} py={[0, 20]} my={[0, 10]} color={"black"}>
           {/* <SectionTitle pt={10}>
             The Best Place to Enroll for Digital Marketing Institute in Delhi
           </SectionTitle> */}
@@ -43,7 +36,7 @@ const EnrollCta = () => {
           </Box>
 
           <Box py={10}>
-            <Box>
+            <Box display={"flex"}>
               <ReturnFocus
                 btnText={`Get a Call back`}
                 children={<ContactForm />}

@@ -103,7 +103,7 @@ export default function ListCardImg({
           </Stack>
           <Box sx={{ mb: 3, mx: 3 }}>
             <Link href={href}>
-              <Button bg={"yellow.300"} width={"full"}>
+              <Button bg={"#04113c"} width={"full"} color="#fff">
                 Learn More
               </Button>
             </Link>
