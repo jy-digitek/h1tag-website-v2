@@ -16,6 +16,9 @@ import {
   IoAnalyticsSharp,
   IoLogoBitcoin,
   IoSearchSharp,
+  IoSchoolOutline,
+  IoSchool,
+  IoSchoolSharp,
 } from "react-icons/io5";
 //   import { ReactElement } from 'react';
 import Link from "next/link";
@@ -65,14 +68,7 @@ export default function ListCardImg({
           >
             {item_1 && (
               <Feature
-                icon={
-                  <Icon
-                    as={IoAnalyticsSharp}
-                    color={"yellow.500"}
-                    w={5}
-                    h={5}
-                  />
-                }
+                icon={<Icon as={IoSchool} color={"yellow.500"} w={5} h={5} />}
                 iconBg={useColorModeValue("yellow.100", "yellow.900")}
                 text={item_1}
               />
@@ -80,9 +76,7 @@ export default function ListCardImg({
 
             {item_2 && (
               <Feature
-                icon={
-                  <Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />
-                }
+                icon={<Icon as={IoSchool} color={"green.500"} w={5} h={5} />}
                 iconBg={useColorModeValue("green.100", "green.900")}
                 text={item_2}
               />
@@ -90,7 +84,7 @@ export default function ListCardImg({
             {item_3 && (
               <Feature
                 icon={
-                  <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
+                  <Icon as={IoSchoolOutline} color={"purple.500"} w={5} h={5} />
                 }
                 iconBg={useColorModeValue("purple.100", "purple.900")}
                 text={item_3}
@@ -100,7 +94,7 @@ export default function ListCardImg({
             {item_4 && (
               <Feature
                 icon={
-                  <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
+                  <Icon as={IoSchoolSharp} color={"purple.500"} w={5} h={5} />
                 }
                 iconBg={useColorModeValue("purple.100", "purple.900")}
                 text={item_4}

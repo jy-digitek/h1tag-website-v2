@@ -14,6 +14,7 @@ import {
   useBreakpointValue,
   useDisclosure,
   Image,
+  Center,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -59,7 +60,11 @@ export default function WithSubnavigation() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex
+          flex={{ base: 1 }}
+          justify={{ base: "center", md: "start" }}
+          textAlign={"center"}
+        >
           <Text
             textAlign={useBreakpointValue({
               base: "center",
@@ -75,20 +80,20 @@ export default function WithSubnavigation() {
             </Link>
           </Text>
           <Text
-            textAlign={useBreakpointValue({
-              base: "center",
-              md: "center",
-              lg: "center",
-            })}
+            // textAlign={useBreakpointValue({
+            //   base: "center",
+            //   md: "center",
+            //   lg: "center",
+            // })}
             color={useColorModeValue("gray.800", "white")}
-            mx={20}
+            mx={"auto"}
             py={4}
           >
             {/* <FcStart fontSize={60} /> */}
             <VideoModal />
           </Text>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} mx={"auto"}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -98,7 +103,6 @@ export default function WithSubnavigation() {
           justify={"flex-end"}
           direction={"row"}
           spacing={6}
-          mr={10}
         >
           <ReturnFocus
             btnText={`Get Brochure`}

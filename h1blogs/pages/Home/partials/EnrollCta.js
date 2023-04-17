@@ -17,16 +17,19 @@ const EnrollCta = () => {
   return (
     <Container
       maxW={"full"}
-      background={
-        "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%)),url(/cta-bg.jpg)"
-      }
+      background={"url(/cta-bg.jpg)"}
       backgroundPosition={"center"}
       backgroundSize={"cover"}
       backgroundRepeat={"no-repeat"}
       color={"white"}
+      paddingInlineStart={[0, "auto"]}
     >
-      <SimpleGrid columns={[1, 1]}>
-        <Box py={10}>
+      <SimpleGrid columns={[1, 2]}>
+        <Box
+          py={10}
+          mx={0}
+          background={"linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"}
+        >
           <SectionTitle pt={10}>
             The Best Place to Enroll for Digital Marketing Institute in Delhi
           </SectionTitle>
