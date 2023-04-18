@@ -55,7 +55,7 @@ export default function ListCardImg({
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           <Heading>{courseTitle}</Heading>
-          <Text color={"gray.500"} fontSize={"lg"}>
+          <Text color={"black"} fontSize={"lg"}>
             {description}
           </Text>
           <Stack

@@ -72,7 +72,7 @@ const PickCourseTab = () => {
 
             <TabPanels>
               <TabPanel sx={{ p: 0 }}>
-                <Card>
+                <Card color={"black"}>
                   <CardBody>
                     <ListCardImg
                       courseTitle={"Digital Marketing"}
