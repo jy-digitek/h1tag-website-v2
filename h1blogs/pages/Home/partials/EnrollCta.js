@@ -18,14 +18,16 @@ const EnrollCta = () => {
       minH={"100%"}
       backgroundPosition={"center"}
     >
-      <SimpleGrid columns={[1, 2]}>
-        <Box ml={10} py={[0, 20]} my={[0, 10]} color={"black"}>
+      <SimpleGrid columns={[1, 2]} mx={10} py={[0, 20]}>
+        <Box color={"black"}>
           {/* <SectionTitle pt={10}>
             The Best Place to Enroll for Digital Marketing Institute in Delhi
           </SectionTitle> */}
           <Box pt={5}>
             <Heading fontSize={"2xl"}>The Best Place to Enroll for </Heading>
-            <Heading as="h1">Digital Marketing Institute in Delhi</Heading>
+            <Heading as="h1" fontSize={"4xl"}>
+              Digital Marketing Institute in Delhi
+            </Heading>
           </Box>
           <Box>
             <Text pt={[5]}>
@@ -38,6 +40,7 @@ const EnrollCta = () => {
           <Box py={10}>
             <Box display={"flex"}>
               <ReturnFocus
+                px={20}
                 btnText={`Get a Call back`}
                 children={<ContactForm />}
                 openModalSet={openModalSet}
@@ -45,10 +48,11 @@ const EnrollCta = () => {
                 label="Explore Now"
                 color="white"
                 //   sx={{ width: "100%", color: "#fff" }}
-                px={5}
+
                 rounded="full"
               />
               <ReturnFocus
+                px={20}
                 btnText={`Get a Call back`}
                 children={<ContactForm />}
                 openModalSet={openModalSet}
@@ -61,7 +65,6 @@ const EnrollCta = () => {
             </Box>
           </Box>
         </Box>
-        <Box />
       </SimpleGrid>
     </Container>
   );
