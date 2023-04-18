@@ -10,34 +10,38 @@ const EnrollCta = () => {
   return (
     <Container
       maxW={"full"}
-      background={"url(/topbanner.jpg)"}
-      backgroundSize={["cover"]}
+      backgroundImage={"url(/topbanner.jpg)"}
+      backgroundSize={'cover'}
       backgroundRepeat={"no-repeat"}
       color={"white"}
-      paddingInlineStart={["auto", "auto"]}
-      minH={"100%"}
-      backgroundPosition={"center"}
+      // paddingInlineStart={["auto", "auto"]}
+      // minH={"100%"}
+      backgroundPosition={"center right"}
       px={[0, "auto"]}
+      py={[20, "0"]}
     >
-      <SimpleGrid columns={[1, 1]} mx={[0, 10]} py={[12, 20]}>
-        <Box color={"black"} px={[5, 20]}>
+      {/* <SimpleGrid columns={[1]} mx={[0, 10]} py={[12, 20]}> */}
+      <Box color={"black"} px={[5, 20]} py={[6, 20]}
+        // sx={{ backgroundImage: 'linear-gradient(to left, #ffffffd4, #fff)' }} py={[8, 12]}
+      >
+
           {/* <SectionTitle pt={10}>
             The Best Place to Enroll for Digital Marketing Institute in Delhi
           </SectionTitle> */}
           <Box pt={[1, 5]}>
-            <Box as="p" fontSize={["10px", "2xl"]} py={[0, 3]}>
+            <Box as="p" fontSize={["sm", "2xl"]} py={[0, 1]}>
               The Best Place to Enroll for{" "}
             </Box>
-            <Heading as="h1" fontSize={["15px", "45px"]}>
+            <Heading as="h1" fontSize={["xl", "45px"]}>
               Digital Marketing Institute in Delhi
             </Heading>
           </Box>
           <Box>
-            <Text pt={[1, 5]} fontSize={["10px", "16px"]}>
+            <Text pt={[1, 5]} fontSize={["sm", "16px"]}>
               Get trained by top industry experts with the best Digital
               Marketing Training Institute in Delhi.
             </Text>
-            <Text>
+            <Text fontSize={["sm", "16px"]}>
               Our comprehensive course will help you unlock the secrets of
               Digital Marketing.
             </Text>
@@ -75,7 +79,7 @@ const EnrollCta = () => {
             </Box>
           </Box>
         </Box>
-      </SimpleGrid>
+
     </Container>
   );
 };
