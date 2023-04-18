@@ -1,6 +1,6 @@
 import Link from "next/link";
 import axios from "axios";
-import { Box, ButtonGroup, Radio, Flex, Text } from "@chakra-ui/react";
+import { Box, ButtonGroup, Radio, Flex, Text, Button } from "@chakra-ui/react";
 import { Formik } from "formik";
 import {
   CheckboxContainer,
@@ -20,24 +20,26 @@ import {
 import * as React from "react";
 import * as Yup from "yup";
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-const onSubmit = (values) => {
-  // sleep(300).then(() => {
-  //   window.alert(JSON.stringify(values, null, 2));
-  // });
-  // console.log(JSON.stringify(values));
-  alert(JSON.stringify(values));
-  initialValues;
-};
-
+// const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const submitHandle = (values) => {
-  console.log(values);
+  //alert(values);
+  // alert("1");
+  // console.log(1);
+  // console.log(val
+  const name = values.name;
+  const email = values.email;
+  const phone = values.phone;
+  const branch = values.branch;
+  const employed = values.employed;
   axios({
     method: "post",
     url: "/mail.php",
     data: {
-      values,
+      name,
+      email,
+      branch,
+      phone,
+      employed,
     },
   });
 };
@@ -48,7 +50,7 @@ const initialValues = {
   email: "",
   phone: "",
   employed: false,
-  place: "",
+  branch: "",
 };
 const validationSchema = Yup.object({
   name: Yup.string().required(),
@@ -60,7 +62,7 @@ const validationSchema = Yup.object({
     .min(10, "too short")
     .max(10, "too long")
     .required("Phone Number is required"),
-  place: Yup.string().required(),
+  branch: Yup.string().required(),
   employed: Yup.boolean().equals([true]),
 });
 
@@ -99,7 +101,7 @@ export default function ContactForm() {
           validationSchema={validationSchema}
           bg={"blue"}
         >
-          {({ handleSubmit, values, errors }) => (
+          {({ handleSubmit, values }) => (
             <Box bg={""} rounded="lg" p={6} as="form" onSubmit={handleSubmit}>
               <InputControl name="name" label="Enter Name" />
               <InputControl name="email" label="Enter Email" />
@@ -121,10 +123,11 @@ export default function ContactForm() {
                   Privacy Policy
                 </Link>
               </CheckboxSingleControl>
-
-              <SubmitButton bg={"#06113a"} w={"full"} color={"white"}>
-                Submit
-              </SubmitButton>
+              <ButtonGroup width={"100%"}>
+                <SubmitButton bg={"#06113a"} w={"full"} color={"white"}>
+                  Submit
+                </SubmitButton>
+              </ButtonGroup>
             </Box>
           )}
         </Formik>

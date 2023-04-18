@@ -11,28 +11,29 @@ const EnrollCta = () => {
     <Container
       maxW={"full"}
       background={"url(/topbanner.jpg)"}
-      backgroundSize={["contain", "cover"]}
+      backgroundSize={["cover"]}
       backgroundRepeat={"no-repeat"}
       color={"white"}
-      paddingInlineStart={[0, "auto"]}
+      paddingInlineStart={["auto", "auto"]}
       minH={"100%"}
       backgroundPosition={"center"}
+      px={[0, "auto"]}
     >
-      <SimpleGrid columns={[1, 1]} mx={10} py={[0, 20]}>
-        <Box color={"black"} px={20}>
+      <SimpleGrid columns={[1, 1]} mx={[0, 10]} py={[12, 20]}>
+        <Box color={"black"} px={[5, 20]}>
           {/* <SectionTitle pt={10}>
             The Best Place to Enroll for Digital Marketing Institute in Delhi
           </SectionTitle> */}
-          <Box pt={5}>
-            <Heading fontSize={"2xl"} py={3}>
+          <Box pt={[1, 5]}>
+            <Box as="p" fontSize={["10px", "2xl"]} py={[0, 3]}>
               The Best Place to Enroll for{" "}
-            </Heading>
-            <Heading as="h1" fontSize={"45px"}>
+            </Box>
+            <Heading as="h1" fontSize={["15px", "45px"]}>
               Digital Marketing Institute in Delhi
             </Heading>
           </Box>
           <Box>
-            <Text pt={[5]} fontSize={"16px"}>
+            <Text pt={[1, 5]} fontSize={["10px", "16px"]}>
               Get trained by top industry experts with the best Digital
               Marketing Training Institute in Delhi.
             </Text>
@@ -42,11 +43,12 @@ const EnrollCta = () => {
             </Text>
           </Box>
 
-          <Box py={10}>
+          <Box py={[5, 10]}>
             <Box display={"flex"}>
               <ReturnFocus
-                px={20}
-                fontSize="20px"
+                py={[0, 2]}
+                px={[4, 10]}
+                fontSize={["14px", "20px"]}
                 btnText={`Get a Call back`}
                 children={<ContactForm />}
                 openModalSet={openModalSet}
@@ -58,15 +60,16 @@ const EnrollCta = () => {
                 rounded="full"
               />
               <ReturnFocus
-                px={20}
-                fontSize="20px"
+                py={[0, 2]}
+                px={[4, 10]}
+                fontSize={["14px", "20px"]}
                 btnText={`Get a Call back`}
                 children={<ContactForm />}
                 openModalSet={openModalSet}
                 // isEditingSet={isEditingSet}
                 label="Book A Free Demo"
                 color="white"
-                mx={5}
+                mx={[2, 5]}
                 rounded={"full"}
               />
             </Box>

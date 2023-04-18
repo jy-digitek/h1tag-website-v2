@@ -23,6 +23,7 @@ import {
   MdOutlineCurrencyRupee,
   MdSupervisedUserCircle,
   MdCastForEducation,
+  MdWork,
 } from "react-icons/md";
 
 export const Benefits = [
@@ -49,7 +50,7 @@ export const Benefits = [
   {
     label: "EMIs Available",
     bg: "green",
-    icon: <MdAttachMoney size={30} />,
+    icon: <MdOutlineCurrencyRupee size={30} />,
   },
   {
     label: "100% Placement Assistance",
@@ -60,7 +61,7 @@ export const Benefits = [
   {
     label: "Paid Internship from 1st Month",
     bg: "red",
-    icon: <MdOutlineCurrencyRupee size={30} />,
+    icon: <MdWork size={30} />,
   },
   {
     label: "Weekday and Weekend Batches",

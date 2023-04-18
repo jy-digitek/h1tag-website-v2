@@ -301,14 +301,14 @@ const NAV_ITEMS = [
       },
     ],
   },
-  {
-    label: "Gallery",
-    href: "/gallery.html",
-  },
-  {
-    label: "Blog",
-    href: "/blogs.html",
-  },
+  // {
+  //   label: "Gallery",
+  //   href: "/gallery.html",
+  // },
+  // {
+  //   label: "Blog",
+  //   href: "/blogs.html",
+  // },
   {
     label: "Contact",
     href: "/contact.html",
