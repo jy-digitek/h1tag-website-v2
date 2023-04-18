@@ -18,22 +18,27 @@ const EnrollCta = () => {
       minH={"100%"}
       backgroundPosition={"center"}
     >
-      <SimpleGrid columns={[1, 2]} mx={10} py={[0, 20]}>
-        <Box color={"black"}>
+      <SimpleGrid columns={[1, 1]} mx={10} py={[0, 20]}>
+        <Box color={"black"} px={20}>
           {/* <SectionTitle pt={10}>
             The Best Place to Enroll for Digital Marketing Institute in Delhi
           </SectionTitle> */}
           <Box pt={5}>
-            <Heading fontSize={"2xl"}>The Best Place to Enroll for </Heading>
-            <Heading as="h1" fontSize={"4xl"}>
+            <Heading fontSize={"2xl"} py={3}>
+              The Best Place to Enroll for{" "}
+            </Heading>
+            <Heading as="h1" fontSize={"45px"}>
               Digital Marketing Institute in Delhi
             </Heading>
           </Box>
           <Box>
-            <Text pt={[5]}>
+            <Text pt={[5]} fontSize={"16px"}>
               Get trained by top industry experts with the best Digital
-              Marketing Training Institute in Delhi. Our comprehensive course
-              will help you unlock the secrets of Digital Marketing.
+              Marketing Training Institute in Delhi.
+            </Text>
+            <Text>
+              Our comprehensive course will help you unlock the secrets of
+              Digital Marketing.
             </Text>
           </Box>
 
@@ -41,6 +46,7 @@ const EnrollCta = () => {
             <Box display={"flex"}>
               <ReturnFocus
                 px={20}
+                fontSize="20px"
                 btnText={`Get a Call back`}
                 children={<ContactForm />}
                 openModalSet={openModalSet}
@@ -53,6 +59,7 @@ const EnrollCta = () => {
               />
               <ReturnFocus
                 px={20}
+                fontSize="20px"
                 btnText={`Get a Call back`}
                 children={<ContactForm />}
                 openModalSet={openModalSet}

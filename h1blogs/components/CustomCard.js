@@ -15,6 +15,7 @@ export const CustomCard = ({
   icon,
   actionText,
   href,
+  ...rest
 }) => {
   return (
     <>
@@ -31,6 +32,7 @@ export const CustomCard = ({
         overflow="hidden"
         className="customCard"
         p={5}
+        {...rest}
       >
         <Stack align={"start"} spacing={2}>
           <Flex

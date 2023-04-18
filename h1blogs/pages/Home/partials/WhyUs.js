@@ -35,6 +35,7 @@ const WhyUs = () => {
             return (
               <Fade cascade key={key}>
                 <CustomCard
+                  minH={"290px"}
                   key={key}
                   heading={item.title}
                   icon={item.icon}
