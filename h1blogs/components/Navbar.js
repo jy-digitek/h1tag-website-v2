@@ -284,7 +284,7 @@ const NAV_ITEMS = [
   },
   {
     label: "About",
-    href: "/about.js",
+    href: "/about.html",
   },
   {
     label: "Courses+",
@@ -292,25 +292,25 @@ const NAV_ITEMS = [
       {
         label: "Digital Marketing Course",
         // subLabel: "Trending Design to inspire you",
-        href: "/digitalmarketing/index.js",
+        href: "/digitalmarketing.html",
       },
       {
         label: "Graphic Design Course",
         // subLabel: "Up-and-coming Designers",
-        href: "/graphicdesign/index.js",
+        href: "/graphicdesign.html",
       },
     ],
   },
   {
     label: "Gallery",
-    href: "/gallery",
+    href: "/gallery.html",
   },
   {
     label: "Blog",
-    href: "/blogs/index.js",
+    href: "/blogs.html",
   },
   {
     label: "Contact",
-    href: "/contact/index.js",
+    href: "/contact.html",
   },
 ];
