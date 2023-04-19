@@ -17,8 +17,8 @@ const StudentFeedback = () => {
   const [openModal, openModalSet] = React.useState(false);
   return (
     <Container maxW={"full"} px={[5, 10]} id={"review"} pb={10}>
-      <SectionTitle py={10}>Students’ Feedback</SectionTitle>
-      <SimpleGrid columns={[1, 2]} textAlign={"center"} alignItems={"center"}>
+      <SectionTitle as="h2" py={10}>Students’ Feedback</SectionTitle>
+      <SimpleGrid columns={[1, 1,  2]} textAlign={"center"} alignItems={"center"}>
         <Box>
           <Carousel />
         </Box>

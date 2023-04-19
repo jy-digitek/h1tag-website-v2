@@ -52,7 +52,7 @@ export default function Footer() {
         py={10}
       >
         <SimpleGrid
-          columns={[1, 2, 4]}
+          columns={[1, 1, 2, 4]}
           spacing={10}
           pt={20}
           color={"white"}
@@ -163,7 +163,7 @@ export default function Footer() {
               </Box>
             </Flex>
             {/* <Text pt={3}>
-            
+
           </Text> */}
 
             <Link href="tel:+91 77700-07683">

@@ -26,7 +26,7 @@ const TransFormingCourse = () => {
       py={8}
       style={{ background: "#f0f0f0" }}
     >
-      <SimpleGrid columns={[1, null, 4]} spacing={6} mx={2} px={10}>
+      <SimpleGrid columns={[1, 2, 4]} spacing={6} mx={2} px={10}>
         <Fade cascade damping={0.1}>
           <Box
             bg="#fff"

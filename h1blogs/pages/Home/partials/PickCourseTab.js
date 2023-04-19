@@ -37,7 +37,7 @@ const PickCourseTab = () => {
   const { isOpen, onToggle } = useDisclosure();
   return (
     <Container maxW={"5xl"}>
-      <SectionTitle my={10}>Pick a Course to Enhance to career</SectionTitle>
+      <SectionTitle as="h2" my={10}>Pick a Course to Enhance to career</SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
         <Box>
           <Tabs variant="enclosed" isFitted>

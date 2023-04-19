@@ -29,6 +29,7 @@ const Benifits = () => {
         p={[2, 5]}
         alignItems="center"
         background={item.bg + ".50"}
+        as="div"
       >
         <Box
           sx={{
@@ -37,7 +38,7 @@ const Benifits = () => {
             minWidth: 16,
             textAlign: "center",
             rounded: "50%",
-            marginRight: 2,
+            marginRight: [2],
             justifyContent: "center",
             display: "flex",
             alignItems: "center",
@@ -55,16 +56,14 @@ const Benifits = () => {
     <Container
       // className={`${styles.container} ${styles.border}`}
       maxW={"full"}
-      px={[0, 10]}
+      px={[5, 10]}
     >
       <SectionTitle my={10}>Benefits to Students</SectionTitle>
 
-      <Wrap spacing={["10px", "20px"]} py={5} px={[0, 10]} fontSize={"20px"}>
-        <SimpleGrid columns={[1, null, 3]} spacing={6} mx={2} px={10}>
-          {Benefits.map((item, key) => (
-            <Box key={key}>
-              <DataItem item={item} />
-            </Box>
+      <Wrap spacing={["10px", "20px"]} py={5} px={[0, 10]} fontSize={"20px"} as="div" className='wrapper'>
+        <SimpleGrid columns={[1, null, 3]} spacing={6} mx={[0, 2]} px={[0, 0, 10]} w="100%" as={'li'}>
+          {Benefits.map((item, index) => (
+            <DataItem item={item} key={index} />
           ))}
         </SimpleGrid>
       </Wrap>

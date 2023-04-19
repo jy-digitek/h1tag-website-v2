@@ -31,6 +31,7 @@ export const CustomCard = ({
         borderRadius="lg"
         overflow="hidden"
         className="customCard"
+
         p={5}
         {...rest}
       >

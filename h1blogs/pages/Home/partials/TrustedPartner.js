@@ -20,8 +20,9 @@ const TrustedPartner = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <SectionTitle
+        as="h2"
         desc={
-          "  Our Digital Marketing Institute in Delhi is trusted by the following partners"
+          "Our Digital Marketing Institute in Delhi is trusted by the following partners"
         }
         py={10}
       >
@@ -31,7 +32,7 @@ const TrustedPartner = () => {
       <Heading as={"h3"} px={[0, 10]} size="md" py={10}>
         Our Placement Partners
       </Heading>
-      <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 5]} spacing={5}>
+      <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 3, 5]} spacing={5}>
         {PlacementPartner.map((item, i) => {
           return (
             <Box key={i}>
@@ -48,7 +49,7 @@ const TrustedPartner = () => {
       <Heading as={"h3"} px={[0, 10]} size="md" py={10}>
         Our Advertising Partners
       </Heading>
-      <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 5]} spacing={5}>
+      <SimpleGrid bg={"white"} mx={["auto"]} columns={[1, 3, 5]} spacing={5}>
         {AdvertisingPartner.map((item, i) => {
           return (
             <Box key={i}>

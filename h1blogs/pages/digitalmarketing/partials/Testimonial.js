@@ -96,7 +96,8 @@ const WithSpeechBubbles = () => {
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <SectionTitle
-            children={"1,000+ students trust H1 Tags"}
+            as="h2"
+            children={"1,000+ Students Trust H1 Tags"}
             desc="Thousands of students’ trust makes us - the Best Digital Marketing Training Institute in Delhi"
           />
         </Stack>

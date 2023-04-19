@@ -1,0 +1,7 @@
+@media (max-width: 576px) {
+    .bannerText {
+        background-color: #ffffffd4;
+        margin: 0 20px;
+        backdrop-filter: blur(4px);
+    }
+}

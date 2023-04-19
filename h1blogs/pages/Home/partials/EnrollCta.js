@@ -4,6 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { GlobalButton } from "../../../components/GlobalButton";
 import ReturnFocus from "../../../components/Modal";
 import ContactForm from "../../../components/contactform";
+import styles from "../../../styles/hero.module.css";
 
 const EnrollCta = () => {
   const [openModal, openModalSet] = React.useState(false);
@@ -19,9 +20,11 @@ const EnrollCta = () => {
       backgroundPosition={"center right"}
       px={[0, "auto"]}
       py={[20, "0"]}
+      // className={styles.bannerText}
     >
       {/* <SimpleGrid columns={[1]} mx={[0, 10]} py={[12, 20]}> */}
       <Box color={"black"} px={[5, 20]} py={[6, 20]}
+        className={styles.bannerText}
         // sx={{ backgroundImage: 'linear-gradient(to left, #ffffffd4, #fff)' }} py={[8, 12]}
       >
 

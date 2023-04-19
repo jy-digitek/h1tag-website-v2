@@ -21,7 +21,7 @@ const WhyUs = () => {
     <>
       <Container maxW={"full"} pb={10}>
         <Stack spacing={0} as={Container} maxW={"3xl"} textAlign={"center"}>
-          <SectionTitle desc={<Description />} my={10}>
+          <SectionTitle as="h2" desc={<Description />} my={10}>
             Why H1Tags
           </SectionTitle>
         </Stack>
@@ -40,6 +40,7 @@ const WhyUs = () => {
                   heading={item.title}
                   icon={item.icon}
                   description={item.text}
+                  boxShadow="lg"
                   // href={"#"}
                   // actionText={"Learn more"}
                 />

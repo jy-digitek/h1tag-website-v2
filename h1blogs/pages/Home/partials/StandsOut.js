@@ -18,11 +18,11 @@ const StandsOut = () => {
   return (
     <Box sx={{ background: "url(/bg-img.jpeg)" }}>
       <Container maxW={"full"} px={[5, 10]}>
-        <SimpleGrid columns={[1, 2, 2]} px={[0, 10]}>
+        <SimpleGrid columns={[1, 1, 2]} px={[0, 10]}>
           <Box />
           <Box px={[0, 10]} my={10}>
             <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
-              <SectionTitle lineHeight="50px" mb={2}>
+              <SectionTitle as="h2" lineHeight="50px" mb={2}>
                 How H1 Tags stands out from others?
               </SectionTitle>
               <Box as="p" sx={{ mb: 2 }}>
@@ -55,9 +55,9 @@ const StandsOut = () => {
                   children={<ContactForm />}
                   openModalSet={openModalSet}
                   // isEditingSet={isEditingSet}
-                  label="Get a Call back"
+                  label="Get a Call Back"
                   color="white"
-                  sx={{ width: "100%", color: "#fff" }}
+                  sx={{ textAlign: 'center',width: "100%", color: "#fff" }}
                   my={5}
                 />
               </Box>

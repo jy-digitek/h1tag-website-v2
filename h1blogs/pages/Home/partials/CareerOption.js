@@ -22,6 +22,7 @@ const CareerOption = () => {
     <Container
       maxW={"full"}
       px={[5, 10]}
+      py={[10, 10, 10]}
       // linear-gradient(to left, rgb(130 146 244 / 81%), rgb(23 33 87 / 80%)),url(crbg.jpg)
       // bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       sx={{
@@ -35,15 +36,14 @@ const CareerOption = () => {
       // className="ooo"
     >
       {/* <Heading textAlign={"center"} py={10}>
-       
+
       </Heading> */}
       <SimpleGrid
-        columns={[0, 2]}
-        px={[0, 10]}
-        spacing={5}
+        columns={[0, 1, 2]}
+        // my={[10]}
         fontSize={"20px"}
-        padding={[0, 20]}
-        py={[5]}
+        padding={[0, 0, 20]}
+        // py={[5]}
       >
         <Box />
         <Box
@@ -54,9 +54,9 @@ const CareerOption = () => {
             backdropFilter: "blur(8px)",
             rounded: 8,
           }}
-          boxShadow={8}
+          // boxShadow={8}
         >
-          <SectionTitle mb={1}>
+          <SectionTitle as="h2" mb={1} px={[20, 5]}>
             Career Options after Digital Marketing Course
           </SectionTitle>
           {CareerOptionData.map((item, key) => {
@@ -84,7 +84,7 @@ const CareerOption = () => {
                 >
                   {key + 1}
                 </Box>
-                <Box as="h3" fontWeight={"bold"} px={3}>
+                <Box as="p" fontWeight={"bold"} px={3}>
                   {item.label}
                 </Box>
               </Flex>
