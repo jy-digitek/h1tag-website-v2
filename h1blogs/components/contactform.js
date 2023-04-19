@@ -35,7 +35,7 @@ export default function ContactForm() {
     const branch = values.branch;
     const employed = values.employed;
     try {
-      const res = axios({
+      const res = await axios({
         method: "POST",
         url: "/mail.php",
         data: {
@@ -46,10 +46,10 @@ export default function ContactForm() {
           employed,
         },
       });
-      console.log("Res=>", res);
+      console.log("Res=>", res.data);
       console.log("Loading=>", loading);
       console.log("Success=>", success);
-      if (res.data.status == "success") {
+      if (res.data == "Mail Sent") {
         successSet(true);
       } else successSet(false);
       loadingSet(false);
