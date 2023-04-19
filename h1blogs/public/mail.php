@@ -1,32 +1,22 @@
 <?php
 
-$email = $_POST['email'];
-$employed = $_POST['employed'];
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$branch = $_POST['branch'];
+$postdata = file_get_contents("php://input");
+$postdata = json_decode($postdata);
 
-if ($email && $employed && $name && $phone && $branch) {
-    $response = $this->sendMail($email && $employed && $name && $phone && $branch);
-    if ($response) {
-        $message = "Mail Sent";
-    } else {
-        $message = "Server Error";
-    }
-} else {
-    $message = "Require params missing";
-}
-return $message;
+$email = $postdata->email;
+$terms_accepted = $postdata->terms_accepted;
+$name = $postdata->name;
+$phone = $postdata->phone;
+$branch = $postdata->branch;
 
-function sendMail($email, $employed, $name, $phone, $branch)
-{
+if ($email && $terms_accepted && $name && $phone && $branch) {
     $to      = 'shubhamjytech@gmail.com';
     $subject = 'H1TAG Query';
-    $message = 'Name: ' . $name;
-    $message .= 'Email: ' . $email;
-    $message .= 'Phone: ' . $phone;
-    $message .= 'Branch: ' . $branch;
-    $message .= 'Employment Status: ' . $employed;
+    $message = ' Name: ' . $name;
+    $message .= ' Email: ' . $email;
+    $message .= ' Phone: ' . $phone;
+    $message .= ' Branch: ' . $branch;
+    $message .= ' Terms Accepted: ' . $terms_accepted;
 
     $headers = array(
         'From' => 't@jycyberhub.com',
@@ -35,8 +25,11 @@ function sendMail($email, $employed, $name, $phone, $branch)
     );
 
     if (mail($to, $subject, $message, $headers)) {
-        return true;
+        $message = "Mail Sent";
     } else {
-        return false;
+        $message = "Server Error";
     }
+} else {
+    $message = "Require params missing";
 }
+echo $message;

@@ -33,7 +33,7 @@ export default function ContactForm() {
     const email = values.email;
     const phone = values.phone;
     const branch = values.branch;
-    const employed = values.employed;
+    const terms_accepted = values.terms_accepted;
     try {
       const res = await axios({
         method: "POST",
@@ -43,7 +43,7 @@ export default function ContactForm() {
           email,
           branch,
           phone,
-          employed,
+          terms_accepted,
         },
       });
       console.log("Res=>", res.data);
@@ -61,7 +61,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    employed: false,
+    terms_accepted: false,
     branch: "",
   };
   const validationSchema = Yup.object({
@@ -75,7 +75,7 @@ export default function ContactForm() {
       .max(10, "Phone number can not exceed 10 digits!")
       .required("Phone Number is required!"),
     branch: Yup.string().required(),
-    employed: Yup.boolean().required("Please agree to Privacy Policy!"),
+    terms_accepted: Yup.boolean().required("Please agree to Privacy Policy!"),
   });
 
   return (
@@ -128,7 +128,7 @@ export default function ContactForm() {
                 </option>
                 <option value="Budh Vihar">Budh Vihar</option>
               </SelectControl>
-              <CheckboxSingleControl name="employed" my={5}>
+              <CheckboxSingleControl name="terms_accepted" my={5}>
                 I agree to the h1tags{" "}
                 <Link href="/" style={{ color: "#06113a" }}>
                   Privacy Policy
