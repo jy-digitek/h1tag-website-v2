@@ -1,84 +1,27 @@
 import Link from "next/link";
-import axios from "axios";
-import { Box, ButtonGroup, Radio, Flex, Text, Button } from "@chakra-ui/react";
+import { Box, ButtonGroup, Flex, Text } from "@chakra-ui/react";
 import { Formik } from "formik";
+import Toast from "./Toast";
 import {
-  CheckboxContainer,
-  CheckboxControl,
+  // CheckboxContainer,
+  // CheckboxControl,
   CheckboxSingleControl,
   InputControl,
-  NumberInputControl,
-  PercentComplete,
-  RadioGroupControl,
-  ResetButton,
+  // NumberInputControl,
+  // PercentComplete,
+  // RadioGroupControl,
+  // ResetButton,
   SelectControl,
-  SliderControl,
+  // SliderControl,
   SubmitButton,
-  SwitchControl,
-  TextareaControl,
+  // SwitchControl,
+  // TextareaControl,
 } from "formik-chakra-ui";
-import * as React from "react";
-import * as Yup from "yup";
-import { useState } from "react";
-// const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export default function ContactForm() {
-  const [success, successSet] = useState(false);
-  const [loading, loadingSet] = useState(false);
-  // const [message, messageSet] = useState(false);
 
-  const submitHandle = async (values) => {
-    loadingSet(true);
-    const name = values.name;
-    const email = values.email;
-    const phone = values.phone;
-    const branch = values.branch;
-    const terms_accepted = values.terms_accepted;
-    try {
-      const res = await axios({
-        method: "POST",
-        url: "/mail.php",
-        data: {
-          name,
-          email,
-          branch,
-          phone,
-          terms_accepted,
-        },
-      });
-      console.log("Res=>", res.data);
-      console.log("Loading=>", loading);
-      console.log("Success=>", success);
-      if (res.data == "Mail Sent") {
-        successSet(true);
-      } else successSet(false);
-      loadingSet(false);
-    } catch (error) {}
-  };
-  const phoneRegExp =
-    /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
-  const initialValues = {
-    name: "",
-    email: "",
-    phone: "",
-    terms_accepted: false,
-    branch: "",
-  };
-  const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
-    email: Yup.string()
-      .email("Invalid email address!")
-      .required("Email is required!"),
-    phone: Yup.string()
-      .matches(phoneRegExp, "Phone number is not valid!")
-      .min(10, "Phone number can not be less than 10 digits!")
-      .max(10, "Phone number can not exceed 10 digits!")
-      .required("Phone Number is required!"),
-    branch: Yup.string().required(),
-    terms_accepted: Yup.boolean().required("Please agree to Privacy Policy!"),
-  });
-
+export default function ContactForm({submitHandle, validationSchema, initialValues, success, loading}) {
   return (
+    <>
     <Flex
       align={"center"}
       // textAlign={"center"}
@@ -143,6 +86,10 @@ export default function ContactForm() {
           )}
         </Formik>
       </Box>
-    </Flex>
+      </Flex>
+      {success && 'App;e'}
+
+      {console.log(success)}
+    </>
   );
 }
