@@ -18,7 +18,7 @@ export default function CarrerOportunity() {
         children={"Career Opportunities after Completing the Course"}
         mb={[5, 10]}
       />
-      <SimpleGrid columns={[1, 2, 3]} gap={2} px={[0, 10]}>
+      <SimpleGrid columns={[1, 1, 3]} gap={2} px={[0, 10]}>
         <Box>
           <Card
             // color={"#fff"}

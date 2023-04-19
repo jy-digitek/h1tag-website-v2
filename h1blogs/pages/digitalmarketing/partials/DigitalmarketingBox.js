@@ -8,7 +8,7 @@ const DigitalmarketingBox = () => {
         pt={[8, 12]}
         children={"Best Digital Marketing Training Institute in Delhi"}
       />
-      <SimpleGrid columns={[1, 4]} py={20} spacing={6} px={10}>
+      <SimpleGrid columns={[1, 2, 4]} py={20} spacing={6} px={10}>
         <Box
           p={10}
           // boxShadow={"10px 10px 5px 12px lightblue"}

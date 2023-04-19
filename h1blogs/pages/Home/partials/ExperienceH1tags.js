@@ -14,16 +14,25 @@ const ExperienceH1tags = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <Stack>
-        <SectionTitle as="h2" py={10} desc={"Real-world marketing work experience"}>
+        <SectionTitle
+          as="h2"
+          py={10}
+          desc={"Real-world marketing work experience"}
+        >
           Experience at H1 Tags
         </SectionTitle>
       </Stack>
-      <SimpleGrid columns={[1, 1, 1, 2]} px={[0, 10]} mb={[10]} fontSize={"20px"}>
+      <SimpleGrid
+        columns={[1, 1, 1, 2]}
+        px={[0, 10]}
+        mb={[10]}
+        fontSize={"20px"}
+      >
         <Box px={[0, 0, 5]}>
-          <Box as="p"
+          <Box
+            as="p"
             sx={{
               lineHeight: 2,
-
 
               pb: 5,
               fontSize: "16px",
@@ -32,10 +41,10 @@ const ExperienceH1tags = () => {
             H1 TAGS is the only Digital Marketing Institute in Delhi to give you
             real-world marketing work experience immediately.{" "}
           </Box>
-          <Box as="p"
+          <Box
+            as="p"
             sx={{
               lineHeight: 2,
-
 
               pb: 5,
               fontSize: "16px",
@@ -49,10 +58,10 @@ const ExperienceH1tags = () => {
             will be the same types of marketing projects you will get once you
             are hired (and then some).
           </Box>
-          <Box as="p"
+          <Box
+            as="p"
             sx={{
               lineHeight: 2,
-
 
               pb: 5,
               fontSize: "16px",
@@ -67,10 +76,10 @@ const ExperienceH1tags = () => {
             that H1 TAGS immediately gives you.
           </Box>
         </Box>
-        <Show below="sm">
-
-          <Image src={"/classroom-image.png"} />
-
+        <Show above="md">
+          <Box>
+            <Image src={"/classroom-image.png"} />
+          </Box>
         </Show>
       </SimpleGrid>
     </Container>

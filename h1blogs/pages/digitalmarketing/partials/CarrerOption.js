@@ -15,7 +15,7 @@ const CarrerOption = () => {
           children={"Career Scope after Digital Marketing Course"}
           my={10}
         />
-        <SimpleGrid columns={[1, 4]} gap={4}>
+        <SimpleGrid columns={[1, 2, 4]} gap={4}>
           <Card maxW={"400px"} my={2}>
             <CardBody>
               With our practical learning programs, students can acquire

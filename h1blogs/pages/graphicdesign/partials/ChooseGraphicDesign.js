@@ -26,7 +26,7 @@ export default function ChooseGraphicDesign() {
         course, students can choose multiple career options and build a stable
         future.
       </Box>
-      <SimpleGrid columns={[1, 3]} gap={3}>
+      <SimpleGrid columns={[1, 1, 3]} gap={3}>
         {H1TagsCourseGraphic.map((item, i) => {
           return (
             <Box key={i} alignItems={"center"}>

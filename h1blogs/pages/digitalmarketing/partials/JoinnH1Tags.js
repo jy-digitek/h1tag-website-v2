@@ -21,7 +21,7 @@ const JoinH1Tags = () => {
         marketing profession by enhancing your digital abilities with the best
         Digital Marketing Training Institute in Delhi.
       </Box>
-      <SimpleGrid columns={[1, 4]} spacing={10} px={10}>
+      <SimpleGrid columns={[1, 2, 4]} spacing={10} px={10}>
         <Box as="card" boxShadow={"sm"}>
           <Card borderLeft={"3px solid blue"}>
             <Flex>
