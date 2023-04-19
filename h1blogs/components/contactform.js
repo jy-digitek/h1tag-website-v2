@@ -21,54 +21,63 @@ import * as React from "react";
 import * as Yup from "yup";
 import { useState } from "react";
 // const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const submitHandle = (values) => {
-  //alert(values);
-  // alert("1");
-  // console.log(1);
-  // console.log(val
-  const name = values.name;
-  const email = values.email;
-  const phone = values.phone;
-  const branch = values.branch;
-  const employed = values.employed;
-
-  const res = axios({
-    method: "post",
-    url: "/mail.php",
-    data: {
-      name,
-      email,
-      branch,
-      phone,
-      employed,
-    },
-  });
-};
-const phoneRegExp =
-  /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
-const initialValues = {
-  name: "",
-  email: "",
-  phone: "",
-  employed: false,
-  branch: "",
-};
-const validationSchema = Yup.object({
-  name: Yup.string().required(),
-  email: Yup.string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  phone: Yup.string()
-    .matches(phoneRegExp, "Phone number is not valid")
-    .min(10, "too short")
-    .max(10, "too long")
-    .required("Phone Number is required"),
-  branch: Yup.string().required(),
-  employed: Yup.boolean().equals([true]),
-});
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [success, successSet] = useState(false);
+  const [loading, loadingSet] = useState(false);
+  // const [message, messageSet] = useState(false);
+
+  const submitHandle = async (values) => {
+    loadingSet(true);
+    const name = values.name;
+    const email = values.email;
+    const phone = values.phone;
+    const branch = values.branch;
+    const employed = values.employed;
+    try {
+      const res = axios({
+        method: "POST",
+        url: "/mail.php",
+        data: {
+          name,
+          email,
+          branch,
+          phone,
+          employed,
+        },
+      });
+      console.log("Res=>", res);
+      console.log("Loading=>", loading);
+      console.log("Success=>", success);
+      if (res.data.status == "success") {
+        successSet(true);
+      } else successSet(false);
+      loadingSet(false);
+    } catch (error) {}
+  };
+  const phoneRegExp =
+    /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+  const initialValues = {
+    name: "",
+    email: "",
+    phone: "",
+    employed: false,
+    branch: "",
+  };
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email address!")
+      .required("Email is required!"),
+    phone: Yup.string()
+      .matches(phoneRegExp, "Phone number is not valid!")
+      .min(10, "Phone number can not be less than 10 digits!")
+      .max(10, "Phone number can not exceed 10 digits!")
+      .required("Phone Number is required!"),
+    branch: Yup.string().required(),
+    employed: Yup.boolean().required("Please agree to Privacy Policy!"),
+  });
+
   return (
     <Flex
       align={"center"}

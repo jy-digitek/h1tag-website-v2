@@ -20,7 +20,7 @@ export default function QuickContact() {
           Quick Enquiry
         </Heading>
       </Box>
-      <SimpleGrid columns={[1, 2]} spacing={10} px={[0, 20]} py={10}>
+      <SimpleGrid columns={[1, 1, 2]} spacing={10} px={[0, 20]} py={10}>
         <Box>
           <Card align="center" sx={{ background: "#fff", py: [2, 4] }}>
             <Link href="tel:+91 77700-07683">

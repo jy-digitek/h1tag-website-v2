@@ -61,7 +61,7 @@ const About = () => {
             // }
             // borderRadius={"1em 0 1em 0"}
 
-            mx={[0, 60]}
+            mx={[0, "80px", 60]}
             color={"black"}
             pb={2}
           >
@@ -87,7 +87,7 @@ const About = () => {
         <SimpleGrid
           columns={[1, 1]}
           sx={{ background: "url(/bg-img.jpeg)" }}
-          px={[5, 60]}
+          px={[5, "80px", 60]}
           py={10}
         >
           <Box px={[0, 10]}>
@@ -114,13 +114,13 @@ const About = () => {
         {/* Track record start */}
         <Box textAlign={"center"} my={10}>
           <SectionTitle mb={10}>Our Track Record…</SectionTitle>
-          <Text px={20} color={"black"} fontSize={20}>
+          <Text px={[5, 10, 20]} color={"black"} fontSize={20}>
             We are a Digital Marketing Agency-based Institute that has strong
             partnerships with several IT companies. Well-reputed and known
             organizations actively seek out our students, as we provide on-site
             training.
           </Text>
-          <SimpleGrid columns={[1, 4]} py={10} spacing={6} px={10}>
+          <SimpleGrid columns={[1, 2, 4]} py={10} spacing={6} px={10}>
             <Box
               p={10}
               // boxShadow={"10px 10px 5px 12px lightblue"}
@@ -196,7 +196,7 @@ const About = () => {
         }}
       >
         <Box maxW={"5xl"} mx={"auto"}>
-          <SimpleGrid columns={[1, 2]} gap={0} my={10} alignItems={"center"}>
+          <SimpleGrid columns={[1, 1, 2]} gap={0} my={10} alignItems={"center"}>
             <Box
               sx={{
                 maxW: 450,
@@ -294,7 +294,7 @@ const About = () => {
       >
         {/* director portfolio starts here */}
         <Box maxW={"5xl"} mx={"auto"}>
-          <SimpleGrid columns={[1, 2]} gap={0} my={10} alignItems={"center"}>
+          <SimpleGrid columns={[1, 1, 2]} gap={0} my={10} alignItems={"center"}>
             <Box className={styles.about}>
               <Heading fontSize={28}>AKSHAY</Heading>
               <Highlight
@@ -585,9 +585,9 @@ const About = () => {
         {/* why choose us ends here */}
 
         {/* your carrer matters ends here */}
-        <Box my={10}>
+        <Box my={[0, 10]}>
           <SectionTitle mb={10}>FAQ’s</SectionTitle>
-          <Accordion allowMultiple mx={[5, 60]}>
+          <Accordion allowMultiple mx={[5, 10, 60]}>
             <AccordionItem>
               {({ isExpanded }) => (
                 <>

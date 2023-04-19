@@ -39,7 +39,7 @@ export default function Addresses() {
       // }}
     >
       <SimpleGrid
-        columns={[1, 2]}
+        columns={[1, 1, 2]}
         spacing={[0, 10]}
         alignItems="flex-start"
         py={[12]}
