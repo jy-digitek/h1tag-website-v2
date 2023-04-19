@@ -19,7 +19,7 @@ import {
 } from "formik-chakra-ui";
 import * as React from "react";
 import * as Yup from "yup";
-
+import { useState } from "react";
 // const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const submitHandle = (values) => {
   //alert(values);
@@ -31,7 +31,8 @@ const submitHandle = (values) => {
   const phone = values.phone;
   const branch = values.branch;
   const employed = values.employed;
-  axios({
+
+  const res = axios({
     method: "post",
     url: "/mail.php",
     data: {
@@ -67,6 +68,7 @@ const validationSchema = Yup.object({
 });
 
 export default function ContactForm() {
+  const [submitted, setSubmitted] = useState(false);
   return (
     <Flex
       align={"center"}
