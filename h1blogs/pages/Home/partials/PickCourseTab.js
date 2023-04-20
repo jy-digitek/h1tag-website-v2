@@ -84,7 +84,7 @@ const PickCourseTab = () => {
                       item_3={`Customized Course`}
                       item_4={`Master Course`}
                       btnText={"Learn More"}
-                      href={"/digitalmarketing"}
+                      href={"/digitalmarketing.html"}
                       img={"/tab2-home.jpg"}
                     />
                   </CardBody>
@@ -99,7 +99,7 @@ const PickCourseTab = () => {
                       item_1={`Foundation Course`}
                       item_2={`Master Course`}
                       btnText={"Learn More"}
-                      href={"/graphicdesign"}
+                      href={"/graphicdesign.html"}
                       img={"/tab1-home.jpg"}
                     />
                   </CardBody>
