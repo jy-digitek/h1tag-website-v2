@@ -9,10 +9,17 @@ import JobRoles from "./partials/JobRoles";
 import PerSueGraphicDesign from "./partials/PerSueGraphicDesign";
 import Eligibility from "./partials/Eligibility";
 import ScholarShipProgram from "./partials/ScholarShipProgram";
+import SEOTags from "../../components/Head";
 
 const index = () => {
   return (
     <Layout>
+      <SEOTags
+        title={"#1 Graphic Design Course in Delhi | H1 Tags"}
+        description={
+          "Looking for the Best Graphic Designing Course in Delhi? H1 Tags Provide Best Graphic Designing Course with 100% Placement Guarantee | Book a Free Demo Class Now!"
+        }
+      />
       <PageBanner title="Graphic Design Course" />
       <TabsCourse />
       <CarrerOportunity />

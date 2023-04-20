@@ -12,11 +12,18 @@ import ExperienceH1tags from "./partials/ExperienceH1tags";
 import StandsOut from "./partials/StandsOut";
 import Testimonial from "../digitalmarketing/partials/Testimonial";
 import EnrollCta from "./partials/EnrollCta";
+import SEOTags from "../../components/Head";
 
 const Home = () => {
   return (
     <Layout>
       {/* <Banner /> */}
+      <SEOTags
+        title={"Best Digital Marketing Institute in Delhi | H1 Tags"}
+        description={
+          "H1 Tags is the Best Digital Marketing Institute in Delhi with Paid Internship During the Course. We provide a 100% Placement Guarantee. Book a Free Demo Class."
+        }
+      />
       <EnrollCta />
       <TransFormingCourse />
       <PickCourseTab />

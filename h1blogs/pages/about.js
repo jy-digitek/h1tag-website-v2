@@ -33,11 +33,17 @@ import { MdCheckCircle } from "react-icons/md";
 import { GlobalButton } from "../components/GlobalButton";
 import ReturnFocus from "../components/Modal";
 import ContactForm from "../components/contactform";
-// import ContactForm from "../components/contactform";
+import SEOTags from "../components/Head";
 const About = () => {
   const [openModal, openModalSet] = React.useState(false);
   return (
     <Layout>
+      <SEOTags
+        title={"Best Digital Marketing Institute in Delhi | H1 Tags"}
+        description={
+          "H1 Tags is the Best Digital Marketing Institute in Delhi with Paid Internship During the Course. We provide a 100% Placement Guarantee. Book a Free Demo Class."
+        }
+      />
       <Container maxW={"full"}>
         {/* image start here  */}
         <Box position="relative">
