@@ -44,10 +44,10 @@ const About = () => {
           "H1 Tags is the Best Digital Marketing Institute in Delhi with Paid Internship During the Course. We provide a 100% Placement Guarantee. Book a Free Demo Class."
         }
       />
-      <Container maxW={"full"}>
+      <Container maxW={"full"} p={0}>
         {/* image start here  */}
-        <Box position="relative">
-          <Image src={"/bg-img.jpeg"} sx={{ rounded: 25, mt: 5 }} />
+        <Box position="relative" p={0}>
+          <Image src={"/aboutBanner.jpg"} maxW="full" />
         </Box>
 
         {/* image end here  */}
@@ -74,17 +74,19 @@ const About = () => {
             Best Digital Marketing Course in Delhi
           </SectionTitle>
 
-          <Box sx={{ padding: 10 }}>
-            <strong>H1 Tags:</strong> A School of Digital Marketing provides the
-            Best Digital Marketing Course in Delhi with training programs in a
-            variety of areas, such as SEO, PPC, Social Media Marketing, Content
-            Management, and more, allowing students to learn the most current
-            methods in the field of Digital Marketing. With over 10+ years of
-            experience in Digital Marketing, we can assist you in achieving your
-            objectives and entering the industry. We have a team of Digital
-            Marketing experts who have years of knowledge in their field and are
-            well-experienced. Our team is dedicated to providing the students
-            with the best knowledge possible.
+          <Box sx={{ padding: 10 }} px={20}>
+            <Text px={20}>
+              <strong>H1 Tags:</strong> A School of Digital Marketing provides
+              the Best Digital Marketing Course in Delhi with training programs
+              in a variety of areas, such as SEO, PPC, Social Media Marketing,
+              Content Management, and more, allowing students to learn the most
+              current methods in the field of Digital Marketing. With over 10+
+              years of experience in Digital Marketing, we can assist you in
+              achieving your objectives and entering the industry. We have a
+              team of Digital Marketing experts who have years of knowledge in
+              their field and are well-experienced. Our team is dedicated to
+              providing the students with the best knowledge possible.
+            </Text>
           </Box>
         </Box>
         {/* digital marketing end */}

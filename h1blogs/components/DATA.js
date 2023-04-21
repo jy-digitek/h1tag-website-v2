@@ -112,7 +112,7 @@ export const CourseBuiltForData = [
   {
     icon: <FcMoneyTransfer />,
     title: "Students/Fresher’s",
-    text: "College students interested in pursuing a job in Digital Marketing",
+    text: "College students interested in pursuing a job in Digital Marketing.",
   },
   {
     icon: <FcOrgUnit />,

@@ -6,7 +6,7 @@ import SEOTags from "../../components/Head";
 const Contact = () => {
   return (
     <Layout>
-      {/* <ContactBanner /> */}
+      <ContactBanner />
 
       <QuickContact />
       <Addresses />

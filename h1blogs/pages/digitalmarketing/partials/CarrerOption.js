@@ -18,12 +18,7 @@ const CarrerOption = () => {
         />
         <SimpleGrid columns={[1, 2, 4]} gap={4}>
           <Box position={"relative"}>
-            <Card
-              minH={"210px"}
-              boxShadow={"xl"}
-              className={styled.serviceBox}
-              _hover={{ color: "white" }}
-            >
+            <Card minH={"340px"} boxShadow={"xl"} className={styled.serviceBox}>
               <CardBody>
                 With our practical learning programs, students can acquire
                 well-paying Full-Time/Part-Time Work in a reputable company. We
