@@ -66,7 +66,7 @@ const CarrerOption = () => {
               <CardBody>
                 As an entrepreneur, doing the Digital Marketing Course can
                 polish your skills. Keeping up with the new skills is essential
-                to make your business successful
+                to make your business successful.
               </CardBody>
             </Card>
           </Box>
