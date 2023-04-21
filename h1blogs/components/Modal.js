@@ -104,13 +104,18 @@ export default function ReturnFocus({
         fontSize={"sm"}
         fontWeight={600}
         color={"white"}
+        border={"2px solid white"}
         onClick={(e) => {
           //   openModalSet(true);
           onOpen(e);
         }}
         label={btnText}
         background="#3950a1"
-        _hover={{ background: "#101C32" }}
+        _hover={{
+          background: "#101C32",
+          color: "white",
+          border: "2px solid white",
+        }}
         {...rest}
       />
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>

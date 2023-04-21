@@ -45,6 +45,7 @@ const CTA = ({ title, label, bg, ...rest }) => {
               color="white"
               rounded="full"
               bg={bg}
+              border={"outlined"}
             />
           </Fade>
           <Stack direction={"row"} gap={10}>
