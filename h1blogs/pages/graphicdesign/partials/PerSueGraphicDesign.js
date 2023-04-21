@@ -16,7 +16,7 @@ export default function PerSueGraphicDesign() {
             minH={["auto", 200]}
           >
             <CardBody>
-              The field of graphic design is in high demand. And it is expected
+              The field of Graphic Design is in high demand. And it is expected
               to expand in the future.
             </CardBody>
           </Card>

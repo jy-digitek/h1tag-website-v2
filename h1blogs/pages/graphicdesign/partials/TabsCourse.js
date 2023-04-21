@@ -34,11 +34,11 @@ export default function TabsCourse() {
         <Box>
           H1 Tags provides Next-Level Education that offers up-to-date graphic
           designing software training in a single place. Students interested in
-          learning graphic design course can enroll in our institute to master
-          anything from the fundamentals to advanced concepts. Our training
-          methods are based on cutting-edge technology and concepts, allowing
-          you to comprehend all areas fully. Skilled educators design our
-          courses to satisfy the needs of all students.
+          learning the graphic design course can enroll in our institute to
+          master anything from the fundamentals to advanced concepts. Our
+          training methods are based on cutting-edge technology and concepts,
+          allowing you to comprehend all areas fully. Skilled educators design
+          our courses to satisfy the needs of all students.
         </Box>
         <Text textAlign="center" fontWeight={"bold"} fontSize={22} mt={5}>
           Learn the most demanding career skill, and secure your future
@@ -85,7 +85,7 @@ export default function TabsCourse() {
               <Box>
                 <SectionTitle
                   children={"Basic Course"}
-                  desc="Module Info & Overview"
+                  desc="Module Info and Overview"
                   mb={5}
                 />
                 <Text as="p" mb={5} textAlign={"center"}>
@@ -158,7 +158,7 @@ export default function TabsCourse() {
               <Box>
                 <SectionTitle
                   children={"Advance Course"}
-                  desc="Module Info & Overview"
+                  desc="Module Info and Overview"
                   mb={5}
                 />
                 <Text as="p" mb={5}>

@@ -79,32 +79,32 @@ export const comparision = [
   {
     icon: <FcMoneyTransfer />,
     title: "Flexible Fee Structure",
-    text: "H1 Tags offers a reasonable and flexible fee structure (on EMI basis), by which the students don't have to pay the full fee altogether but can make EMI's.",
+    text: "H1 Tags offers a reasonable and flexible fee structure (on an EMI basis), by which the students don't have to pay the full fee altogether but can make EMI.",
   },
   {
     icon: <FcReadingEbook />,
     title: "Training Facilities",
-    text: " Easy for students to understand and study. Keen students can stay updated with their personalized Laptops relating to theirsubjects latest advancements and curriculum.",
+    text: "Easy for students to understand and study. Keen students can stay updated with their personalized Laptops relating to their subjects' latest advancements and curriculum.",
   },
   {
     icon: <FcOk />,
     title: " Job Placement",
-    text: " Students participating in placement units learn about business standards and improve their job prospects. We give assured placement guarantee to our students.",
+    text: "Students in placement units learn about business standards and improve their job prospects. We give secure placement guarantees to our students.",
   },
   {
     icon: <FcApproval />,
     title: " Paid Internship",
-    text: " We ensure that our students get paid internships from the first month of joining. Unlike many of your friends, you can begin building your collection sooner. You can add this additional expertise to your resume.",
+    text: "We ensure that our students get paid internships from the first month of joining. Unlike many of your friends, you can begin building your collection sooner. You can add this additional expertise to your resume.",
   },
   {
     icon: <FcOnlineSupport />,
     title: "Advanced Experience",
-    text: "  As H1 Tags is an agency-based institute, we ensure that our students work on practical and live projects, which builds confidence.",
+    text: "As H1 Tags is an agency-based Digital Marketing Institute in Delhi, we ensure that our students work on practical and live projects, which builds confidence.",
   },
   {
     icon: <FcComboChart />,
-    title: " Proven Track Record",
-    text: "Our students tend to grow and enhance their careers; in many ways, our students are happy a satisfied as with our institute they got placement in well-known companies.",
+    title: "Proven Track Record",
+    text: "Our students tend to grow and enhance their careers; in many ways, our students are happy and satisfied; with our institute, they get placement in well-known companies.",
   },
 ];
 

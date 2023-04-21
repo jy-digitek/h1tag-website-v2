@@ -38,7 +38,7 @@ const PickCourseTab = () => {
   return (
     <Container maxW={"5xl"}>
       <SectionTitle as="h2" my={10}>
-        Pick a Course to Enhance to career
+        Pick a Course to Enhance to Career
       </SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
         <Box>
@@ -78,7 +78,7 @@ const PickCourseTab = () => {
                   <CardBody>
                     <ListCardImg
                       courseTitle={"Digital Marketing"}
-                      description={`We offer a variety of options with our Digital Marketing courses, so you can choose the one that best suits your needs and preferences.`}
+                      description={`We offer a variety of options with our Digital Marketing Course, so you can choose the one that best suits your needs and preferences.`}
                       item_1={`Job Oriented Course`}
                       item_2={`Foundation Course`}
                       item_3={`Customized Course`}
@@ -95,7 +95,7 @@ const PickCourseTab = () => {
                   <CardBody>
                     <ListCardImg
                       courseTitle={"Graphic Designing"}
-                      description={`Our Graphic Designing courses provide you with a diverse range of options. With our wide range of options, you can gain a solid foundation in graphic designing and take your skills to the next level.`}
+                      description={`Our Graphic Designing Course provides you with a diverse range of options. With our vast range of options, you can gain a solid foundation in Graphic Designing and take your skills to the next level.`}
                       item_1={`Foundation Course`}
                       item_2={`Master Course`}
                       btnText={"Learn More"}

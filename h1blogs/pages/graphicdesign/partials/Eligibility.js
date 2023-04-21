@@ -19,9 +19,9 @@ export default function Eligibility() {
             <Box position={"relative"} p={[0, 8]}>
               <SectionTitle children="Who can do this Course?" />
               <Box as="p">
-                No Need for a Specific Qualification or Degree, Our Graphic
+                No Need for a Specific Qualification or Degree.Our Graphic
                 Designing course is open to students who have completed their
-                12th graduation (from any stream) and working professionals who
+                12th, Graduation (from any stream) and working professionals who
                 want to switch careers. Anyone who has a passion for designing
                 and is of a creative mind is welcome to join this course and can
                 get a high-paying job.
