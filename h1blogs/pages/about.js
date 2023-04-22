@@ -74,8 +74,8 @@ const About = () => {
             Best Digital Marketing Course in Delhi
           </SectionTitle>
 
-          <Box sx={{ padding: 10 }} px={20}>
-            <Text px={20}>
+          <Box sx={{ padding: 10 }} px={[0, 20]}>
+            <Text px={[0, 20]}>
               <strong>H1 Tags:</strong> A School of Digital Marketing provides
               the Best Digital Marketing Course in Delhi with training programs
               in a variety of areas, such as SEO, PPC, Social Media Marketing,
@@ -128,13 +128,18 @@ const About = () => {
             organizations actively seek out our students, as we provide on-site
             training.
           </Text>
-          <SimpleGrid columns={[1, 2, 4]} py={10} spacing={6} px={10}>
+          <SimpleGrid
+            columns={[1, 2, 4]}
+            py={10}
+            spacing={6}
+            px={10}
+            color={"#ffffff"}
+          >
             <Box
               p={10}
               // boxShadow={"10px 10px 5px 12px lightblue"}
               bg={"radial-gradient(#1fe4f5, #3fbafe)"}
               borderRadius={10}
-              color={"black"}
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 1000+
@@ -145,7 +150,6 @@ const About = () => {
               p={10} //boxShadow={"10px 10px 5px 12px red"}
               bg={"radial-gradient(#fbc1cc, #fa99b2)"}
               borderRadius={10}
-              color="black"
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 {" "}
@@ -157,7 +161,6 @@ const About = () => {
               p={10} //</SimpleGrid>boxShadow={"10px 10px 5px 12px lightblue"}
               bg={"radial-gradient(#76b2fe, #b69efe)"}
               borderRadius={10}
-              color={"black"}
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 700+
@@ -169,7 +172,6 @@ const About = () => {
               //boxShadow={"10px 10px 5px 12px lightblue"}
               bg={"radial-gradient(#60efbc, #58d5c9)"}
               borderRadius={10}
-              color={"black"}
             >
               <Text fontWeight={"bold"} fontSize={"2rem"}>
                 {" "}
@@ -194,7 +196,7 @@ const About = () => {
       {/* Track record end */}
 
       {/* director portfolio starts here */}
-      <Container
+      {/* <Container
         maxW={"full"}
         sx={{
           py: 15,
@@ -287,7 +289,93 @@ const About = () => {
             </Box>
           </SimpleGrid>
         </Box>
-        {/* director portfolio ends here */}
+      </Container> */}
+      {/* director portfolio ends here */}
+      <Container
+        maxW={"full"}
+        sx={{
+          py: 15,
+          background: "rgb(2,0,36)",
+          background: "linear-gradient(380deg, #101C32 63%, gray 63%)",
+        }}
+      >
+        <SimpleGrid columns={[1, 1, 2]} px={[2, 10]}>
+          <Box>
+            <Image src={"/Yuvraj_singh.png"} />
+          </Box>
+          <Box color={"white"}>
+            <SectionTitle fontSize={10}>MESSAGE FROM DIRECTOR</SectionTitle>
+            <Text pT={10} pb={5}>
+              Our sole and complete mission is to teach the value of Digital
+              Marketing by utilizing and creating a viable digital career path
+              for you. We assist you in providing an understanding of the
+              section-wise method so that you can comprehend the process at your
+              own pace and put extra efforts into the program that you like.
+            </Text>
+            <Heading
+              fontSize={28}
+              // sx={{
+              //   fontsize: "12px",
+              // }}
+            >
+              YUVRAJ SINGH
+            </Heading>
+            <Highlight
+              query="Director"
+              styles={{
+                color: "#010b2e",
+                fontWeight: "bold",
+                fontSize: "20px",
+              }}
+              py={7}
+            >
+              Director
+            </Highlight>
+            <Text>
+              Mr. Yuvraj Singh is an accomplished entrepreneur who has made a
+              name for himself in the world of digital marketing. Born with an
+              innate entrepreneurial spirit, Yuvraj started his career by
+              launching several ventures, including H1 TAGS, which is now
+              recognized as the top Digital Marketing Institute in Delhi NCR.
+            </Text>
+            <Text>
+              With a proven track record of developing and directing high-impact
+              digital marketing strategies, Yuvraj is an expert in overseeing
+              web strategy and development, digital engagement, and
+              consumer-facing tools. He has a deep understanding of the latest
+              trends and best practices in digital marketing and is skilled in
+              guiding strategic relationships to achieve company goals.
+            </Text>
+            <Text>
+              Under Yuvraj's leadership, H1 TAGS has become the go-to
+              destination for individuals and businesses looking to improve
+              their digital marketing skills. The institute offers a
+              comprehensive curriculum covering all aspects of digital
+              marketing, including SEO, PPC advertising, social media marketing,
+              email marketing, content marketing, and more.
+            </Text>
+            <Text>
+              Yuvraj is highly regarded in the industry for his exceptional
+              leadership skills and his ability to inspire and motivate his
+              team. He is a strategic thinker who is always looking for
+              innovative ways to improve the performance of his company and his
+              clients' businesses.
+            </Text>
+            <Text>
+              In addition to his work at H1 TAGS, Yuvraj is also involved in
+              several other ventures and is a respected thought leader in the
+              field of digital marketing. He is known for his dynamic and
+              engaging speaking style and has been invited to speak at various
+              conferences and events.
+            </Text>
+            <Text>
+              Outside of work, Yuvraj is a fitness enthusiast who enjoys playing
+              sports and staying active. He is a true entrepreneur at heart and
+              is constantly looking for new and exciting opportunities to make a
+              positive impact in the world.
+            </Text>
+          </Box>
+        </SimpleGrid>
       </Container>
 
       {/* cofounder portfolio starts here */}
@@ -296,12 +384,12 @@ const About = () => {
         sx={{
           py: 15,
           background: "rgb(2,0,36)",
-          background:
-            "linear-gradient(342deg, rgba(255,255,255,1) 61%, #101C32 61%)",
+          background: "linear-gradient(380deg,  gray 63%, #101C32 63%)",
         }}
+        color={"white"}
       >
         {/* director portfolio starts here */}
-        <Box maxW={"5xl"} mx={"auto"}>
+        {/* <Box maxW={"5xl"} mx={"auto"}>
           <SimpleGrid columns={[1, 1, 2]} gap={0} my={10} alignItems={"center"}>
             <Box className={styles.about}>
               <Heading fontSize={28}>AKSHAY</Heading>
@@ -369,8 +457,75 @@ const About = () => {
               <Image src={"/Akshay.png"} w={"100%"} />
             </Box>
           </SimpleGrid>
-        </Box>
+        </Box> */}
         {/* director portfolio ends here */}
+
+        <SimpleGrid columns={[1, 1, 2]} px={[2, 10]}>
+          <Box>
+            <Heading fontSize={28}>AKSHAY</Heading>
+            <Highlight
+              query="Co-Founder"
+              styles={{
+                color: "#010b2e",
+                fontWeight: "bold",
+                fontSize: "20px",
+              }}
+              py={7}
+            >
+              Co-Founder
+            </Highlight>
+
+            <Text>
+              Akshay is a highly skilled digital marketer with over 8 years of
+              experience in the field. He is currently working as the Vice
+              President at JY Technologies Consulting Pvt Ltd., where he
+              oversees the company's digital marketing strategies and ensures
+              that their online presence is optimized for maximum impact.
+            </Text>
+            <Text>
+              Apart from his role at JY Technologies, Akshay is also a
+              co-founder of a H1 Tags Digital Marketing institute where he is
+              committed to providing high-quality education and training to
+              students and professionals alike. He has developed a comprehensive
+              curriculum covering all aspects of digital marketing, including
+              SEO, PPC advertising, social media marketing, email marketing,
+              content marketing, and more.
+            </Text>
+            <Text>
+              Akshay is known for his exceptional teaching skills and his
+              ability to make complex concepts easy to understand. He has a
+              passion for helping others succeed in the fast-paced and
+              ever-evolving world of digital marketing.
+            </Text>
+            <Text>
+              In his role as the Vice President at JY Technologies, Akshay is
+              responsible for developing and executing digital marketing
+              strategies that drive business growth. He is an expert in
+              leveraging various digital platforms and tools to help companies
+              reach their target audience and achieve their marketing goals.
+            </Text>
+            <Text>
+              With his extensive experience and expertise in digital marketing,
+              Akshay is a thought leader in the industry. He has published
+              articles and spoken at conferences on various topics related to
+              digital marketing, sharing his insights and knowledge with others
+              in the field.
+            </Text>
+            <Text>
+              Outside of work, Akshay enjoys traveling and exploring new
+              cultures. He is a dedicated professional who is committed to
+              helping individuals and businesses succeed in the dynamic world of
+              digital marketing.
+            </Text>
+          </Box>
+          <Box
+            sx={{
+              marginLeft: "auto",
+            }}
+          >
+            <Image src={"/Akshay.png"} />
+          </Box>
+        </SimpleGrid>
       </Container>
 
       <Container maxW={"full"}>
