@@ -47,7 +47,7 @@ const About = () => {
       <Container maxW={"full"} p={0}>
         {/* image start here  */}
         <Box position="relative" p={0}>
-          <Image src={"/aboutBanner.jpg"} maxW="full" />
+          <Image src={"/aboutBanner.jpg"} w={"100%"} />
         </Box>
 
         {/* image end here  */}
