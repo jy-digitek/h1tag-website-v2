@@ -15,9 +15,9 @@ const index = () => {
   return (
     <Layout>
       <SEOTags
-        title={"Best Digital Marketing Training Institute in Delhi"}
+        title={"Best Digital Marketing Course in Delhi"}
         description={
-          "Best Digital Marketing Training Institute in Delhi- H1 Tags. Offline Classes | Live Projects | 20+ certifications | 3 months duration | Get Future-ready Today! "
+          "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available. "
         }
       />
       <DigitalBanner />

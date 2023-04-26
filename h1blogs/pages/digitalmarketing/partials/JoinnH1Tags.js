@@ -19,7 +19,7 @@ const JoinH1Tags = () => {
       <Box as="p" my={[3, 5]} maxW={"5xl"} mx={"auto"} textAlign={"center"}>
         Get a globally recognized Digital Marketing Certification. Advance your
         marketing profession by enhancing your digital abilities with the best
-        Digital Marketing Training Institute in Delhi.
+        Digital Marketing Course in Delhi.
       </Box>
       <SimpleGrid columns={[1, 2, 4]} spacing={10} px={10}>
         <Box as="card" boxShadow={"sm"}>

@@ -6,7 +6,7 @@ const DigitalmarketingBox = () => {
       <SectionTitle
         as={"h1"}
         pt={[8, 12]}
-        children={"Best Digital Marketing Training Institute in Delhi"}
+        children={"Best Digital Marketing Course in Delhi"}
       />
       <SimpleGrid columns={[1, 2, 4]} py={20} spacing={6} px={10}>
         <Box

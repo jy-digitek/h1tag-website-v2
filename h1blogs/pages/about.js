@@ -39,9 +39,9 @@ const About = () => {
   return (
     <Layout>
       <SEOTags
-        title={"Best Digital Marketing Institute in Delhi | H1 Tags"}
+        title={"Best Digital Marketing Training Institute in Delhi"}
         description={
-          "H1 Tags is the Best Digital Marketing Institute in Delhi with Paid Internship During the Course. We provide a 100% Placement Guarantee. Book a Free Demo Class."
+          "Best Digital Marketing Training Institute in Delhi- H1 Tags. Offline Classes | Live Projects | 20+ certifications | 3 months duration | Get Future-ready Today!"
         }
       />
       <Container maxW={"full"} p={0}>
@@ -71,21 +71,22 @@ const About = () => {
             color={"black"}
             pb={2}
           >
-            Best Digital Marketing Course in Delhi
+            Best Digital Marketing Institute in Delhi
           </SectionTitle>
 
           <Box sx={{ padding: 10 }} px={[0, 20]}>
             <Text px={[0, 20]}>
-              <strong>H1 Tags:</strong> A School of Digital Marketing provides
-              the Best Digital Marketing Course in Delhi with training programs
-              in a variety of areas, such as SEO, PPC, Social Media Marketing,
-              Content Management, and more, allowing students to learn the most
-              current methods in the field of Digital Marketing. With over 10+
-              years of experience in Digital Marketing, we can assist you in
-              achieving your objectives and entering the industry. We have a
-              team of Digital Marketing experts who have years of knowledge in
-              their field and are well-experienced. Our team is dedicated to
-              providing the students with the best knowledge possible.
+              <strong>H1 Tags:</strong>An Institute of Digital Marketing
+              provides the Best Digital Marketing Course in Delhi with training
+              programs in a variety of areas, such as SEO, PPC, Social Media
+              Marketing, Content Management, and more, allowing students to
+              learn the most current methods in the field of Digital Marketing.
+              With over 10+ years of experience in Digital Marketing, our
+              institute assists you in achieving your objectives and entering
+              the industry. We have a team of Digital Marketing experts who have
+              years of knowledge in their field and are well-experienced. Our
+              team is dedicated to providing the students with the best
+              knowledge possible.
             </Text>
           </Box>
         </Box>
