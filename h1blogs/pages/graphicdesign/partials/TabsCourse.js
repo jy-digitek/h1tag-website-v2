@@ -79,7 +79,7 @@ export default function TabsCourse() {
           <Box />
         </SimpleGrid>
       </Container>
-      <Container maxW={"6xl"} py={10} bg="gray.100">
+      <Container maxW={"7xl"} py={10} bg="gray.100">
         <Show above="md">
           <Box maxW={"6xl"} mx={"auto"}>
             <Tabs

@@ -3,7 +3,7 @@ import { Container, SimpleGrid, Box, Card, CardBody } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 export default function PerSueGraphicDesign() {
   return (
-    <Container maxW={"6xl"}>
+    <Container maxW={"7xl"}>
       <SectionTitle
         children={"Why to pursue Graphic Designing Course?"}
         py={10}

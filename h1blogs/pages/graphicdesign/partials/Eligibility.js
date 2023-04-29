@@ -13,7 +13,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 export default function Eligibility() {
   return (
     <Box py={10} mx={[5, 10]}>
-      <Container maxW={"6xl"} backgroundColor={"#e4f0e7"}>
+      <Container maxW={"7xl"} backgroundColor={"#e4f0e7"}>
         <Grid templateColumns="repeat(6, 1fr)" gap={5}>
           <GridItem colSpan={[6, 5]}>
             <Box position={"relative"} p={[0, 8]}>

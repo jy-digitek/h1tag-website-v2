@@ -13,7 +13,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FcReadingEbook, FcOrganization, FcBriefcase } from "react-icons/fc";
 export default function CarrerOportunity() {
   return (
-    <Container maxW={"6xl"} py={[5, 10]}>
+    <Container maxW={"7xl"} py={[5, 10]}>
       <SectionTitle
         children={"Career Opportunities after Completing the Course"}
         mb={[5, 10]}
