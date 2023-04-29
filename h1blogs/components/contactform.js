@@ -1,21 +1,12 @@
 import Link from "next/link";
 import { Box, ButtonGroup, Flex, Text } from "@chakra-ui/react";
 import { Formik } from "formik";
-import Toast from "./Toast";
+
 import {
-  // CheckboxContainer,
-  // CheckboxControl,
   CheckboxSingleControl,
   InputControl,
-  // NumberInputControl,
-  // PercentComplete,
-  // RadioGroupControl,
-  // ResetButton,
   SelectControl,
-  // SliderControl,
   SubmitButton,
-  // SwitchControl,
-  // TextareaControl,
 } from "formik-chakra-ui";
 
 export default function ContactForm({
@@ -29,9 +20,7 @@ export default function ContactForm({
     <>
       <Flex
         align={"center"}
-        // textAlign={"center"}
         justify="center"
-        // h="100vh"
         style={{ width: "100%" }}
         width={"100%"}
       >

@@ -13,12 +13,12 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FcReadingEbook, FcOrganization, FcBriefcase } from "react-icons/fc";
 export default function CarrerOportunity() {
   return (
-    <Container maxW={"full"} py={[5, 10]}>
+    <Container maxW={"6xl"} py={[5, 10]}>
       <SectionTitle
         children={"Career Opportunities after Completing the Course"}
         mb={[5, 10]}
       />
-      <SimpleGrid columns={[1, 1, 3]} gap={2} px={[0, 10]}>
+      <SimpleGrid columns={[1, 1, 3]} gap={2}>
         <Box>
           <Card
             // color={"#fff"}

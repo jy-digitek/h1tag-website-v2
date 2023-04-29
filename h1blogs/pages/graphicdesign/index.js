@@ -21,7 +21,7 @@ const index = () => {
         }
       />
       {/* <PageBanner title="Graphic Design Course" /> */}
-      <GraphicBanner />
+      {/* <GraphicBanner /> */}
       <TabsCourse />
       <CarrerOportunity />
       <Eligibility />

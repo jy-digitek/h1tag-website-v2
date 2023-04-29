@@ -316,6 +316,7 @@ export default function Tabs2() {
           </TabPanel>
         </Tabs>
       </Show>
+
       <Show below="md">
         <Tabs
           defaultTab="one"
