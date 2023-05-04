@@ -10,15 +10,20 @@ import Tabs2 from "./partials/Tabs2";
 import { Slide, Zoom } from "react-awesome-reveal";
 import SEOTags from "../../components/Head";
 import DigitalBanner from "./partials/DigitalBanner";
-
+import { useEffect, useState } from "react";
 const index = () => {
+  const [currentUrl, setCurrentUrl] = useState("");
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
   return (
     <Layout>
       <SEOTags
         title={"Best Digital Marketing Course in Delhi"}
         description={
-          "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available. "
+          "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available."
         }
+        currentUrl={currentUrl}
       />
       <DigitalBanner />
       <Zoom>

@@ -11,6 +11,7 @@ import Eligibility from "./partials/Eligibility";
 import ScholarShipProgram from "./partials/ScholarShipProgram";
 import SEOTags from "../../components/Head";
 import GraphicBanner from "./partials/GraphicBanner";
+
 const index = () => {
   return (
     <Layout>

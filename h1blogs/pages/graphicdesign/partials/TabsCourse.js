@@ -39,9 +39,9 @@ export default function TabsCourse() {
       >
         <SimpleGrid columns={[1, 1]}>
           <Box my={[5, 10]} mx={"auto"} textColor={"#fff"} px={[3, 20]}>
-            <SectionTitle
-              children={"Top Graphic Design Course from the Best Instructors"}
-            />
+            <SectionTitle>
+              <h1>Top Graphic Design Course from the Best Instructor</h1>
+            </SectionTitle>
             <Box>
               H1 Tags provides Next-Level Education that offers up-to-date
               graphic designing software training in a single place. Students

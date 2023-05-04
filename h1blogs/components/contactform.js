@@ -13,8 +13,6 @@ export default function ContactForm({
   submitHandle,
   validationSchema,
   initialValues,
-  success,
-  loading,
 }) {
   return (
     <>
@@ -61,7 +59,7 @@ export default function ContactForm({
                   mt={5}
                 >
                   <option value="Netaji Subhash Place">
-                    Netaji Shubhash Place
+                    Netaji Subhash Place
                   </option>
                   <option value="Budh Vihar">Budh Vihar</option>
                 </SelectControl>

@@ -2,19 +2,16 @@ import React from "react";
 import * as Yup from "yup";
 import { useState } from "react";
 import {
-  // Box,
-  // Button,
   Modal,
   ModalOverlay,
   ModalHeader,
-  // ModalFooter,
   ModalContent,
   ModalCloseButton,
   ModalBody,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
 import { GlobalButton } from "./GlobalButton";
-
+import Link from "next/link";
 import axios from "axios";
 
 import ContactForm from "./contactform";
@@ -23,8 +20,6 @@ export default function ReturnFocus({
   btnText,
   modalTitle,
   isEditingSet,
-  // openModalSet,
-  w,
   children,
   ...rest
 }) {
@@ -46,6 +41,7 @@ export default function ReturnFocus({
     const terms_accepted = values.terms_accepted;
     console.log("success", success);
     successSet(true);
+
     try {
       const res = await axios({
         method: "POST",
@@ -65,9 +61,12 @@ export default function ReturnFocus({
       if (res.data == "Mail Sent") {
         successSet(true);
         onClose();
+        window.open("/uploads/broucher/Broucher.pdf");
       } else successSet(false);
       loadingSet(false);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
   const phoneRegExp =
     /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;

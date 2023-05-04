@@ -23,7 +23,9 @@ import {
   Flex,
   Center,
   Hide,
+  useDisclosure,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import styles from "../styles/About.module.css";
 import { FiArrowRightCircle } from "react-icons/fi";
@@ -34,7 +36,9 @@ import { GlobalButton } from "../components/GlobalButton";
 import ReturnFocus from "../components/Modal";
 import ContactForm from "../components/contactform";
 import SEOTags from "../components/Head";
+
 const About = () => {
+  const { isOpen, onToggle } = useDisclosure();
   const [openModal, openModalSet] = React.useState(false);
   return (
     <Layout>
@@ -71,7 +75,7 @@ const About = () => {
             color={"black"}
             pb={2}
           >
-            Best Digital Marketing Institute in Delhi
+            <h1> Best Digital Marketing Institute in Delhi</h1>
           </SectionTitle>
 
           <Box sx={{ padding: 10 }} px={[0, 20]}>
@@ -574,13 +578,15 @@ const About = () => {
                   </SectionTitle>
                 </Stack>
                 <Stack direction={"row"} gap={10}>
-                  <GlobalButton
-                    rounded={"full"}
-                    color={"white"}
-                    label={" Get started today"}
-                    background="#3950a1"
-                    _hover={{ background: "#101C32" }}
-                  />
+                  <Link href="/contact">
+                    <GlobalButton
+                      rounded={"full"}
+                      color={"white"}
+                      label={"Contact Us"}
+                      background="#3950a1"
+                      _hover={{ background: "#101C32" }}
+                    />
+                  </Link>
                 </Stack>
               </VStack>
             </Box>
@@ -616,39 +622,28 @@ const About = () => {
                 backgroundAttachment={"fixed"}
                 position={"relative"}
               >
-                <Hide below="sm">
-                  <Box
-                    position={"absolute"}
-                    sx={{
-                      width: 0,
-                      height: 0,
-                      left: 0,
-                      top: "25%",
-                      borderTop: "40px solid transparent",
-                      borderBottom: "40px solid transparent",
-                      borderLeft: "40px solid papayawhip",
-                    }}
-                  />
-                </Hide>
                 <VStack
                   w={"full"}
                   justify={"center"}
                   h={"full"}
                   mb={8}
                   bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+                  pb={10}
                 >
                   <Stack maxW={"2xl"} align={"center"} spacing={6}>
                     <SectionTitle py={5} color={"#fff"}>
-                      Why Choose us?
+                      Your career matters to us
                     </SectionTitle>
                   </Stack>
                   <Stack direction={"row"} gap={10}>
-                    <GlobalButton
+                    <ReturnFocus
+                      btnText={`Get started today`}
+                      children={<ContactForm />}
+                      openModalSet={openModalSet}
+                      // isEditingSet={isEditingSet}
+                      label="Get started today"
+                      color="white"
                       rounded={"full"}
-                      color={"white"}
-                      label={"Get started today"}
-                      background="#3950a1"
-                      _hover={{ background: "#101C32" }}
                     />
                   </Stack>
                 </VStack>
@@ -732,12 +727,14 @@ const About = () => {
                     </SectionTitle>
                   </Stack>
                   <Stack direction={"row"} gap={10}>
-                    <GlobalButton
+                    <ReturnFocus
+                      btnText={`Get started today`}
+                      children={<ContactForm />}
+                      openModalSet={openModalSet}
+                      // isEditingSet={isEditingSet}
+                      label="Get started today"
+                      color="white"
                       rounded={"full"}
-                      color={"white"}
-                      label={"Get started today"}
-                      background="#3950a1"
-                      _hover={{ background: "#101C32" }}
                     />
                   </Stack>
                 </VStack>
