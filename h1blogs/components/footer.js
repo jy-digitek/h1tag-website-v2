@@ -127,8 +127,8 @@ export default function Footer() {
               </ListItem>
             </List>
           </Box>
-          <Box>
-            <Heading as={"h2"} fontSize="20px">
+          <Box p={0}>
+            <Heading as={"h2"} fontSize="20px" textAlign={"center"}>
               Training Centers :
             </Heading>
             {/* <Text fontSize={"12px"} py={3}>
@@ -136,15 +136,53 @@ export default function Footer() {
             Garden | South Campus | Noida | Meerut | Mumbai | GOA | Varanasi |
             Jaipur | Srinagar J&K
           </Text> */}
-            <UnorderedList>
-              <ListItem>Netaji Subhash Place</ListItem>
-              <ListItem>Budh Vihar</ListItem>
-            </UnorderedList>
-            <Heading as={"h2"} fontSize="20px" py={3}>
+
+            <Flex pt={3}>
+              <Box>
+                <SiGooglemaps fontSize={"25px"} paddingLeft={0} />
+              </Box>
+              <Box ml={2}>
+                FF 18, First Floor, Pearls Omaxe Tower Netaji Subhash Place,
+                Delhi-110034
+              </Box>
+            </Flex>
+
+            <Flex py={3}>
+              <Box>
+                {" "}
+                <SlPhone fontSize={"25px"} />
+              </Box>
+              <Box ml={2}>+91 7770007684, 7770007683</Box>
+            </Flex>
+
+            <Flex py={1}>
+              <Box>
+                <SiGooglemaps fontSize={"25px"} paddingLeft={0} />
+              </Box>
+              <Box ml={2}>
+                {" "}
+                D-44, Kanjhawala Rd, Budh Vihar Phase I, Krishan Vihar, Delhi,
+                110086
+              </Box>
+            </Flex>
+
+            <Flex py={1}>
+              <Box>
+                {" "}
+                <SlPhone fontSize={"25px"} />
+              </Box>
+              <Box ml={2}>+91 7770007648, 7770007698</Box>
+            </Flex>
+
+            <Heading as={"h2"} fontSize="20px" py={3} textAlign={"center"}>
               Business Hours
             </Heading>
-            <Text fontSize={"12px"}>Monday – Friday : 10am to 7pm</Text>
-            <Text fontSize={"12px"}>Saturday & Sunday : 10am to 2pm</Text>
+            <Text fontSize={"12px"} textAlign={"center"}>
+              Monday – Friday : 10am to 7pm
+            </Text>
+            <Text fontSize={"12px"} textAlign={"center"}>
+              Saturday & Sunday : 10am to 2pm
+            </Text>
           </Box>
 
           <Box>
@@ -166,12 +204,12 @@ export default function Footer() {
 
           </Text> */}
 
-            <Link href="tel:+91 77700-07683">
+            <Link href="tel:7770007683">
               <Flex pt={3}>
                 <Box>
                   <SlPhone fontSize={"25px"} />
                 </Box>
-                <Box>+91 77700-07683</Box>
+                <Box>+91 777 000 7683</Box>
               </Flex>
             </Link>
 

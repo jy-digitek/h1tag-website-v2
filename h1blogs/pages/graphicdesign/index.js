@@ -11,28 +11,50 @@ import Eligibility from "./partials/Eligibility";
 import ScholarShipProgram from "./partials/ScholarShipProgram";
 import SEOTags from "../../components/Head";
 import GraphicBanner from "./partials/GraphicBanner";
+import { useState, useEffect } from "react";
 
 const index = () => {
-  return (
-    <Layout>
-      <SEOTags
-        title={"#1 Graphic Design Course in Delhi | H1 Tags"}
-        description={
-          "Looking for the Best Graphic Designing Course in Delhi? H1 Tags Provide Best Graphic Designing Course with 100% Placement Guarantee | Book a Free Demo Class Now!"
-        }
-      />
-      {/* <PageBanner title="Graphic Design Course" /> */}
-      {/* <GraphicBanner /> */}
-      <TabsCourse />
-      <CarrerOportunity />
-      <Eligibility />
-      <PerSueGraphicDesign />
-      <ScholarShipProgram />
-      <ChooseGraphicDesign />
-      <JobRoles />
-      <Faq />
-    </Layout>
-  );
+    const [currentUrl, setCurrentUrl] = useState("");
+    useEffect(() => {
+        setCurrentUrl(window.location.href);
+    }, []);
+    return (
+        <Layout>
+            <SEOTags
+                title={"#1 Graphic Design Course in Delhi | H1 Tags"}
+                description={
+                    "Looking for the Best Graphic Designing Course in Delhi? H1 Tags Provide Best Graphic Designing Course with 100% Placement Guarantee | Book a Free Demo Class Now!"
+                }
+                currentUrl={currentUrl}
+            />
+            {/* <Head>
+                <title>#1 Graphic Design Course in Delhi | H1 Tags</title>
+                <meta
+                    name="description"
+                    content={
+                        "Looking for the Best Graphic Designing Course in Delhi? H1 Tags Provide Best Graphic Designing Course with 100% Placement Guarantee | Book a Free Demo Class Now!"
+                    }
+                />
+                <meta name="language" content="english" />
+                <meta name="robots" content="index, follow" />
+                <link
+                    rel="canonical"
+                    href={"http://localhost:3000/graphicdesign"}
+                    key="canonical"
+                />
+            </Head> */}
+            {/* <PageBanner title="Graphic Design Course" /> */}
+            {/* <GraphicBanner /> */}
+            <TabsCourse />
+            <CarrerOportunity />
+            <Eligibility />
+            <PerSueGraphicDesign />
+            <ScholarShipProgram />
+            <ChooseGraphicDesign />
+            <JobRoles />
+            <Faq />
+        </Layout>
+    );
 };
 
 export default index;

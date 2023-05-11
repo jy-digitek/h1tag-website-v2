@@ -38,7 +38,7 @@ const PickCourseTab = () => {
   return (
     <Container maxW={"5xl"}>
       <SectionTitle as="h2" my={10}>
-        Pick a Course to Enhance to Career
+        Pick a Course to Enhance Your Career
       </SectionTitle>
       <SimpleGrid columns={[1]} spacing="6" px={[0, 10]}>
         <Box>

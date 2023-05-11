@@ -28,7 +28,7 @@ import {
 
 export const Benefits = [
   {
-    label: "Earn While You Learning",
+    label: "Earn While You Learn",
     bg: "purple",
     icon: <MdLightbulb size={30} />,
   },
@@ -64,7 +64,7 @@ export const Benefits = [
     icon: <MdWork size={30} />,
   },
   {
-    label: "Weekday and Weekend Batches",
+    label: "Weekdays and Weekend Batches",
     bg: "orange",
     icon: <MdSupervisedUserCircle size={30} />,
   },
@@ -111,18 +111,18 @@ export const comparision = [
 export const CourseBuiltForData = [
   {
     icon: <FcMoneyTransfer />,
-    title: "Students/Fresher’s",
+    title: "College and School",
     text: "College students interested in pursuing a job in Digital Marketing.",
   },
   {
     icon: <FcOrgUnit />,
-    title: "Professionals",
+    title: "Working Professionals",
     text: "Professionals seeking to advance their jobs in the more hopeful field of Digital Marketing.",
   },
   {
     icon: <FcOk />,
     title: "Coaches",
-    text: "Coaches and trainers who want to expand their training company online and attract more students.",
+    text: "Coaches and trainers who want to expand their training company online and attract more students and clients",
   },
   {
     icon: <FcApproval />,
@@ -253,17 +253,57 @@ export const PlacementPartner = [
 ];
 
 export const AdvertisingPartner = [
-  { src: "/adver/1.png", name: "Bisiness Standard" },
+  {
+    src: "/adver/1.png",
+    name: "Bisiness Standard",
+    href: "https://www.business-standard.com/content/press-releases-ani/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags-122092600424_1.html",
+  },
   { src: "/adver/2.png", name: "Hindustan Times" },
-  { src: "/adver/3.png", name: "World News Network" },
-  { src: "/adver/4.png", name: "British News Network" },
-  { src: "/adver/5.png", name: "ANI" },
-  { src: "/adver/6.png", name: "Dailyhunt" },
-  { src: "/adver/7.png", name: "Zee5" },
-  { src: "/adver/8.png", name: "Jio News" },
-  { src: "/adver/9.png", name: "The Print" },
-  { src: "/adver/10.png", name: "Maharastra Samachar" },
-  { src: "/adver/11.png", name: "Sun Times" },
+  {
+    src: "/adver/3.png",
+    name: "World News Network",
+    href: "https://www.worldnewsnetwork.net/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
+  {
+    src: "/adver/4.png",
+    name: "British News Network",
+    href: "https://www.britishnewsnetwork.com/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
+  {
+    src: "/adver/5.png",
+    name: "ANI",
+    href: "https://aninews.in/news/business/business/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114241/",
+  },
+  {
+    src: "/adver/6.png",
+    name: "Dailyhunt",
+    href: "https://m.dailyhunt.in/news/india/english/ani67917250816496966-epaper-dh448c3797a13d4f32b1d2367d0d72a726/jy+technologies+consulting+inaugurates+digital+marketing+institute+h1tags-newsid-n426175122",
+  },
+  {
+    src: "/adver/7.png",
+    name: "Zee5",
+    href: "https://www.zee5.com/articles/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags",
+  },
+  {
+    src: "/adver/8.png",
+    name: "Jio News",
+    href: "https://jionews.com/home/article/10/1926640316/Business-News-JY-Technologies-Consulting-Inaugurates-Digital-Marketing-Institute-H1Tags",
+  },
+  {
+    src: "/adver/9.png",
+    name: "The Print",
+    href: "https://theprint.in/ani-press-releases/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags/1143249/",
+  },
+  {
+    src: "/adver/10.png",
+    name: "Maharastra Samachar",
+    href: "https://www.MaharashtraSamachar.com/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
+  {
+    src: "/adver/11.png",
+    name: "Sun Times",
+    href: "https://www.europeansuntimes.com/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
 ];
 
 export const MasterCourseData = [

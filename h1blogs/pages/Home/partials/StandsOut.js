@@ -6,6 +6,7 @@ import {
   Heading,
   Image,
   background,
+  Highlight,
 } from "@chakra-ui/react";
 import React from "react";
 import { SectionTitle } from "../../../components/SectionTitle";
@@ -23,7 +24,17 @@ const StandsOut = () => {
           <Box px={[0, 10]} my={10}>
             <Box sx={{ lineHeight: 2, background: "#fff", p: 7, rounded: 5 }}>
               <SectionTitle as="h2" lineHeight="50px" mb={2}>
-                How H1 Tags stands out from others?
+                <Highlight
+                  query="H1 Tags"
+                  styles={{
+                    px: "2",
+                    py: "1",
+                    rounded: "full",
+                    color: "#FF5733",
+                  }}
+                >
+                  How H1 Tags stands out from others?
+                </Highlight>
               </SectionTitle>
               <Box as="p" sx={{ mb: 2 }}>
                 H1 Tags is an agency-based Digital Marketing Institute in Delhi
@@ -57,7 +68,7 @@ const StandsOut = () => {
                   // isEditingSet={isEditingSet}
                   label="Get a Call Back"
                   color="white"
-                  sx={{ textAlign: 'center',width: "100%", color: "#fff" }}
+                  sx={{ textAlign: "center", width: "100%", color: "#fff" }}
                   my={5}
                 />
               </Box>
