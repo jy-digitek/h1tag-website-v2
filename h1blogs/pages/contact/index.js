@@ -16,7 +16,7 @@ const Contact = () => {
                 description={
                     "the best digital marketing institute in Delhi NCR and take your career to the next level. Enroll in our comprehensive and hands-on courses today."
                 }
-                currentUrl={currentUrl}
+                currentUrl={"https://h1tags.com/contact"}
             />
             <ContactBanner />
             <QuickContact />

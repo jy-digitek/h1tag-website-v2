@@ -23,7 +23,7 @@ const index = () => {
                 description={
                     "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available."
                 }
-                currentUrl={currentUrl}
+                currentUrl={"https://h1tags.com/digitalmarketing"}
             />
             <DigitalBanner />
             <Zoom>

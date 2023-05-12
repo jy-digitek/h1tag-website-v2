@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Layout from "../../components/layout";
 import { PageBanner } from "../../components/PageBanner";
@@ -25,7 +26,7 @@ const index = () => {
                 description={
                     "Looking for the Best Graphic Designing Course in Delhi? H1 Tags Provide Best Graphic Designing Course with 100% Placement Guarantee | Book a Free Demo Class Now!"
                 }
-                currentUrl={currentUrl}
+                currentUrl={"https://h1tags.com/graphicdesign"}
             />
             {/* <Head>
                 <title>#1 Graphic Design Course in Delhi | H1 Tags</title>

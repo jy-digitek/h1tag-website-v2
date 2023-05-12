@@ -52,7 +52,7 @@ const About = () => {
                 description={
                     "Best Digital Marketing Training Institute in Delhi- H1 Tags. Offline Classes | Live Projects | 20+ certifications | 3 months duration | Get Future-ready Today!"
                 }
-                currentUrl={currentUrl}
+                currentUrl={"https://h1tags.com/about"}
             />
             <Container maxW={"full"} p={0}>
                 {/* image start here  */}

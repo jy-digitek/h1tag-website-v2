@@ -14,7 +14,6 @@ import Testimonial from "../digitalmarketing/partials/Testimonial";
 import EnrollCta from "./partials/EnrollCta";
 import SEOTags from "../../components/Head";
 import { useState, useEffect } from "react";
-import Head from "next/head";
 
 const Home = () => {
     const [currentUrl, setCurrentUrl] = useState("");
@@ -24,32 +23,14 @@ const Home = () => {
     return (
         <Layout>
             {/* <Banner /> */}
-            {/* <SEOTags
+            <SEOTags
                 title={"Best Digital Marketing Institute in Delhi | H1 Tags"}
                 description={
                     "H1 Tags is the Best Digital Marketing Institute in Delhi with Paid Internship During the Course. We provide a 100% Placement Guarantee. Book a Free Demo Class."
                 }
-                currentUrl={currentUrl}
-            /> */}
+                currentUrl={"https://h1tags.com/"}
+            />
 
-            <Head>
-                <title>
-                    Best Digital Marketing Institute in Delhi | H1 Tags
-                </title>
-                <meta
-                    name="description"
-                    content={
-                        "H1 Tags is the Best Digital Marketing Institute in Delhi with Paid Internship During the Course. We provide a 100% Placement Guarantee. Book a Free Demo Class."
-                    }
-                />
-                <meta name="language" content="english" />
-                <meta name="robots" content="index, follow" />
-                <link
-                    rel="canonical"
-                    href={"https://h1tags.com/"}
-                    key="canonical"
-                />
-            </Head>
             <EnrollCta />
             <TransFormingCourse />
             <PickCourseTab />
