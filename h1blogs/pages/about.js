@@ -45,14 +45,15 @@ const About = () => {
     useEffect(() => {
         setCurrentUrl(window.location.href);
     }, []);
+
     return (
-        <Layout>
+        <Layout canonical={"/about"}>
             <SEOTags
                 title={"Best Digital Marketing Training Institute in Delhi"}
                 description={
                     "Best Digital Marketing Training Institute in Delhi- H1 Tags. Offline Classes | Live Projects | 20+ certifications | 3 months duration | Get Future-ready Today!"
                 }
-                currentUrl={"https://h1tags.com/about"}
+                currentUrl={"https://h1tags.com/about.html/"}
             />
             <Container maxW={"full"} p={0}>
                 {/* image start here  */}

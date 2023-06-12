@@ -10,13 +10,15 @@ const Contact = () => {
         setCurrentUrl(window.location.href);
     }, []);
     return (
-        <Layout>
+        <Layout canonical={"/contact"}>
             <SEOTags
-                title={"Best Digital Marketing Institute in Delhi NCR"}
-                description={
-                    "the best digital marketing institute in Delhi NCR and take your career to the next level. Enroll in our comprehensive and hands-on courses today."
+                title={
+                    "Contact H1 Tags- Best Digital Marketing Institute in Delhi NCR"
                 }
-                currentUrl={"https://h1tags.com/contact"}
+                description={
+                    "Contact H1 Tags the best digital marketing institute in Delhi NCR and take your career to the next level. Enroll in our comprehensive and hands-on courses today."
+                }
+                currentUrl={"https://h1tags.com/contact.html/"}
             />
             <ContactBanner />
             <QuickContact />

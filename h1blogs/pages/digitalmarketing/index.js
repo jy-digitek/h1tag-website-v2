@@ -11,11 +11,9 @@ import { Slide, Zoom } from "react-awesome-reveal";
 import SEOTags from "../../components/Head";
 import DigitalBanner from "./partials/DigitalBanner";
 import { useEffect, useState } from "react";
-const index = () => {
-    const [currentUrl, setCurrentUrl] = useState("");
-    useEffect(() => {
-        setCurrentUrl(window.location.href);
-    }, []);
+import Head from "next/head";
+const index = ({ canonicalUrl }) => {
+    console.log("canonicalUrl", canonicalUrl);
     return (
         <Layout>
             <SEOTags
@@ -23,8 +21,33 @@ const index = () => {
                 description={
                     "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available."
                 }
-                currentUrl={"https://h1tags.com/digitalmarketing"}
+                currentUrl={"https://h1tags.com/digitalmarketing.html/"}
             />
+            {/* <Head>
+                <title>Best Digital Marketing Course in Delhi</title>
+                <link
+                    rel="shortcut icon"
+                    href="/h1logo.png"
+                    style={{
+                        height: "16px",
+                        width: "16px",
+                    }}
+                />
+                <meta
+                    name="og:description"
+                    content={
+                        "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available."
+                    }
+                    key={"Best Digital Marketing Course in Delhi"}
+                />
+                <meta name="language" content="english" />
+                <meta name="robots" content="index, follow" />
+                <link
+                    rel="og:canonical"
+                    href="https://h1tags.com/digitalmarketing/"
+                    key="https://h1tags.com/digitalmarketing/"
+                />
+            </Head> */}
             <DigitalBanner />
             <Zoom>
                 <DigitalmarketingBox />
@@ -41,5 +64,15 @@ const index = () => {
         </Layout>
     );
 };
+export async function getStaticProps(ctx) {
+    // const { pathname } = ctx;
+    // console.log(ctx);
+    // console.log(canonicalUrl);
+    return {
+        props: {
+            canonicalUrl: "https://h1tags.com/digitalmarketing/",
+        },
+    };
+}
 
 export default index;

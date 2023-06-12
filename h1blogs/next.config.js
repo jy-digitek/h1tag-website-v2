@@ -1,12 +1,12 @@
 module.exports = {
-  trailingSlash: true,
+    trailingSlash: true,
 };
 
 module.exports = {
-  ...(config, { isServer }) => {
-    if (isServer) {
-      require("./scripts/sitemap-generator");
-    }
-    return config;
-  },
+    ...(config, { isServer }) => {
+        if (isServer) {
+            require("./scripts/sitemap-generator");
+        }
+        return config;
+    },
 };

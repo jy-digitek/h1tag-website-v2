@@ -16,12 +16,8 @@ import SEOTags from "../../components/Head";
 import { useState, useEffect } from "react";
 
 const Home = () => {
-    const [currentUrl, setCurrentUrl] = useState("");
-    useEffect(() => {
-        setCurrentUrl(window.location.href);
-    }, []);
     return (
-        <Layout>
+        <Layout canonical={""}>
             {/* <Banner /> */}
             <SEOTags
                 title={"Best Digital Marketing Institute in Delhi | H1 Tags"}
