@@ -1,0 +1,49 @@
+.model_container{
+    padding: 0 !important;
+}
+.wrapper ul {
+    justify-content: center;
+}
+
+.isRippleButton {
+    /* position: absolute; */
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .isRippleButton button {
+    background: transparent;
+    cursor: pointer;
+    /* border: 2px solid white; */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 100%;
+    text-transform: uppercase;
+    /* font-size: 20px; */
+    line-height: 30px;
+    animation: ripple 1.5s linear infinite;
+    transition: all 0.7s ease;
+  }
+  .isRippleButton button:hover {
+    transform: scale(1.1);
+  }
+  .isRippleButton button:focus {
+    outline: none;
+  }
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.3), 0 0 0 1px rgba(255, 0, 0, 0.3), 0 0 0 3px rgba(255, 0, 0, 0.3), 0 0 0 5px rgba(255, 0, 0, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.3), 0 0 0 4px rgba(255, 0, 0, 0.3), 0 0 0 10px rgba(255, 0, 0, 0), 0 0 0 20px rgba(255, 0, 0, 0);
+    }
+  }

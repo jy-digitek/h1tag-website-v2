@@ -23,11 +23,12 @@ import {
   MdOutlineCurrencyRupee,
   MdSupervisedUserCircle,
   MdCastForEducation,
+  MdWork,
 } from "react-icons/md";
 
 export const Benefits = [
   {
-    label: "Earn While You Learning",
+    label: "Earn While You Learn",
     bg: "purple",
     icon: <MdLightbulb size={30} />,
   },
@@ -49,7 +50,7 @@ export const Benefits = [
   {
     label: "EMIs Available",
     bg: "green",
-    icon: <MdAttachMoney size={30} />,
+    icon: <MdOutlineCurrencyRupee size={30} />,
   },
   {
     label: "100% Placement Assistance",
@@ -60,10 +61,10 @@ export const Benefits = [
   {
     label: "Paid Internship from 1st Month",
     bg: "red",
-    icon: <MdOutlineCurrencyRupee size={30} />,
+    icon: <MdWork size={30} />,
   },
   {
-    label: "Weekday and Weekend Batches",
+    label: "Weekdays and Weekend Batches",
     bg: "orange",
     icon: <MdSupervisedUserCircle size={30} />,
   },
@@ -78,50 +79,50 @@ export const comparision = [
   {
     icon: <FcMoneyTransfer />,
     title: "Flexible Fee Structure",
-    text: "H1 Tags offers a reasonable and flexible fee structure (on EMI basis), by which the students don't have to pay the full fee altogether but can make EMI's.",
+    text: "H1 Tags offers a reasonable and flexible fee structure (on an EMI basis), by which the students don't have to pay the full fee altogether but can make EMI.",
   },
   {
-    icon: <FcOrgUnit />,
+    icon: <FcReadingEbook />,
     title: "Training Facilities",
-    text: " Easy for students to understand and study. Keen students can stay updated with their personalized Laptops relating to theirsubjects latest advancements and curriculum.",
+    text: "Easy for students to understand and study. Keen students can stay updated with their personalized Laptops relating to their subjects' latest advancements and curriculum.",
   },
   {
     icon: <FcOk />,
     title: " Job Placement",
-    text: " Students participating in placement units learn about business standards and improve their job prospects. We give assured placement guarantee to our students.",
+    text: "Students in placement units learn about business standards and improve their job prospects. We give secure placement guarantees to our students.",
   },
   {
     icon: <FcApproval />,
     title: " Paid Internship",
-    text: " We ensure that our students get paid internships from the first month of joining. Unlike many of your friends, you can begin building your collection sooner. You can add this additional expertise to your resume.",
+    text: "We ensure that our students get paid internships from the first month of joining. Unlike many of your friends, you can begin building your collection sooner. You can add this additional expertise to your resume.",
   },
   {
     icon: <FcOnlineSupport />,
     title: "Advanced Experience",
-    text: "  As H1 Tags is an agency-based institute, we ensure that our students work on practical and live projects, which builds confidence.",
+    text: "As H1 Tags is an agency-based Digital Marketing Institute in Delhi, we ensure that our students work on practical and live projects, which builds confidence.",
   },
   {
     icon: <FcComboChart />,
-    title: " Proven Track Record",
-    text: "Our students tend to grow and enhance their careers; in many ways, our students are happy a satisfied as with our institute they got placement in well-known companies.",
+    title: "Proven Track Record",
+    text: "Our students tend to grow and enhance their careers; in many ways, our students are happy and satisfied; with our institute, they get placement in well-known companies.",
   },
 ];
 
 export const CourseBuiltForData = [
   {
     icon: <FcMoneyTransfer />,
-    title: "Students/Fresher’s",
-    text: "College students interested in pursuing a job in Digital Marketing",
+    title: "College and School",
+    text: "College students interested in pursuing a job in Digital Marketing.",
   },
   {
     icon: <FcOrgUnit />,
-    title: "Professionals",
+    title: "Working Professionals",
     text: "Professionals seeking to advance their jobs in the more hopeful field of Digital Marketing.",
   },
   {
     icon: <FcOk />,
     title: "Coaches",
-    text: "Coaches and trainers who want to expand their training company online and attract more students.",
+    text: "Coaches and trainers who want to expand their training company online and attract more students and clients",
   },
   {
     icon: <FcApproval />,
@@ -252,17 +253,57 @@ export const PlacementPartner = [
 ];
 
 export const AdvertisingPartner = [
-  { src: "/adver/1.png", name: "Bisiness Standard" },
+  {
+    src: "/adver/1.png",
+    name: "Bisiness Standard",
+    href: "https://www.business-standard.com/content/press-releases-ani/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags-122092600424_1.html",
+  },
   { src: "/adver/2.png", name: "Hindustan Times" },
-  { src: "/adver/3.png", name: "World News Network" },
-  { src: "/adver/4.png", name: "British News Network" },
-  { src: "/adver/5.png", name: "ANI" },
-  { src: "/adver/6.png", name: "Dailyhunt" },
-  { src: "/adver/7.png", name: "Zee5" },
-  { src: "/adver/8.png", name: "Jio News" },
-  { src: "/adver/9.png", name: "The Print" },
-  { src: "/adver/10.png", name: "Maharastra Samachar" },
-  { src: "/adver/11.png", name: "Sun Times" },
+  {
+    src: "/adver/3.png",
+    name: "World News Network",
+    href: "https://www.worldnewsnetwork.net/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
+  {
+    src: "/adver/4.png",
+    name: "British News Network",
+    href: "https://www.britishnewsnetwork.com/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
+  {
+    src: "/adver/5.png",
+    name: "ANI",
+    href: "https://aninews.in/news/business/business/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114241/",
+  },
+  {
+    src: "/adver/6.png",
+    name: "Dailyhunt",
+    href: "https://m.dailyhunt.in/news/india/english/ani67917250816496966-epaper-dh448c3797a13d4f32b1d2367d0d72a726/jy+technologies+consulting+inaugurates+digital+marketing+institute+h1tags-newsid-n426175122",
+  },
+  {
+    src: "/adver/7.png",
+    name: "Zee5",
+    href: "https://www.zee5.com/articles/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags",
+  },
+  {
+    src: "/adver/8.png",
+    name: "Jio News",
+    href: "https://jionews.com/home/article/10/1926640316/Business-News-JY-Technologies-Consulting-Inaugurates-Digital-Marketing-Institute-H1Tags",
+  },
+  {
+    src: "/adver/9.png",
+    name: "The Print",
+    href: "https://theprint.in/ani-press-releases/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags/1143249/",
+  },
+  {
+    src: "/adver/10.png",
+    name: "Maharastra Samachar",
+    href: "https://www.MaharashtraSamachar.com/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
+  {
+    src: "/adver/11.png",
+    name: "Sun Times",
+    href: "https://www.europeansuntimes.com/news/jy-technologies-consulting-inaugurates-digital-marketing-institute-h1tags20220926114239/",
+  },
 ];
 
 export const MasterCourseData = [

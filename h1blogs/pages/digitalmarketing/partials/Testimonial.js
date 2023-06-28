@@ -18,6 +18,7 @@ import {
   Container,
   Avatar,
   useColorModeValue,
+  Highlight,
 } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 
@@ -96,9 +97,21 @@ const WithSpeechBubbles = () => {
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <SectionTitle
-            children={"1,000+ students trust H1 Tags"}
+            as="h2"
             desc="Thousands of students’ trust makes us - the Best Digital Marketing Training Institute in Delhi"
-          />
+          >
+            <Highlight
+              query="H1 Tags"
+              styles={{
+                px: "2",
+                py: "1",
+                rounded: "full",
+                color: "#FF5733",
+              }}
+            >
+              1,000+ Students Trust H1 Tags
+            </Highlight>
+          </SectionTitle>
         </Stack>
         {/* <Stack
           direction={{ base: "column", md: "row" }}

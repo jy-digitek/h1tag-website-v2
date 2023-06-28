@@ -6,6 +6,8 @@ import {
   Text,
   Image,
   Stack,
+  Show,
+  Highlight,
 } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
@@ -13,19 +15,37 @@ const ExperienceH1tags = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
       <Stack>
-        <SectionTitle py={10} desc={"Real-world marketing work experience"}>
-          Experience at H1 Tags
+        <SectionTitle
+          as="h2"
+          py={10}
+          desc={"Real-world marketing work experience"}
+        >
+          <Highlight
+            query="H1 Tags"
+            styles={{
+              px: "2",
+              py: "1",
+              rounded: "full",
+              color: "#FF5733",
+            }}
+          >
+            Experience at H1 Tags
+          </Highlight>
         </SectionTitle>
       </Stack>
-      <SimpleGrid columns={[1, 2]} px={[0, 10]} fontSize={"20px"}>
-        <Box px={[0, 5]}>
+      <SimpleGrid
+        columns={[1, 1, 1, 2]}
+        px={[0, 10]}
+        mb={[10]}
+        fontSize={"20px"}
+      >
+        <Box px={[0, 0, 5]}>
           <Box
+            as="p"
             sx={{
               lineHeight: 2,
-              background: "#fff",
-              px: 3,
+
               pb: 5,
-              rounded: 5,
               fontSize: "16px",
             }}
           >
@@ -33,12 +53,11 @@ const ExperienceH1tags = () => {
             real-world marketing work experience immediately.{" "}
           </Box>
           <Box
+            as="p"
             sx={{
               lineHeight: 2,
-              background: "#fff",
-              px: 3,
+
               pb: 5,
-              rounded: 5,
               fontSize: "16px",
             }}
           >
@@ -51,12 +70,11 @@ const ExperienceH1tags = () => {
             are hired (and then some).
           </Box>
           <Box
+            as="p"
             sx={{
               lineHeight: 2,
-              background: "#fff",
-              px: 3,
+
               pb: 5,
-              rounded: 5,
               fontSize: "16px",
             }}
           >
@@ -69,9 +87,11 @@ const ExperienceH1tags = () => {
             that H1 TAGS immediately gives you.
           </Box>
         </Box>
-        <Box>
-          <Image src={"/classroom-image.png"} />
-        </Box>
+        <Show above="md">
+          <Box>
+            <Image src={"/classroom-image.png"} />
+          </Box>
+        </Show>
       </SimpleGrid>
     </Container>
   );

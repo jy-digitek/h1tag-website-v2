@@ -13,6 +13,7 @@ export const PageBanner = ({ title, ...rest }) => {
       backgroundSize={"cover"}
       backgroundPosition={"center"}
       backgroundAttachment={"fixed"}
+      py={[5, 10]}
     >
       <VStack
         w={"full"}

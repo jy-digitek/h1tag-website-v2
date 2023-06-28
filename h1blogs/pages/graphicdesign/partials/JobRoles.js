@@ -20,7 +20,7 @@ export default function JobRoles() {
       fontSize={15}
       width={["100%", "auto"]}
       rounded={8}
-      border={`1px solid ${item.bg}`}
+      // border={`1px solid ${item.bg}`}
       color={item.bg}
       p={[2, 5]}
       alignItems="center"
@@ -47,16 +47,21 @@ export default function JobRoles() {
   );
   return (
     <Container maxW={"full"}>
-      <SectionTitle children="Job Roles After Graphic Design Course" />
-      <Wrap spacing={["10px", "20px"]} py={5} px={[0, 10]} fontSize={"20px"}>
-        <SimpleGrid columns={[1, null, 3]} spacing={6} mx={2} px={10}>
-          {JobRolesData.map((item, key) => (
-            <Box key={key}>
-              <DataItem item={item} />
-            </Box>
-          ))}
-        </SimpleGrid>
-      </Wrap>
+      <SectionTitle py={10} children="Job Roles After Graphic Design Course" />
+
+      <SimpleGrid
+        columns={[1, null, 3]}
+        spacing={6}
+        mx={[5, 10]}
+        px={[5, 10]}
+        //py={[5, 10]}
+      >
+        {JobRolesData.map((item, key) => (
+          <Box key={key}>
+            <DataItem item={item} />
+          </Box>
+        ))}
+      </SimpleGrid>
     </Container>
   );
 }

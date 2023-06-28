@@ -13,12 +13,12 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FcReadingEbook, FcOrganization, FcBriefcase } from "react-icons/fc";
 export default function CarrerOportunity() {
   return (
-    <Container maxW={"full"} py={10}>
+    <Container maxW={"7xl"} py={[5, 10]}>
       <SectionTitle
         children={"Career Opportunities after Completing the Course"}
-        mb={10}
+        mb={[5, 10]}
       />
-      <SimpleGrid columns={[1, 2, 3]} gap={2} px={10}>
+      <SimpleGrid columns={[1, 1, 3]} gap={2}>
         <Box>
           <Card
             // color={"#fff"}
@@ -33,7 +33,7 @@ export default function CarrerOportunity() {
             <CardHeader>
               <Box
                 boxSize={20}
-                background={"gray"}
+                background={"#687bc0"}
                 rounded={"full"}
                 display={"flex"}
                 alignItems={"center"}
@@ -70,7 +70,7 @@ export default function CarrerOportunity() {
             <CardHeader>
               <Box
                 boxSize={20}
-                background={"gray"}
+                background={"#687bc0"}
                 rounded={"full"}
                 display={"flex"}
                 alignItems={"center"}
@@ -103,12 +103,13 @@ export default function CarrerOportunity() {
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",
             }}
+            minH={"255px"}
           >
             <CardHeader>
               {" "}
               <Box
                 boxSize={20}
-                background={"gray"}
+                background={"#687bc0"}
                 rounded={"full"}
                 display={"flex"}
                 alignItems={"center"}

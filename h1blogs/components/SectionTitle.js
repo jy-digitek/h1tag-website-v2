@@ -13,11 +13,13 @@ export function SectionTitle({ children, desc, ...rest }) {
   return (
     <>
       <Box {...rest} textAlign={"center"}>
-        <Box fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-          {children}
-        </Box>
+        {children && (
+          <Box fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
+            {children}
+          </Box>
+        )}
 
-        <Text>{desc}</Text>
+        {desc && <Text>{desc}</Text>}
         <Decorator />
       </Box>
     </>
