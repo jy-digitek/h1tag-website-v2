@@ -1,32 +1,29 @@
 import {
-    Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
-    Hide,
-    SimpleGrid,
-    Stack,
-    Collapse,
-    Icon,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    useColorModeValue,
-    useBreakpointValue,
-    useDisclosure,
-    Image,
-    Center,
-} from "@chakra-ui/react";
-import {
-    HamburgerIcon,
-    CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
+    CloseIcon,
+    HamburgerIcon,
 } from "@chakra-ui/icons";
-import ReturnFocus from "./Modal";
-import React from "react";
+import {
+    Box,
+    Collapse,
+    Flex,
+    Hide,
+    Icon,
+    IconButton,
+    Image,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    SimpleGrid,
+    Stack,
+    Text,
+    useColorModeValue,
+    useDisclosure,
+} from "@chakra-ui/react";
 import Link from "next/link";
+import React from "react";
+import ReturnFocus from "./Modal";
 import ContactForm from "./contactform";
 
 import VideoModal from "./videoModal";
@@ -317,12 +314,22 @@ const NAV_ITEMS = [
             {
                 label: "Digital Marketing Course",
                 // subLabel: "Trending Design to inspire you",
-                href: "/digitalmarketing.html",
+                href: "/digitalmarketing",
             },
             {
                 label: "Graphic Design Course",
                 // subLabel: "Up-and-coming Designers",
-                href: "/graphicdesign.html",
+                href: "/graphicdesign",
+            },
+            {
+                label: "Digital Marketing Course in Pitampura",
+                // subLabel: "Up-and-coming Designers",
+                href: "/area-course",
+            },
+            {
+                label: "Digital Marketing Institute in Rohini",
+                // subLabel: "Up-and-coming Designers",
+                href: "/area-course-sec",
             },
         ],
     },

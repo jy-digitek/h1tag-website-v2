@@ -1,17 +1,16 @@
 import Layout from "../../components/layout";
-import JoinH1Tags from "./partials/JoinnH1Tags";
 import CarrerOption from "./partials/CarrerOption";
 import EligibalForCourse from "./partials/EligibalForCourse";
+import JoinH1Tags from "./partials/JoinnH1Tags";
 // import ScholarshipProgram from "./partials/ScholarshipProgram";
-import WithSpeechBubbles from "./partials/Testimonial";
+import { Zoom } from "react-awesome-reveal";
+import SEOTags from "../../components/Head";
+import AreaCourse from "../area-course";
+import DigitalBanner from "./partials/DigitalBanner";
 import DigitalmarketingBox from "./partials/DigitalmarketingBox";
 import H1TagsAdmission from "./partials/H1TagsAdmission";
 import Tabs2 from "./partials/Tabs2";
-import { Slide, Zoom } from "react-awesome-reveal";
-import SEOTags from "../../components/Head";
-import DigitalBanner from "./partials/DigitalBanner";
-import { useEffect, useState } from "react";
-import Head from "next/head";
+import WithSpeechBubbles from "./partials/Testimonial";
 const index = ({ canonicalUrl }) => {
     console.log("canonicalUrl", canonicalUrl);
     return (
@@ -59,6 +58,7 @@ const index = ({ canonicalUrl }) => {
             {/* <ScholarshipProgram /> */}
             <WithSpeechBubbles />
             <H1TagsAdmission />
+            <AreaCourse />
 
             {/* <FAQ /> */}
         </Layout>
