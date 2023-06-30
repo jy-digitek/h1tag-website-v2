@@ -17,27 +17,27 @@ const SechduleTime = () => {
         <Container maxW={"7xl"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
                 <Text fontWeight={"bold"} fontSize={"3xl"}>
-                    DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
+                    H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
                 </Text>
                 <Text>
                     In Pitampura Training Centre Our Session will be conducted
                     through out the day with all time flexibility & multiple
-                    batches options both online & offline mode.
+                    batches offline mode
                 </Text>
             </Box>
 
             <Card m={20}>
                 <CardBody ml={10}>
                     <Text>
-                        <strong>Training Centre Timing : </strong> 9:00 AM TO
-                        9:OO PM
+                        <strong>Training Centre Timing : </strong> 10:00 AM TO
+                        7:00 PM
                     </Text>
                     <Text style={{ letterSpacing: "1px" }}>
                         <strong>Batch Type : </strong> Weekdays | Weekends |
                         Sunday only
                     </Text>
                     <Text style={{ letterSpacing: "1px" }}>
-                        <strong>Training Mode : </strong> In-Class | Online Mode
+                        <strong>Training Mode : </strong> offline
                     </Text>
                     <Text style={{ letterSpacing: "1px" }}>
                         <strong>Education Qualification : </strong> Any Level
@@ -46,15 +46,16 @@ const SechduleTime = () => {
                         <strong>
                             Technical & Professional Qualification -
                         </strong>{" "}
-                        Basic elementary knowledge is enough to join this
-                        training program. Any one who can easily handle smart
-                        phone or know about how to use internet or browser
-                        surfing.
+                        Technical & Professional Qualification-It is not
+                        necessary to have advanced expertise to enroll in this
+                        training programme. everyone who has experience using a
+                        smart phone and is familiar with using the internet and
+                        browsers.
                     </Text>
                     <Text pt={10}>
-                        <strong>Profile Criteria -</strong>Any One can join our
-                        courses - Working Professionals | Job Seekers | House
-                        Wife | Students | Freelancers and others
+                        <strong>Profile Criteria -</strong>Anyone is welcome to
+                        enrol in our classes, including freelancers, students,
+                        housewives, working professionals, and job seekers.
                     </Text>
                     <Text fontSize="lg">
                         <strong>Program or Course Level </strong>

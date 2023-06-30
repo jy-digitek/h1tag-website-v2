@@ -12,11 +12,15 @@ import Banner from "./partials/Banner";
 import KeyPoint from "./partials/KeyPoint";
 import Location from "./partials/Location";
 import Layout from "../../components/layout";
+import CourseOffer from "./partials/CourseOffer";
+import Feedback from "./partials/Feedback";
 const index = () => {
     return (
         <>
             <Layout>
                 <Banner />
+                <CourseOffer />
+                <Feedback />
                 <KeyPoint />
                 <MasterCourse />
                 <SechduleTime />
