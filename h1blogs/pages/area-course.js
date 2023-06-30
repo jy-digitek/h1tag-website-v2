@@ -34,10 +34,8 @@ import {
     TableCaption,
 } from "@chakra-ui/react";
 import React from "react";
-// import Carousel from "../../../components/Carousel";
-// import ReturnFocus from "../../components/Modal";
-// import ContactForm from "../../components/contactform";
-// import Carousel from "../components/Carousel";
+import { index } from "./branch/index";
+
 import { CustomCard } from "../components/CustomCard";
 import { CourseBuiltForData } from "../components/DATA";
 import Carousel from "../components/Carousel";
@@ -776,19 +774,17 @@ const AreaCourse = () => {
                     </Box>
                 </Box>
 
-                <Box>
-                    <SectionTitle pt={[8, 12]}>
-                        <h1>
-                            DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
-                        </h1>
+                {/* <Box> */}
+                    {/* <SectionTitle pt={[8, 12]}>
+                        DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
                     </SectionTitle>
                     <Text style={{ textAlign: "center" }}>
                         In Pitampura Training Centre Our Session will be
                         conducted through out the day with all time flexibility
                         & multiple batches options both online & offline mode.
-                    </Text>
+                    </Text> */}
 
-                    <Card m={20}>
+                    {/* <Card m={20}>
                         <CardBody>
                             <Text>
                                 <strong>Training Centre Timing : </strong> 9:00
@@ -868,9 +864,11 @@ const AreaCourse = () => {
                                 </Button>
                             </Box>
                         </CardBody>
-                    </Card>
-                </Box>
-                <Box style={{ textAlign: "center" }} m={20}>
+                    </Card> */}
+
+                {/* </Box> */}
+
+                {/* <Box style={{ textAlign: "center" }} m={20}>
                     <Text fontSize="3xl">
                         <strong>
                             {" "}
@@ -1075,9 +1073,12 @@ const AreaCourse = () => {
                             </CardBody>
                         </Card>
                     </SimpleGrid>
-                </Box>
+                </Box> */}
 
-                <Box m={20}>
+                
+
+
+                {/* <Box m={20}>
                     <SectionTitle>
                         Digital Marketing Training Course Module in Pitampura
                     </SectionTitle>
@@ -1202,8 +1203,8 @@ const AreaCourse = () => {
                             </CardBody>
                         </Card>
                     </SimpleGrid>
-                </Box>
-                <Box style={{ textAlign: "center" }} m={20}>
+                </Box> */}
+                {/* <Box style={{ textAlign: "center" }} m={20}>
                     <Text fontSize="3xl">
                         <strong>
                             {" "}
@@ -1231,22 +1232,7 @@ const AreaCourse = () => {
                             </CardBody>
                         </Card>
                     </SimpleGrid>
-                    {/* <SimpleGrid>
-                        <Card>
-                            <CardBody></CardBody>
-                        </Card>
-                        <Card>
-                            <CardHeader
-                                style={{
-                                    backgroundColor: "gray",
-                                    textAlign: "center",
-                                }}
-                            >
-                                <Text>Program Course Fee</Text>
-                            </CardHeader>
-                            <CardBody></CardBody>
-                        </Card>
-                    </SimpleGrid> */}
+                
                     <SimpleGrid columns={[2]} mx={10} p={10}>
                         <Card>
                             <CardBody>
@@ -1603,7 +1589,7 @@ const AreaCourse = () => {
                             </Box>
                         </SimpleGrid>
                     </Box>
-                </Box>
+                {/* </Box>  */}
                 <Box my={[0, 10]}>
                     <SectionTitle mb={10}>
                         Digital Marketing Course in Pitampura FAQ’S

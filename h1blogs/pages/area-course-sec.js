@@ -56,8 +56,8 @@ const CourseArea = () => {
                 <Box position="relative" p={0}>
                     <Image src={"/image2.jpg"} w={"100%"} />
                 </Box>
-                <SectionTitle pt={[8, 12]}>
-                    <h1> Digital Marketing Training Institute - Pitampura</h1>
+                <SectionTitle pt={[8, 12]} as="h1">
+                    Digital Marketing Training Institute - Pitampura
                 </SectionTitle>
 
                 <Box sx={{ padding: 5 }} px={[0, 20]}>
@@ -778,9 +778,7 @@ const CourseArea = () => {
 
                 <Box>
                     <SectionTitle pt={[8, 12]}>
-                        <h1>
-                            DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
-                        </h1>
+                        DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
                     </SectionTitle>
                     <Text style={{ textAlign: "center" }}>
                         In Pitampura Training Centre Our Session will be
