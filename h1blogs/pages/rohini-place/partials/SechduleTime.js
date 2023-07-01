@@ -17,7 +17,7 @@ const SechduleTime = () => {
         <Container maxW={"7xl"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
                 <Text fontWeight={"bold"} fontSize={"3xl"}>
-                    H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
+                    H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN Rohini
                 </Text>
                 <Text>
                     In Pitampura Training Centre Our Session will be conducted

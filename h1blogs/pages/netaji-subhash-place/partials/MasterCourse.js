@@ -19,24 +19,22 @@ const MasterCourse = () => {
     return (
         // <div>MasterCourse</div>
         <>
-            <Container maxW={"7xl"}>
-                <Box style={{ textAlign: "center" }}>
-                    <Text fontWeight={"bold"} fontSize={"3xl"}>
-                        MASTER IN DIGITAL MARKETING COURSE IN PITAMPURA
-                    </Text>
-                    <Text fontSize="3xl">
-                        <strong>Hybrid </strong> Training Program conducted by{" "}
-                        <strong>DIDM</strong>
-                    </Text>
-                    <Text>
-                        The main reasons to join digital marketing training
-                        program in pitampura. In DIDM Pitampura training centre,
-                        you will get both In-Class and Online digital marketing
-                        training session. DIDM Pitampura cover almost 50+
-                        digital marketing module specially design to fulfill the
-                        market needs..
-                    </Text>
-                </Box>
+            <Container maxW={"7xl"} py={5} textAlign={"center"}>
+                {/* <Box style={{ textAlign: "center" }}> */}
+                <Text fontWeight={"bold"} fontSize={"3xl"}>
+                    MASTER IN DIGITAL MARKETING COURSE IN PITAMPURA{" "}
+                    <strong>Hybrid </strong> Training Program conducted by{" "}
+                    <strong>DIDM</strong>
+                </Text>
+                {/* <Text fontSize="3xl"></Text> */}
+                <Text>
+                    The main reasons to join digital marketing training program
+                    in pitampura. In DIDM Pitampura training centre, you will
+                    get both In-Class and Online digital marketing training
+                    session. DIDM Pitampura cover almost 50+ digital marketing
+                    module specially design to fulfill the market needs..
+                </Text>
+                {/* </Box> */}
                 <SimpleGrid columns={[2, null, 3]} pt={10}>
                     <Box>
                         {" "}

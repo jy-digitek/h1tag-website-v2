@@ -324,12 +324,12 @@ const NAV_ITEMS = [
             {
                 label: "Digital Marketing Course in Pitampura",
                 // subLabel: "Up-and-coming Designers",
-                href: "/area-course",
+                href: "/netaji-subhash-place",
             },
             {
                 label: "Digital Marketing Institute in Rohini",
                 // subLabel: "Up-and-coming Designers",
-                href: "/area-course-sec",
+                href: "/rohini-place",
             },
         ],
     },

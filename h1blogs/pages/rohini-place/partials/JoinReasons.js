@@ -10,7 +10,7 @@ const JoinReasons = () => {
             <Container maxW={"7xl"}>
                 <Box style={{ textAlign: "center" }}>
                     <Text fontSize={"4xl"} fontWeight={"bold"}>
-                        Reasons To Join Digital Marketing Institute in Pitampura
+                        Reasons To Join Digital Marketing Institute in Rohini
                     </Text>
                 </Box>
                 <SimpleGrid
@@ -27,21 +27,7 @@ const JoinReasons = () => {
                             icon={item.icon}
                             description={item.text}
                             color={"black"}
-
-                            // href={"#"}
-                            // actionText={"Learn more"}
                         />
-
-                        //                             <Card>
-                        //                             <CardBody>
-                        //                                 {
-                        //                                     key = { key },
-                        //                                     icon = { item.icon },
-                        //                                     title={item.title}
-
-                        //                                }
-                        // </CardBody>
-                        //                             </Card>
                     ))}
                 </SimpleGrid>
             </Container>

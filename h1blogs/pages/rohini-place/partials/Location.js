@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "../../../components/contactform";
+
 import {
     Container,
     SimpleGrid,
@@ -14,9 +14,8 @@ import {
     Image,
 } from "@chakra-ui/react";
 import { ImCheckmark, ImLocation2, ImPhone, ImEnvelop } from "react-icons/im";
-import { AddressesData, NspLocation } from "../../../components/DATA";
 
-const Location = () => {
+const RohLocation = () => {
     return (
         <Container maxW={"7xl"} py={[5, 0]}>
             <SimpleGrid columns={[2]} mx={10} p={10}>
@@ -59,7 +58,7 @@ const Location = () => {
                             </ListItem>
                         </List>
                         <Box display={"flex"} justifyContent={"center"} pt={5}>
-                            {/* <Button
+                            <Button
                                 style={{
                                     backgroundColor: "#3950a1",
                                     color: "white",
@@ -68,42 +67,28 @@ const Location = () => {
                                 }}
                             >
                                 Get Direction
-                            </Button> */}
+                            </Button>
                         </Box>
                     </CardBody>
                 </Card>
-
-                {NspLocation.map((i, k) => (
-                    <Card key={k}>
-                        <CardHeader
-                            style={{
-                                backgroundColor: "#3950a1",
-                                textAlign: "center",
-                            }}
-                        >
-                            <Text color={"white"} fontSize="2xl">
-                                Program Course maps
-                            </Text>{" "}
-                        </CardHeader>
-                        <CardBody>
-                            <>
-                                <Box
-                                    as="iframe"
-                                    sx={{ mt: 5 }}
-                                    src={i.map_url}
-                                    width={"500px"}
-                                    height="250"
-                                    // style="border:0;"
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></Box>
-                            </>
-                        </CardBody>
-                    </Card>
-                ))}
-                {/* <CardBody> */}
-                {/* <Text>
+                <Card mx={10}>
+                    <CardHeader
+                        style={{
+                            backgroundColor: "#3950a1",
+                            textAlign: "center",
+                        }}
+                    >
+                        <Text color={"white"} fontSize="2xl">
+                            Program Course Fee
+                        </Text>
+                    </CardHeader>{" "}
+                    <Image
+                        src={"/digitalMarketingBanner.jpg"}
+                        alt="Green double couch with wooden legs"
+                        spacing={2}
+                    />
+                    <CardBody>
+                        <Text>
                             Get in Touch with Our Team to Get more detail about
                             Admission formalities and Fees!
                         </Text>
@@ -124,12 +109,12 @@ const Location = () => {
                             >
                                 Enroll Here
                             </Button>
-                        </Box> */}
-                {/* </CardBody> */}
-                {/* </Card> */}
+                        </Box>
+                    </CardBody>
+                </Card>
             </SimpleGrid>
         </Container>
     );
 };
 
-export default Location;
+export default RohLocation;

@@ -14,6 +14,9 @@ import Location from "./partials/Location";
 import Layout from "../../components/layout";
 import CourseOffer from "./partials/CourseOffer";
 import Feedback from "./partials/Feedback";
+import WhyChoose from "./partials/WhyChoose";
+import Faq from "./partials/Faq";
+import CTA from "../../components/CTA";
 const index = () => {
     return (
         <>
@@ -21,16 +24,34 @@ const index = () => {
                 <Banner />
                 <CourseOffer />
                 <Feedback />
-                <KeyPoint />
-                <MasterCourse />
+                <WhyChoose />
+                {/* <MasterCourse /> */}
                 <SechduleTime />
-                <Didm />
+                <KeyPoint />
+                {/* <Didm /> */}
                 {/* <CourseModule /> */}
-                <AboutCourse />
-                <Location />
-                <UpcomingBatch />
+                {/* <AboutCourse /> */}
+
+                {/* <UpcomingBatch /> */}
+                <CTA
+                    title={"Struggling to Choose a Career?"}
+                    label={"Get instant Career Counselling"}
+                    color="black"
+                    mt={10}
+                    backgroundImage={
+                        "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"
+                    }
+                    //background={"white"}
+                    bg={"white"}
+                    backgroundPosition={"center"}
+                    backgroundRepeat={"no-repeat"}
+                    backgroundSize={"cover"}
+                />
                 <JoinReasons />
-                <TrandingBlog />
+                {/* <TrandingBlog /> */}
+
+                <Location />
+                <Faq />
             </Layout>
         </>
     );
