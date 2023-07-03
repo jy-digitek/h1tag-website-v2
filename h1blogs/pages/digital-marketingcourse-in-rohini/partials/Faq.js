@@ -28,8 +28,7 @@ const Faq = () => {
                                             flex="1"
                                             textAlign="left"
                                         >
-                                            where is h1tags located in
-                                            pitampura?
+                                            where is h1tags located in rohini?
                                         </Box>
                                         {isExpanded ? (
                                             <MinusIcon fontSize="12px" />

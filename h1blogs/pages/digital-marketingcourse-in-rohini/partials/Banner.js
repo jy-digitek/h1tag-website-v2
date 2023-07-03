@@ -28,7 +28,7 @@ const RohBanner = () => {
             <Box maxW={"full"} p={0}>
                 <Card
                     style={{
-                        backgroundColor: "#rgb(52 74 148);",
+                        backgroundColor: "#3950a1",
                         textAlign: "center",
                     }}
                 >

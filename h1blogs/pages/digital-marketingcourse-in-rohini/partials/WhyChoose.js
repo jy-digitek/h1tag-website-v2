@@ -10,9 +10,9 @@ const WhyChoose = () => {
                 </Text>
                 <Text pt={[5, 10]}>
                     H1 Tags Institute of Digital Marketing provides Advance
-                    Digital Marketing Training course in pitampura for beginners
-                    to master. It is comprised of 50+ Digital Marketing modules
-                    and offers 100% placement. H1 Tags Advanced Certification in
+                    Digital Marketing Training course in rohini for beginners to
+                    master. It is comprised of 50+ Digital Marketing modules and
+                    offers 100% placement. H1 Tags Advanced Certification in
                     Digital Marketing was developed by Digital Marketing Agency,
                     JY Technologies Consulting Pvt. Ltd. H1 Tags experts and
                     faculty assist you in understanding business problems,

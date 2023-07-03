@@ -22,7 +22,7 @@ const SechduleTime = () => {
                     H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN Rohini
                 </Text>
                 <Text pt={[5, 10]}>
-                    In Pitampura Training Centre Our Session will be conducted
+                    In rohini Training Centre Our Session will be conducted
                     through out the day with all time flexibility & multiple
                     batches offline mode
                 </Text>
