@@ -8,7 +8,7 @@ import ContactForm from "../../components/contactform";
 const RohFeedback = () => {
     return (
         <>
-            <Box maxW={"full"} px={[5, 10]} id={"review"} pb={10}>
+            <Box maxW={"full"} px={[5, 10]} id={"review"} pb={10} m={[10]}>
                 {" "}
                 <SectionTitle as="h2" py={10}>
                     Students’ Feedback

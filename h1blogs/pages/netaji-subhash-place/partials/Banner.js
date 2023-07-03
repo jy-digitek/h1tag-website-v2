@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 
 const Banner = () => {
     return (
-        <Container maxW={"full"} p={0}>
+        <Container maxW={"full"} p={0} py={[5, 10]}>
             <Box position="relative" p={0}>
                 <Image src={"/image1.jpg"} w={"100%"} />
             </Box>
@@ -28,12 +28,17 @@ const Banner = () => {
             <Box maxW={"full"} p={0}>
                 <Card
                     style={{
-                        backgroundColor: "#3950a1",
+                        backgroundColor: "#rgb(52 74 148);",
+
                         textAlign: "center",
                     }}
                 >
                     <CardBody>
-                        <Text fontSize="5xl" color={"white"}>
+                        <Text
+                            fontWeight={"bold"}
+                            color={`#fff`}
+                            fontSize={"4xl"}
+                        >
                             H1 Tags - Most Trusted Institute for Digital
                             Marketing Course
                         </Text>

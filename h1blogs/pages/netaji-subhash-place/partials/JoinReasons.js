@@ -8,7 +8,7 @@ const JoinReasons = () => {
     return (
         <>
             <Container maxW={"full"}>
-                <Box style={{ textAlign: "center" }}>
+                <Box style={{ textAlign: "center" }} pt={10}>
                     <Text fontSize={"4xl"} fontWeight={"bold"}>
                         Reasons To Join Digital Marketing Institute in Pitampura
                     </Text>

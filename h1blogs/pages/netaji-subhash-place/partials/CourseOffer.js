@@ -30,7 +30,7 @@ import ContactForm from "../../../components/contactform";
 export default function CourseOffer() {
     const [openModal, openModalSet] = React.useState(false);
     return (
-        <Container maxW={"full"} bg="gray.100" my={10}>
+        <Container maxW={"6xl"} bg="gray.100" my={[10]}>
             <SectionTitle children={"Courses We Offer"} pt={10} />
             <Box
                 as="p"

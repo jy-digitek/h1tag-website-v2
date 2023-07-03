@@ -16,7 +16,7 @@ import CTA from "../../components/CTA";
 
 const index = () => {
     return (
-        <Layout minWidth={"100%"}>
+        <Layout>
             <RohBanner />
             <RohCourseOffer />
             <RohFeedback />

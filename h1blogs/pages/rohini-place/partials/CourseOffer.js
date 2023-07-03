@@ -30,15 +30,15 @@ import ContactForm from "../../../components/contactform";
 export default function RohCourseOffer() {
     const [openModal, openModalSet] = React.useState(false);
     return (
-        <Container maxW={"full"} bg="gray.100" my={10}>
+        <Container maxW={"6xl"} bg="gray.100" my={[10]}>
             <SectionTitle children={"Courses We Offer"} pt={10} />
             <Box
-                as="div"
+                as="p"
                 my={[3, 5]}
                 maxW={"5xl"}
                 mx={"auto"}
                 textAlign={"center"}
-                px={[0, 20]}
+                px={[, 20]}
             >
                 <Text py={[3, 7]}>
                     During your Digital Marketing Course, you will learn
@@ -64,6 +64,9 @@ export default function RohCourseOffer() {
                         <Tab className={Styles.Tab_default} tabFor="one">
                             MASTER COURSE
                         </Tab>
+                        {/* <Tab tabFor="two">FOUNDATION COURSE</Tab>
+                        <Tab tabFor="three"> JOB ORIENTED PROGRAM</Tab>
+                        <Tab tabFor="fourth">CUSTOMIZED COURSE</Tab> */}
                     </TabList>
                     <TabPanel tabId="one">
                         <Box>
@@ -111,6 +114,12 @@ export default function RohCourseOffer() {
                                 })}
                             </SimpleGrid>
                             <Center sx={{ mt: 8, mb: 4 }}>
+                                {/* <GlobalButton
+                label={"Download Brochure"}
+                maxW="100%"
+                background="#3950a1"
+                _hover={{ background: "#101C32" }}
+              /> */}
                                 <ReturnFocus
                                     btnText={`Apply Now`}
                                     children={<ContactForm />}
@@ -128,7 +137,7 @@ export default function RohCourseOffer() {
                             </Center>
                         </Box>
                     </TabPanel>
-                    <TabPanel tabId="two">
+                    {/* <TabPanel tabId="two">
                         <Box boxShadow="sm">
                             <SectionTitle
                                 mb={5}
@@ -141,7 +150,40 @@ export default function RohCourseOffer() {
                                 Marketing campaign with our Foundation Course,
                                 which combines theory and practice.
                             </Text>
-
+                            <SimpleGrid columns={[1, 2, 3]}>
+                                {FoundationCourse.map((item, i) => {
+                                    return (
+                                        <Flex
+                                            key={i}
+                                            alignItems={"center"}
+                                            boxShadow={"md"}
+                                            py={2}
+                                            px={[5]}
+                                            cursor={"pointer"}
+                                            sx={{
+                                                transition: ".5s",
+                                                ":hover": {
+                                                    backgroundColor: "tomato",
+                                                    color: "#fff",
+                                                },
+                                            }}
+                                        >
+                                            <Box
+                                                rounded={"full"}
+                                                boxSize={10}
+                                                backgroundColor={"gray.200"}
+                                                display={"flex"}
+                                                alignItems={"center"}
+                                                justifyContent={"center"}
+                                                marginRight={4}
+                                            >
+                                                <FcNext />
+                                            </Box>
+                                            <Text>{item.level}</Text>
+                                        </Flex>
+                                    );
+                                })}
+                            </SimpleGrid>
                             <Center sx={{ mt: 8, mb: 4 }}>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
@@ -173,7 +215,40 @@ export default function RohCourseOffer() {
                                 hire you following the training; finding your
                                 ideal job is our top priority.
                             </Text>
-
+                            <SimpleGrid columns={[1, 2, 3]}>
+                                {JobOrientedData.map((item, i) => {
+                                    return (
+                                        <Flex
+                                            key={i}
+                                            alignItems={"center"}
+                                            boxShadow={"md"}
+                                            py={2}
+                                            px={[5]}
+                                            cursor={"pointer"}
+                                            sx={{
+                                                transition: ".5s",
+                                                ":hover": {
+                                                    backgroundColor: "tomato",
+                                                    color: "#fff",
+                                                },
+                                            }}
+                                        >
+                                            <Box
+                                                rounded={"full"}
+                                                boxSize={10}
+                                                backgroundColor={"gray.200"}
+                                                display={"flex"}
+                                                alignItems={"center"}
+                                                justifyContent={"center"}
+                                                marginRight={4}
+                                            >
+                                                <FcNext />
+                                            </Box>
+                                            <Text>{item.level}</Text>
+                                        </Flex>
+                                    );
+                                })}
+                            </SimpleGrid>
                             <Center sx={{ mt: 8, mb: 4 }}>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
@@ -256,7 +331,7 @@ export default function RohCourseOffer() {
                                 />
                             </Center>
                         </Box>
-                    </TabPanel>
+                    </TabPanel> */}
                 </Tabs>
             </Show>
 
@@ -281,9 +356,9 @@ export default function RohCourseOffer() {
                         >
                             Master Course
                         </Tab>
-                        {/* <Tab tabFor="two">Foundation Course</Tab>
+                        <Tab tabFor="two">Foundation Course</Tab>
                         <Tab tabFor="three">Job Oriented Program</Tab>
-                        <Tab tabFor="fourth">Customized Course</Tab> */}
+                        <Tab tabFor="fourth">Customized Course</Tab>
                     </TabList>
 
                     <TabPanel tabId="one">
@@ -335,6 +410,12 @@ export default function RohCourseOffer() {
                                 })}
                             </SimpleGrid>
                             <Center sx={{ mt: 8, mb: 4 }}>
+                                {/* <GlobalButton
+                label={"Download Brochure"}
+                maxW="100%"
+                background="#3950a1"
+                _hover={{ background: "#101C32" }}
+              /> */}
                                 <ReturnFocus
                                     btnText={`Apply Now`}
                                     children={<ContactForm />}
@@ -365,7 +446,7 @@ export default function RohCourseOffer() {
                                 Marketing campaign with our Foundation Course,
                                 which combines theory and practice.
                             </Text>
-                            {/* <SimpleGrid columns={[1, 2]}>
+                            <SimpleGrid columns={[1, 2]}>
                                 {FoundationCourse.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -400,7 +481,7 @@ export default function RohCourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid> */}
+                            </SimpleGrid>
                             <Center sx={{ mt: 8, mb: 4 }}>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
@@ -432,7 +513,7 @@ export default function RohCourseOffer() {
                                 hire you following the training; finding your
                                 ideal job is our top priority.
                             </Text>
-                            {/* <SimpleGrid columns={[1, 2]}>
+                            <SimpleGrid columns={[1, 2]}>
                                 {JobOrientedData.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -468,7 +549,7 @@ export default function RohCourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid> */}
+                            </SimpleGrid>
                             <Center>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
@@ -500,7 +581,7 @@ export default function RohCourseOffer() {
                                 preferences; you can alter the programs
                                 according to your choice.
                             </Text>
-                            {/* <SimpleGrid columns={[1, 2]}>
+                            <SimpleGrid columns={[1, 2]}>
                                 {CustomizedCourseData.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -536,7 +617,7 @@ export default function RohCourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid> */}
+                            </SimpleGrid>
                             <Center>
                                 <ReturnFocus
                                     btnText={`Apply Now`}

@@ -20,7 +20,11 @@ import CTA from "../../components/CTA";
 const index = () => {
     return (
         <>
-            <Layout>
+            <Layout
+                style={{
+                    overflow: "hidden",
+                }}
+            >
                 <Banner />
                 <CourseOffer />
                 <Feedback />
