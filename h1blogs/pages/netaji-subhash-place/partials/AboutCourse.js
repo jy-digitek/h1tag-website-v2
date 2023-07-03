@@ -13,7 +13,7 @@ import ContactForm from "../../../components/contactform";
 const AboutCourse = () => {
     return (
         <>
-            <Container maxW={"7xl"}>
+            <Container maxW={"full"}>
                 <Text fontSize="2xl" style={{ textAlign: "center" }} pt={10}>
                     <strong>
                         {" "}
@@ -23,7 +23,7 @@ const AboutCourse = () => {
                     </strong>
                 </Text>
 
-                <SimpleGrid columns={[2, null, 3]} m={20}>
+                <SimpleGrid columns={[2, null, 3]} m={[0, 20]}>
                     <Box>
                         {" "}
                         <Image src={"/DIDM(1).png"} />

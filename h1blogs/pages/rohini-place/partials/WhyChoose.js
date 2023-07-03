@@ -3,7 +3,7 @@ import { Container, Box, Text } from "@chakra-ui/react";
 const WhyChoose = () => {
     return (
         // <Box style={{ textAlign: "center" }}>
-        <Container maxW={"7xl"} textAlign={"center"}>
+        <Container maxW={"full"} textAlign={"center"}>
             <Text fontSize={"3xl"} fontWeight={"bold"}>
                 Why Choose H1 Tags For Digital Marketing Course
             </Text>

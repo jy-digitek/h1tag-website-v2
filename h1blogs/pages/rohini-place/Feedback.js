@@ -21,16 +21,11 @@ const RohFeedback = () => {
                     <Box>
                         <Carousel />
                     </Box>
-
-                    <Card
-                        mx={20}
-                        style={{
-                            width: "400px",
-                            height: "600px",
-                        }}
-                    >
-                        <CardBody> {<ContactForm />}</CardBody>
-                    </Card>
+                    <Box>
+                        <Card mx={[2, 20]}>
+                            <CardBody> {<ContactForm />}</CardBody>
+                        </Card>
+                    </Box>
                 </SimpleGrid>
             </Box>{" "}
         </>

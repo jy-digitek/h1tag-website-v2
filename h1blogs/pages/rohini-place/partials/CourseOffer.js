@@ -30,15 +30,15 @@ import ContactForm from "../../../components/contactform";
 export default function RohCourseOffer() {
     const [openModal, openModalSet] = React.useState(false);
     return (
-        <Container maxW={"6xl"} bg="gray.100" my={10}>
+        <Container maxW={"full"} bg="gray.100" my={10}>
             <SectionTitle children={"Courses We Offer"} pt={10} />
             <Box
-                as="p"
+                as="div"
                 my={[3, 5]}
                 maxW={"5xl"}
                 mx={"auto"}
                 textAlign={"center"}
-                px={[, 20]}
+                px={[0, 20]}
             >
                 <Text py={[3, 7]}>
                     During your Digital Marketing Course, you will learn
@@ -281,9 +281,9 @@ export default function RohCourseOffer() {
                         >
                             Master Course
                         </Tab>
-                        <Tab tabFor="two">Foundation Course</Tab>
+                        {/* <Tab tabFor="two">Foundation Course</Tab>
                         <Tab tabFor="three">Job Oriented Program</Tab>
-                        <Tab tabFor="fourth">Customized Course</Tab>
+                        <Tab tabFor="fourth">Customized Course</Tab> */}
                     </TabList>
 
                     <TabPanel tabId="one">
@@ -365,7 +365,7 @@ export default function RohCourseOffer() {
                                 Marketing campaign with our Foundation Course,
                                 which combines theory and practice.
                             </Text>
-                            <SimpleGrid columns={[1, 2]}>
+                            {/* <SimpleGrid columns={[1, 2]}>
                                 {FoundationCourse.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -400,7 +400,7 @@ export default function RohCourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid>
+                            </SimpleGrid> */}
                             <Center sx={{ mt: 8, mb: 4 }}>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
@@ -432,7 +432,7 @@ export default function RohCourseOffer() {
                                 hire you following the training; finding your
                                 ideal job is our top priority.
                             </Text>
-                            <SimpleGrid columns={[1, 2]}>
+                            {/* <SimpleGrid columns={[1, 2]}>
                                 {JobOrientedData.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -468,7 +468,7 @@ export default function RohCourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid>
+                            </SimpleGrid> */}
                             <Center>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
@@ -500,7 +500,7 @@ export default function RohCourseOffer() {
                                 preferences; you can alter the programs
                                 according to your choice.
                             </Text>
-                            <SimpleGrid columns={[1, 2]}>
+                            {/* <SimpleGrid columns={[1, 2]}>
                                 {CustomizedCourseData.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -536,7 +536,7 @@ export default function RohCourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid>
+                            </SimpleGrid> */}
                             <Center>
                                 <ReturnFocus
                                     btnText={`Apply Now`}

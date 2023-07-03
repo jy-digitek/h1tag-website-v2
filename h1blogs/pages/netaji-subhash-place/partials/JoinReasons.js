@@ -7,7 +7,7 @@ import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 const JoinReasons = () => {
     return (
         <>
-            <Container maxW={"7xl"}>
+            <Container maxW={"full"}>
                 <Box style={{ textAlign: "center" }}>
                     <Text fontSize={"4xl"} fontWeight={"bold"}>
                         Reasons To Join Digital Marketing Institute in Pitampura
@@ -31,17 +31,6 @@ const JoinReasons = () => {
                             // href={"#"}
                             // actionText={"Learn more"}
                         />
-
-                        //                             <Card>
-                        //                             <CardBody>
-                        //                                 {
-                        //                                     key = { key },
-                        //                                     icon = { item.icon },
-                        //                                     title={item.title}
-
-                        //                                }
-                        // </CardBody>
-                        //                             </Card>
                     ))}
                 </SimpleGrid>
             </Container>

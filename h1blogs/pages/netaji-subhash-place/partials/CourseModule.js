@@ -59,7 +59,7 @@ const tabData = [
 
 const CourseModule = () => {
     return (
-        <Container maxW={"7xl"} py={[5, 0]}>
+        <Container maxW={"full"} py={[5, 0]}>
             <Box m={20}>
                 <Text
                     fontWeight={"bold"}

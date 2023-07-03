@@ -14,7 +14,7 @@ import {
 
 const SechduleTime = () => {
     return (
-        <Container maxW={"7xl"} py={[5, 10]}>
+        <Container maxW={"full"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
                 <Text fontWeight={"bold"} fontSize={"3xl"}>
                     H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN Rohini
@@ -26,7 +26,7 @@ const SechduleTime = () => {
                 </Text>
             </Box>
 
-            <Card m={20}>
+            <Card m={[0, 20]}>
                 <CardBody ml={10}>
                     <Text>
                         <strong>Training Centre Timing : </strong> 10:00 AM TO

@@ -14,7 +14,7 @@ import {
 
 const Didm = () => {
     return (
-        <Container maxW={"7xl"} py={[5, 0]}>
+        <Container maxW={"full"} py={[5, 0]}>
             <Box style={{ textAlign: "center" }} mx={20}>
                 <Text fontSize="3xl">
                     <strong>

@@ -1,13 +1,13 @@
 import React from "react";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { SimpleGrid, Box, Card, CardBody } from "@chakra-ui/react";
+import { SimpleGrid, Box, Card, CardBody, Container } from "@chakra-ui/react";
 import Carousel from "../../../components/Carousel";
 import ContactForm from "../../../components/contactform";
 
 const Feedback = () => {
     return (
         <>
-            <Box maxW={"full"} px={[5, 10]} id={"review"} pb={10}>
+            <Container maxW={"full"} px={[5, 10]} id={"review"} pb={10}>
                 {" "}
                 <SectionTitle as="h2" py={10}>
                     Students’ Feedback
@@ -20,18 +20,13 @@ const Feedback = () => {
                     <Box>
                         <Carousel />
                     </Box>
-
-                    <Card
-                        mx={20}
-                        style={{
-                            width: "400px",
-                            height: "600px",
-                        }}
-                    >
-                        <CardBody> {<ContactForm />}</CardBody>
-                    </Card>
+                    <Box>
+                        <Card mx={[0, 20]}>
+                            <CardBody> {<ContactForm />}</CardBody>
+                        </Card>{" "}
+                    </Box>
                 </SimpleGrid>
-            </Box>{" "}
+            </Container>{" "}
         </>
     );
 };

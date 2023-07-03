@@ -7,7 +7,7 @@ import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 const JoinReasons = () => {
     return (
         <>
-            <Container maxW={"7xl"}>
+            <Container maxW={"full"}>
                 <Box style={{ textAlign: "center" }}>
                     <Text fontSize={"4xl"} fontWeight={"bold"}>
                         Reasons To Join Digital Marketing Institute in Rohini
@@ -21,13 +21,15 @@ const JoinReasons = () => {
                     fontSize={"20px"}
                 >
                     {ReasonData.map((item, key) => (
-                        <CustomCard
-                            key={key}
-                            heading={item.title}
-                            icon={item.icon}
-                            description={item.text}
-                            color={"black"}
-                        />
+                        <Box key={key}>
+                            <CustomCard
+                                key={key}
+                                heading={item.title}
+                                icon={item.icon}
+                                description={item.text}
+                                color={"black"}
+                            />
+                        </Box>
                     ))}
                 </SimpleGrid>
             </Container>

@@ -14,7 +14,7 @@ import {
 
 const SechduleTime = () => {
     return (
-        <Container maxW={"7xl"} py={[5, 10]}>
+        <Container maxW={"full"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
                 <Text fontWeight={"bold"} fontSize={"3xl"}>
                     H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
@@ -26,8 +26,8 @@ const SechduleTime = () => {
                 </Text>
             </Box>
 
-            <Card m={20}>
-                <CardBody ml={10}>
+            <Card m={[0, 20]}>
+                <CardBody ml={[0, 10]}>
                     <Text>
                         <strong>Training Centre Timing : </strong> 10:00 AM TO
                         7:00 PM
@@ -111,8 +111,8 @@ const SechduleTime = () => {
                         session through our industrial professionals and
                         experts.
                     </Text>
-                    <Box textAlign={"center"} pt={5}>
-                        <Button bg="#3950a1" color={"white"} mx={5}>
+                    <Box textAlign={"center"} pt={[0, 5]}>
+                        <Button bg="#3950a1" color={"white"} mx={[0, 5]}>
                             Take a Free Session
                         </Button>
                         {/* <Button bg="#3d3dc6" color={"white"}>

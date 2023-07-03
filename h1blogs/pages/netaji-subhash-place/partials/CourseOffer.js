@@ -30,7 +30,7 @@ import ContactForm from "../../../components/contactform";
 export default function CourseOffer() {
     const [openModal, openModalSet] = React.useState(false);
     return (
-        <Container maxW={"6xl"} bg="gray.100" my={10}>
+        <Container maxW={"full"} bg="gray.100" my={10}>
             <SectionTitle children={"Courses We Offer"} pt={10} />
             <Box
                 as="p"
@@ -281,9 +281,9 @@ export default function CourseOffer() {
                         >
                             Master Course
                         </Tab>
-                        <Tab tabFor="two">Foundation Course</Tab>
+                        {/* <Tab tabFor="two">Foundation Course</Tab>
                         <Tab tabFor="three">Job Oriented Program</Tab>
-                        <Tab tabFor="fourth">Customized Course</Tab>
+                        <Tab tabFor="fourth">Customized Course</Tab> */}
                     </TabList>
 
                     <TabPanel tabId="one">
@@ -432,7 +432,7 @@ export default function CourseOffer() {
                                 hire you following the training; finding your
                                 ideal job is our top priority.
                             </Text>
-                            <SimpleGrid columns={[1, 2]}>
+                            {/* <SimpleGrid columns={[1, 2]}>
                                 {JobOrientedData.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -468,7 +468,7 @@ export default function CourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid>
+                            </SimpleGrid> */}
                             <Center>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
@@ -500,7 +500,7 @@ export default function CourseOffer() {
                                 preferences; you can alter the programs
                                 according to your choice.
                             </Text>
-                            <SimpleGrid columns={[1, 2]}>
+                            {/* <SimpleGrid columns={[1, 2]}>
                                 {CustomizedCourseData.map((item, i) => {
                                     return (
                                         <Box key={i}>
@@ -536,7 +536,7 @@ export default function CourseOffer() {
                                         </Box>
                                     );
                                 })}
-                            </SimpleGrid>
+                            </SimpleGrid> */}
                             <Center>
                                 <ReturnFocus
                                     btnText={`Apply Now`}
