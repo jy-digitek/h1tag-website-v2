@@ -329,7 +329,7 @@ const NAV_ITEMS = [
             {
                 label: "Digital Marketing Institute in Rohini",
                 // subLabel: "Up-and-coming Designers",
-                href: "/digital-marketingcourse-in-rohini",
+                href: "/digital-marketing-course-in-rohini",
             },
         ],
     },

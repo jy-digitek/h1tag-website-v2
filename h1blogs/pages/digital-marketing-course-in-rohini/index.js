@@ -13,10 +13,20 @@ import RohBanner from "./partials/Banner";
 import RohCourseOffer from "./partials/CourseOffer";
 import RohFeedback from "./Feedback";
 import CTA from "../../components/CTA";
+import SEOTags from "../../components/Head";
 
 const index = () => {
     return (
         <Layout>
+            <SEOTags
+                title={
+                    "Rohini Best Digital Marketing Course in Rohini - H1 Tags Institute "
+                }
+                description={
+                    "Looking for the Best Digital Marketing Course in Rohini? Book your seat for the Advanced Digital Marketing Course in Rohini. Join Now free demo class - H1 Tags."
+                }
+                currentUrl={"https://h1tags.com/contact.html/"}
+            />
             <RohBanner />
             <RohCourseOffer />
             <RohFeedback />

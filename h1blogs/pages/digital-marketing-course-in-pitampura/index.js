@@ -17,14 +17,20 @@ import Feedback from "./partials/Feedback";
 import WhyChoose from "./partials/WhyChoose";
 import Faq from "./partials/Faq";
 import CTA from "../../components/CTA";
+import SEOTags from "../../components/Head";
 const index = () => {
     return (
         <>
-            <Layout
-                style={{
-                    overflow: "hidden",
-                }}
-            >
+            <Layout>
+                <SEOTags
+                    title={
+                        "Pitampura Best Digital Marketing Course in Pitampura - H1 Tags Institute "
+                    }
+                    description={
+                        "Looking for the Best Digital Marketing Course in Pitampura? Book your seat for the Advanced Digital Marketing Course in Pitampura. Join Now free demo class - H1 Tags."
+                    }
+                    currentUrl={"https://h1tags.com/contact.html/"}
+                />
                 <Banner />
                 <CourseOffer />
                 <Feedback />

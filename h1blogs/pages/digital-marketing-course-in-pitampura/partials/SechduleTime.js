@@ -127,18 +127,7 @@ const SechduleTime = () => {
                                 color="white"
                                 rounded={"full"}
                             />
-                            {/* <Button
-                                bg="#3950a1"
-                                color={"white"}
-                                mx={5}
-                              
-                                children={<ContactForm />}
-                            >
-                                Take a Free Session
-                            </Button> */}
-                            {/* <Button bg="#3d3dc6" color={"white"}>
-                            Take a Free Session
-                        </Button> */}
+                          
                         </Box>
                     </CardBody>
                 </Card>
