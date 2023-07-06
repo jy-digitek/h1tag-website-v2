@@ -2,40 +2,33 @@
 // import { BsFillHandbagFill } from "react-icons/bs";
 
 import {
-    FcMoneyTransfer,
-    FcOrgUnit,
-    FcOk,
     FcApproval,
+    FcBullish,
     FcComboChart,
-    FcOnlineSupport,
+    FcDepartment,
     FcGraduationCap,
-    FcReadingEbook,
-    FcReading,
+    FcGrid,
     FcIdea,
     FcManager,
-    FcBullish,
-    FcDepartment,
-    FcGrid,
+    FcMoneyTransfer,
+    FcOk,
+    FcOnlineSupport,
+    FcOrgUnit,
+    FcReading,
+    FcReadingEbook,
 } from "react-icons/fc";
 import {
-    MdLightbulb,
-    MdOutlineScreenShare,
-    MdOutlineAutoGraph,
-    MdComputer,
     MdAttachMoney,
     MdBookmarkAdded,
-    MdOutlineCurrencyRupee,
-    MdSupervisedUserCircle,
     MdCastForEducation,
+    MdComputer,
+    MdLightbulb,
+    MdOutlineAutoGraph,
+    MdOutlineCurrencyRupee,
+    MdOutlineScreenShare,
+    MdSupervisedUserCircle,
     MdWork,
-    MdInterpreterMode,
 } from "react-icons/md";
-import {
-    ImTrophy,
-    ImLibrary,
-    ImSortAmountAsc,
-    ImDisplay,
-} from "react-icons/im";
 
 export const Benefits = [
     {
@@ -202,7 +195,7 @@ export const AddressesData = [
         branch_location: "Netaji Subhash Place",
         address:
             "FF 18, First Floor, Pearls Omaxe Tower Netaji Subhash Place, Delhi-110034",
-        conatct_No: "+91 77700-07683",
+        conatct_No: "+91 777 000 7648,777 000 7698",
         email: " info@h1tags.com",
         map_url:
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27999.749303036984!2d77.151797!3d28.690584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0332a9eb6003%3A0x11b19c5ca3150063!2sH1%20Tags%20-%20School%20of%20Digital%20Marketing%20and%20Web%20Development!5e0!3m2!1sen!2sin!4v1680081485111!5m2!1sen!2sin",
@@ -210,8 +203,8 @@ export const AddressesData = [
     {
         branch_location: "Budh Vihar",
         address:
-            "D-44, Kanjhawala Rd, Budh Vihar Phase I, Krishan Vihar, Delhi, 110086",
-        conatct_No: "+91 77700-07683",
+            "D-45, Kanjhawala Rd, Budh Vihar Phase I, Krishan Vihar, Delhi, 110086",
+        conatct_No: "+91 777 000 7648,777 000 7698",
         email: " info@h1tags.com",
         map_url:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55987.1485623417!2d77.00817445820313!3d28.713664499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07400a3ccea1%3A0xc76b847400a15cdb!2sH1%20Tags%20Institute%20-%20Advanced%20Digital%20Marketing%20course%20in%20Budh%20Vihar%20Phase%201%2C%20Delhi!5e0!3m2!1sen!2sin!4v1680083814656!5m2!1sen!2sin",

@@ -5,7 +5,7 @@ import JoinH1Tags from "./partials/JoinnH1Tags";
 // import ScholarshipProgram from "./partials/ScholarshipProgram";
 import { Zoom } from "react-awesome-reveal";
 import SEOTags from "../../components/Head";
-import AreaCourse from "../area-course";
+//import AreaCourse from "../area-course";
 import DigitalBanner from "./partials/DigitalBanner";
 import DigitalmarketingBox from "./partials/DigitalmarketingBox";
 import H1TagsAdmission from "./partials/H1TagsAdmission";
@@ -58,7 +58,7 @@ const index = ({ canonicalUrl }) => {
             {/* <ScholarshipProgram /> */}
             <WithSpeechBubbles />
             <H1TagsAdmission />
-            <AreaCourse />
+            {/* <AreaCourse /> */}
 
             {/* <FAQ /> */}
         </Layout>

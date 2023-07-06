@@ -1,19 +1,18 @@
 import React from "react";
 import Layout from "../../components/layout";
 // import RohBanner from "./partials/Banner";
-import CourseOffer from "./partials/CourseOffer";
 // import Feedback from "./partials/Feedback";
-import WhyChoose from "./partials/WhyChoose";
-import SechduleTime from "./partials/SechduleTime";
-import KeyPoint from "./partials/KeyPoint";
-import JoinReasons from "./partials/JoinReasons";
-import RohLocation from "./partials/Location";
-import Faq from "./partials/Faq";
-import RohBanner from "./partials/Banner";
-import RohCourseOffer from "./partials/CourseOffer";
-import RohFeedback from "./Feedback";
 import CTA from "../../components/CTA";
 import SEOTags from "../../components/Head";
+import Feedback from "./Feedback";
+import RohBanner from "./partials/Banner";
+import RohCourseOffer from "./partials/CourseOffer";
+import Faq from "./partials/Faq";
+import JoinReasons from "./partials/JoinReasons";
+import KeyPoint from "./partials/KeyPoint";
+import RohLocation from "./partials/Location";
+import SechduleTime from "./partials/SechduleTime";
+import WhyChoose from "./partials/WhyChoose";
 
 const index = () => {
     return (
@@ -29,7 +28,7 @@ const index = () => {
             />
             <RohBanner />
             <RohCourseOffer />
-            <RohFeedback />
+            <Feedback />
             <WhyChoose />
             <SechduleTime />
             <KeyPoint />

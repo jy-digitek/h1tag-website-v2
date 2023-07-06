@@ -1,24 +1,23 @@
 import { ChevronRightIcon, EmailIcon } from "@chakra-ui/icons";
 import {
-    Container,
-    SimpleGrid,
     Box,
-    Heading,
-    Text,
-    List,
-    ListItem,
-    ListIcon,
-    UnorderedList,
+    Container,
     Flex,
+    Heading,
     Image,
+    List,
+    ListIcon,
+    ListItem,
+    SimpleGrid,
+    Text,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import {
-    SiGooglemaps,
-    SiYoutube,
-    SiInstagram,
     SiFacebook,
+    SiGooglemaps,
+    SiInstagram,
     SiLinkedin,
+    SiYoutube,
 } from "react-icons/si";
 import { SlPhone } from "react-icons/sl";
 // import CTA from "../pages/Home/partials/CTA";
@@ -187,7 +186,7 @@ export default function Footer() {
                             </Box>
                             <Box ml={2}>
                                 {" "}
-                                D-44, Kanjhawala Rd, Budh Vihar Phase I, Krishan
+                                D-45, Kanjhawala Rd, Budh Vihar Phase I, Krishan
                                 Vihar, Delhi, 110086
                             </Box>
                         </Flex>

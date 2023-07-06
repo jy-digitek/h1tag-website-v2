@@ -1,12 +1,12 @@
+import { Box, Card, CardBody, Container, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { Container, Box, Image, Card, CardBody, Text } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 
 const Banner = () => {
     return (
-        <Container maxW={"full"} p={0} py={[5, 10]}>
-            <Box position="relative" p={0}>
-                <Image src={"/image1.jpg"} w={"100%"} />
+        <Container maxW={"full"} p={0}>
+            <Box p={0}>
+                <Image src={"/pitampura.jpg"} w={"100%"} />
             </Box>
             <SectionTitle pt={[8, 12]}>
                 <h1>
