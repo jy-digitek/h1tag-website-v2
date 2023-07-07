@@ -8,11 +8,10 @@ const RohBanner = () => {
             <Box p={0}>
                 <Image src={"/rohini.jpg"} w={"100%"} />
             </Box>
-            <SectionTitle pt={[8, 12]}>
-                <h1>
-                    {" "}
-                    Best Digital Marketing Course Training Institute - Rohini
-                </h1>
+            <SectionTitle as="h1" pt={[8, 12]}>
+                {/* <h2> */} Best Digital Marketing Course Training Institute -
+                Rohini
+                {/* </h2> */}
             </SectionTitle>
 
             <Box sx={{ padding: 5 }} px={[0, 20]}>
@@ -33,14 +32,13 @@ const RohBanner = () => {
                     }}
                 >
                     <CardBody>
-                        <Text
-                            fontWeight={"bold"}
-                            color={`#fff`}
-                            fontSize={"4xl"}
-                        >
+                        {/* <h3 fontWeight={"bold"} color={`#fff`}>
+                            
+                        </h3> */}
+                        <SectionTitle as="h2">
                             H1 Tags - Most Trusted Institute for Digital
                             Marketing Course
-                        </Text>
+                        </SectionTitle>
                     </CardBody>
                 </Card>
             </Box>

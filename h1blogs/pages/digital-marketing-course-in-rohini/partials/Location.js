@@ -19,7 +19,12 @@ import { RohiniLocation } from "../../../components/DATA";
 const RohLocation = () => {
     return (
         <Container maxW={"full"} py={[5, 0]}>
-            <SimpleGrid columns={[1, 1, 2]} mx={[0, 10]} p={[0, 10]}>
+            <SimpleGrid
+                columns={[1, 1, 2]}
+                mx={[0, 10]}
+                p={[0, 10]}
+                spacing={5}
+            >
                 <Box px={[0, 10]}>
                     <Card>
                         {" "}
@@ -41,7 +46,7 @@ const RohLocation = () => {
                                 <ListItem display={"flex"}>
                                     <ImLocation2 />
                                     <Text pl={3}>
-                                        D-44, Kanjhawala Rd, Budh Vihar Phase-I
+                                        D-45, Kanjhawala Rd, Budh Vihar Phase-I
                                         Krishan Vihar, Delhi, 110086
                                     </Text>
                                 </ListItem>

@@ -17,7 +17,12 @@ import { AddressesData, NspLocation } from "../../../components/DATA";
 const Location = () => {
     return (
         <Container maxW={"full"} py={[5, 0]}>
-            <SimpleGrid columns={[1, 1, 2]} mx={[0, 10]} p={[0, 10]}>
+            <SimpleGrid
+                columns={[1, 1, 2]}
+                mx={[0, 10]}
+                p={[0, 10]}
+                spacing={5}
+            >
                 <Box px={[0, 10]}>
                     <Card>
                         {" "}

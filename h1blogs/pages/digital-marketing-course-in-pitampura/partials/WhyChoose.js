@@ -1,14 +1,15 @@
 import React from "react";
 import { Container, Box, Text } from "@chakra-ui/react";
+import { SectionTitle } from "../../../components/SectionTitle";
 const WhyChoose = () => {
     return (
         // <Box style={{ textAlign: "center" }}>
-        <Container maxW={"full"} textAlign={"center"}>
-            <Box mx={20}>
-                <Text fontSize={"3xl"} fontWeight={"bold"}>
+        <Container maxW={"full"}>
+            <Box>
+                <SectionTitle as="h3">
                     Why Choose H1 Tags For Digital Marketing Course
-                </Text>
-                <Text pt={[5, 10]}>
+                </SectionTitle>
+                <Text pt={[5, 10]} mx={10}>
                     H1 Tags Institute of Digital Marketing provides Advance
                     Digital Marketing Training course in pitampura for beginners
                     to master. It is comprised of 50+ Digital Marketing modules

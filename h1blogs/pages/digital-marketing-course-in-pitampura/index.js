@@ -24,7 +24,7 @@ const index = () => {
             <Layout>
                 <SEOTags
                     title={
-                        "Pitampura Best Digital Marketing Course in Pitampura - H1 Tags Institute "
+                        "Best Digital Marketing Course in Pitampura - H1 Tags Institute "
                     }
                     description={
                         "Looking for the Best Digital Marketing Course in Pitampura? Book your seat for the Advanced Digital Marketing Course in Pitampura. Join Now free demo class - H1 Tags."

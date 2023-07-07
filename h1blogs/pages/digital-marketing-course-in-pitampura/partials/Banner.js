@@ -8,11 +8,9 @@ const Banner = () => {
             <Box p={0}>
                 <Image src={"/pitampura.jpg"} w={"100%"} />
             </Box>
-            <SectionTitle pt={[8, 12]}>
-                <h1>
-                    {" "}
-                    Best Digital Marketing Course Training Institute - Pitampura
-                </h1>
+            <SectionTitle as="h1" pt={[8, 12]}>
+                {" "}
+                Best Digital Marketing Course Training Institute - Pitampura
             </SectionTitle>
 
             <Box sx={{ padding: 5 }} px={[0, 20]}>
@@ -34,14 +32,10 @@ const Banner = () => {
                     }}
                 >
                     <CardBody>
-                        <Text
-                            fontWeight={"bold"}
-                            color={`#fff`}
-                            fontSize={"4xl"}
-                        >
+                        <SectionTitle as="h2">
                             H1 Tags - Most Trusted Institute for Digital
                             Marketing Course
-                        </Text>
+                        </SectionTitle>
                     </CardBody>
                 </Card>
             </Box>

@@ -10,27 +10,36 @@ import {
     List,
     Button,
     Image,
+    ListIcon,
 } from "@chakra-ui/react";
 // import ContactForm from "../../../components/contactform";
 import ContactForm from "../../../components/contactform";
+import { MdCheckCircle } from "react-icons/md";
 import ReturnFocus from "../../../components/Modal";
 const SechduleTime = () => {
     const [openModal, openModalSet] = React.useState(false);
     return (
         <Container maxW={"full"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
-                <Text fontWeight={"bold"} fontSize={"3xl"}>
-                    H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN PITAMPURA
-                </Text>
-                <Text pt={[5, 10]}>
+                <SectionTitle as="h3">
+                    H1 Tags - Digital Marketing Training Schedule In Rohini
+                </SectionTitle>
+                {/* <Text pt={[2, 5]}>
                     In Pitampura Training Centre Our Session will be conducted
                     through out the day with all time flexibility & multiple
                     batches offline mode
-                </Text>
+                </Text> */}
+                <Box sx={{ padding: 5 }} px={[0, 20]}>
+                    <Text px={[0, 20]}>
+                        In Pitampura Training Centre Our Session will be
+                        conducted through out the day with all time flexibility
+                        & multiple batches offline mode
+                    </Text>
+                </Box>
             </Box>
 
-            <Box m={[10]}>
-                <Card m={[10, 10]}>
+            <Box m={[0, 10]} pt={[5]}>
+                <Card>
                     <CardBody mx={10}>
                         <Text>
                             <strong>Training Centre Timing : </strong> 10:00 AM
@@ -68,8 +77,9 @@ const SechduleTime = () => {
                         </Text>
                         <List pt={3}>
                             <ListItem display={"flex"} py={2}>
-                                <Image
-                                    src={"/check point.jpg"}
+                                <ListIcon
+                                    as={MdCheckCircle}
+                                    color="#3950a1"
                                     style={{
                                         width: "20px",
                                         height: "20px",
@@ -81,8 +91,9 @@ const SechduleTime = () => {
                                 <strong>( MIDM )</strong>
                             </ListItem>
                             <ListItem display={"flex"} py={2}>
-                                <Image
-                                    src={"/check point.jpg"}
+                                <ListIcon
+                                    as={MdCheckCircle}
+                                    color="#3950a1"
                                     style={{
                                         width: "20px",
                                         height: "20px",
@@ -95,8 +106,9 @@ const SechduleTime = () => {
                                 <strong>( AIMTP )</strong>
                             </ListItem>
                             <ListItem display={"flex"} py={2}>
-                                <Image
-                                    src={"/check point.jpg"}
+                                <ListIcon
+                                    as={MdCheckCircle}
+                                    color="#3950a1"
                                     style={{
                                         width: "20px",
                                         height: "20px",
@@ -127,7 +139,6 @@ const SechduleTime = () => {
                                 color="white"
                                 rounded={"full"}
                             />
-                          
                         </Box>
                     </CardBody>
                 </Card>

@@ -81,7 +81,7 @@ const Feedback = () => {
         <>
             <Container maxW={"full"} px={[5, 10]} id={"review"} pb={10}>
                 {" "}
-                <SectionTitle as="h2" py={10}>
+                <SectionTitle as="h3" py={10}>
                     Students’ Feedback
                 </SectionTitle>
                 <SimpleGrid
