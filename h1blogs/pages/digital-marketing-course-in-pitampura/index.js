@@ -38,6 +38,7 @@ const index = () => {
                 {/* <MasterCourse /> */}
                 <SechduleTime />
                 <KeyPoint />
+
                 {/* <Didm /> */}
                 {/* <CourseModule /> */}
                 {/* <AboutCourse /> */}
