@@ -321,16 +321,16 @@ const NAV_ITEMS = [
                 // subLabel: "Up-and-coming Designers",
                 href: "/graphicdesign.html",
             },
-            {
-                label: "Digital Marketing Course in Pitampura",
-                // subLabel: "Up-and-coming Designers",
-                href: "/digital-marketing-course-in-pitampura.html",
-            },
-            {
-                label: "Digital Marketing Institute in Rohini",
-                // subLabel: "Up-and-coming Designers",
-                href: "/digital-marketing-course-in-rohini.html",
-            },
+            // {
+            //     label: "Digital Marketing Course in Pitampura",
+            //     // subLabel: "Up-and-coming Designers",
+            //     href: "/digital-marketing-course-in-pitampura.html",
+            // },
+            // {
+            //     label: "Digital Marketing Institute in Rohini",
+            //     // subLabel: "Up-and-coming Designers",
+            //     href: "/digital-marketing-course-in-rohini.html",
+            // },
         ],
     },
     // {

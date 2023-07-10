@@ -38,6 +38,7 @@ const Banner = () => {
                             fontWeight={"bold"}
                             color={`#fff`}
                             fontSize={"4xl"}
+                            as={"h2"}
                         >
                             H1 Tags - Most Trusted Institute for Digital
                             Marketing Course
