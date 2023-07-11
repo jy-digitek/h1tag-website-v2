@@ -32,7 +32,7 @@ const Banner = () => {
                     }}
                 >
                     <CardBody>
-                        <SectionTitle as="h2">
+                        <SectionTitle as="h2" color={"white"}>
                             H1 Tags - Most Trusted Institute for Digital
                             Marketing Course
                         </SectionTitle>
