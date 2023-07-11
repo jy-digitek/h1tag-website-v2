@@ -14,14 +14,14 @@ const Faq = () => {
     return (
         <Container maxW={"full"}>
             <Box my={[0, 10]}>
-                <SectionTitle mb={10}>
+                <SectionTitle mb={10} as="h3">
                     Digital Marketing Course in Rohini FAQ’S
                 </SectionTitle>
                 <Accordion allowMultiple mx={[0, 10, 60]}>
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -36,7 +36,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     <strong> H1Tags Rohini</strong> is located
                                     in the hub of educational institute area at
@@ -49,7 +49,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -65,7 +65,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     H1Tags is the top{" "}
                                     <strong>
@@ -83,7 +83,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -99,7 +99,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     A digital marketer's pay starts at 3 lacs.
                                     It is dependent on the candidate's position,
@@ -111,7 +111,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -128,7 +128,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     There are a number of digital marketing job
                                     opportunities available for both job seekers
@@ -152,7 +152,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -169,7 +169,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     The cost of a digital marketing course in
                                     Rohini is determined by the training
@@ -181,7 +181,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -197,7 +197,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     There are many chances in the sector of
                                     digital marketing in Delhi-NCR. Many global
@@ -214,7 +214,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -230,7 +230,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     There are many chances in the sector of
                                     digital marketing in Delhi-NCR. Many global
@@ -247,7 +247,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -264,7 +264,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     yes, you can get a job after completing a
                                     digital marketing course in Rohini. H1Tags
@@ -278,7 +278,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -294,7 +294,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     Digital marketing allows them to reach a
                                     larger audience, expand their business, and
@@ -340,7 +340,7 @@ const Faq = () => {
                     <AccordionItem>
                         {({ isExpanded }) => (
                             <>
-                                <h2>
+                                <h3>
                                     <AccordionButton>
                                         <Box
                                             as="span"
@@ -356,7 +356,7 @@ const Faq = () => {
                                             <AddIcon fontSize="12px" />
                                         )}
                                     </AccordionButton>
-                                </h2>
+                                </h3>
                                 <AccordionPanel pb={4}>
                                     If you enroll in{" "}
                                     <strong>

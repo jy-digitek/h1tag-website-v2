@@ -2,6 +2,7 @@ import React from "react";
 import { CourseBuiltForData, ReasonData } from "../../../components/DATA";
 import { CustomCard } from "../../../components/CustomCard";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
+import { SectionTitle } from "../../../components/SectionTitle";
 // import { ReasonData } from "../../../components/DATA";
 
 const JoinReasons = () => {
@@ -9,9 +10,12 @@ const JoinReasons = () => {
         <>
             <Container maxW={"full"}>
                 <Box style={{ textAlign: "center" }} pt={10}>
-                    <Text fontSize={"4xl"} fontWeight={"bold"}>
+                    {/* <Text fontSize={"4xl"} fontWeight={"bold"}>
                         Reasons To Join Digital Marketing Institute in Pitampura
-                    </Text>
+                    </Text> */}
+                    <SectionTitle as="h3">
+                        Reasons To Join Digital Marketing Institute in Pitampura
+                    </SectionTitle>
                 </Box>
                 <SimpleGrid
                     py={10}

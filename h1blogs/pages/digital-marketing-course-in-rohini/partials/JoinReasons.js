@@ -3,15 +3,18 @@ import { CourseBuiltForData, ReasonData } from "../../../components/DATA";
 import { CustomCard } from "../../../components/CustomCard";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 // import { ReasonData } from "../../../components/DATA";
-
+import { SectionTitle } from "../../../components/SectionTitle";
 const JoinReasons = () => {
     return (
         <>
             <Container maxW={"full"}>
                 <Box style={{ textAlign: "center" }}>
-                    <Text fontSize={"4xl"} fontWeight={"bold"}>
+                    {/* <Text fontSize={"4xl"} fontWeight={"bold"}>
                         Reasons To Join Digital Marketing Institute in Rohini
-                    </Text>
+                    </Text> */}
+                    <SectionTitle as="h3">
+                        Reasons To Join Digital Marketing Institute in Rohini
+                    </SectionTitle>
                 </Box>
                 <SimpleGrid
                     py={10}
