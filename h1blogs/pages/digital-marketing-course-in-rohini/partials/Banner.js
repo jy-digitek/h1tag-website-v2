@@ -9,8 +9,7 @@ const RohBanner = () => {
                 <Image src={"/rohini.jpg"} w={"100%"} />
             </Box>
             <SectionTitle as="h1" pt={[8, 12]}>
-                {/* <h2> */} Best Digital Marketing Course Training Institute -
-                Rohini
+                {/* <h2> */} Best Digital Marketing Course Institute - Rohini
                 {/* </h2> */}
             </SectionTitle>
 

@@ -10,7 +10,7 @@ const Banner = () => {
             </Box>
             <SectionTitle as="h1" pt={[8, 12]}>
                 {" "}
-                Best Digital Marketing Course Training Institute - Pitampura
+                Best Digital Marketing Course Institute - Pitampura
             </SectionTitle>
 
             <Box sx={{ padding: 5 }} px={[0, 20]}>

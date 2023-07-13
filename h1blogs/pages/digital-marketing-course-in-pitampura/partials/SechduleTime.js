@@ -119,7 +119,7 @@ const SechduleTime = () => {
                                 <strong>( Customized )</strong>
                             </ListItem>
                         </List>
-                        <Text>
+                        {/* <Text>
                             Delhi institute of digital marketing (DIDM) was
                             Awarded “ Most Promising Brand “ by Assocham. We are
                             follow all kind of standard training norms, we are
@@ -128,7 +128,7 @@ const SechduleTime = () => {
                             gurgaon training centre, you will get high quality
                             of digital marketing training session through our
                             industrial professionals and experts.
-                        </Text>
+                        </Text> */}
                         <Box textAlign={"center"} pt={5}>
                             <ReturnFocus
                                 btnText={`Take a Free Session`}
