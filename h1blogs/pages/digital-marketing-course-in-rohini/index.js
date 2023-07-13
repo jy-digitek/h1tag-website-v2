@@ -31,7 +31,7 @@ const index = () => {
             <Feedback />
             <WhyChoose />
             <SechduleTime />
-            <KeyPoint />
+            {/* <KeyPoint /> */}
             <JoinReasons />
             <CTA
                 title={"Struggling to Choose a Career?"}

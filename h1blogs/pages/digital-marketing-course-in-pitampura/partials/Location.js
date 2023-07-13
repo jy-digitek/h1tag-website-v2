@@ -16,9 +16,9 @@ import { AddressesData, NspLocation } from "../../../components/DATA";
 
 const Location = () => {
     return (
-        <Container maxW={"full"} py={[5, 0]}>
+        <Container maxW={"8xl"} py={[5, 0]}>
             <SimpleGrid
-                columns={[1, 1, 2]}
+                columns={[1, 1, 1, 2]}
                 mx={[0, 10]}
                 p={[0, 10]}
                 spacing={5}

@@ -19,7 +19,7 @@ import { MdCheckCircle } from "react-icons/md";
 const SechduleTime = () => {
     const [openModal, openModalSet] = React.useState(false);
     return (
-        <Container maxW={"full"} py={[5, 10]}>
+        <Container maxW={"7xl"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
                 {/* <Text fontWeight={"bold"} fontSize={"3xl"}>
                     H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN Rohini

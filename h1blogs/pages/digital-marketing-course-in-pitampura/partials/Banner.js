@@ -12,17 +12,20 @@ const Banner = () => {
                 {" "}
                 Best Digital Marketing Course Institute - Pitampura
             </SectionTitle>
+            <Container maxW={"8xl"}>
+                <Box sx={{ padding: 5 }} px={[0, 20]}>
+                    <Text px={[0, 20]}>
+                        Looking for the best digital marketing course in
+                        Pitampura? Look no further! H1 tags Institute is
+                        relevant for digital marketing course in Pitampura is
+                        designed to equip you with the skills and knowledge
+                        needed to excel in the dynamic world of online
+                        marketing. Join us today and embark on your journey to
+                        success!
+                    </Text>
+                </Box>
+            </Container>
 
-            <Box sx={{ padding: 5 }} px={[0, 20]}>
-                <Text px={[0, 20]}>
-                    Looking for the best digital marketing course in Pitampura?
-                    Look no further! H1 tags Institute is relevant for digital
-                    marketing course in Pitampura is designed to equip you with
-                    the skills and knowledge needed to excel in the dynamic
-                    world of online marketing. Join us today and embark on your
-                    journey to success!
-                </Text>
-            </Box>
             <Box maxW={"full"} p={0}>
                 <Card
                     style={{

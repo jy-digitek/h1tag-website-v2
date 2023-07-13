@@ -19,10 +19,10 @@ import ReturnFocus from "../../../components/Modal";
 const SechduleTime = () => {
     const [openModal, openModalSet] = React.useState(false);
     return (
-        <Container maxW={"full"} py={[5, 10]}>
+        <Container maxW={"7xl"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
                 <SectionTitle as="h3">
-                    H1 Tags - Digital Marketing Training Schedule In Rohini
+                    H1 Tags - Digital Marketing Training Schedule In Pitampura
                 </SectionTitle>
                 {/* <Text pt={[2, 5]}>
                     In Pitampura Training Centre Our Session will be conducted

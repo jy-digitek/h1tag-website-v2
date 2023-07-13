@@ -8,7 +8,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 const JoinReasons = () => {
     return (
         <>
-            <Container maxW={"full"}>
+            <Container maxW={"7xl"}>
                 <Box style={{ textAlign: "center" }} pt={10}>
                     {/* <Text fontSize={"4xl"} fontWeight={"bold"}>
                         Reasons To Join Digital Marketing Institute in Pitampura

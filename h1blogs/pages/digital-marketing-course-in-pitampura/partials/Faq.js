@@ -12,7 +12,7 @@ import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 
 const Faq = () => {
     return (
-        <Container maxW={"full"}>
+        <Container maxW={"8xl"}>
             <Box my={[0, 10]}>
                 <SectionTitle mb={10} as="h3">
                     Digital Marketing Course in Pitampura FAQ’S
