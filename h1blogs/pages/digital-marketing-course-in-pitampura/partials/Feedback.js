@@ -85,7 +85,7 @@ const Feedback = () => {
                     Students’ Feedback
                 </SectionTitle>
                 <SimpleGrid
-                    columns={[1, 1, 2]}
+                    columns={[1, 1, 1, 2]}
                     textAlign={"center"}
                     alignItems={"center"}
                 >
