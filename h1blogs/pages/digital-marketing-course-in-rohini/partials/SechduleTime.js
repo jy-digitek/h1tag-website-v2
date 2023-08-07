@@ -126,6 +126,14 @@ const SechduleTime = () => {
                                 </Text>
                             </ListItem>
                         </List>
+                        <Text pt={3}>
+                            Best Digital Marketing Institute. We Follow All
+                            Kinds Of Standard Training Norms; We Are Certified
+                            By And Also Registered Under Msme. In H1tags
+                            Pitmapura Training Center, You Will Get High-quality
+                            Digital Marketing Training Sessions Through Our
+                            Industrial Professionals And Experts
+                        </Text>
 
                         <Box textAlign={"center"} pt={5}>
                             <ReturnFocus
