@@ -11,6 +11,9 @@ import DigitalmarketingBox from "./partials/DigitalmarketingBox";
 import H1TagsAdmission from "./partials/H1TagsAdmission";
 import Tabs2 from "./partials/Tabs2";
 import WithSpeechBubbles from "./partials/Testimonial";
+import FAQ from "./partials/Faq";
+import PracticalCourse from "./partials/PracticalCourse";
+// import FAQ from "./partials/Faq";
 const index = ({ canonicalUrl }) => {
     console.log("canonicalUrl", canonicalUrl);
     return (
@@ -59,8 +62,8 @@ const index = ({ canonicalUrl }) => {
             <WithSpeechBubbles />
             <H1TagsAdmission />
             {/* <AreaCourse /> */}
-
-            {/* <FAQ /> */}
+            <PracticalCourse />
+            <FAQ />
         </Layout>
     );
 };
