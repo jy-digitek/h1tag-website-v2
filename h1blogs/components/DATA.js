@@ -723,3 +723,30 @@ export const Reviews = [
         review: "H1tags is not just a common institute for learning digital marketing but an agency-based institute where we get practical knowledge and paid internships within a month of joining the course. As per my experience, H1 Tags is the best institute in Delhi.",
     },
 ];
+
+export const galleryimage = [
+    {
+        img: "./test/gallery-1.jpg",
+    },
+    {
+        img: "./test/gallery-2.jpg",
+    },
+    {
+        img: "./test/gallery-3.jpg",
+    },
+    {
+        img: "./test/gallery-4.jpg",
+    },
+    {
+        img: "./test/gallery-5.jpg",
+    },
+    {
+        img: "./test/gallery-6.jpg",
+    },
+    // {
+    //     img: "./test/gallery1.jpg",
+    // },
+    // {
+    //     img: "./test/gallery1.jpg",
+    // },
+];

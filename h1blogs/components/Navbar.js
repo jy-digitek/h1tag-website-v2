@@ -334,8 +334,8 @@ const NAV_ITEMS = [
         ],
     },
     // {
-    //   label: "Gallery",
-    //   href: "/gallery.html",
+    //     label: "Gallery",
+    //     href: "/gallery.html",
     // },
     // {
     //   label: "Blog",
