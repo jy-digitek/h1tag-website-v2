@@ -31,8 +31,8 @@ const index = () => {
             <Feedback />
             <WhyChoose />
             <SechduleTime />
-            {/* <KeyPoint /> */}
-            <JoinReasons />
+            <KeyPoint />
+
             <CTA
                 title={"Struggling to Choose a Career?"}
                 label={"Get instant Career Counselling"}
@@ -47,6 +47,7 @@ const index = () => {
                 backgroundRepeat={"no-repeat"}
                 backgroundSize={"cover"}
             />
+            <JoinReasons />
             <RohLocation />
             <Faq />
         </Layout>

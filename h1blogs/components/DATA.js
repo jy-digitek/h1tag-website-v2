@@ -147,27 +147,27 @@ export const CourseBuiltForData = [
 
 export const ReasonData = [
     {
-        icon: <FcMoneyTransfer />,
+        // icon: <FcMoneyTransfer />,
         title: "100% Placement Assistance",
     },
     {
-        icon: <FcReading />,
+        // icon: <FcReading />,
         title: "Paid Internship during the Course",
     },
     {
-        icon: <FcBullish />,
+        // icon: <FcBullish />,
         title: "Flexible Batch Timing",
     },
     {
-        icon: <FcDepartment />,
+        // icon: <FcDepartment />,
         title: "Live Pratice Sessions",
     },
     {
-        icon: <FcGrid />,
+        // icon: <FcGrid />,
         title: "Work Opportunities from Day 1",
     },
     {
-        icon: <FcManager />,
+        // icon: <FcManager />,
         title: "Traning by Real Time Experts",
     },
 ];
