@@ -1,6 +1,6 @@
 import React from "react";
 import { CourseBuiltForData, ReasonData } from "../../../components/DATA";
-import { CustomCard } from "../../../components/CustomCard";
+// import { CustomCard } from "../../../components/CustomCard";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 // import { ReasonData } from "../../../components/DATA";
