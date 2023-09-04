@@ -1,32 +1,29 @@
 import {
-    Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
-    Hide,
-    SimpleGrid,
-    Stack,
-    Collapse,
-    Icon,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    useColorModeValue,
-    useBreakpointValue,
-    useDisclosure,
-    Image,
-    Center,
-} from "@chakra-ui/react";
-import {
-    HamburgerIcon,
-    CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
+    CloseIcon,
+    HamburgerIcon,
 } from "@chakra-ui/icons";
-import ReturnFocus from "./Modal";
-import React from "react";
+import {
+    Box,
+    Collapse,
+    Flex,
+    Hide,
+    Icon,
+    IconButton,
+    Image,
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+    SimpleGrid,
+    Stack,
+    Text,
+    useColorModeValue,
+    useDisclosure,
+} from "@chakra-ui/react";
 import Link from "next/link";
+import React from "react";
+import ReturnFocus from "./Modal";
 import ContactForm from "./contactform";
 
 import VideoModal from "./videoModal";
@@ -74,13 +71,13 @@ export default function WithSubnavigation() {
                 > */}
                 <SimpleGrid columns={[1, 4, 4, 4]}>
                     <Box
-                        // textAlign={useBreakpointValue({
-                        //   base: "center",
-                        //   md: "left",
-                        //   lg: "left",
-                        // })}
-                        // fontFamily={"heading"}
-                        // color={useColorModeValue("gray.800", "white")}
+                    // textAlign={useBreakpointValue({
+                    //   base: "center",
+                    //   md: "left",
+                    //   lg: "left",
+                    // })}
+                    // fontFamily={"heading"}
+                    // color={useColorModeValue("gray.800", "white")}
                     >
                         <Link href="/">
                             <Image src={"/h1logo.png"} w={"162px"} />
@@ -101,12 +98,12 @@ export default function WithSubnavigation() {
                             {/* <FcStart fontSize={60} /> */}
                             <VideoModal />
                         </Box>
-                   </Hide>
+                    </Hide>
 
                     <Flex display={{ base: "none", md: "flex" }} mx={"auto"}>
                         <DesktopNav />
                     </Flex>
-                    </SimpleGrid>
+                </SimpleGrid>
 
                 <Stack
                     flex={{ base: 1, md: 0 }}
@@ -324,6 +321,16 @@ const NAV_ITEMS = [
                 // subLabel: "Up-and-coming Designers",
                 href: "/graphicdesign.html",
             },
+            // {
+            //     label: "Digital Marketing Course in Pitampura",
+            //     // subLabel: "Up-and-coming Designers",
+            //     href: "/digital-marketing-course-in-pitampura.html",
+            // },
+            // {
+            //     label: "Digital Marketing Institute in Rohini",
+            //     // subLabel: "Up-and-coming Designers",
+            //     href: "/digital-marketing-course-in-rohini.html",
+            // },
         ],
     },
     // {

@@ -15,24 +15,16 @@ const EnrollCta = () => {
       backgroundSize={"cover"}
       backgroundRepeat={"no-repeat"}
       color={"white"}
-      // paddingInlineStart={["auto", "auto"]}
-      // minH={"100%"}
       backgroundPosition={"center right"}
       px={[0, "auto"]}
       py={[20, "0"]}
-      // className={styles.bannerText}
     >
-      {/* <SimpleGrid columns={[1]} mx={[0, 10]} py={[12, 20]}> */}
       <Box
         color={"black"}
         px={[5, 20]}
         py={[6, 20]}
         className={styles.bannerText}
-        // sx={{ backgroundImage: 'linear-gradient(to left, #ffffffd4, #fff)' }} py={[8, 12]}
       >
-        {/* <SectionTitle pt={10}>
-            The Best Place to Enroll for Digital Marketing Institute in Delhi
-          </SectionTitle> */}
         <Box pt={[1, 5]}>
           <Box as="p" fontSize={["sm", "2xl"]} py={[0, 1]}>
             The Best Place to Enroll for{" "}
@@ -54,20 +46,6 @@ const EnrollCta = () => {
 
         <Box py={[5, 10]}>
           <Box display={"flex"}>
-            {/* <ReturnFocus
-                py={[0, 2]}
-                px={[4, 10]}
-                fontSize={["14px", "20px"]}
-                btnText={`Get a Call back`}
-                children={<ContactForm />}
-                openModalSet={openModalSet}
-                // isEditingSet={isEditingSet}
-                label="Explore Now"
-                color="white"
-                //   sx={{ width: "100%", color: "#fff" }}
-
-                rounded="full"
-              /> */}
             <ReturnFocus
               py={[0, 2]}
               px={[4, 10]}

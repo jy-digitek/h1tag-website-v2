@@ -3,7 +3,7 @@ import { Container, SimpleGrid, Box, Card, CardBody } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 export default function PerSueGraphicDesign() {
   return (
-    <Container maxW={"6xl"}>
+    <Container maxW={"7xl"}>
       <SectionTitle
         children={"Why to pursue Graphic Designing Course?"}
         py={10}
@@ -16,7 +16,7 @@ export default function PerSueGraphicDesign() {
             minH={["auto", 200]}
           >
             <CardBody>
-              The field of graphic design is in high demand. And it is expected
+              The field of Graphic Design is in high demand. And it is expected
               to expand in the future.
             </CardBody>
           </Card>

@@ -14,12 +14,12 @@ import { FcManager, FcRules, FcAssistant, FcSettings } from "react-icons/fc";
 
 const JoinH1Tags = () => {
   return (
-    <Container maxW={"full"} py={10} bg="gray.100">
+    <Container maxW={"full"} py={10}>
       <SectionTitle children={"Benefits of Joining H1 Tags"} />
       <Box as="p" my={[3, 5]} maxW={"5xl"} mx={"auto"} textAlign={"center"}>
         Get a globally recognized Digital Marketing Certification. Advance your
         marketing profession by enhancing your digital abilities with the best
-        Digital Marketing Training Institute in Delhi.
+        Digital Marketing Course in Delhi.
       </Box>
       <SimpleGrid columns={[1, 2, 4]} spacing={10} px={10}>
         <Box as="card" boxShadow={"sm"}>

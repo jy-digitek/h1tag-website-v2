@@ -28,21 +28,23 @@ import ContactForm from "../../../components/contactform";
 export default function Tabs2() {
   const [openModal, openModalSet] = React.useState(false);
   return (
-    <Container maxW={"6xl"}>
-      <SectionTitle children={"Courses We Offer"} mb={10} />
+    <Container maxW={"6xl"} bg="gray.100">
+      <SectionTitle children={"Courses We Offer"} pt={10} />
       <Box
         as="p"
         my={[3, 5]}
         maxW={"5xl"}
         mx={"auto"}
         textAlign={"center"}
-        px={[5, 20]}
+        px={[, 20]}
       >
-        During your Digital Marketing Course, you will learn different
-        techniques of Digital Marketing and how to apply them in real life. We
-        will make you a skilled professional, and you will acquire the skills
-        you need to succeed in life. You can choose from a variety of courses
-        that H1 Tags is offering.
+        <Text py={[3, 7]}>
+          During your Digital Marketing Course, you will learn different
+          techniques of Digital Marketing and how to apply them in real life. We
+          will make you a skilled professional, and you will acquire the skills
+          you need to succeed in life. You can choose from a variety of courses
+          that H1 Tags is offering.
+        </Text>
       </Box>
 
       <Show above="md">
@@ -66,22 +68,21 @@ export default function Tabs2() {
           <TabPanel tabId="one">
             <Box>
               <SectionTitle
-                mb={5}
                 children={"Master Course"}
-                desc="Module Info & Overview"
+                desc="Module Info and Overview"
               />
-              <Text as="p" mb={5}>
+              <Text as="p" py={10} textAlign={"center"}>
                 This program is designed to make you an expert in Digital
                 Marketing; with this course, we provide deep learning of Digital
                 Marketing.
               </Text>
-              <SimpleGrid columns={2}>
+              <SimpleGrid columns={[1, 2, 3]}>
                 {MasterCourseData.map((item, i) => {
                   return (
                     <Flex
                       key={i}
                       alignItems={"center"}
-                      boxShadow={"sm"}
+                      boxShadow={"md"}
                       py={2}
                       px={[5]}
                       cursor={"pointer"}
@@ -137,18 +138,18 @@ export default function Tabs2() {
                 children={"Foundation Course"}
                 desc="Module Info and Overview"
               />
-              <Text as="p" mb={5}>
+              <Text as="p" py={10}>
                 Get practical experiences using Digital Marketing tools to
                 manage and optimize a Digital Marketing campaign with our
                 Foundation Course, which combines theory and practice.
               </Text>
-              <SimpleGrid columns={2}>
+              <SimpleGrid columns={[1, 2, 3]}>
                 {FoundationCourse.map((item, i) => {
                   return (
                     <Flex
                       key={i}
                       alignItems={"center"}
-                      boxShadow={"sm"}
+                      boxShadow={"md"}
                       py={2}
                       px={[5]}
                       cursor={"pointer"}
@@ -173,7 +174,7 @@ export default function Tabs2() {
                   );
                 })}
               </SimpleGrid>
-              <Center>
+              <Center sx={{ mt: 8, mb: 4 }}>
                 <ReturnFocus
                   btnText={`Apply Now`}
                   children={<ContactForm />}
@@ -195,21 +196,21 @@ export default function Tabs2() {
             <Box>
               <SectionTitle
                 children={"Job Oriented Program "}
-                desc="Module Info & Overview"
+                desc="Module Info and Overview"
                 mb={5}
               />
-              <Text as="p" mb={5}>
+              <Text as="p" py={10}>
                 Our job-oriented course is mainly created with the intention
                 that a reputable organization can hire you following the
                 training; finding your ideal job is our top priority.
               </Text>
-              <SimpleGrid columns={2}>
+              <SimpleGrid columns={[1, 2, 3]}>
                 {JobOrientedData.map((item, i) => {
                   return (
                     <Flex
                       key={i}
                       alignItems={"center"}
-                      boxShadow={"sm"}
+                      boxShadow={"md"}
                       py={2}
                       px={[5]}
                       cursor={"pointer"}
@@ -234,7 +235,7 @@ export default function Tabs2() {
                   );
                 })}
               </SimpleGrid>
-              <Center>
+              <Center sx={{ mt: 8, mb: 4 }}>
                 <ReturnFocus
                   btnText={`Apply Now`}
                   children={<ContactForm />}
@@ -256,21 +257,21 @@ export default function Tabs2() {
             <Box>
               <SectionTitle
                 children={"Customized Course"}
-                desc="Module Info & Overview"
+                desc="Module Info and Overview"
                 mb={5}
               />
-              <Text as="p" mb={5}>
+              <Text as="p" py={10}>
                 Our customized course assist in altering our training program
                 according to your needs and preferences; you can alter the
                 programs according to your choice.
               </Text>
-              <SimpleGrid columns={2}>
+              <SimpleGrid columns={[1, 2, 3]}>
                 {CustomizedCourseData.map((item, i) => {
                   return (
                     <Flex
                       key={i}
                       alignItems={"center"}
-                      boxShadow={"sm"}
+                      boxShadow={"md"}
                       py={2}
                       px={[5]}
                       cursor={"pointer"}
@@ -295,7 +296,7 @@ export default function Tabs2() {
                   );
                 })}
               </SimpleGrid>
-              <Center>
+              <Center sx={{ mt: 8, mb: 4 }}>
                 <ReturnFocus
                   btnText={`Apply Now`}
                   children={<ContactForm />}
@@ -315,6 +316,7 @@ export default function Tabs2() {
           </TabPanel>
         </Tabs>
       </Show>
+
       <Show below="md">
         <Tabs
           defaultTab="one"
@@ -343,41 +345,45 @@ export default function Tabs2() {
               <SectionTitle
                 mb={5}
                 children={"Master Course"}
-                desc="Module Info & Overview"
+                desc="Module Info and Overview"
               />
               <Text as="p" mb={5}>
                 This program is designed to make you an expert in Digital
                 Marketing; with this course, we provide deep learning of Digital
                 Marketing.
               </Text>
-              <SimpleGrid columns={[1, 2]}>
+              <SimpleGrid columns={[1, 2, 3, 3]}>
                 {MasterCourseData.map((item, i) => {
                   return (
-                    <Flex
-                      key={i}
-                      alignItems={"center"}
-                      boxShadow={"sm"}
-                      py={2}
-                      px={[5]}
-                      cursor={"pointer"}
-                      sx={{
-                        transition: ".5s",
-                        ":hover": { backgroundColor: "tomato", color: "#fff" },
-                      }}
-                    >
-                      <Box
-                        rounded={"full"}
-                        boxSize={10}
-                        backgroundColor={"gray.200"}
-                        display={"flex"}
+                    <Box key={i}>
+                      <Flex
+                        key={i}
                         alignItems={"center"}
-                        justifyContent={"center"}
-                        marginRight={4}
+                        boxShadow={"sm"}
+                        py={2}
+                        px={[5]}
+                        cursor={"pointer"}
+                        sx={{
+                          transition: ".5s",
+                          ":hover": {
+                            backgroundColor: "tomato",
+                            color: "#fff",
+                          },
+                        }}
                       >
-                        <FcNext />{" "}
-                      </Box>
-                      <Text>{item.level}</Text>
-                    </Flex>
+                        <Box
+                          rounded={"full"}
+                          backgroundColor={"gray.200"}
+                          display={"flex"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                          marginRight={4}
+                        >
+                          <FcNext />
+                        </Box>
+                        <Text>{item.level}</Text>
+                      </Flex>
+                    </Box>
                   );
                 })}
               </SimpleGrid>
@@ -396,10 +402,10 @@ export default function Tabs2() {
                   label="Download Brochure"
                   color="white"
                   rounded={"full"}
-                  mt={2}
-                  px={10}
                   background="#3950a1"
                   _hover={{ background: "#101C32" }}
+                  mt={2}
+                  px={10}
                   mb={5}
                 />
               </Center>
@@ -420,48 +426,52 @@ export default function Tabs2() {
               <SimpleGrid columns={[1, 2]}>
                 {FoundationCourse.map((item, i) => {
                   return (
-                    <Flex
-                      key={i}
-                      alignItems={"center"}
-                      boxShadow={"sm"}
-                      py={2}
-                      px={[5]}
-                      cursor={"pointer"}
-                      sx={{
-                        transition: ".5s",
-                        ":hover": { backgroundColor: "tomato", color: "#fff" },
-                      }}
-                    >
-                      <Box
-                        rounded={"full"}
-                        boxSize={10}
-                        backgroundColor={"gray.200"}
-                        display={"flex"}
+                    <Box key={i}>
+                      <Flex
+                        key={i}
                         alignItems={"center"}
-                        justifyContent={"center"}
-                        marginRight={4}
+                        boxShadow={"sm"}
+                        py={2}
+                        px={[5]}
+                        cursor={"pointer"}
+                        sx={{
+                          transition: ".5s",
+                          ":hover": {
+                            backgroundColor: "tomato",
+                            color: "#fff",
+                          },
+                        }}
                       >
-                        <FcNext />
-                      </Box>
-                      <Text>{item.level}</Text>
-                    </Flex>
+                        <Box
+                          rounded={"full"}
+                          backgroundColor={"gray.200"}
+                          display={"flex"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                          marginRight={4}
+                        >
+                          <FcNext />
+                        </Box>
+                        <Text>{item.level}</Text>
+                      </Flex>
+                    </Box>
                   );
                 })}
               </SimpleGrid>
-              <Center>
+              <Center sx={{ mt: 8, mb: 4 }}>
                 <ReturnFocus
                   btnText={`Apply Now`}
                   children={<ContactForm />}
-                  openModalSet={openModalSet}
+                  // openModalSet={openModalSet}
                   // isEditingSet={isEditingSet}
                   label="Download Brochure"
                   color="white"
                   rounded={"full"}
                   mt={2}
                   px={10}
+                  mb={5}
                   background="#3950a1"
                   _hover={{ background: "#101C32" }}
-                  mb={5}
                 />
               </Center>
             </Box>
@@ -470,7 +480,7 @@ export default function Tabs2() {
             <Box>
               <SectionTitle
                 children={"Job Oriented Program "}
-                desc="Module Info & Overview"
+                desc="Module Info and Overview"
                 mb={5}
               />
               <Text as="p" mb={5}>
@@ -481,31 +491,36 @@ export default function Tabs2() {
               <SimpleGrid columns={[1, 2]}>
                 {JobOrientedData.map((item, i) => {
                   return (
-                    <Flex
-                      key={i}
-                      alignItems={"center"}
-                      boxShadow={"sm"}
-                      py={2}
-                      px={[5]}
-                      cursor={"pointer"}
-                      sx={{
-                        transition: ".5s",
-                        ":hover": { backgroundColor: "tomato", color: "#fff" },
-                      }}
-                    >
-                      <Box
-                        rounded={"full"}
-                        boxSize={10}
-                        backgroundColor={"gray.200"}
-                        display={"flex"}
+                    <Box key={i}>
+                      <Flex
+                        key={i}
                         alignItems={"center"}
-                        justifyContent={"center"}
-                        marginRight={4}
+                        boxShadow={"sm"}
+                        py={2}
+                        px={[5]}
+                        cursor={"pointer"}
+                        sx={{
+                          transition: ".5s",
+                          ":hover": {
+                            backgroundColor: "tomato",
+                            color: "#fff",
+                          },
+                        }}
                       >
-                        <FcNext />
-                      </Box>
-                      <Text>{item.level}</Text>
-                    </Flex>
+                        <Box
+                          rounded={"full"}
+                          boxSize={10}
+                          backgroundColor={"gray.200"}
+                          display={"flex"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                          marginRight={4}
+                        >
+                          <FcNext />
+                        </Box>
+                        <Text>{item.level}</Text>
+                      </Flex>
+                    </Box>
                   );
                 })}
               </SimpleGrid>
@@ -542,31 +557,36 @@ export default function Tabs2() {
               <SimpleGrid columns={[1, 2]}>
                 {CustomizedCourseData.map((item, i) => {
                   return (
-                    <Flex
-                      key={i}
-                      alignItems={"center"}
-                      boxShadow={"sm"}
-                      py={2}
-                      px={[5]}
-                      cursor={"pointer"}
-                      sx={{
-                        transition: ".5s",
-                        ":hover": { backgroundColor: "tomato", color: "#fff" },
-                      }}
-                    >
-                      <Box
-                        rounded={"full"}
-                        boxSize={10}
-                        backgroundColor={"gray.200"}
-                        display={"flex"}
+                    <Box key={i}>
+                      <Flex
+                        key={i}
                         alignItems={"center"}
-                        justifyContent={"center"}
-                        marginRight={4}
+                        boxShadow={"sm"}
+                        py={2}
+                        px={[5]}
+                        cursor={"pointer"}
+                        sx={{
+                          transition: ".5s",
+                          ":hover": {
+                            backgroundColor: "tomato",
+                            color: "#fff",
+                          },
+                        }}
                       >
-                        <FcNext />
-                      </Box>
-                      <Text>{item.level}</Text>
-                    </Flex>
+                        <Box
+                          rounded={"full"}
+                          boxSize={10}
+                          backgroundColor={"gray.200"}
+                          display={"flex"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                          marginRight={4}
+                        >
+                          <FcNext />
+                        </Box>
+                        <Text>{item.level}</Text>
+                      </Flex>
+                    </Box>
                   );
                 })}
               </SimpleGrid>

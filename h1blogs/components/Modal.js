@@ -1,21 +1,16 @@
-import React from "react";
-import * as Yup from "yup";
-import { useState } from "react";
 import {
-    // Box,
-    // Button,
     Modal,
-    ModalOverlay,
-    ModalHeader,
-    // ModalFooter,
-    ModalContent,
-    ModalCloseButton,
     ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalHeader,
+    ModalOverlay,
+    useDisclosure,
 } from "@chakra-ui/react";
-import { useDisclosure } from "@chakra-ui/react";
-import { GlobalButton } from "./GlobalButton";
-
 import axios from "axios";
+import React, { useState } from "react";
+import * as Yup from "yup";
+import { GlobalButton } from "./GlobalButton";
 
 import ContactForm from "./contactform";
 
@@ -23,8 +18,6 @@ export default function ReturnFocus({
     btnText,
     modalTitle,
     isEditingSet,
-    // openModalSet,
-    w,
     children,
     ...rest
 }) {
@@ -37,12 +30,16 @@ export default function ReturnFocus({
     // const [message, messageSet] = useState(false);
 
     const submitHandle = async (values) => {
+        console.log(values);
         loadingSet(true);
         const name = values.name;
         const email = values.email;
         const phone = values.phone;
         const branch = values.branch;
         const terms_accepted = values.terms_accepted;
+        console.log("success", success);
+        successSet(true);
+
         try {
             const res = await axios({
                 method: "POST",
@@ -55,15 +52,19 @@ export default function ReturnFocus({
                     terms_accepted,
                 },
             });
-            console.log("Res=>", res.data);
+
+            //console.log("Res=>", res.data);
             // console.log("Loading=>", loading);
             console.log("Success=>", success);
             if (res.data == "Mail Sent") {
-              successSet(true);
-                openModalSet(false);
+                successSet(true);
+                onClose();
+                window.open("/uploads/broucher/Broucher.pdf");
             } else successSet(false);
-          loadingSet(false);
-        } catch (error) {}
+            loadingSet(false);
+        } catch (error) {
+            console.log(error);
+        }
     };
     const phoneRegExp =
         /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
@@ -89,12 +90,11 @@ export default function ReturnFocus({
             "Please agree to Privacy Policy!"
         ),
     });
-  React.useEffect(() => {
-    setTimeout(() => {
-      successSet(false);
-      console.log('a')
-      }, 0)
-  }, [success])
+    React.useEffect(() => {
+        setTimeout(() => {
+            console.log("a");
+        }, 0);
+    }, [success]);
 
     return (
         <>
@@ -103,13 +103,18 @@ export default function ReturnFocus({
                 fontSize={"sm"}
                 fontWeight={600}
                 color={"white"}
+                border={"2px solid white"}
                 onClick={(e) => {
-                    openModalSet(true);
+                    //   openModalSet(true);
                     onOpen(e);
                 }}
                 label={btnText}
                 background="#3950a1"
-                _hover={{ background: "#101C32" }}
+                _hover={{
+                    background: "#101C32",
+                    color: "white",
+                    border: "2px solid white",
+                }}
                 {...rest}
             />
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
@@ -118,7 +123,14 @@ export default function ReturnFocus({
                     <ModalHeader>{modalTitle}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-              <ContactForm success={success} successSet={successSet} loading={loading} validationSchema={validationSchema} initialValues={initialValues} submitHandle={submitHandle} />
+                        <ContactForm
+                            success={success}
+                            successSet={successSet}
+                            loading={loading}
+                            validationSchema={validationSchema}
+                            initialValues={initialValues}
+                            submitHandle={submitHandle}
+                        />
                     </ModalBody>
                 </ModalContent>
             </Modal>

@@ -1,4 +1,11 @@
-import { Container, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
+  Highlight,
+} from "@chakra-ui/react";
 import { CustomCard } from "../../../components/CustomCard";
 
 import { comparision } from "../../../components/DATA";
@@ -22,7 +29,17 @@ const WhyUs = () => {
       <Container maxW={"full"} pb={10}>
         <Stack spacing={0} as={Container} maxW={"3xl"} textAlign={"center"}>
           <SectionTitle as="h2" desc={<Description />} my={10}>
-            Why H1Tags
+            <Highlight
+              query="H1Tags"
+              styles={{
+                px: "2",
+                py: "1",
+                rounded: "full",
+                color: "#FF5733",
+              }}
+            >
+              Why H1Tags
+            </Highlight>
           </SectionTitle>
         </Stack>
         <SimpleGrid

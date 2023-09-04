@@ -3,11 +3,9 @@ import { SectionTitle } from "../../../components/SectionTitle";
 const DigitalmarketingBox = () => {
   return (
     <Container maxW={"full"}>
-      <SectionTitle
-        as={"h1"}
-        pt={[8, 12]}
-        children={"Best Digital Marketing Training Institute in Delhi"}
-      />
+      <SectionTitle pt={[8, 12]}>
+        <h1>Best Digital Marketing Course in Delhi</h1>
+      </SectionTitle>
       <SimpleGrid columns={[1, 2, 4]} py={20} spacing={6} px={10}>
         <Box
           p={10}

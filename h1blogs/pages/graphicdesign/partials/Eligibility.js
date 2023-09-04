@@ -13,15 +13,15 @@ import { SectionTitle } from "../../../components/SectionTitle";
 export default function Eligibility() {
   return (
     <Box py={10} mx={[5, 10]}>
-      <Container maxW={"6xl"} backgroundColor={"#e4f0e7"}>
+      <Container maxW={"7xl"} backgroundColor={"#e4f0e7"}>
         <Grid templateColumns="repeat(6, 1fr)" gap={5}>
           <GridItem colSpan={[6, 5]}>
             <Box position={"relative"} p={[0, 8]}>
               <SectionTitle children="Who can do this Course?" />
               <Box as="p">
-                No Need for a Specific Qualification or Degree, Our Graphic
+                No Need for a Specific Qualification or Degree.Our Graphic
                 Designing course is open to students who have completed their
-                12th graduation (from any stream) and working professionals who
+                12th, Graduation (from any stream) and working professionals who
                 want to switch careers. Anyone who has a passion for designing
                 and is of a creative mind is welcome to join this course and can
                 get a high-paying job.

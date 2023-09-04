@@ -7,6 +7,7 @@ import {
   Image,
   Stack,
   Show,
+  Highlight,
 } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
@@ -19,7 +20,17 @@ const ExperienceH1tags = () => {
           py={10}
           desc={"Real-world marketing work experience"}
         >
-          Experience at H1 Tags
+          <Highlight
+            query="H1 Tags"
+            styles={{
+              px: "2",
+              py: "1",
+              rounded: "full",
+              color: "#FF5733",
+            }}
+          >
+            Experience at H1 Tags
+          </Highlight>
         </SectionTitle>
       </Stack>
       <SimpleGrid

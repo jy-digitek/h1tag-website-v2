@@ -35,7 +35,7 @@ const EligibalForCourse = () => {
             backgroundAttachment={"fixed"}
           >
             <Box>
-              <Image src={"/test/item-service-1.jpeg"} />
+              <Image src={"/test/eligibalfordc.jpg"} />
             </Box>
             <Box
               sx={{
@@ -54,7 +54,7 @@ const EligibalForCourse = () => {
               </Text>
             </Box>
             <Box>
-              <Image src={"/test/item-service-1.jpeg"} />
+              <Image src={"/test/eligibalfordc.jpg"} />
             </Box>
             <Box
               sx={{
@@ -73,7 +73,7 @@ const EligibalForCourse = () => {
               </Text>
             </Box>
             <Box>
-              <Image src={"/test/item-service-1.jpeg"} />
+              <Image src={"/test/eligibalfordc.jpg"} />
             </Box>
             <Box
               sx={{
@@ -92,7 +92,7 @@ const EligibalForCourse = () => {
               </Text>
             </Box>
             <Box>
-              <Image src={"/test/item-service-1.jpeg"} />
+              <Image src={"/test/eligibalfordc.jpg"} />
             </Box>
             <Box
               sx={{
@@ -111,7 +111,7 @@ const EligibalForCourse = () => {
               </Text>
             </Box>
             <Box>
-              <Image src={"/test/item-service-1.jpeg"} />
+              <Image src={"/test/eligibalfordc.jpg"} />
             </Box>
             <Box
               sx={{
@@ -130,7 +130,7 @@ const EligibalForCourse = () => {
               </Text>
             </Box>
             <Box>
-              <Image src={"/test/item-service-1.jpeg"} />
+              <Image src={"/test/eligibalfordc.jpg"} />
             </Box>
             <Box
               sx={{

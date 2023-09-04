@@ -10,12 +10,14 @@ import {
   Heading,
   SimpleGrid,
   Box,
+  Link,
 } from "@chakra-ui/react";
 
 import { SectionTitle } from "../../../components/SectionTitle";
 import { PlacementPartner } from "../../../components/DATA";
 import { AdvertisingPartner } from "../../../components/DATA";
 import { Fade, AttentionSeeker } from "react-awesome-reveal";
+
 const TrustedPartner = () => {
   return (
     <Container maxW={"full"} px={[5, 10]}>
@@ -53,11 +55,13 @@ const TrustedPartner = () => {
         {AdvertisingPartner.map((item, i) => {
           return (
             <Box key={i}>
-              <Card align="center">
-                <CardBody>
-                  <Image src={item.src} boxSize={40} alt={item.name} />
-                </CardBody>
-              </Card>
+              <Link href={item?.href}>
+                <Card align="center">
+                  <CardBody>
+                    <Image src={item.src} boxSize={40} alt={item.name} />
+                  </CardBody>
+                </Card>
+              </Link>
             </Box>
           );
         })}
