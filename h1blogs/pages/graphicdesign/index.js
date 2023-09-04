@@ -13,15 +13,16 @@ import SEOTags from "../../components/Head";
 import GraphicBanner from "./partials/GraphicBanner";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import AboutGraphics from "./partials/AboutGraphics";
 
 const index = ({ canonicalUrl }) => {
     console.log("canonicalUrl", canonicalUrl);
     return (
         <Layout>
             <SEOTags
-                title={"#1 Graphic Design Course in Delhi | H1 Tags"}
+                title={"Best graphic design course in delhi-get enroll now"}
                 description={
-                    "Looking for the Best Graphic Designing Course in Delhi? H1 Tags Provide Best Graphic Designing Course with 100% Placement Guarantee | Book a Free Demo Class Now!"
+                    "Best graphic design course in Delhi. Enroll now to master design principles, Adobe Creative Suite, branding, and more. Join us for hands-on learning and industry insights."
                 }
                 currentUrl={"https://h1tags.com/graphicdesign.html/"}
             />
@@ -70,11 +71,13 @@ const index = ({ canonicalUrl }) => {
             {/* <GraphicBanner /> */}
             <TabsCourse />
             <CarrerOportunity />
+
             <Eligibility />
             <PerSueGraphicDesign />
             <ScholarShipProgram />
             <ChooseGraphicDesign />
             <JobRoles />
+            <AboutGraphics />
             <Faq />
         </Layout>
     );
