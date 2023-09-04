@@ -147,27 +147,27 @@ export const CourseBuiltForData = [
 
 export const ReasonData = [
     {
-        icon: <FcMoneyTransfer />,
+        // icon: <FcMoneyTransfer />,
         title: "100% Placement Assistance",
     },
     {
-        icon: <FcReading />,
+        // icon: <FcReading />,
         title: "Paid Internship during the Course",
     },
     {
-        icon: <FcBullish />,
+        // icon: <FcBullish />,
         title: "Flexible Batch Timing",
     },
     {
-        icon: <FcDepartment />,
+        // icon: <FcDepartment />,
         title: "Live Pratice Sessions",
     },
     {
-        icon: <FcGrid />,
+        // icon: <FcGrid />,
         title: "Work Opportunities from Day 1",
     },
     {
-        icon: <FcManager />,
+        // icon: <FcManager />,
         title: "Traning by Real Time Experts",
     },
 ];
@@ -419,34 +419,89 @@ export const CustomizedCourseData = [
 
 export const AccordionDigitalData = [
     {
-        que: "What is the duration of the training program?",
-        ans: "The duration is for 3 months. We will provide you with the best training for your bright future during this duration.",
+        que: "How can I join and start the best digital marketing course in delhi ? ",
+        ans: "at h1, tags take pride in giving every student, whether they have recently completed a few of our courses, have an account with us now, or are just contemplating individual attention. We interact personally with our trainer to walk you through the best digital marketing course in Delhi, whether in person at our institute or over the phone. You will start your education with us by receiving customised online educational resources and accessing live classroom sessions once you join h1tags",
     },
     {
-        que: "Who can join the digital marketing training program?",
-        ans: "Students from any stream, working professionals, home-makers, entrepreneurs, etc., can do this course with just a basic knowledge of computers.",
+        que: " What is the scope of digital marketing ?",
+        ans: "Following every company's growth, digital advertising continues to grow in India. Various businesses have started to recognize the opportunities many modern digital advertising techniques offer over time. Companies are beginning to understand the benefits of online and virtual platforms over traditional offline media. In the contemporary digital age, people with experience in online advertising and the ability to change marketing plans to accommodate corporate requirements while comprehending the behavior of target audiences .",
     },
     {
-        que: "I need help deciding on a course that suits me. What do I do now?",
-        ans: "Simple! Call us at +91 77700 07683, +91 77700 07698, or inquire. Our representatives will contact you and provide the exact consultation by offering advice and guidance on choosing the right course for your needs.",
+        que: "what is the duration of the course ?",
+        ans: "The duration of the Master In  Best Digital Marketing Course in delhi varies depending on your chosen course and typically spans about four months.",
     },
     {
-        que: "Do I get job assistance from your institute after the training program?",
-        ans: "Yes, we have tie-ups with well-known organizations looking for our institute's candidates. We provide 100% placement assistance.",
+        que: "How is this digital marketing course in delhi different from others ?",
+        ans: "Our teaching approach centers on a demanding study schedule, a stimulating curriculum, using case studies of modern advertising strategies from the present, and guest lectures led by executives from the field. Our primary objective is to give personal attention and create an enjoyable learning environment. An essential part of what we teach is using hands-on, practical methods.",
     },
     {
-        que: "Do you provide any certificates?",
-        ans: "Yes, we provide 20+ globally recognized certificates after the successful completion of the course, which will be recognized worldwide.",
+        que: "Will I get certificates ?",
+        ans: "Someone's job depends on having the appropriate certifications. Your chances of being hired by several companies are increased. As well it aids with getting freelance work and other things. At h1 tags, we offer 15+ qualifications, including a letter verifying an internship and a certificate of program completion.",
     },
     {
-        que: "I am a working professional. Can I ask for Flexible Timing?",
-        ans: "Yes, we do have special weekend batches for working professionals, and they can coordinate with our staff for the same.",
+        que: "Do you provide internships after done a digital marketing course ?",
+        ans: "We Also Provide You with three months Internship letter Based On a real-time Project You Complete.",
     },
     {
-        que: "I am a student; how can this course help me?",
-        ans: "As a student, our Digital Marketing course will assist you in getting a secure job and a bright future.",
+        que: "What is the average salary after completing my digital marketing course in delhi ?",
+        ans: "Depending on requirements, including work function, experience, skills, organisation, etc., the average salary for completing the best digital marketing course in delhi can change. However, a professional with ordinary digital marketing expertise in Delhi could plan on earning around 2.5 and 5 lakhs annually. Compensation systems can be enhanced further with the right experience and knowledge.",
+    },
+    {
+        que: "Is digital marketing a good career option in delhi ?",
+        ans: "There are numerous career and job options in the burgeoning field of digital marketing right now, including.\n Manager of Digital Marketing \n An executive in digital marketing \n SEO Manager\n Social Media Manager,among other things.\n Businesses have begun to spend more money on digital media. As a result, there is a tremendous need for qualified digital marketers to help companies to increase their online presence. Therefore, there is no doubt that the digital industry has a very promising future.",
+    },
+    {
+        que: "what is the fee for the h1 tags course ?",
+        ans: "Depending on the training package you select, the cost of the digital marketing course in delhi will change. For programs beginning after four months, the price ranges between 35,000 and 40,000 INR.",
+    },
+    {
+        que: "How long is a digital marketing course in delhi?",
+        ans: "H1tags An 3- to 4-month advanced digital marketing training is typical. However, we provide many learning options that suit diverse schedules.",
     },
 ];
+
+// const DigitalMarketFAQ = [
+//     {
+//         que: "How can I join and start the best digital marketing course in delhi ? ",
+//         ans: "at h1, tags take pride in giving every student, whether they have recently completed a few of our courses, have an account with us now, or are just contemplating individual attention. We interact personally with our trainer to walk you through the best digital marketing course in Delhi, whether in person at our institute or over the phone. You will start your education with us by receiving customised online educational resources and accessing live classroom sessions once you join h1tags",
+//     },
+//     {
+//         que: " What is the scope of digital marketing ?",
+//         ans: "Following every company's growth, digital advertising continues to grow in India. Various businesses have started to recognize the opportunities many modern digital advertising techniques offer over time. Companies are beginning to understand the benefits of online and virtual platforms over traditional offline media. In the contemporary digital age, people with experience in online advertising and the ability to change marketing plans to accommodate corporate requirements while comprehending the behavior of target audiences .",
+//     },
+//     {
+//         que: "what is the duration of the course ?",
+//         ans: "The duration of the Master In Best Digital Marketing Course in delhi varies depending on your chosen course and typically spans about four months.",
+//     },
+//     {
+//         que: "How is this digital marketing course in delhi different from others ?",
+//         ans: "Our teaching approach centers on a demanding study schedule, a stimulating curriculum, using case studies of modern advertising strategies from the present, and guest lectures led by executives from the field. Our primary objective is to give personal attention and create an enjoyable learning environment. An essential part of what we teach is using hands-on, practical methods.",
+//     },
+//     {
+//         que: "Will I get certificates ?",
+//         ans: "Someone's job depends on having the appropriate certifications. Your chances of being hired by several companies are increased. As well it aids with getting freelance work and other things. At h1 tags, we offer 15+ qualifications, including a letter verifying an internship and a certificate of program completion.",
+//     },
+//     {
+//         que: "Do you provide internships after done a digital marketing course ?",
+//         ans: "We Also Provide You with three months Internship letter Based On a real-time Project You Complete.",
+//     },
+//     {
+//         que: "What is the average salary after completing my digital marketing course in delhi ?",
+//         ans: "Depending on requirements, including work function, experience, skills, organisation, etc., the average salary for completing the best digital marketing course in delhi can change. However, a professional with ordinary digital marketing expertise in Delhi could plan on earning around 2.5 and 5 lakhs annually. Compensation systems can be enhanced further with the right experience and knowledge.",
+//     },
+//     {
+//         que: "Is digital marketing a good career option in delhi ?",
+//         ans: "There are numerous career and job options in the burgeoning field of digital marketing right now, including.\n Manager of Digital Marketing \n An executive in digital marketing \n SEO Manager\n Social Media Manager,among other things.\n Businesses have begun to spend more money on digital media. As a result, there is a tremendous need for qualified digital marketers to help companies to increase their online presence. Therefore, there is no doubt that the digital industry has a very promising future.",
+//     },
+//     {
+//         que: "what is the fee for the h1 tags course ?",
+//         ans: "Depending on the training package you select, the cost of the digital marketing course in delhi will change. For programs beginning after four months, the price ranges between 35,000 and 40,000 INR.",
+//     },
+//     {
+//         que: "How long is a digital marketing course in delhi?",
+//         ans: "H1tags An 3- to 4-month advanced digital marketing training is typical. However, we provide many learning options that suit diverse schedules.",
+//     },
+// ];
 
 export const digitalMaeketingH1Admission = [
     {
@@ -667,4 +722,31 @@ export const Reviews = [
         name: "Priyansh",
         review: "H1tags is not just a common institute for learning digital marketing but an agency-based institute where we get practical knowledge and paid internships within a month of joining the course. As per my experience, H1 Tags is the best institute in Delhi.",
     },
+];
+
+export const galleryimage = [
+    {
+        img: "./test/gallery-1.jpg",
+    },
+    {
+        img: "./test/gallery-2.jpg",
+    },
+    {
+        img: "./test/gallery-3.jpg",
+    },
+    {
+        img: "./test/gallery-4.jpg",
+    },
+    {
+        img: "./test/gallery-5.jpg",
+    },
+    {
+        img: "./test/gallery-6.jpg",
+    },
+    // {
+    //     img: "./test/gallery1.jpg",
+    // },
+    // {
+    //     img: "./test/gallery1.jpg",
+    // },
 ];

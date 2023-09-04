@@ -4,14 +4,19 @@ import { CustomCard } from "../../../components/CustomCard";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 // import { ReasonData } from "../../../components/DATA";
 import { SectionTitle } from "../../../components/SectionTitle";
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    Heading,
+    Button,
+} from "@chakra-ui/react";
 const JoinReasons = () => {
     return (
         <>
-            <Container maxW={"full"}>
-                <Box style={{ textAlign: "center" }}>
-                    {/* <Text fontSize={"4xl"} fontWeight={"bold"}>
-                        Reasons To Join Digital Marketing Institute in Rohini
-                    </Text> */}
+            <Container maxW={"7xl"} mt={5}>
+                <Box style={{ textAlign: "center" }} py={10}>
                     <SectionTitle as="h3">
                         Reasons To Join Digital Marketing Institute in Rohini
                     </SectionTitle>
@@ -22,17 +27,20 @@ const JoinReasons = () => {
                     px={[0, 10]}
                     spacing={6}
                     fontSize={"20px"}
+                    sx={{
+                        backgroundImage: "/bgimage.jpg",
+                    }}
                 >
                     {ReasonData.map((item, key) => (
-                        <Box key={key}>
-                            <CustomCard
-                                key={key}
-                                heading={item.title}
-                                icon={item.icon}
-                                description={item.text}
-                                color={"black"}
-                            />
-                        </Box>
+                        <Card key={key} m={2}>
+                            <CardHeader ml={10}>
+                                <Heading size="md"> {item.title}</Heading>
+                            </CardHeader>
+
+                            <CardFooter>
+                                <Button ml={"90px"}>view more</Button>
+                            </CardFooter>
+                        </Card>
                     ))}
                 </SimpleGrid>
             </Container>

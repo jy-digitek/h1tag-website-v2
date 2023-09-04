@@ -19,10 +19,10 @@ import ReturnFocus from "../../../components/Modal";
 const SechduleTime = () => {
     const [openModal, openModalSet] = React.useState(false);
     return (
-        <Container maxW={"full"} py={[5, 10]}>
+        <Container maxW={"7xl"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
                 <SectionTitle as="h3">
-                    H1 Tags - Digital Marketing Training Schedule In Rohini
+                    H1 Tags - Digital Marketing Training Schedule In Pitampura
                 </SectionTitle>
                 {/* <Text pt={[2, 5]}>
                     In Pitampura Training Centre Our Session will be conducted
@@ -86,9 +86,9 @@ const SechduleTime = () => {
                                     }}
                                 />
                                 <Text pl={3}>
-                                    Master In Digital marketing course
+                                    Master In Digital marketing course{" "}
+                                    <strong>( MIDM )</strong>
                                 </Text>
-                                <strong>( MIDM )</strong>
                             </ListItem>
                             <ListItem display={"flex"} py={2}>
                                 <ListIcon
@@ -100,10 +100,9 @@ const SechduleTime = () => {
                                     }}
                                 />
                                 <Text pl={3}>
-                                    Advanced Internet Marketing Training Program
+                                    Advanced Internet Marketing Training Program{" "}
+                                    <strong>( AIMTP )</strong>
                                 </Text>
-
-                                <strong>( AIMTP )</strong>
                             </ListItem>
                             <ListItem display={"flex"} py={2}>
                                 <ListIcon
@@ -114,21 +113,21 @@ const SechduleTime = () => {
                                         height: "20px",
                                     }}
                                 />
-                                <Text pl={3}> Customised Course</Text>
-
-                                <strong>( Customized )</strong>
+                                <Text pl={2}>
+                                    Customised Course{" "}
+                                    <strong>(Customized)</strong>
+                                </Text>
                             </ListItem>
                         </List>
-                        <Text>
-                            Delhi institute of digital marketing (DIDM) was
-                            Awarded “ Most Promising Brand “ by Assocham. We are
-                            follow all kind of standard training norms, we are
-                            certified by ISO 9001 and also registered under MSME
-                            ( Ministry of MSME, Govt. of India ). In didm
-                            gurgaon training centre, you will get high quality
-                            of digital marketing training session through our
-                            industrial professionals and experts.
+                        <Text pt={3}>
+                            Best Digital Marketing Institute. We Follow All
+                            Kinds Of Standard Training Norms; We Are Certified
+                            By And Also Registered Under Msme. In H1tags
+                            Pitmapura Training Center, You Will Get High-quality
+                            Digital Marketing Training Sessions Through Our
+                            Industrial Professionals And Experts
                         </Text>
+
                         <Box textAlign={"center"} pt={5}>
                             <ReturnFocus
                                 btnText={`Take a Free Session`}

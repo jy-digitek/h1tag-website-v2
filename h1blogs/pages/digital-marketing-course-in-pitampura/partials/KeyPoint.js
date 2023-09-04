@@ -13,7 +13,7 @@ import {
 
 const KeyPoint = () => {
     return (
-        <Container maxW={"full"}>
+        <Container maxW={"8xl"}>
             <SimpleGrid
                 columns={[1, 1, 1, 2]}
                 px={[0, 0]}
