@@ -79,13 +79,13 @@ const Feedback = () => {
     });
     return (
         <>
-            <Container maxW={"full"} px={[5, 10]} id={"review"} pb={10}>
+            <Container maxW={"8xl"} px={[5, 10]} id={"review"} pb={10}>
                 {" "}
                 <SectionTitle as="h3" py={10}>
                     Students’ Feedback
                 </SectionTitle>
                 <SimpleGrid
-                    columns={[1, 1, 2]}
+                    columns={[1, 1, 1, 2]}
                     textAlign={"center"}
                     alignItems={"center"}
                 >

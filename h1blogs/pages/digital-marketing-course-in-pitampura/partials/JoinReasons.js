@@ -4,15 +4,20 @@ import { CustomCard } from "../../../components/CustomCard";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
 // import { ReasonData } from "../../../components/DATA";
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    Heading,
+    Button,
+} from "@chakra-ui/react";
 
 const JoinReasons = () => {
     return (
         <>
-            <Container maxW={"full"}>
-                <Box style={{ textAlign: "center" }} pt={10}>
-                    {/* <Text fontSize={"4xl"} fontWeight={"bold"}>
-                        Reasons To Join Digital Marketing Institute in Pitampura
-                    </Text> */}
+            <Container maxW={"7xl"} mt={5}>
+                <Box style={{ textAlign: "center" }} py={10}>
                     <SectionTitle as="h3">
                         Reasons To Join Digital Marketing Institute in Pitampura
                     </SectionTitle>
@@ -23,18 +28,20 @@ const JoinReasons = () => {
                     px={[0, 10]}
                     spacing={6}
                     fontSize={"20px"}
+                    sx={{
+                        backgroundImage: "/bgimage.jpg",
+                    }}
                 >
                     {ReasonData.map((item, key) => (
-                        <CustomCard
-                            key={key}
-                            heading={item.title}
-                            icon={item.icon}
-                            description={item.text}
-                            color={"black"}
+                        <Card key={key} m={2}>
+                            <CardHeader ml={10}>
+                                <Heading size="md"> {item.title}</Heading>
+                            </CardHeader>
 
-                            // href={"#"}
-                            // actionText={"Learn more"}
-                        />
+                            <CardFooter>
+                                <Button ml={"90px"}>view more</Button>
+                            </CardFooter>
+                        </Card>
                     ))}
                 </SimpleGrid>
             </Container>

@@ -297,6 +297,15 @@ export default function Footer() {
                 >
                     Copyright ©2023, All rights reserved.
                 </Text>
+                <Box sx={{ maxW: 50, position: "fixed", bottom: 5, right: 5 }}>
+                    <a
+                        href="https://api.whatsapp.com/send?phone=7770007648&text=H1Tags"
+                        rel="noopener"
+                        target="_blank"
+                    >
+                        <Image src={`/test/whatsapp.png`} />
+                    </a>
+                </Box>
             </Container>
         </>
     );

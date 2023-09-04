@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 const WhyChoose = () => {
     return (
         // <Box style={{ textAlign: "center" }}>
-        <Container maxW={"full"}>
+        <Container maxW={"7xl"}>
             <Box>
                 {/* <Text fontSize={"3xl"} fontWeight={"bold"}>
                     Why Choose H1 Tags For Digital Marketing Course
