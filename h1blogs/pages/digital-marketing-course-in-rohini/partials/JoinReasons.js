@@ -32,7 +32,7 @@ const JoinReasons = () => {
                     }}
                 >
                     {ReasonData.map((item, key) => (
-                        <Card key={key} m={2}>
+                        <Card key={key} m={2} border={"3px solid blue"}>
                             <CardHeader ml={10}>
                                 <Heading size="md"> {item.title}</Heading>
                             </CardHeader>

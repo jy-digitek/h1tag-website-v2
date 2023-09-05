@@ -164,8 +164,20 @@ export default function Footer() {
                                 />
                             </Box>
                             <Box ml={2}>
-                                FF 18, First Floor, Pearls Omaxe Tower Netaji
+                                FF 18, First Floor , Pearls Omaxe Tower Netaji
                                 Subhash Place, Delhi-110034
+                            </Box>
+                        </Flex>
+
+                        <Flex pt={3}>
+                            <Box>
+                                <SiGooglemaps fontSize={"25px"} />
+                            </Box>
+                            <Box>
+                                <Text ml={2}>
+                                    SF-07 Second Floor , Pearls Omaxe Tower
+                                    Netaji Subhash Place, Delhi-110034
+                                </Text>
                             </Box>
                         </Flex>
 
@@ -225,11 +237,12 @@ export default function Footer() {
                             </Box>
                             <Box>
                                 <Text ml={2}>
-                                    FF 18, First Floor, Pearls Omaxe Tower
+                                    FF 18, First Floor , Pearls Omaxe Tower
                                     Netaji Subhash Place, Delhi-110034
                                 </Text>
                             </Box>
                         </Flex>
+
                         {/* <Text pt={3}>
 
           </Text> */}

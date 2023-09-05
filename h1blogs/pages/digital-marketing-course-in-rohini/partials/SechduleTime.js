@@ -21,26 +21,19 @@ const SechduleTime = () => {
     return (
         <Container maxW={"7xl"} py={[5, 10]}>
             <Box sx={{ textAlign: "center" }}>
-                {/* <Text fontWeight={"bold"} fontSize={"3xl"}>
-                    H1 Tags - DIGITAL MARKETING TRAINING SCHEDULE IN Rohini
-                </Text> */}
                 <SectionTitle as="h3">
                     H1 Tags - Digital Marketing Training Schedule In Rohini
                 </SectionTitle>
-                {/* <Text pt={[2, 5]}>
-                    In rohini Training Centre Our Session will be conducted
-                    through out the day with all time flexibility & multiple
-                    batches offline mode
-                </Text> */}
+
                 <Box sx={{ padding: 5 }} px={[0, 20]}>
-                    <Text px={[0, 20]}>
+                    <Text>
                         In rohini Training Centre Our Session will be conducted
                         through out the day with all time flexibility & multiple
                         batches offline mode
                     </Text>
                 </Box>
             </Box>
-            <Box m={[0, 10]} pt={[5]}>
+            <Box m={[0, 10]}>
                 <Card>
                     <CardBody mx={10}>
                         <Text>
