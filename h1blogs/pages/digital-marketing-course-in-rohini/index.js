@@ -13,6 +13,7 @@ import KeyPoint from "./partials/KeyPoint";
 import RohLocation from "./partials/Location";
 import SechduleTime from "./partials/SechduleTime";
 import WhyChoose from "./partials/WhyChoose";
+import Placement from "./partials/viewpage/Placement";
 
 const index = () => {
     return (
@@ -31,6 +32,7 @@ const index = () => {
             <Feedback />
             <WhyChoose />
             <SechduleTime />
+
             <KeyPoint />
 
             <CTA

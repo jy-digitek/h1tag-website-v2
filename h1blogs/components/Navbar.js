@@ -309,6 +309,10 @@ const NAV_ITEMS = [
         href: "/about.html",
     },
     {
+        label: "Placement",
+        href: "/placement-assiatances",
+    },
+    {
         label: "Courses+",
         children: [
             {

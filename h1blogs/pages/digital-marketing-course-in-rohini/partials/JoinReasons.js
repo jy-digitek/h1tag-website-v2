@@ -4,6 +4,10 @@ import { CustomCard } from "../../../components/CustomCard";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 // import { ReasonData } from "../../../components/DATA";
 import { SectionTitle } from "../../../components/SectionTitle";
+import ReturnFocus from "../../../components/Modal";
+import Link from "next/link";
+// import Placement from "./viewpage/Placement";
+// import Placements from "../../placement-assistance/Placements";
 import {
     Card,
     CardHeader,
@@ -12,6 +16,7 @@ import {
     Heading,
     Button,
 } from "@chakra-ui/react";
+import Placement from "./viewpage/Placement";
 const JoinReasons = () => {
     return (
         <>
@@ -31,17 +36,28 @@ const JoinReasons = () => {
                         backgroundImage: "/bgimage.jpg",
                     }}
                 >
-                    {ReasonData.map((item, key) => (
-                        <Card key={key} m={2} border={"3px solid blue"}>
-                            <CardHeader ml={10}>
-                                <Heading size="md"> {item.title}</Heading>
-                            </CardHeader>
+                    {ReasonData &&
+                        ReasonData.map((item, i) => (
+                            <Card key={i} m={2} border={"3px solid blue"}>
+                                <CardHeader ml={10}>
+                                    <Heading size="md"> {item.title}</Heading>
+                                </CardHeader>
 
-                            <CardFooter>
-                                <Button ml={"90px"}>view more</Button>
-                            </CardFooter>
-                        </Card>
-                    ))}
+                                <CardFooter>
+                                    <Box
+                                        style={{
+                                            marginLeft: "90px",
+                                            border: "1px solid blue",
+                                            padding: "10px",
+                                            borderRadius: "10px",
+                                        }}
+                                    >
+                                        <Link href={item.href}>view more</Link>{" "}
+                                        {console.log("item---", item)}
+                                    </Box>
+                                </CardFooter>
+                            </Card>
+                        ))}
                 </SimpleGrid>
             </Container>
         </>

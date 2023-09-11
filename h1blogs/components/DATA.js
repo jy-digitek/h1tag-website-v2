@@ -149,26 +149,66 @@ export const ReasonData = [
     {
         // icon: <FcMoneyTransfer />,
         title: "100% Placement Assistance",
+        href: "/placement-assiatances",
     },
     {
         // icon: <FcReading />,
         title: "Paid Internship during the Course",
+        href: "/paid-internship-course",
     },
     {
         // icon: <FcBullish />,
         title: "Flexible Batch Timing",
+        href: "/flexible-batch-timing",
     },
     {
         // icon: <FcDepartment />,
         title: "Live Pratice Sessions",
+        href: "/live-pratice-sessions",
     },
     {
         // icon: <FcGrid />,
-        title: "Work Opportunities from Day 1",
+        title: "Work Opportunities from Day",
+        href: "/work-opportunities-day",
     },
     {
         // icon: <FcManager />,
         title: "Traning by Real Time Experts",
+        href: "/traning-real-time-experts",
+    },
+];
+
+export const internshipFaq = [
+    {
+        qus: "What are digital marketing internships about?",
+        ans: "All aspects of digital marketing, including media planning, social media marketing, email marketing, search engine optimization, app development and optimization, content generation, copywriting, ad design, and much more, are covered in digital marketing internships. By working in several departments, an intern acquires practical experience in these fields.",
+    },
+    {
+        qus: "What is the salary of a digital marketing intern? ",
+        ans: "The average salary of a digital marketing intern is INR 5,000 – 10,000 in India. ",
+    },
+    {
+        qus: "Do marketing interns get paid?",
+        ans: "Yes, marketing interns do get paid. But this depends from company to company. For a complete fresher, Many businesses also provide unpaid internships at first so you may learn on the job. The average salary of a marketing intern in India is INR 5,000 – 10,000.",
+    },
+    {
+        qus: "What do you say in a marketing internship interview?",
+        ans: "You must be knowledgeable about current marketing trends, case studies, widely used marketing techniques, brand strategies, and the ability to effectively strategize if you want to succeed in a marketing interview.",
+    },
+];
+
+export const InternshipCourese = [
+    {
+        heading: "4 month course",
+        title: "A four-month program that includes both training and an internship is known as a digital marketing course with internship.",
+    },
+    {
+        heading: "Internship with live project",
+        title: "For two months, you can work as an intern, complete a real-world project, and take the course to get experience in the workplace.",
+    },
+    {
+        heading: "Experience certificate ",
+        title: "After the program, we will also give you a validated internship certificate from H1tags. ",
     },
 ];
 export const vdoFeedback = [
