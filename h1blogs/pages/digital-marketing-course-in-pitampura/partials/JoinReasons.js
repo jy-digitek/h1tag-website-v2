@@ -1,9 +1,10 @@
 import React from "react";
 import { CourseBuiltForData, ReasonData } from "../../../components/DATA";
-// import { CustomCard } from "../../../components/CustomCard";
+
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 import { SectionTitle } from "../../../components/SectionTitle";
-// import { ReasonData } from "../../../components/DATA";
+
+import Link from "next/link";
 import {
     Card,
     CardHeader,
@@ -32,17 +33,27 @@ const JoinReasons = () => {
                         backgroundImage: "/bgimage.jpg",
                     }}
                 >
-                    {ReasonData.map((item, key) => (
-                        <Card key={key} m={2} border={"3px solid blue"}>
-                            <CardHeader ml={10}>
-                                <Heading size="md"> {item.title}</Heading>
-                            </CardHeader>
+                    {ReasonData &&
+                        ReasonData.map((item, i) => (
+                            <Card key={i} m={2} border={"3px solid blue"}>
+                                <CardHeader ml={10}>
+                                    <Heading size="md"> {item.title}</Heading>
+                                </CardHeader>
 
-                            <CardFooter>
-                                <Button ml={"90px"}>view more</Button>
-                            </CardFooter>
-                        </Card>
-                    ))}
+                                <CardFooter>
+                                    <Box
+                                        style={{
+                                            marginLeft: "90px",
+                                            border: "1px solid blue",
+                                            padding: "10px",
+                                            borderRadius: "10px",
+                                        }}
+                                    >
+                                        <Link href={item.href}>view more</Link>{" "}
+                                    </Box>
+                                </CardFooter>
+                            </Card>
+                        ))}
                 </SimpleGrid>
             </Container>
         </>

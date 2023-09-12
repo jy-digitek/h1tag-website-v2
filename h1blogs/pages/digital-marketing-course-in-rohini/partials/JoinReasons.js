@@ -53,7 +53,6 @@ const JoinReasons = () => {
                                         }}
                                     >
                                         <Link href={item.href}>view more</Link>{" "}
-                                        {console.log("item---", item)}
                                     </Box>
                                 </CardFooter>
                             </Card>

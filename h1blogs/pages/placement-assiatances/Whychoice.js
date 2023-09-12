@@ -29,9 +29,13 @@ function Whychoice() {
                             <Box>
                                 <Card>
                                     <CardBody>
-                                        <Heading textAlign={"center"}>
+                                        <Text
+                                            textAlign={"center"}
+                                            fontSize={"3xl"}
+                                            fontWeight={"bold"}
+                                        >
                                             Expert Faculty
-                                        </Heading>
+                                        </Text>
                                     </CardBody>
                                     <CardFooter>
                                         Our courses are led by seasoned industry
@@ -45,9 +49,13 @@ function Whychoice() {
                             <Box>
                                 <Card>
                                     <CardBody>
-                                        <Heading textAlign={"center"}>
+                                        <Text
+                                            textAlign={"center"}
+                                            fontSize={"3xl"}
+                                            fontWeight={"bold"}
+                                        >
                                             Comprehensive Curriculum
-                                        </Heading>
+                                        </Text>
                                     </CardBody>
                                     <CardFooter>
                                         Our curriculum covers the full spectrum
@@ -61,9 +69,13 @@ function Whychoice() {
                             <Box>
                                 <Card>
                                     <CardBody>
-                                        <Heading textAlign={"center"}>
+                                        <Text
+                                            textAlign={"center"}
+                                            fontSize={"3xl"}
+                                            fontWeight={"bold"}
+                                        >
                                             100% Placement Assistance
-                                        </Heading>
+                                        </Text>
                                     </CardBody>
                                     <CardFooter>
                                         Securing your dream job is our top
@@ -79,9 +91,13 @@ function Whychoice() {
                             <Box>
                                 <Card>
                                     <CardBody>
-                                        <Heading textAlign={"center"}>
+                                        <Text
+                                            textAlign={"center"}
+                                            fontSize={"3xl"}
+                                            fontWeight={"bold"}
+                                        >
                                             Personalized Support
-                                        </Heading>
+                                        </Text>
                                     </CardBody>
                                     <CardFooter>
                                         We understand that every student is
