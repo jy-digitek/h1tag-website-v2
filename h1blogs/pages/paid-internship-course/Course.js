@@ -35,8 +35,7 @@ function Course() {
                     spacing={6}
                     fontSize={"20px"}
                     sx={{
-                        backgroundImage:
-                            "https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png",
+                        backgroundImage: "./backgroundimage.png",
                     }}
                 >
                     {InternshipCourese &&

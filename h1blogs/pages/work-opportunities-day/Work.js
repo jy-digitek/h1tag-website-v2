@@ -8,7 +8,7 @@ function Work() {
             <Container maxW={"7xl"} py={5}>
                 <Box style={{ textAlign: "center" }} py={5}>
                     <SectionTitle as="h3">
-                        Size Work Opportunities from Day1
+                        Work Opportunities from Day1
                     </SectionTitle>
                 </Box>
                 <Text>
