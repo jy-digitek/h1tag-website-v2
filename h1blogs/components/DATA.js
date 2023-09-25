@@ -612,14 +612,14 @@ export const AccordionGraphicsData = [
 export const BasicCourseData = [
     { level: "Adobe Illustrator  " },
     { level: "Adobe Photoshop" },
-    { level: "CorelDraw" },
+
     { level: "Adobe InDesign" },
 ];
 
 export const AdvanceCourseData = [
     { level: "Adobe Illustrator" },
     { level: "Adobe Photoshop" },
-    { level: "CorelDraw" },
+
     { level: "Adobe InDesign" },
     { level: "Adobe After Effects" },
     { level: "Adobe Premier Pro " },
