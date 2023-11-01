@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./footer";
 
 import Topbar from "./Topbar";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import Head from "next/head";
 
 // <link

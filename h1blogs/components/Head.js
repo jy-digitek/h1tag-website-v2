@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 
 const SEOTags = ({ title, description, currentUrl }) => {
     return (
@@ -17,6 +18,14 @@ const SEOTags = ({ title, description, currentUrl }) => {
             <meta name="language" content="english" />
             <meta name="robots" content="index, follow" />
             <link rel="canonical" href={currentUrl} key="canonical" />
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-CPREKLS4XW" />
+            <Script id="google-analytics">
+                {`
+                    window.dataLayer = window.dataLayer || []; function gtag()
+                    {dataLayer.push(arguments)}
+                    gtag('js', new Date()); gtag('config', 'G-CPREKLS4XW');
+                `}
+            </Script>
         </Head>
     );
 };
