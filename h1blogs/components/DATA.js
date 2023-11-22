@@ -149,7 +149,7 @@ export const ReasonData = [
   {
     // icon: <FcMoneyTransfer />,
     title: "100% Placement Assistance",
-    href: "/placement-assiatances.html",
+    href: "/placement-assistances.html",
   },
   {
     // icon: <FcReading />,

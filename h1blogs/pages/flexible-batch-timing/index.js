@@ -4,22 +4,20 @@ import SEOTags from "../../components/Head";
 import Timing from "./Timing";
 
 function Index() {
-    return (
-        <>
-            <Layout>
-                <SEOTags
-                    title={
-                        " Best Flexible Batch Digital Marketing Course in Rohini - H1 Tags Institute "
-                    }
-                    description={
-                        "Looking for the Best Digital Marketing Course in Rohini? Book your seat for the Advanced Digital Marketing Course in Rohini. Join Now free demo class - H1 Tags."
-                    }
-                    currentUrl={"https://h1tags.com/contact.html/"}
-                />
-                <Timing />
-            </Layout>
-        </>
-    );
+  return (
+    <>
+      <Layout>
+        <SEOTags
+          title={"Unlock Your Potential with Flexible Batch Timings at H1tags"}
+          description={
+            "Experience the Ultimate Convenience in Learning with H1ags, the Top Institute Offering Flexible Batch Timings. Tailor Your Educational Journey."
+          }
+          currentUrl={"https://h1tags.com/flexible-batch-timing.html/"}
+        />
+        <Timing />
+      </Layout>
+    </>
+  );
 }
 
 export default Index;

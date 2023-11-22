@@ -1,9 +1,9 @@
+"use client";
 import Navbar from "./Navbar";
 import Footer from "./footer";
-
 import Topbar from "./Topbar";
-import { ChakraProvider, Box } from "@chakra-ui/react";
-import Head from "next/head";
+import { ChakraProvider } from "@chakra-ui/react";
+import Script from "next/script";
 
 // <link
 //   rel="stylesheet"
@@ -15,6 +15,7 @@ export default function Layout({ children, ...rest }) {
     <ChakraProvider>
       <Topbar />
       <Navbar />
+
       <main>{children}</main>
 
       <Footer />

@@ -6,25 +6,23 @@ import Course from "./Course";
 import Faq from "./Faq";
 
 function Index() {
-    return (
-        <>
-            <Layout>
-                <SEOTags
-                    title={
-                        " Best Paid Internship Digital Marketing Course in Rohini - H1 Tags Institute "
-                    }
-                    description={
-                        "Looking for the Best Digital Marketing Course in Rohini? Book your seat for the Advanced Digital Marketing Course in Rohini. Join Now free demo class - H1 Tags."
-                    }
-                    currentUrl={"https://h1tags.com/contact.html/"}
-                />
-                <Course />
-                <Program />
-                {/* <Whychoice /> */}
-                <Faq />
-            </Layout>
-        </>
-    );
+  return (
+    <>
+      <Layout>
+        <SEOTags
+          title={"Kickstart Your Career: Paid Internship Course with H1tags"}
+          description={
+            "Fuel Your Career Ambitions with a Paid Internship Course at H1tags, Recognized as the Premier Institute for Professional Development. Gain Practical Experience."
+          }
+          currentUrl={"https://paid-internship-course.html/"}
+        />
+        <Course />
+        <Program />
+        {/* <Whychoice /> */}
+        <Faq />
+      </Layout>
+    </>
+  );
 }
 
 export default Index;

@@ -95,7 +95,7 @@ export default function Footer() {
                 </Link>
               </ListItem>
               <ListItem p={0}>
-                <Link href="/graphicdesign.html">
+                <Link href="/graphic-designing-course-in-delhi.html">
                   <ListIcon as={ChevronRightIcon} color="white" />
                   Graphic Design Course
                 </Link>

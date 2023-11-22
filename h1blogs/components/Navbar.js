@@ -294,7 +294,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Placement",
-    href: "/placement-assiatances",
+    href: "/placement-assistances.html",
   },
   {
     label: "Courses+",
