@@ -94,8 +94,8 @@ const TestimonialAvatar = ({ src, name, title }) => {
 const WithSpeechBubbles = () => {
   return (
     <Box bg={useColorModeValue("gray.100", "gray.700")}>
-      <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
-        <Stack spacing={0} align={"center"}>
+      <Container maxW={"7xl"} py={16} spacing={12}>
+        <Stack spacing={0} py={12} align={"center"}>
           <SectionTitle
             as="h2"
             desc="Thousands of students’ trust makes us - the Best Digital Marketing Training Institute in Delhi"

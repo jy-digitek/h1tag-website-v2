@@ -11,13 +11,13 @@ import Head from "next/head";
 // />;
 
 export default function Layout({ children, ...rest }) {
-    return (
-        <ChakraProvider>
-            <Topbar />
-            <Navbar />
-            <main>{children}</main>
+  return (
+    <ChakraProvider>
+      <Topbar />
+      <Navbar />
+      <main>{children}</main>
 
-            <Footer />
-        </ChakraProvider>
-    );
+      <Footer />
+    </ChakraProvider>
+  );
 }
