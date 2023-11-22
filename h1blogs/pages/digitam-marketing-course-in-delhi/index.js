@@ -15,8 +15,8 @@ import FAQ from "./partials/Faq";
 import PracticalCourse from "./partials/PracticalCourse";
 import Gallery from "./partials/gallery";
 // import FAQ from "./partials/Faq";
-const index = ({ canonicalUrl }) => {
-  console.log("canonicalUrl", canonicalUrl);
+const index = () => {
+  // console.log("canonicalUrl", canonicalUrl);
   return (
     <Layout>
       <SEOTags
@@ -28,31 +28,7 @@ const index = ({ canonicalUrl }) => {
           "https://h1tags.com/digitam-marketing-course-in-delhi.html/"
         }
       />
-      {/* <Head>
-                <title>Best Digital Marketing Course in Delhi</title>
-                <link
-                    rel="shortcut icon"
-                    href="/h1logo.png"
-                    style={{
-                        height: "16px",
-                        width: "16px",
-                    }}
-                />
-                <meta
-                    name="og:description"
-                    content={
-                        "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available."
-                    }
-                    key={"Best Digital Marketing Course in Delhi"}
-                />
-                <meta name="language" content="english" />
-                <meta name="robots" content="index, follow" />
-                <link
-                    rel="og:canonical"
-                    href="https://h1tags.com/digitalmarketing/"
-                    key="https://h1tags.com/digitalmarketing/"
-                />
-            </Head> */}
+
       <DigitalBanner />
       <Zoom>
         <DigitalmarketingBox />

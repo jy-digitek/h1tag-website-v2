@@ -1,9 +1,10 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { vdoFeedback } from "./DATA";
+import { imgFeedback } from "./DATA";
 var settings = {
   dots: true,
   infinite: true,
@@ -17,23 +18,24 @@ var settings = {
   pauseOnHover: true,
 };
 
-export default function Carousel() {
+const ImageCarousel = () => {
   return (
     <Slider {...settings}>
-      {vdoFeedback.map((item, key) => (
+      {imgFeedback.map((item, key) => (
         <Box px={[0, 3]} key={key}>
           <Box
-            as="iframe"
+            as={Image}
             sx={{
               rounded: 8,
               border: 0,
               shadow: "lg",
               my: 8,
             }}
+            objectFit="cover"
             //margin="10px"
             overflow="hidden"
             width="100%"
-            height="300"
+            height="400"
             src={item}
             style={{ background: "red" }}
             title="My experience at H1 Tags - A Digital Marketing Training Institute: SABEENA"
@@ -45,4 +47,6 @@ export default function Carousel() {
       ))}
     </Slider>
   );
-}
+};
+
+export default ImageCarousel;

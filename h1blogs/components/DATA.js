@@ -220,6 +220,12 @@ export const vdoFeedback = [
   "https://www.youtube.com/embed/RXMIi5QblN8",
   "https://www.youtube.com/embed/hS5-F7w6xDk",
 ];
+
+export const imgFeedback = [
+  "/pitampurafeedback2.jpeg",
+  "/imagefeedback1.jpeg",
+  "/feedback2.jpeg",
+];
 export const NspLocation = [
   {
     map_url:
