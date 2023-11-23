@@ -302,7 +302,7 @@ const NAV_ITEMS = [
       {
         label: "Digital Marketing Course",
         // subLabel: "Trending Design to inspire you",
-        href: "/digitam-marketing-course-in-delhi.html",
+        href: "/digital-marketing-course-in-delhi.html",
       },
       {
         label: "Graphic Design Course",

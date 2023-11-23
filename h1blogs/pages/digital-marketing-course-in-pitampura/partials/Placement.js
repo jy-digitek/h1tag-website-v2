@@ -13,15 +13,15 @@ const Placement = () => {
       <Container maxW={"8xl"}>
         <SectionTitle as="h3" pt={[8, 12]} px={[0, 20]}>
           {" "}
-          <span style={{ color: "rgb(255, 87, 51)" }}> H1Tags </span>Digital
-          Marketing Institute in Pitampura Provide Live Project Training:
+          <span style={{ color: "#ff5733" }}> H1Tags </span>Digital Marketing
+          Institute in Pitampura Provide Live Project Training:
         </SectionTitle>
         <Box sx={{ padding: 5 }} px={[0, 20]}>
           <Text px={[0, 20]}>
             Ultimately, online courses come with a unique set of drawbacks.
             Students tend to lose interest in them since they are frequently
             inflexible and less engaging. The goal of{" "}
-            <span style={{ color: "rgb(255, 87, 51)" }}>H1Tags</span>{" "}
+            <span style={{ color: "#ff5733" }}>H1Tags</span>{" "}
             <strong>digital marketing courses in Pitampura</strong> is to
             provide real-world experience through practical projects that will
             enhance your functional abilities and give you a more comprehensive
@@ -39,11 +39,11 @@ const Placement = () => {
         <Box sx={{ padding: 5 }} px={[0, 20]}>
           <Text px={[0, 20]}>
             If you're looking for the most excellent digital marketing course in
-            Pitampura, <span style={{ color: "rgb(255, 87, 51)" }}>H1Tags</span>{" "}
-            Digital Marketing Institute is the ideal setting for you to acquire
-            social media and digital marketing expertise. We're giving you the
-            chance to work on an actual project so you can match your talents to
-            the needs of the industry as it exists now. We have worked with many
+            Pitampura, <span style={{ color: "#ff5733" }}>H1Tags</span> Digital
+            Marketing Institute is the ideal setting for you to acquire social
+            media and digital marketing expertise. We're giving you the chance
+            to work on an actual project so you can match your talents to the
+            needs of the industry as it exists now. We have worked with many
             clients worldwide and are well-versed in all areas.
           </Text>
         </Box>

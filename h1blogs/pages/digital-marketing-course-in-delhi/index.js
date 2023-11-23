@@ -1,3 +1,4 @@
+"use client";
 import Layout from "../../components/layout";
 import CarrerOption from "./partials/CarrerOption";
 import EligibalForCourse from "./partials/EligibalForCourse";
@@ -25,7 +26,7 @@ const index = () => {
           "Looking for the Best Digital Marketing Course in Delhi? Book your seat for the Advanced Digital Marketing Training Program. A Free Demo Class is Available."
         }
         currentUrl={
-          "https://h1tags.com/digitam-marketing-course-in-delhi.html/"
+          "https://h1tags.com/digital-marketing-course-in-delhi.html/"
         }
       />
 

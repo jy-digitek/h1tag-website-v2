@@ -84,7 +84,7 @@ const PickCourseTab = () => {
                       item_3={`Customized Course`}
                       item_4={`Master Course`}
                       btnText={"Learn More"}
-                      href={"/digitam-marketing-course-in-delhi.html"}
+                      href={"/digital-marketing-course-in-delhi.html"}
                       img={"/tab2-home.jpg"}
                     />
                   </CardBody>

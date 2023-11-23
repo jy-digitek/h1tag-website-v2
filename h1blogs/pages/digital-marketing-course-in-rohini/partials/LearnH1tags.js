@@ -8,16 +8,12 @@ const LearnH1tags = () => {
       <Container maxW={"8xl"}>
         <SectionTitle as="h3" pt={[8, 12]} px={[0, 20]}>
           {" "}
-          Learn With <span style={{ color: "rgb(255, 87, 51)" }}>
-            {" "}
-            H1Tags
-          </span>{" "}
-          No.1 Best Digital Marketing Course In Rohini
+          Learn With <span style={{ color: "#ff5733" }}> H1Tags</span> No.1 Best
+          Digital Marketing Course In Rohini
         </SectionTitle>
         <Box sx={{ padding: 5 }} px={[0, 20]}>
           <Text px={[0, 20]}>
-            Discover why{" "}
-            <span style={{ color: "rgb(255, 87, 51)" }}>H1Tags</span> is
+            Discover why <span style={{ color: "#ff5733" }}>H1Tags</span> is
             recognized as Rohini's #1 Best Digital Marketing Course. We invite
             you to be a part of a community that values excellence, innovation,
             and a commitment to shaping the future of digital marketing. Popular

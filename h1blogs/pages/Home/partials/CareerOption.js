@@ -1,3 +1,4 @@
+"use client";
 import {
   Container,
   // Heading,
@@ -13,7 +14,7 @@ import React from "react";
 import { GlobalButton } from "../../../components/GlobalButton";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { CareerOptionData } from "../../../components/DATA";
-import { Fade, AttentionSeeker } from "react-awesome-reveal";
+// w
 import ReturnFocus from "../../../components/Modal";
 import ContactForm from "../../../components/contactform";
 const CareerOption = () => {
@@ -27,7 +28,7 @@ const CareerOption = () => {
       // bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       sx={{
         // background: "url(/crbg.jpg)",
-        backgroundImage:
+        background:
           "linear-gradient(to left, rgb(130 146 244 / 81%), rgb(23 33 87 / 80%)),url(crbg.jpg)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -91,13 +92,6 @@ const CareerOption = () => {
             );
           })}
           <Box sx={{ mt: 7, display: "flex", justifyContent: "center" }}>
-            {/* <GlobalButton
-              label={"Kick Start Your Career"}
-              //color={"yellow"}
-              maxW="100%"
-              background="#3950a1"
-              _hover={{ background: "#101C32" }}
-            /> */}
             <ReturnFocus
               btnText={`Kick Start Your Career`}
               children={<ContactForm />}

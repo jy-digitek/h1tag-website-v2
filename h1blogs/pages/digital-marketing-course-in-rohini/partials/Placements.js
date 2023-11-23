@@ -73,16 +73,18 @@ const Placements = () => {
             Course in Rohini. Recognized as the #1 Best Digital Marketing Course
             in Rohini, we offer a comprehensive learning experience that propels
             your career to new heights. Learn from the best in the business! Our
-            instructors bring industry experience and are H1Tags accredited,
+            instructors bring industry experience and are
+            <span style={{ color: "#ff5733" }}> H1Tags </span> accredited,
             ensuring you receive top-notch training. Benefit from their
             expertise, insights, and real-world strategies that will set you
             apart in the competitive digital landscape.
             <br />
             <br />
-            Expert Training Institute is proud to be recognized by H1Tags as a
-            center of excellence in digital marketing training. Our commitment
-            to quality education and industry-relevant skills has earned us the
-            distinction of being the best institute in digital marketing.
+            Expert Training Institute is proud to be recognized by{" "}
+            <span style={{ color: "#ff5733" }}> H1Tags </span> as a center of
+            excellence in digital marketing training. Our commitment to quality
+            education and industry-relevant skills has earned us the distinction
+            of being the best institute in digital marketing.
             <br />
             <br />
             Don't miss the chance to participate in the #1{" "}

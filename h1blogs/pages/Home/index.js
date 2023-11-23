@@ -10,7 +10,7 @@ import TrustedPartner from "./partials/TrustedPartner";
 import CourseBuiltFor from "./partials/CourseBuiltFor";
 import ExperienceH1tags from "./partials/ExperienceH1tags";
 import StandsOut from "./partials/StandsOut";
-import Testimonial from "../digitam-marketing-course-in-delhi/partials/Testimonial";
+import Testimonial from "../digital-marketing-course-in-delhi/partials/Testimonial";
 import EnrollCta from "./partials/EnrollCta";
 import SEOTags from "../../components/Head";
 import { useState, useEffect } from "react";

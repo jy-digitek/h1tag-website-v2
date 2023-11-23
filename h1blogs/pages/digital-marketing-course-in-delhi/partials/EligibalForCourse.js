@@ -26,7 +26,7 @@ const EligibalForCourse = () => {
         <GridItem colSpan={[4]}>
           <SimpleGrid
             columns={[1, 2]}
-            backgroundImage={
+            background={
               "linear-gradient(to left, rgb(130 146 244 / 81%), rgb(23 33 87 / 80%)),url(crbg.jpg)"
             }
             // backgroundSize={"100%"}

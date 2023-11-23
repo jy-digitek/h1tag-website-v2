@@ -35,8 +35,8 @@ const JoinReasons = () => {
           }}
         >
           {ReasonData &&
-            ReasonData.map((item, i) => (
-              <Link href={item.href}>
+            ReasonData.map((item, index) => (
+              <Link href={item.href} key={index}>
                 <Box
                   bg="#fff"
                   sx={{ borderLeft: "5px solid #3950a1" }}

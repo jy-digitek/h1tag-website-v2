@@ -89,7 +89,7 @@ export default function Footer() {
 
             <List spacing={3} fontSize="14px" py={3}>
               <ListItem p={0}>
-                <Link href={"digitam-marketing-course-in-delhi.html"}>
+                <Link href={"digital-marketing-course-in-delhi.html"}>
                   <ListIcon as={ChevronRightIcon} color="white" />
                   Digital marketing Course
                 </Link>
