@@ -48,6 +48,7 @@ const EnrollCta = () => {
           <Box display={"flex"}>
             <ReturnFocus
               py={[0, 2]}
+              style={{ color: "white" }}
               px={[4, 10]}
               fontSize={["14px", "20px"]}
               btnText={`Get a Call back`}

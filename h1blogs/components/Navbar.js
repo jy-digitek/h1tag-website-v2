@@ -114,6 +114,7 @@ export default function WithSubnavigation() {
             // isEditingSet={isEditingSet}
             label="Get Brochure"
             color="white"
+            style={{ color: "white" }}
           />
         </Stack>
       </Flex>

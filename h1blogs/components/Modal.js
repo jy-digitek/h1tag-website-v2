@@ -97,10 +97,10 @@ export default function ReturnFocus({
   return (
     <>
       <GlobalButton
-        display={{ base: "block", md: "inline-flex" }}
+        display={{ base: "block", md: "inline-flex", color: "#fff" }}
         fontSize={"sm"}
         fontWeight={600}
-        color={"#fff"}
+        // color={"#fff"}
         border={"2px solid white"}
         onClick={(e) => {
           //   openModalSet(true);
