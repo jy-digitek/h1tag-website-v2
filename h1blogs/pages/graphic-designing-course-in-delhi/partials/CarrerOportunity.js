@@ -23,8 +23,7 @@ export default function CarrerOportunity() {
           <Card
             // color={"#fff"}
             sx={{
-              backgroundImage:
-                "linear-gradient(to top, #cfd9df 0%, #f0f0f0 100%)",
+              background: "linear-gradient(to top, #cfd9df 0%, #f0f0f0 100%)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",
@@ -60,8 +59,7 @@ export default function CarrerOportunity() {
           <Card
             // color={"#fff"}
             sx={{
-              backgroundImage:
-                "linear-gradient(to top, #cfd9df 0%, #f0f0f0 100%)",
+              background: "linear-gradient(to top, #cfd9df 0%, #f0f0f0 100%)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",
@@ -97,8 +95,7 @@ export default function CarrerOportunity() {
           <Card
             //  color={"#fff"}
             sx={{
-              backgroundImage:
-                "linear-gradient(to top, #cfd9df 0%, #f0f0f0 100%)",
+              background: "linear-gradient(to top, #cfd9df 0%, #f0f0f0 100%)",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "fixed",

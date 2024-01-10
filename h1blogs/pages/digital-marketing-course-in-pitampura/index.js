@@ -18,54 +18,56 @@ import WhyChoose from "./partials/WhyChoose";
 import Faq from "./partials/Faq";
 import CTA from "../../components/CTA";
 import SEOTags from "../../components/Head";
+import Placement from "./partials/Placement";
 const index = () => {
-    return (
-        <>
-            <Layout>
-                <SEOTags
-                    title={
-                        "Best Digital Marketing Course in Pitampura - H1 Tags Institute "
-                    }
-                    description={
-                        "Looking for the Best Digital Marketing Course in Pitampura? Book your seat for the Advanced Digital Marketing Course in Pitampura. Join Now free demo class - H1 Tags."
-                    }
-                    currentUrl={"https://h1tags.com/contact.html/"}
-                />
-                <Banner />
-                <CourseOffer />
-                <Feedback />
-                <WhyChoose />
-                {/* <MasterCourse /> */}
-                <SechduleTime />
-                <KeyPoint />
+  return (
+    <>
+      <Layout>
+        <SEOTags
+          title={
+            "Best Digital Marketing Course in Pitampura - H1 Tags Institute "
+          }
+          description={
+            "Looking for the Best Digital Marketing Course in Pitampura? Book your seat for the Advanced Digital Marketing Course in Pitampura. Join Now free demo class - H1 Tags."
+          }
+          currentUrl={"https://h1tags.com/contact.html/"}
+        />
+        <Banner />
+        <CourseOffer />
+        <Feedback />
+        <WhyChoose />
+        {/* <MasterCourse /> */}
+        <SechduleTime />
+        <KeyPoint />
 
-                {/* <Didm /> */}
-                {/* <CourseModule /> */}
-                {/* <AboutCourse /> */}
+        {/* <Didm /> */}
+        {/* <CourseModule /> */}
+        {/* <AboutCourse /> */}
 
-                {/* <UpcomingBatch /> */}
-                <CTA
-                    title={"Struggling to Choose a Career?"}
-                    label={"Get instant Career Counselling"}
-                    color="black"
-                    mt={10}
-                    backgroundImage={
-                        "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"
-                    }
-                    //background={"white"}
-                    bg={"white"}
-                    backgroundPosition={"center"}
-                    backgroundRepeat={"no-repeat"}
-                    backgroundSize={"cover"}
-                />
-                <JoinReasons />
-                {/* <TrandingBlog /> */}
+        {/* <UpcomingBatch /> */}
+        <CTA
+          title={"Struggling to Choose a Career?"}
+          label={"Get instant Career Counselling"}
+          color="black"
+          mt={10}
+          backgroundImage={
+            "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"
+          }
+          //background={"white"}
+          bg={"white"}
+          backgroundPosition={"center"}
+          backgroundRepeat={"no-repeat"}
+          backgroundSize={"cover"}
+        />
+        <JoinReasons />
+        {/* <TrandingBlog /> */}
+        <Placement />
 
-                <Location />
-                <Faq />
-            </Layout>
-        </>
-    );
+        <Location />
+        <Faq />
+      </Layout>
+    </>
+  );
 };
 
 export default index;

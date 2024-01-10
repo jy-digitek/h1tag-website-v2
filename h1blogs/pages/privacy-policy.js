@@ -1,10 +1,18 @@
 import React from "react";
 import Layout from "../components/layout";
 import { Container, Heading, Box, Text } from "@chakra-ui/react";
+import SEOTags from "../components/Head";
 
 const Privacy = () => {
   return (
     <Layout>
+      <SEOTags
+        title={"Privacy Policy"}
+        description={
+          "How We Prioritize Your Privacy at H1tgas Explore Our Detailed Privacy Policy, Outlining Our Commitment to Protecting Your Data and Ensuring."
+        }
+        currentUrl={"https://h1tags.com/privacy-policy.html/"}
+      />
       <Container maxW={"6xl"} py={[5, 10]}>
         <Heading textAlign={"center"} as="h1" py={10}>
           Privacy Policy

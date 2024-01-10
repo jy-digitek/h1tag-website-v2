@@ -13,45 +13,49 @@ import KeyPoint from "./partials/KeyPoint";
 import RohLocation from "./partials/Location";
 import SechduleTime from "./partials/SechduleTime";
 import WhyChoose from "./partials/WhyChoose";
+import Placement from "./partials/viewpage/Placement";
+import LearnH1tags from "./partials/LearnH1tags";
+import Placements from "./partials/Placements";
 
 const index = () => {
-    return (
-        <Layout>
-            <SEOTags
-                title={
-                    " Best Digital Marketing Course in Rohini - H1 Tags Institute "
-                }
-                description={
-                    "Looking for the Best Digital Marketing Course in Rohini? Book your seat for the Advanced Digital Marketing Course in Rohini. Join Now free demo class - H1 Tags."
-                }
-                currentUrl={"https://h1tags.com/contact.html/"}
-            />
-            <RohBanner />
-            <RohCourseOffer />
-            <Feedback />
-            <WhyChoose />
-            <SechduleTime />
-            <KeyPoint />
+  return (
+    <Layout>
+      <SEOTags
+        title={" Best Digital Marketing Course in Rohini - H1 Tags Institute "}
+        description={
+          "Looking for the Best Digital Marketing Course in Rohini? Book your seat for the Advanced Digital Marketing Course in Rohini. Join Now free demo class - H1 Tags."
+        }
+        currentUrl={"https://h1tags.com/contact.html/"}
+      />
+      <RohBanner />
+      <RohCourseOffer />
+      <Feedback />
+      <WhyChoose />
+      <SechduleTime />
 
-            <CTA
-                title={"Struggling to Choose a Career?"}
-                label={"Get instant Career Counselling"}
-                color="black"
-                mt={10}
-                backgroundImage={
-                    "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"
-                }
-                //background={"white"}
-                bg={"white"}
-                backgroundPosition={"center"}
-                backgroundRepeat={"no-repeat"}
-                backgroundSize={"cover"}
-            />
-            <JoinReasons />
-            <RohLocation />
-            <Faq />
-        </Layout>
-    );
+      <KeyPoint />
+
+      <CTA
+        title={"Struggling to Choose a Career?"}
+        label={"Get instant Career Counselling"}
+        color="black"
+        mt={10}
+        backgroundImage={
+          "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%))"
+        }
+        //background={"white"}
+        bg={"white"}
+        backgroundPosition={"center"}
+        backgroundRepeat={"no-repeat"}
+        backgroundSize={"cover"}
+      />
+      <JoinReasons />
+      <LearnH1tags />
+      <Placements />
+      <RohLocation />
+      <Faq />
+    </Layout>
+  );
 };
 
 export default index;

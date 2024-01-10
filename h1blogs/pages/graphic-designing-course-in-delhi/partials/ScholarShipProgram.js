@@ -9,7 +9,7 @@ export default function ScholarShipProgram() {
   const [openModal, openModalSet] = React.useState(false);
   return (
     <Box
-      backgroundImage={
+      background={
         "linear-gradient(45deg, rgb(3 10 46), rgb(0 0 0 / 75%)),url(/bg-p.jpg)"
       }
       backgroundPosition={"center"}

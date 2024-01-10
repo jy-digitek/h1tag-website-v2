@@ -30,7 +30,7 @@ const SechduleTime = () => {
                     batches offline mode
                 </Text> */}
                 <Box sx={{ padding: 5 }} px={[0, 20]}>
-                    <Text px={[0, 20]}>
+                    <Text>
                         In Pitampura Training Centre Our Session will be
                         conducted through out the day with all time flexibility
                         & multiple batches offline mode
@@ -38,7 +38,7 @@ const SechduleTime = () => {
                 </Box>
             </Box>
 
-            <Box m={[0, 10]} pt={[5]}>
+            <Box m={[0, 10]}>
                 <Card>
                     <CardBody mx={10}>
                         <Text>

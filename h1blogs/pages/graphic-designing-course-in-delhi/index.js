@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Layout from "../../components/layout";
 import { PageBanner } from "../../components/PageBanner";
@@ -13,19 +14,20 @@ import SEOTags from "../../components/Head";
 import GraphicBanner from "./partials/GraphicBanner";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import AboutGraphics from "./partials/AboutGraphics";
 
 const index = ({ canonicalUrl }) => {
-    console.log("canonicalUrl", canonicalUrl);
-    return (
-        <Layout>
-            <SEOTags
-                title={"#1 Graphic Design Course in Delhi | H1 Tags"}
-                description={
-                    "Looking for the Best Graphic Designing Course in Delhi? H1 Tags Provide Best Graphic Designing Course with 100% Placement Guarantee | Book a Free Demo Class Now!"
-                }
-                currentUrl={"https://h1tags.com/graphicdesign.html/"}
-            />
-            {/* <Head>
+  console.log("canonicalUrl", canonicalUrl);
+  return (
+    <Layout>
+      <SEOTags
+        title={"Best graphic design course in delhi-get enroll now"}
+        description={
+          "Best graphic design course in Delhi. Enroll now to master design principles, Adobe Creative Suite, branding, and more. Join us for hands-on learning and industry insights."
+        }
+        currentUrl={"https://h1tags.com/graphic-designing-course-in-delhi.html"}
+      />
+      {/* <Head>
                 <title>#1 Graphic Design Course in Delhi | H1 Tags</title>
                 <link
                     rel="shortcut icon"
@@ -50,7 +52,7 @@ const index = ({ canonicalUrl }) => {
                     key="https://h1tags.com/graphicdesign/"
                 />
             </Head> */}
-            {/* <Head>
+      {/* <Head>
                 <title>#1 Graphic Design Course in Delhi | H1 Tags</title>
                 <meta
                     name="description"
@@ -66,18 +68,20 @@ const index = ({ canonicalUrl }) => {
                     key="canonical"
                 />
             </Head> */}
-            {/* <PageBanner title="Graphic Design Course" /> */}
-            {/* <GraphicBanner /> */}
-            <TabsCourse />
-            <CarrerOportunity />
-            <Eligibility />
-            <PerSueGraphicDesign />
-            <ScholarShipProgram />
-            <ChooseGraphicDesign />
-            <JobRoles />
-            <Faq />
-        </Layout>
-    );
+      {/* <PageBanner title="Graphic Design Course" /> */}
+      {/* <GraphicBanner /> */}
+      <TabsCourse />
+      <CarrerOportunity />
+
+      <Eligibility />
+      <PerSueGraphicDesign />
+      <ScholarShipProgram />
+      <ChooseGraphicDesign />
+      <JobRoles />
+      <AboutGraphics />
+      <Faq />
+    </Layout>
+  );
 };
 
 // export const getServerSideProps = async (ctx) => {
@@ -92,13 +96,13 @@ const index = ({ canonicalUrl }) => {
 // };
 
 export async function getStaticProps(ctx) {
-    // const { pathname } = ctx;
-    // console.log(ctx);
-    // console.log(canonicalUrl);
-    return {
-        props: {
-            canonicalUrl: "https://h1tags.com/graphicdesign/",
-        },
-    };
+  // const { pathname } = ctx;
+  // console.log(ctx);
+  // console.log(canonicalUrl);
+  return {
+    props: {
+      canonicalUrl: "https://h1tags.com/graphicdesign/",
+    },
+  };
 }
 export default index;

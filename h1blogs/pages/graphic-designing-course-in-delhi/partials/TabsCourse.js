@@ -30,7 +30,7 @@ export default function TabsCourse() {
         maxW={"full"}
         py={[5, 3]}
         sx={{
-          backgroundImage:
+          background:
             "linear-gradient(45deg, rgb(190 196 227), rgb(0 0 0 / 75%)),url(/graphicsSide.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -40,21 +40,26 @@ export default function TabsCourse() {
         <SimpleGrid columns={[1, 1]}>
           <Box my={[5, 10]} mx={"auto"} textColor={"#fff"} px={[3, 20]}>
             <SectionTitle>
-              <h1>Top Graphic Design Course from the Best Instructor</h1>
+              <h1>Best Graphic Design Course by H1tags</h1>
             </SectionTitle>
             <Box>
-              H1 Tags provides Next-Level Education that offers up-to-date
-              graphic designing software training in a single place. Students
-              interested in learning the graphic design course can enroll in our
-              institute to master anything from the fundamentals to advanced
-              concepts. Our training methods are based on cutting-edge
-              technology and concepts, allowing you to comprehend all areas
-              fully. Skilled educators design our courses to satisfy the needs
-              of all students.
+              H1tags Is a Certified and Reputed Institute in Delhi That Provides
+              Graphic Design Courses That Teach the Latest Tools and Skills of
+              Graphic Design Courses to the Demands of the Industry. Most of Our
+              Students Who Receive Their Education from Members of Our Society
+              Work in Graphic Design. Our Institute Provides 100% Placement
+              Assistance to Candidates Wanting to Grow Their Graphic Design
+              Course in delhi
             </Box>
-            <Text textAlign="center" fontWeight={"bold"} fontSize={22} mt={5}>
-              Learn the most demanding career skill, and secure your future
-            </Text>
+            {/* <Text
+                            textAlign="center"
+                            fontWeight={"bold"}
+                            fontSize={22}
+                            mt={5}
+                        >
+                            Learn the most demanding career skill, and secure
+                            your future
+                        </Text> */}
             <Center my={5}>
               {/* <GlobalButton
           rounded={"full"}
@@ -63,17 +68,17 @@ export default function TabsCourse() {
           background={"#3950a1"}
           _hover={{ background: "#101C32" }}
         /> */}
-              <ReturnFocus
-                btnText={`Get Brochure`}
-                children={<ContactForm />}
-                openModalSet={openModalSet}
-                rounded={"full"}
-                color={"white"}
-                label={"Enroll Now"}
-                background={"#3950a1"}
-                _hover={{ background: "#101C32" }}
-                px={10}
-              />
+              {/* <ReturnFocus
+                                btnText={`Get Brochure`}
+                                children={<ContactForm />}
+                                openModalSet={openModalSet}
+                                rounded={"full"}
+                                color={"white"}
+                                label={"Enroll Now"}
+                                background={"#3950a1"}
+                                _hover={{ background: "#101C32" }}
+                                px={10}
+                            /> */}
             </Center>
           </Box>
           <Box />
@@ -98,14 +103,17 @@ export default function TabsCourse() {
               <TabPanel tabId="one">
                 <Box>
                   <SectionTitle
-                    children={"Basic Course"}
-                    desc="Module Info and Overview"
+                    children={"Course Overview"}
+                    // desc="Module Info and Overview"
                     mb={5}
                   />
                   <Text as="p" mb={5} textAlign={"center"}>
-                    Our basic Graphic Design Course introduces students to
-                    interface design, visual culture, image design,
-                    communication and media theory, typography, etc.
+                    Our Basic Graphic Design Course in delhi Is Thoughtfully
+                    Structured to Introduce You to the Fundamental Concepts That
+                    Serve as the Backbone of Visual Design. Through Engaging
+                    Modules, You'll Gain Insights into the Principles, Tools,
+                    and Techniques That Graphic Designers Rely on to Create
+                    Impactful and Visually Appealing Content.
                   </Text>
                   <Text fontWeight={"bold"} py={3}>
                     Duration: 3 Months

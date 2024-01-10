@@ -1,9 +1,9 @@
+"use client";
 import Navbar from "./Navbar";
 import Footer from "./footer";
-
 import Topbar from "./Topbar";
 import { ChakraProvider } from "@chakra-ui/react";
-import Head from "next/head";
+import Script from "next/script";
 
 // <link
 //   rel="stylesheet"
@@ -11,13 +11,14 @@ import Head from "next/head";
 // />;
 
 export default function Layout({ children, ...rest }) {
-    return (
-        <ChakraProvider>
-            <Topbar />
-            <Navbar />
-            <main>{children}</main>
+  return (
+    <ChakraProvider>
+      <Topbar />
+      <Navbar />
 
-            <Footer />
-        </ChakraProvider>
-    );
+      <main>{children}</main>
+
+      <Footer />
+    </ChakraProvider>
+  );
 }
